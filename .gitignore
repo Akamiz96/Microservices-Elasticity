@@ -1,32 +1,29 @@
-# Prerequisites
-*.d
+# Archivos de configuración y credenciales
+*.env
+*.secret
+*.config
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+# Directorios de herramientas comunes
+.idea/
+.vscode/
+__pycache__/
+node_modules/
 
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
+# Archivos generados por Kubernetes
+*.log
+*.pid
+*.sock
 *.out
-*.app
+*.err
+*.tmp
+
+# Archivos de Terraform (si usas infraestructura como código)
+*.tfstate
+*.tfstate.backup
+.terraform/
+
+# Claves privadas (por seguridad)
+id_rsa*
+*.pem
+*.crt
+*.key
