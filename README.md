@@ -7,14 +7,13 @@ El objetivo principal es proporcionar una plataforma de experimentación para me
 
 - **Selección de métricas clave** para evaluar elasticidad y rendimiento.  
 - **Despliegue de infraestructura** para experimentación con Kubernetes.  
-- **Ejecución de pruebas de carga** utilizando herramientas como `k6`, `Prometheus`, `Grafana`, `HPA` y `KEDA`.  
+- **Ejecución de pruebas de carga** utilizando herramientas como `k6` y `HPA`.  
 - **Análisis de resultados** para proponer mejoras en configuraciones de autoescalado y arquitectura de microservicios.  
 
 ## 🔧 Tecnologías y Herramientas  
-- **Orquestador**: Kubernetes  
-- **Monitoreo y métricas**: Prometheus, Grafana  
+- **Orquestador**: Kubernetes    
 - **Pruebas de carga**: k6  
-- **Autoescalado**: HPA (Horizontal Pod Autoscaler), KEDA  
+- **Autoescalado**: HPA (Horizontal Pod Autoscaler)  
 - **Scripts y automatización**: Bash, YAML  
 
 ## 📂 Estructura del Repositorio  

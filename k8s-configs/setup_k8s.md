@@ -60,9 +60,26 @@ sudo ufw allow 10250:10252/tcp
 sudo ufw reload
 ```
 
+### 7️⃣ Configurar Taints en Nodos Trabajadores
+En algunos entornos, los nodos pueden heredar el rol de "control-plane", lo que impide la programación de pods en ellos. Para permitir que un nodo específico ejecute workloads, se debe eliminar la marca (`taint`) de `NoSchedule`.
+
+Por ejemplo, si el nodo **worker7** tiene un taint que le impide ejecutar pods, puedes eliminarlo con el siguiente comando:
+```bash
+kubectl taint node worker7 node-role.kubernetes.io/control-plane:NoSchedule-
+```
+Si deseas aplicar este comando en cualquier nodo de tu entorno, debes reemplazar `worker7` por el nombre del nodo específico:
+```bash
+kubectl taint node <nombre-del-nodo> node-role.kubernetes.io/control-plane:NoSchedule-
+```
+Para listar todos los nodos y verificar si tienen taints asignados:
+```bash
+kubectl get nodes -o wide
+kubectl describe node <nombre-del-nodo>
+```
+
 ## 🏗 Inicialización del Clúster
 
-### 7️⃣ Inicializar el Nodo Maestro
+### 8️⃣ Inicializar el Nodo Maestro
 En el nodo maestro, ejecuta:
 ```bash
 sudo kubeadm init --pod-network-cidr=10.244.0.0/16
@@ -74,7 +91,7 @@ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 
-### 8️⃣ Unir Nodos Trabajadores al Clúster
+### 9️⃣ Unir Nodos Trabajadores al Clúster
 Ejecuta el comando generado tras la inicialización en cada nodo trabajador:
 ```bash
 sudo kubeadm join <MAESTRO_IP>:6443 --token <TOKEN> --discovery-token-ca-cert-hash sha256:<HASH>
