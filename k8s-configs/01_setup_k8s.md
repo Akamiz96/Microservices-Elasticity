@@ -9,24 +9,23 @@ Antes de comenzar, asegúrate de cumplir con los siguientes requisitos:
 - **Al menos dos nodos** (uno maestro y uno o más trabajadores).
 - **Conectividad de red entre los nodos**.
 
-## 🚀 Instalación de Kubernetes
+---
 
-### 1️⃣ Verificar el Sistema Operativo
-Asegúrate de que los nodos ejecuten la misma versión de Linux y que estén actualizados:
+## 🚀 Paso 1: Instalación de Kubernetes
+
+### 1.1 Verificar el Sistema Operativo
 ```bash
 sudo apt update && sudo apt upgrade -y
 ```
 
-### 2️⃣ Instalar Docker
-Kubernetes usa contenedores, por lo que es necesario instalar Docker:
+### 1.2 Instalar Docker
 ```bash
 sudo apt install -y docker.io
 sudo systemctl enable docker
 sudo systemctl start docker
 ```
 
-### 3️⃣ Instalar kubeadm, kubelet y kubectl
-Estas herramientas son esenciales para la administración del clúster:
+### 1.3 Instalar kubeadm, kubelet y kubectl
 ```bash
 sudo apt install -y apt-transport-https ca-certificates curl
 curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
@@ -36,23 +35,22 @@ sudo apt install -y kubelet kubeadm kubectl
 sudo apt-mark hold kubelet kubeadm kubectl
 ```
 
-## 🛠 Configuración de los Nodos
+---
 
-### 4️⃣ Configurar los Hostnames
-Cada nodo debe tener un nombre único:
+## 🛠 Paso 2: Configuración de los Nodos
+
+### 2.1 Configurar los Hostnames
 ```bash
 sudo hostnamectl set-hostname <nombre-del-nodo>
 ```
 
-### 5️⃣ Desactivar Swap
-Kubernetes requiere que el swap esté desactivado:
+### 2.2 Desactivar Swap
 ```bash
 sudo swapoff -a
 sudo sed -i '/ swap / s/^/#/' /etc/fstab
 ```
 
-### 6️⃣ Configuración del Firewall
-Abrir los puertos requeridos:
+### 2.3 Configuración del Firewall
 ```bash
 sudo ufw allow 6443/tcp
 sudo ufw allow 2379:2380/tcp
@@ -60,87 +58,92 @@ sudo ufw allow 10250:10252/tcp
 sudo ufw reload
 ```
 
-### 7️⃣ Configurar Taints en Nodos Trabajadores
-En algunos entornos, los nodos pueden heredar el rol de "control-plane", lo que impide la programación de pods en ellos. Para permitir que un nodo específico ejecute workloads, se debe eliminar la marca (`taint`) de `NoSchedule`.
-
-Por ejemplo, si el nodo **worker7** tiene un taint que le impide ejecutar pods, puedes eliminarlo con el siguiente comando:
+### 2.4 Configurar Taints en Nodos Trabajadores
 ```bash
 kubectl taint node worker7 node-role.kubernetes.io/control-plane:NoSchedule-
 ```
-Si deseas aplicar este comando en cualquier nodo de tu entorno, debes reemplazar `worker7` por el nombre del nodo específico:
+O de forma genérica:
 ```bash
 kubectl taint node <nombre-del-nodo> node-role.kubernetes.io/control-plane:NoSchedule-
 ```
-Para listar todos los nodos y verificar si tienen taints asignados:
+
+Verifica los taints:
 ```bash
 kubectl get nodes -o wide
 kubectl describe node <nombre-del-nodo>
 ```
 
-## 🏗 Inicialización del Clúster
+---
 
-### 8️⃣ Inicializar el Nodo Maestro
-En el nodo maestro, ejecuta:
+## 🏗 Paso 3: Inicialización del Clúster
+
+### 3.1 Inicializar el Nodo Maestro
 ```bash
 sudo kubeadm init --pod-network-cidr=10.244.0.0/16
 ```
-Después de la inicialización, configura `kubectl`:
+
+### 3.2 Configurar `kubectl`
 ```bash
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 
-### 9️⃣ Unir Nodos Trabajadores al Clúster
-Ejecuta el comando generado tras la inicialización en cada nodo trabajador:
+### 3.3 Unir Nodos Trabajadores al Clúster
 ```bash
 sudo kubeadm join <MAESTRO_IP>:6443 --token <TOKEN> --discovery-token-ca-cert-hash sha256:<HASH>
 ```
 
-## 🌐 Configuración de la Red
-Instalar Flannel para gestionar la red entre los pods:
+---
+
+## 🌐 Paso 4: Configuración de la Red
+
+### 4.1 Instalar Flannel
 ```bash
 kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
 ```
-Verifica que los pods de Flannel estén ejecutándose:
+
+### 4.2 Verificar la red
 ```bash
 kubectl get pods -n kube-system
 ```
 
-## 📊 Instalación del Metrics Server
+---
 
-Para habilitar la recopilación de métricas necesarias para el **Horizontal Pod Autoscaler (HPA)** y otras herramientas de monitoreo, es necesario instalar el **Metrics Server**.
+## 📊 Paso 5: Instalación del Metrics Server
 
-### 1️⃣ Verificar si HPA recolecta métricas:
+### 5.1 Verificar si HPA recolecta métricas
 ```bash
 kubectl get hpa
 ```
 
-Si no se muestran métricas correctamente, continúa con la instalación.
-
-### 2️⃣ Instalar el Metrics Server:
+### 5.2 Instalar el Metrics Server
 ```bash
 kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
 ```
 
-### 3️⃣ Habilitar `--kubelet-insecure-tls` en el deployment:
+### 5.3 Habilitar `--kubelet-insecure-tls`
 ```bash
-kubectl patch deployment metrics-server -n kube-system --type='json' -p='[{"op":"add","path":"/spec/template/spec/containers/0/args/-", "value":"--kubelet-insecure-tls"}]'
+kubectl patch deployment metrics-server -n kube-system --type='json' \
+  -p='[{"op":"add","path":"/spec/template/spec/containers/0/args/-", "value":"--kubelet-insecure-tls"}]'
 ```
 
-### 4️⃣ Verificar que el Metrics Server esté en ejecución:
+### 5.4 Verificar el Metrics Server
 ```bash
 kubectl get pods -n kube-system | grep metrics-server
 ```
 
-Una vez instalado y configurado correctamente, el **Metrics Server** permitirá que Kubernetes recoja métricas de uso de recursos, lo cual es indispensable para pruebas de escalabilidad y elasticidad.
+---
 
-## 🔍 Verificación del Clúster
-Para comprobar el estado del clúster, usa:
+## 🔍 Paso 6: Verificación del Clúster
+
 ```bash
 kubectl get nodes
 ```
-Si todo está correctamente configurado, los nodos aparecerán en estado **Ready**.
+Los nodos deben aparecer con el estado **Ready**.
 
-## 📌 Conclusión
-Siguiendo estos pasos, tendrás un clúster Kubernetes funcional listo para experimentar con elasticidad y autoescalado. En los siguientes documentos exploraremos cómo configurar **HPA (Horizontal Pod Autoscaler)**.
+---
+
+## ✅ Conclusión
+
+Siguiendo estos pasos, tendrás un clúster Kubernetes funcional y listo para experimentar con elasticidad y autoescalado. En los siguientes documentos se abordará la configuración de **Horizontal Pod Autoscaler (HPA)**.
