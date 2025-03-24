@@ -9,12 +9,16 @@ El propósito de esta prueba es:
 - Confirmar que `kubectl` puede desplegar y gestionar recursos en el clúster.
 - Ejecutar un servicio simple para comprobar el autoescalado.
 
+---
+
 ## 🚀 Paso 1: Verificar el Estado del Clúster
 Ejecuta el siguiente comando para verificar que todos los nodos están en estado **Ready**:
 ```bash
 kubectl get nodes
 ```
 Si todos los nodos aparecen como **Ready**, el clúster está en funcionamiento.
+
+---
 
 ## 🔧 Paso 2: Desplegar una Aplicación de Prueba
 Como prueba básica, desplegaremos un pod con una imagen de prueba (`nginx`) para validar que Kubernetes puede administrar cargas de trabajo.
@@ -28,6 +32,8 @@ kubectl get pods
 ```
 Si aparece el pod en estado **Running**, significa que Kubernetes puede desplegar aplicaciones correctamente.
 
+---
+
 ## 🌐 Paso 3: Exponer la Aplicación
 Para asegurarnos de que los servicios funcionan correctamente, expondremos el pod como un servicio accesible dentro del clúster:
 ```bash
@@ -37,6 +43,8 @@ Verifica el servicio con:
 ```bash
 kubectl get svc
 ```
+
+---
 
 ## 📊 Paso 4: Probar el Autoescalado
 Si el clúster soporta **Horizontal Pod Autoscaler (HPA)**, probemos su funcionamiento:
@@ -49,7 +57,9 @@ kubectl get hpa
 ```
 Si se muestra el HPA con la configuración esperada, significa que el autoescalado está funcionando correctamente.
 
-## ✅ Paso 5: Limpiar la Prueba
+---
+
+## 🧹 Paso 5: Limpiar la Prueba
 Después de verificar el funcionamiento, puedes eliminar los recursos creados para la prueba:
 ```bash
 kubectl delete deployment test-nginx
@@ -57,21 +67,23 @@ kubectl delete svc test-nginx
 kubectl delete hpa test-nginx
 ```
 
-## 📂 Uso del Script Automatizado
+---
+
+## ⚙️ Uso del Script Automatizado
 
 Para facilitar la ejecución de esta prueba, se incluye un script en Shell que automatiza todos los pasos descritos en este documento.
 
 ### 📁 Archivo
 
-El script se encuentra en el archivo:
+El script se encuentra en la siguiente ruta dentro del repositorio:
 
 ```bash
 files/01_test_cluster.sh
 ```
 
-#### 🧪 Ejecución del Script
+### 🧪 Ejecución del Script
 
-1. Asegúrate de tener permisos de ejecución sobre el archivo. Desde la terminal, navega hasta el directorio donde se encuentra el archivo y ejecuta:
+1. Asegúrate de tener permisos de ejecución sobre el archivo. Desde la terminal, navega hasta el directorio del proyecto y ejecuta:
 
 ```bash
 chmod +x files/01_test_cluster.sh
@@ -84,6 +96,8 @@ chmod +x files/01_test_cluster.sh
 ```
 
 Este script realizará automáticamente todas las validaciones y pruebas descritas en este documento, mostrando mensajes informativos y resultados paso a paso. Al finalizar, también limpiará los recursos creados durante la prueba.
+
+---
 
 ## 📌 Conclusión
 Si todos los pasos se ejecutan sin errores, significa que el clúster Kubernetes está correctamente configurado y listo para ejecutar pruebas más avanzadas sobre elasticidad.

@@ -1,47 +1,60 @@
 #!/bin/bash
 
-echo "======================================="
-echo "🚀 Iniciando prueba de funcionamiento del clúster Kubernetes"
-echo "======================================="
+# Script para validar el funcionamiento básico de un clúster Kubernetes
+# Despliega una aplicación de prueba, la expone, aplica autoescalado y luego limpia los recursos
 
-# Paso 1: Verificar el Estado del Clúster
-echo ""
-echo "📌 Paso 1: Verificando el estado del clúster..."
+set -e
+
+# ================================================
+# 1. Verificar el estado del clúster
+# ================================================
+echo "[FASE 1] Verificando el estado del clúster..."
 kubectl get nodes
-echo "✅ Verificación del estado del clúster completada."
+sleep 2
 
-# Paso 2: Desplegar una Aplicación de Prueba
-echo ""
-echo "🔧 Paso 2: Desplegando aplicación de prueba (nginx)..."
+# ================================================
+# 2. Desplegar aplicación de prueba
+# ================================================
+echo "[FASE 2] Desplegando aplicación nginx de prueba..."
 kubectl create deployment test-nginx --image=nginx
 sleep 5
-echo "⏳ Esperando que el pod esté en estado 'Running'..."
-kubectl get pods
-echo "✅ Aplicación de prueba desplegada."
 
-# Paso 3: Exponer la Aplicación
-echo ""
-echo "🌐 Paso 3: Exponiendo la aplicación como servicio..."
+echo "[INFO] Mostrando estado de los pods desplegados:"
+kubectl get pods
+sleep 2
+
+# ================================================
+# 3. Exponer la aplicación como servicio
+# ================================================
+echo "[FASE 3] Exponiendo el deployment como servicio NodePort..."
 kubectl expose deployment test-nginx --type=NodePort --port=80
 sleep 3
-kubectl get svc
-echo "✅ Servicio expuesto correctamente."
 
-# Paso 4: Probar el Autoescalado
-echo ""
-echo "📊 Paso 4: Aplicando autoescalado con Horizontal Pod Autoscaler..."
+kubectl get svc
+sleep 2
+
+# ================================================
+# 4. Aplicar autoescalado con HPA
+# ================================================
+echo "[FASE 4] Configurando autoescalado con Horizontal Pod Autoscaler..."
 kubectl autoscale deployment test-nginx --cpu-percent=50 --min=1 --max=5
 sleep 5
-kubectl get hpa
-echo "✅ Autoescalado configurado y verificado."
 
-# Paso 5: Limpiar la Prueba
-echo ""
-echo "🧹 Paso 5: Limpiando recursos creados durante la prueba..."
+kubectl get hpa
+sleep 2
+
+# ================================================
+# 5. Limpiar recursos creados
+# ================================================
+echo "[FASE 5] Eliminando recursos creados durante la prueba..."
 kubectl delete deployment test-nginx
 kubectl delete svc test-nginx
 kubectl delete hpa test-nginx
-echo "✅ Recursos eliminados."
+sleep 2
 
-echo ""
-echo "🎉 Prueba completada exitosamente. El clúster está listo para pruebas avanzadas."
+# ================================================
+# Resultado Final
+# ================================================
+echo "[RESULTADO] Prueba completada exitosamente. El clúster está listo para pruebas avanzadas."
+
+# Fin del script
