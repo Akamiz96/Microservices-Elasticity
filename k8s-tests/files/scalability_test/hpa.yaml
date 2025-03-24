@@ -1,0 +1,22 @@
+# Este manifiesto crea un HorizontalPodAutoscaler (HPA)
+# que ajusta el número de réplicas del Deployment 'nginx-test'
+# de acuerdo con el uso promedio de CPU.
+
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: nginx-hpa                    # Nombre del HPA
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1             # El recurso objetivo es un Deployment
+    kind: Deployment
+    name: nginx-test                # Nombre del Deployment a escalar
+  minReplicas: 1                    # Mínimo de pods permitidos
+  maxReplicas: 10                   # Máximo de pods permitidos
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu                     # Métrica monitoreada: uso de CPU
+      target:
+        type: Utilization           # Tipo de medición: utilización porcentual
+        averageUtilization: 25      # Si el uso promedio supera el 25%, se escalarán los pods

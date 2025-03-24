@@ -52,9 +52,11 @@ spec:
       nodePort: 30080
   type: NodePort
 ```
+**Este archivo también se encuentra como `files/scalability_test/nginx-deployment.yaml`**
+
 Aplicamos la configuración:
 ```bash
-kubectl apply -f nginx-deployment.yaml
+kubectl apply -f files/scalability_test/nginx-deployment.yaml
 ```
 
 ---
@@ -82,22 +84,28 @@ spec:
         type: Utilization
         averageUtilization: 25
 ```
+**Este archivo también se encuentra como `files/scalability_test/hpa.yaml`**
+
 Aplicamos la configuración:
 ```bash
-kubectl apply -f hpa.yaml
+kubectl apply -f files/scalability_test/hpa.yaml
 ```
+
 Verificamos el estado del **HPA**:
 ```bash
 kubectl get hpa
 ```
+
 Si el **HPA** no recolecta métricas correctamente, debemos instalar el **Metrics Server**:
 ```bash
 kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
 ```
+
 Luego, activamos la opción **--kubelet-insecure-tls**:
 ```bash
 kubectl patch deployment metrics-server -n kube-system --type='json' -p='[{"op":"add","path":"/spec/template/spec/containers/0/args/-", "value":"--kubelet-insecure-tls"}]'
 ```
+
 Verificamos que el **Metrics Server** esté en ejecución:
 ```bash
 kubectl get pods -n kube-system | grep metrics-server
@@ -126,29 +134,65 @@ export default function () {
     sleep(1);
 }
 ```
+**Este archivo también se encuentra como `files/scalability_test/test.js`**
+
 Reemplaza `<IP_DEL_CLUSTER>` con la IP del nodo donde está corriendo el servicio:
 ```bash
 kubectl get nodes -o wide
 ```
+
 Ejecutamos la prueba de carga con **k6**:
 ```bash
-k6 run test.js
+k6 run files/scalability_test/test.js
 ```
 
 ---
 
 ## 📊 Paso 4: Monitoreo del Autoescalado
+
 Podemos monitorear en tiempo real cómo se ajustan los recursos observando el **HPA**:
 ```bash
 kubectl get hpa -w
 ```
+
 También podemos ver el consumo de recursos con:
 ```bash
 kubectl top pods
 ```
+
 A medida que la carga aumenta, Kubernetes debe crear más **réplicas** del **nginx-test** hasta alcanzar el límite de **10 pods**.
 
 ---
 
+## ⚙️ Uso del Script Automatizado
+
+Todos los pasos anteriores pueden ejecutarse de forma automática utilizando el siguiente script:
+
+```bash
+files/02_escalability_test.sh
+```
+
+### 🧪 Ejecución del Script
+
+1. Asegúrate de que el archivo tenga permisos de ejecución:
+```bash
+chmod +x files/02_escalability_test.sh
+```
+
+2. Ejecuta el script:
+```bash
+./files/02_escalability_test.sh
+```
+
+Este script:
+- Despliega la aplicación.
+- Aplica la configuración del HPA.
+- Lanza la prueba de carga con `k6`.
+- Ejecuta el monitoreo en segundo plano.
+- Presenta los resultados automáticamente.
+
+---
+
 ## ✅ Conclusión
-Este experimento demuestra cómo Kubernetes ajusta dinámicamente los recursos en respuesta a la demanda. Si el autoescalado funciona correctamente, veremos un aumento progresivo en el número de pods hasta que la carga se reduzca nuevamente. 🚀
+
+Este experimento demuestra cómo Kubernetes ajusta dinámicamente los recursos en respuesta a la demanda. Si el autoescalado funciona correctamente, veremos un aumento progresivo en el número de pods hasta que la carga se reduzca nuevamente.

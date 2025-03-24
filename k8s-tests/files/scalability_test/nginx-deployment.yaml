@@ -1,0 +1,52 @@
+# Este manifiesto crea un Deployment y un Service en Kubernetes
+# para ejecutar y exponer una aplicación basada en Nginx.
+
+# ---------------------------------------------------------------
+# DEPLOYMENT: Lanza pods con la imagen de nginx y configura límites de recursos
+# ---------------------------------------------------------------
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-test           # Nombre del Deployment
+  labels:
+    app: nginx-test          # Etiqueta que ayuda a identificar el recurso
+spec:
+  replicas: 1                # Cantidad inicial de pods; el HPA modificará este valor
+  selector:
+    matchLabels:
+      app: nginx-test        # Selector que identifica qué pods manejar
+  template:
+    metadata:
+      labels:
+        app: nginx-test      # Etiqueta usada por el selector
+    spec:
+      containers:
+      - name: nginx
+        image: nginx         # Imagen oficial de Nginx desde Docker Hub
+        ports:
+        - containerPort: 80  # Puerto donde Nginx expone el servicio dentro del pod
+        resources:
+          requests:
+            cpu: "100m"      # CPU mínima garantizada para este contenedor
+            memory: "128Mi"  # Memoria mínima garantizada
+          limits:
+            cpu: "200m"      # Límite máximo de CPU que puede usar
+            memory: "256Mi"  # Límite máximo de memoria
+
+---
+# ---------------------------------------------------------------
+# SERVICE: Exposición del deployment hacia el exterior
+# ---------------------------------------------------------------
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service        # Nombre del servicio
+spec:
+  type: NodePort             # Tipo de servicio accesible desde fuera del clúster
+  selector:
+    app: nginx-test          # Apunta a los pods con esta etiqueta
+  ports:
+    - protocol: TCP
+      port: 80               # Puerto expuesto dentro del clúster
+      targetPort: 80         # Puerto en el contenedor
+      nodePort: 30080        # Puerto disponible desde el nodo físico (útil para pruebas)
