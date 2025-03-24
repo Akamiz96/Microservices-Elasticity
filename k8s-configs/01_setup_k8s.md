@@ -107,6 +107,34 @@ Verifica que los pods de Flannel estén ejecutándose:
 kubectl get pods -n kube-system
 ```
 
+## 📊 Instalación del Metrics Server
+
+Para habilitar la recopilación de métricas necesarias para el **Horizontal Pod Autoscaler (HPA)** y otras herramientas de monitoreo, es necesario instalar el **Metrics Server**.
+
+### 1️⃣ Verificar si HPA recolecta métricas:
+```bash
+kubectl get hpa
+```
+
+Si no se muestran métricas correctamente, continúa con la instalación.
+
+### 2️⃣ Instalar el Metrics Server:
+```bash
+kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+```
+
+### 3️⃣ Habilitar `--kubelet-insecure-tls` en el deployment:
+```bash
+kubectl patch deployment metrics-server -n kube-system --type='json' -p='[{"op":"add","path":"/spec/template/spec/containers/0/args/-", "value":"--kubelet-insecure-tls"}]'
+```
+
+### 4️⃣ Verificar que el Metrics Server esté en ejecución:
+```bash
+kubectl get pods -n kube-system | grep metrics-server
+```
+
+Una vez instalado y configurado correctamente, el **Metrics Server** permitirá que Kubernetes recoja métricas de uso de recursos, lo cual es indispensable para pruebas de escalabilidad y elasticidad.
+
 ## 🔍 Verificación del Clúster
 Para comprobar el estado del clúster, usa:
 ```bash
