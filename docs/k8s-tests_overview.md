@@ -16,7 +16,7 @@ Este archivo describe una **prueba básica de validación del clúster**, asegur
 
 Ideal para verificar que el clúster fue instalado correctamente y está operativo.
 
-### 2️⃣ [`02_escalability_test.md`](../k8s-tests/02_escalability_test.md)
+### 2️⃣ [`02_scalability_test.md`](../k8s-tests/02_scalability_test.md)
 
 Este archivo documenta una **prueba de escalabilidad del clúster**, con el objetivo de evaluar el comportamiento del sistema bajo una carga creciente. Contiene:
 
@@ -40,7 +40,7 @@ Este script automatiza la **prueba básica de despliegue de una aplicación** en
 
 Útil para realizar pruebas rápidas y repetir el proceso de validación sin intervención manual.
 
-### 4️⃣ [`02_escalability_test.sh`](../k8s-tests/files/02_escalability_test.sh)
+### 4️⃣ [`02_scalability_test.sh`](../k8s-tests/files/02_scalability_test.sh)
 
 Este script ejecuta de forma automatizada la **prueba de escalabilidad** descrita en el archivo correspondiente. Incluye:
 
