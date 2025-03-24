@@ -115,4 +115,4 @@ kubectl get nodes
 Si todo está correctamente configurado, los nodos aparecerán en estado **Ready**.
 
 ## 📌 Conclusión
-Siguiendo estos pasos, tendrás un clúster Kubernetes funcional listo para experimentar con elasticidad y autoescalado. En los siguientes documentos exploraremos cómo configurar **HPA (Horizontal Pod Autoscaler)** y herramientas de monitoreo como **Prometheus y Grafana**.
+Siguiendo estos pasos, tendrás un clúster Kubernetes funcional listo para experimentar con elasticidad y autoescalado. En los siguientes documentos exploraremos cómo configurar **HPA (Horizontal Pod Autoscaler)**.

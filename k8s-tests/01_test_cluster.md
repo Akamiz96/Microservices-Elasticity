@@ -57,5 +57,33 @@ kubectl delete svc test-nginx
 kubectl delete hpa test-nginx
 ```
 
+## 📂 Uso del Script Automatizado
+
+Para facilitar la ejecución de esta prueba, se incluye un script en Shell que automatiza todos los pasos descritos en este documento.
+
+### 📁 Archivo
+
+El script se encuentra en el archivo:
+
+```bash
+files/01_test_cluster.sh
+```
+
+#### 🧪 Ejecución del Script
+
+1. Asegúrate de tener permisos de ejecución sobre el archivo. Desde la terminal, navega hasta el directorio donde se encuentra el archivo y ejecuta:
+
+```bash
+chmod +x files/01_test_cluster.sh
+```
+
+2. Luego, ejecuta el script con:
+
+```bash
+./files/01_test_cluster.sh
+```
+
+Este script realizará automáticamente todas las validaciones y pruebas descritas en este documento, mostrando mensajes informativos y resultados paso a paso. Al finalizar, también limpiará los recursos creados durante la prueba.
+
 ## 📌 Conclusión
 Si todos los pasos se ejecutan sin errores, significa que el clúster Kubernetes está correctamente configurado y listo para ejecutar pruebas más avanzadas sobre elasticidad.
