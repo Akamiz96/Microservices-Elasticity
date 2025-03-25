@@ -85,4 +85,21 @@ echo "Puedes instalarlo ejecutando:"
 echo "kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml"
 echo "y luego habilitar el flag --kubelet-insecure-tls si es necesario."
 
-# Fin del script
+# ================================================
+# 8. Limpieza opcional de recursos
+# ================================================
+echo "[FASE 8] ¿Deseas eliminar los recursos creados durante la prueba? (y/n)"
+read -r CLEANUP
+if [[ "$CLEANUP" == "y" || "$CLEANUP" == "Y" ]]; then
+  echo "Eliminando deployment, servicio y HPA..."
+  kubectl delete deployment nginx-test
+  kubectl delete service nginx-service
+  kubectl delete hpa nginx-hpa
+  echo "Recursos eliminados correctamente."
+else
+  echo "Limpieza omitida. Los recursos siguen activos en el clúster."
+fi
+
+# ================================================
+# 10. Fin del script
+# ================================================

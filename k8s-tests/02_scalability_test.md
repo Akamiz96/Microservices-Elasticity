@@ -192,6 +192,33 @@ Este script:
 - Presenta los resultados automáticamente.
 
 ---
+## 🧹 Limpieza de Recursos
+
+Una vez finalizada la prueba, puedes liberar los recursos creados (deployment, servicio y HPA) para dejar el clúster limpio.
+
+### Opción 1: Limpieza automática al final del script
+
+El script `files/02_escalability_test.sh` te preguntará si deseas eliminar los recursos creados. Si respondes `y`, ejecutará automáticamente:
+
+```bash
+kubectl delete deployment nginx-test
+kubectl delete service nginx-service
+kubectl delete hpa nginx-hpa
+```
+
+Esto eliminará los pods y configuraciones utilizadas durante el experimento.
+
+### Opción 2: Limpieza manual
+
+Si ejecutaste la prueba paso a paso, puedes eliminar los recursos manualmente con los siguientes comandos:
+
+```bash
+kubectl delete deployment nginx-test
+kubectl delete service nginx-service
+kubectl delete hpa nginx-hpa
+```
+
+---
 
 ## ✅ Conclusión
 
