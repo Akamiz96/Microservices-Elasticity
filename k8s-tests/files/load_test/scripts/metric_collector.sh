@@ -15,7 +15,7 @@
 # ---------------------------------------------------------------
 # CONFIGURACIÓN GENERAL
 # ---------------------------------------------------------------
-OUTPUT_DIR="../output"                  # Carpeta donde se guardará el CSV
+OUTPUT_DIR="load_test/output"          # Carpeta donde se guardará el CSV
 OUTPUT_FILE="$OUTPUT_DIR/metrics.csv"  # Ruta completa al archivo de salida
 
 NAMESPACE="default"                    # Namespace a monitorear
