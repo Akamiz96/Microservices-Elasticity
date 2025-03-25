@@ -75,15 +75,27 @@ echo "[Paso 4] Ejecutando prueba de carga con k6..."
 k6 run "$TEST_SCRIPT"
 
 # ---------------------------------------------------------------
-# PASO 5: Finalizar recolección de métricas
+# PASO 5: Esperar desescalado y mostrar progreso
 # ---------------------------------------------------------------
-echo "[Paso 5] Deteniendo recolección de métricas..."
+echo "[Paso 5] Esperando 5 minutos adicionales para monitorear el desescalado de recursos..."
+
+WAIT_TIME=300  # 5 minutos en segundos
+for ((i=WAIT_TIME; i>0; i--)); do
+    printf "\r[Info] Tiempo restante para finalizar monitoreo: %3d segundos..." "$i"
+    sleep 1
+done
+echo -e "\n[Info] Monitoreo completado. Procediendo con la finalización."
+
+# ---------------------------------------------------------------
+# PASO 6: Finalizar recolección de métricas
+# ---------------------------------------------------------------
+echo "[Paso 6] Deteniendo recolección de métricas..."
 kill "$METRIC_PID"
 
 # ---------------------------------------------------------------
-# PASO 6: Generar visualizaciones con Docker
+# PASO 7: Generar visualizaciones con Docker
 # ---------------------------------------------------------------
-echo "[Paso 6] Generando gráficos a partir de las métricas..."
+echo "[Paso 7] Generando gráficos a partir de las métricas..."
 
 docker build -t loadtest-analysis "$ANALYSIS_DIR"
 docker run --rm \
@@ -92,9 +104,9 @@ docker run --rm \
   loadtest-analysis
 
 # ---------------------------------------------------------------
-# PASO 7: Eliminar recursos del clúster
+# PASO 8: Eliminar recursos del clúster
 # ---------------------------------------------------------------
-echo "[Paso 7] Eliminando recursos de Kubernetes..."
+echo "[Paso 8] Eliminando recursos de Kubernetes..."
 kubectl delete -f "$MANIFESTS_DIR/nginx-deployment.yaml"
 kubectl delete -f "$MANIFESTS_DIR/hpa.yaml"
 
