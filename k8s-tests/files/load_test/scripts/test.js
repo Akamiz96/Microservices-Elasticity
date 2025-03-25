@@ -23,15 +23,11 @@ import { sleep } from 'k6';   // Módulo para simular tiempo de espera entre sol
 // ------------------------------------------------------------------------------
 export let options = {
   stages: [
-    { duration: '2m', target: 100 },  // Escala gradualmente hasta 100 usuarios concurrentes
-    { duration: '5m', target: 100 },  // Mantiene 100 usuarios durante 5 minutos
-    { duration: '2m', target: 200 },  // Escala hasta 200 usuarios
-    { duration: '5m', target: 200 },  // Mantiene 200 usuarios durante 5 minutos
-    { duration: '2m', target: 300 },  // Escala hasta 300 usuarios
-    { duration: '5m', target: 300 },  // Mantiene 300 usuarios durante 5 minutos
-    { duration: '2m', target: 100 },  // Reduce carga a 100 usuarios
-    { duration: '5m', target: 100 },  // Mantiene 100 usuarios
-    { duration: '2m', target: 0 },    // Finaliza la prueba reduciendo a 0 usuarios
+    { duration: '1m', target: 50 },   // Calentamiento inicial
+    { duration: '2m', target: 150 },  // Aumento rápido de carga
+    { duration: '3m', target: 300 },  // Carga máxima durante 3 minutos
+    { duration: '2m', target: 50 },   // Reducción de carga
+    { duration: '2m', target: 0 },    // Descenso completo
   ],
   thresholds: {
     http_req_duration: ['p(95)<500'], // El 95% de las solicitudes deben completarse en menos de 500 ms
