@@ -26,7 +26,7 @@
 # ---------------------------------------------------------------
 # CONFIGURACIÓN DE RUTAS RELATIVAS
 # ---------------------------------------------------------------
-BASE_DIR="files/load_test"
+BASE_DIR="load_test"
 MANIFESTS_DIR="$BASE_DIR/manifests"
 SCRIPTS_DIR="$BASE_DIR/scripts"
 OUTPUT_DIR="$BASE_DIR/output"
