@@ -1,9 +1,26 @@
-// Este script es usado por k6 para generar una carga HTTP controlada
-// contra el servicio nginx desplegado en el clúster Kubernetes.
+// ------------------------------------------------------------------------------
+// ARCHIVO: test.js
+// DESCRIPCIÓN: Script de carga para la herramienta k6, diseñado para generar
+//              tráfico HTTP progresivo contra un servicio NGINX desplegado en Kubernetes.
+//              La prueba simula aumentos y reducciones de carga para evaluar el
+//              comportamiento del escalado automático (HPA).
+//
+// AUTOR: Alejandro Castro Martínez
+// FECHA DE MODIFICACIÓN: 25 de marzo de 2025
+// CONTEXTO:
+//   - Utilizado en pruebas de escalabilidad horizontal con HPA en Kubernetes.
+//   - Se recomienda ejecutarlo mientras se recolectan métricas de uso de CPU y número de pods.
+//   - El servicio debe estar expuesto a través de un NodePort accesible desde el host.
+// ------------------------------------------------------------------------------
 
-// ---------------------------------------------------------------
-// CONFIGURACIÓN DE ESCENARIOS
-// ---------------------------------------------------------------
+import http from 'k6/http';   // Módulo para realizar solicitudes HTTP
+import { sleep } from 'k6';   // Módulo para simular tiempo de espera entre solicitudes
+
+// ------------------------------------------------------------------------------
+// CONFIGURACIÓN DE LA PRUEBA DE CARGA
+// stages: define cómo evoluciona la carga (usuarios virtuales) a lo largo del tiempo
+// thresholds: define criterios de éxito (rendimiento mínimo aceptable)
+// ------------------------------------------------------------------------------
 export let options = {
     stages: [
         { duration: '30s', target: 50 },   // Subida gradual a 50 usuarios
@@ -13,15 +30,15 @@ export let options = {
     ],
 };
 
-// ---------------------------------------------------------------
-// FUNCIÓN PRINCIPAL DE PRUEBA
-// ---------------------------------------------------------------
+// ------------------------------------------------------------------------------
+// FUNCIÓN PRINCIPAL
+// Se ejecuta una vez por iteración de cada usuario virtual
+// ------------------------------------------------------------------------------
 export default function () {
-    // IMPORTANTE: reemplaza <IP_DEL_CLUSTER> con la IP externa del nodo Kubernetes
-    // que esté exponiendo el puerto 30080 (servicio NodePort)
-    http.get('http://<IP_DEL_CLUSTER>:30080'); // Solicitud HTTP GET a la app nginx
-    sleep(1);                                  // Tiempo de espera de 1 segundo entre solicitudes
-}
+  // Realiza una petición HTTP GET al servicio expuesto en el clúster
+  // NOTA: Reemplaza '<IP_DEL_CLUSTER>' con la IP del nodo o la IP externa real del servicio
+  http.get('http://<IP_DEL_CLUSTER>:30080');
 
-import http from 'k6/http';
-import { sleep } from 'k6';
+  // Simula una pausa entre solicitudes, imitando un usuario real
+  sleep(1);
+}
