@@ -1,58 +1,48 @@
 # ------------------------------------------------------------------------------
-# ARCHIVO: plot_cpu_usage.py
-# DESCRIPCIÓN: Script para graficar el uso de CPU (%) de cada pod durante una
-#              prueba de carga. Los datos se leen desde un archivo CSV generado
-#              por el script de recolección de métricas.
+# ARCHIVO: plot_pod_count.py
+# DESCRIPCIÓN: Script para graficar la evolución del número de pods en ejecución
+#              durante una prueba de carga basada en Kubernetes.
 #
 # AUTOR: Alejandro Castro Martínez
 # FECHA DE MODIFICACIÓN: 25 de marzo de 2025
 # CONTEXTO:
-#   - Este script se usa dentro de un contenedor Docker para generar gráficos
-#     automáticamente, pero también puede ejecutarse en local.
+#   - Este script se ejecuta automáticamente dentro de un contenedor Docker
+#     como parte del análisis de resultados, pero también puede usarse en local.
 # ------------------------------------------------------------------------------
 
-# NOTA IMPORTANTE:
-# Si deseas ejecutar este script localmente (fuera de Docker),
-# cambia la variable `file_path` a "../output/metrics.csv"
-# y `output_path` a "../analysis/images/cpu_por_pod.png" o similar.
+# NOTA:
+# Si deseas ejecutar este script localmente, cambia 'output/metrics.csv'
+# por '../output/metrics.csv' y guarda la imagen en '../analysis/images/'.
 
 import pandas as pd
 import matplotlib.pyplot as plt
-import seaborn as sns
 import os
 
-# Ruta dentro del contenedor Docker (ajustar si se ejecuta en local)
+# ---------------------------------------------------------------
+# CARGA DE DATOS
+# ---------------------------------------------------------------
 file_path = "output/metrics.csv"
+df = pd.read_csv(file_path, usecols=["timestamp", "num_pods"])
+df["timestamp"] = pd.to_datetime(df["timestamp"], errors="coerce")
+df["num_pods"] = pd.to_numeric(df["num_pods"], errors="coerce")
 
-# Cargar los datos
-df = pd.read_csv(file_path, delimiter=",", dtype=str, on_bad_lines="skip")
-df["timestamp"] = pd.to_datetime(df["timestamp"], errors='coerce')
-df["%cpu"] = df["%cpu"].str.replace(",", ".", regex=False)
-df["%cpu"] = pd.to_numeric(df["%cpu"], errors="coerce")
-df = df[["timestamp", "pod", "%cpu"]]
-
-# Preparar visualización
-pods_unicos = df["pod"].unique()
-palette = sns.color_palette("husl", len(pods_unicos))
-fig, axes = plt.subplots(len(pods_unicos), 1, figsize=(12, 5 * len(pods_unicos)), sharex=True)
-
-if len(pods_unicos) == 1:
-    axes = [axes]
-
-for i, (pod, color) in enumerate(zip(pods_unicos, palette)):
-    pod_df = df[df["pod"] == pod]
-    axes[i].plot(pod_df["timestamp"], pod_df["%cpu"], label=f"CPU % - {pod}", marker="o", color=color)
-    axes[i].set_ylabel("% CPU")
-    axes[i].legend()
-    axes[i].grid()
-
-axes[-1].set_xlabel("Tiempo")
-plt.suptitle("Uso de CPU por Pod en el Tiempo", y=0.90)
+# ---------------------------------------------------------------
+# GRAFICO: Evolución del número de pods
+# ---------------------------------------------------------------
+plt.figure(figsize=(12, 6))
+plt.plot(df["timestamp"], df["num_pods"], label="Active Pods", marker="o")
+plt.xlabel("Time")
+plt.ylabel("Number of Pods")
+plt.title("Pod Count Over Time")
+plt.legend()
+plt.grid()
 plt.xticks(rotation=45)
 plt.tight_layout()
 
-# Guardar imagen
+# ---------------------------------------------------------------
+# GUARDADO DE LA IMAGEN
+# ---------------------------------------------------------------
 os.makedirs("images", exist_ok=True)
-output_path = "images/cpu_por_pod.png"
+output_path = "images/pod_count_over_time.png"
 plt.savefig(output_path)
 plt.show()
