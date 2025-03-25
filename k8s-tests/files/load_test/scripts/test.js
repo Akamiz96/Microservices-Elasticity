@@ -42,7 +42,7 @@ export let options = {
 export default function () {
   // Realiza una petición HTTP GET al servicio expuesto en el clúster
   // NOTA: Reemplaza '<IP_DEL_CLUSTER>' con la IP del nodo o la IP externa real del servicio
-  http.get('http://<IP_DEL_CLUSTER>:30080');
+  http.get('http://10.195.20.20:30080');
 
   // Simula una pausa entre solicitudes, imitando un usuario real
   sleep(1);

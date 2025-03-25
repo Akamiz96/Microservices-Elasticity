@@ -1,0 +1,7 @@
+timestamp,pod,cpu(millicores),memory(bytes),%cpu,num_pods
+2025-03-25 14:47:48,nginx-test-7cb6548485-9jmmj,0,16Mi,0,3
+2025-03-25 14:47:48,nginx-test-7cb6548485-jj8w5,0,15Mi,0,3
+2025-03-25 14:47:48,nginx-test-7cb6548485-mb2mp,0,16Mi,0,3
+2025-03-25 14:47:58,nginx-test-7cb6548485-9jmmj,0,16Mi,0,3
+2025-03-25 14:47:58,nginx-test-7cb6548485-jj8w5,0,15Mi,0,3
+2025-03-25 14:47:58,nginx-test-7cb6548485-mb2mp,0,16Mi,0,3
