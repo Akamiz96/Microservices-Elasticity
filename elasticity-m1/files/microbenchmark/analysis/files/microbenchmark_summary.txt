@@ -1,0 +1,6 @@
+📊 Microbenchmark Summary
+Total requests: 303
+Máximo de VUs: 10
+Total CPU usada: 16.00 millicores
+CPU por request: 0.05 millicores/request
+CPU por VU: 1.60 millicores/VU
