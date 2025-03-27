@@ -34,7 +34,7 @@ ANALYSIS_DIR="$BASE_DIR/analysis"
 # PASO 1: Desplegar manifiestos en Kubernetes
 # ---------------------------------------------------------------
 echo "[Paso 1] Aplicando manifiestos de Kubernetes..."
-kubectl apply -f "$MANIFESTS_DIR/deployment.yaml"
+kubectl apply -f "$MANIFESTS_DIR/nginx-deployment.yaml"
 kubectl apply -f "$MANIFESTS_DIR/hpa.yaml"
 
 echo "[Info] Esperando 20 segundos para que los pods se inicialicen correctamente..."
