@@ -5,7 +5,7 @@
 # DESCRIPCIÓN: Script específico para recolectar métricas de CPU y memoria de los pods
 #              durante la ejecución del experimento básico de elasticidad.
 #              Guarda los resultados en un archivo CSV fijo como referencia para
-#              comparar demanda estimada vs recursos ofrecidos.
+#              analizar la oferta real de recursos del sistema.
 #
 # AUTOR: Alejandro Castro Martínez
 # FECHA DE MODIFICACIÓN: 27 de marzo de 2025
