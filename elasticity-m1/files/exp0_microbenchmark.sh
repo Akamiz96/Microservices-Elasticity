@@ -20,7 +20,7 @@
 # ---------------------------------------------------------------
 # CONFIGURACIÓN DE RUTAS RELATIVAS
 # ---------------------------------------------------------------
-BASE_DIR="exp0_microbenchmark"
+BASE_DIR="microbenchmark"
 MANIFESTS_DIR="$BASE_DIR/manifests"
 SCRIPTS_DIR="$BASE_DIR/scripts"
 LOADTEST_DIR="$BASE_DIR/loadtest"

@@ -10,13 +10,13 @@
 # FECHA DE MODIFICACIÓN: 27 de marzo de 2025
 # CONTEXTO:
 #   - Diseñado para ser usado exclusivamente con el benchmark_test.js.
-#   - Guarda las métricas en una ruta fija bajo exp0_microbenchmark/output.
+#   - Guarda las métricas en una ruta fija bajo microbenchmark/output.
 # ------------------------------------------------------------------------------
 
 # ---------------------------------------------------------------
 # CONFIGURACIÓN GENERAL
 # ---------------------------------------------------------------
-OUTPUT_DIR="exp0_microbenchmark/output"                   # Carpeta donde se guardará el CSV
+OUTPUT_DIR="microbenchmark/output"                   # Carpeta donde se guardará el CSV
 OUTPUT_FILE="$OUTPUT_DIR/microbenchmark_metrics.csv"      # Archivo de salida fijo
 
 NAMESPACE="default"                                       # Namespace a monitorear

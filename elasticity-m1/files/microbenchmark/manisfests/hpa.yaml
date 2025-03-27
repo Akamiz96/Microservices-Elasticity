@@ -1,0 +1,52 @@
+# ------------------------------------------------------------------------------
+# ARCHIVO: hpa.yaml
+# DESCRIPCIÓN: Este manifiesto crea un HorizontalPodAutoscaler (HPA) en Kubernetes
+#              que escala automáticamente el número de réplicas del deployment
+#              `nginx-test` basado en la utilización promedio de CPU.
+#
+# AUTOR: Alejandro Castro Martínez
+# FECHA DE MODIFICACIÓN: 26 de marzo de 2025
+# CONTEXTO:
+#   - Utilizado en pruebas de escalabilidad horizontal sobre NGINX.
+#   - El HPA monitorea el uso de CPU y ajusta la cantidad de pods en función de la carga.
+#   - Compatible con métricas del recurso CPU definidas en el deployment.
+# ------------------------------------------------------------------------------
+
+# ---------------------------------------------------------------
+# DEFINICIÓN DEL OBJETO: HorizontalPodAutoscaler (v2 API)
+# ---------------------------------------------------------------
+apiVersion: autoscaling/v2  # Versión de la API que permite métricas avanzadas (v2)
+kind: HorizontalPodAutoscaler
+
+# ---------------------------------------------------------------
+# METADATOS DE IDENTIFICACIÓN
+# ---------------------------------------------------------------
+metadata:
+  name: nginx-hpa            # Nombre del objeto HPA dentro del namespace
+
+# ---------------------------------------------------------------
+# ESPECIFICACIONES DEL ESCALADOR
+# ---------------------------------------------------------------
+spec:
+  # Referencia al Deployment que se quiere escalar
+  scaleTargetRef:
+    apiVersion: apps/v1      # API del objeto destino (deployment)
+    kind: Deployment         # Tipo del objeto a escalar
+    name: nginx-test         # Nombre del Deployment que será escalado
+
+  # Límite inferior de réplicas (nunca escalará por debajo de 1 pod)
+  minReplicas: 1
+
+  # Límite superior de réplicas (no escalará más allá de 10 pods)
+  maxReplicas: 10
+
+  # ---------------------------------------------------------------
+  # MÉTRICA DE ESCALADO: Utilización promedio del recurso CPU
+  # ---------------------------------------------------------------
+  metrics:
+    - type: Resource          # Tipo de métrica: recurso del sistema (CPU, memory, etc.)
+      resource:
+        name: cpu             # Se monitoriza el uso del recurso CPU
+        target:
+          type: Utilization   # Tipo de objetivo: porcentaje de utilización
+          averageUtilization: 25  # Umbral de uso promedio. Si se supera el 25% de CPU, se escala.
