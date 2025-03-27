@@ -2,13 +2,13 @@
 # ARCHIVO: analyze_microbenchmark.py
 # DESCRIPCIÓN: Calcula métricas derivadas del microbenchmark, usando la carga
 #              generada por k6 y el consumo de CPU registrado en Kubernetes.
-#              Los resultados se imprimen en consola y se guardan en archivo.
+#              Los resultados se imprimen, se guardan como texto legible y como CSV.
 #
 # AUTOR: Alejandro Castro Martínez
 # FECHA DE MODIFICACIÓN: 27 de marzo de 2025
 # CONTEXTO:
-#   - Este script complementa los gráficos al ofrecer estimaciones numéricas clave.
-#   - El archivo de salida se guarda en 'files/' para que persista vía volumen Docker.
+#   - El archivo .txt es legible para humanos.
+#   - El archivo .csv permite cargar fácilmente los valores numéricos desde scripts.
 # ------------------------------------------------------------------------------
 
 import json
@@ -54,7 +54,21 @@ summary = [
 # Imprimir por consola
 print("\n".join(summary))
 
-# Guardar en archivo
+# Asegurar existencia del directorio
 os.makedirs("files", exist_ok=True)
+
+# Guardar resumen en texto plano
 with open("files/microbenchmark_summary.txt", "w") as out_file:
     out_file.write("\n".join(summary))
+
+# Guardar también en CSV estructurado
+csv_path = "files/microbenchmark_summary.csv"
+csv_data = pd.DataFrame([{
+    "total_requests": total_requests,
+    "vus_max": vus_max,
+    "cpu_total_millicores": round(cpu_total_millicores, 2),
+    "cpu_per_request": round(cpu_per_request, 4),
+    "cpu_per_vu": round(cpu_per_vu, 4)
+}])
+
+csv_data.to_csv(csv_path, index=False)

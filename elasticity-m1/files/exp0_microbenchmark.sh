@@ -24,10 +24,10 @@ BASE_DIR="microbenchmark"
 MANIFESTS_DIR="$BASE_DIR/manifests"
 SCRIPTS_DIR="$BASE_DIR/scripts"
 OUTPUT_DIR="$BASE_DIR/output"
-FILES_DIR="$BASE_DIR/files"
 METRIC_SCRIPT="$SCRIPTS_DIR/metric_collector_microbenchmark.sh"
 BENCHMARK_SCRIPT="$SCRIPTS_DIR/benchmark_test.js"
 ANALYSIS_DIR="$BASE_DIR/analysis"
+FILES_DIR="$ANALYSIS_DIR/files"
 
 # ---------------------------------------------------------------
 # PASO 1: Desplegar manifiestos en Kubernetes
