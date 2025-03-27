@@ -1,14 +1,15 @@
 # ------------------------------------------------------------------------------
-# ARCHIVO: nginx-deployment.yaml
+# ARCHIVO: deployment.yaml
 # DESCRIPCIÓN: Este manifiesto crea un Deployment y un Service en Kubernetes
 #              para ejecutar y exponer una aplicación basada en NGINX.
 #
 # AUTOR: Alejandro Castro Martínez
-# FECHA DE MODIFICACIÓN: 26 de marzo de 2025
+# FECHA DE MODIFICACIÓN: 27 de marzo de 2025
 # CONTEXTO:
-#   - Este deployment es utilizado en pruebas de escalabilidad mediante HPA.
-#   - El servicio expone NGINX por NodePort para permitir pruebas de carga externas.
-#   - Compatible con autoscaling basado en uso de CPU (ver archivo hpa.yaml).
+#   - Este deployment es utilizado en el experimento de elasticidad
+#     `exp1_basic-autoscaling`.
+#   - El servicio expone NGINX mediante un NodePort, permitiendo pruebas de carga externas.
+#   - Compatible con escalado automático basado en uso de CPU (ver `hpa.yaml`).
 # ------------------------------------------------------------------------------
 
 # ---------------------------------------------------------------
@@ -17,21 +18,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-test              # Nombre del Deployment (referenciado en el HPA)
+  name: nginx-basic              # Nombre del Deployment (referenciado en el HPA)
   labels:
-    app: nginx-test             # Etiqueta común para identificar los pods del deployment
+    app: nginx-basic             # Etiqueta común para identificar los pods del deployment
 
 spec:
-  replicas: 1                   # Réplica inicial. Será gestionada dinámicamente por el HPA.
+  replicas: 1                    # Réplica inicial. Será gestionada dinámicamente por el HPA.
 
   selector:
     matchLabels:
-      app: nginx-test           # Selector para identificar los pods gestionados
+      app: nginx-basic           # Selector para identificar los pods gestionados
 
   template:
     metadata:
       labels:
-        app: nginx-test         # Etiqueta que debe coincidir con el selector
+        app: nginx-basic         # Etiqueta que debe coincidir con el selector
 
     spec:
       containers:
@@ -50,19 +51,20 @@ spec:
               cpu: 500m         # Límite máximo de CPU permitido (0.5 core)
               memory: 128Mi     # Límite máximo de memoria
 
+---
 # ---------------------------------------------------------------
 # SERVICE: Expone el Deployment a través de un NodePort externo
 # ---------------------------------------------------------------
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx-service           # Nombre del servicio (puede ser usado en DNS interno)
+  name: nginx-basic-service           # Nombre del servicio (referenciado desde k6)
 spec:
-  type: NodePort                # Permite acceder desde fuera del clúster usando la IP del nodo
+  type: NodePort                      # Permite acceder desde fuera del clúster usando la IP del nodo
   selector:
-    app: nginx-test             # Asocia este servicio a los pods etiquetados como nginx-test
+    app: nginx-basic                  # Asocia este servicio a los pods etiquetados como nginx-basic
   ports:
     - protocol: TCP
-      port: 80                  # Puerto lógico del servicio dentro del clúster
-      targetPort: 80            # Puerto del contenedor al que se redirige el tráfico
-      nodePort: 30080           # Puerto externo accesible desde fuera del clúster (http://<node>:30080)
+      port: 80                        # Puerto lógico del servicio dentro del clúster
+      targetPort: 80                  # Puerto del contenedor al que se redirige el tráfico
+      nodePort: 30080                 # Puerto externo accesible desde fuera del clúster (http://<node>:30080)

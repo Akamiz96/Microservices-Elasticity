@@ -2,51 +2,55 @@
 # ARCHIVO: hpa.yaml
 # DESCRIPCIÓN: Este manifiesto crea un HorizontalPodAutoscaler (HPA) en Kubernetes
 #              que escala automáticamente el número de réplicas del deployment
-#              `nginx-test` basado en la utilización promedio de CPU.
+#              `nginx-basic` basado en la utilización promedio de CPU.
 #
 # AUTOR: Alejandro Castro Martínez
-# FECHA DE MODIFICACIÓN: 26 de marzo de 2025
+# FECHA DE MODIFICACIÓN: 27 de marzo de 2025
 # CONTEXTO:
-#   - Utilizado en pruebas de escalabilidad horizontal sobre NGINX.
-#   - El HPA monitorea el uso de CPU y ajusta la cantidad de pods en función de la carga.
-#   - Compatible con métricas del recurso CPU definidas en el deployment.
+#   - Utilizado en el experimento `exp1_basic-autoscaling` para observar la
+#     respuesta del sistema ante cargas variables.
+#   - El HPA monitorea el uso de CPU de los pods y ajusta su cantidad según
+#     la configuración establecida.
+#   - Compatible con métricas del recurso CPU definidas en el deployment asociado.
 # ------------------------------------------------------------------------------
 
 # ---------------------------------------------------------------
 # DEFINICIÓN DEL OBJETO: HorizontalPodAutoscaler (v2 API)
 # ---------------------------------------------------------------
-apiVersion: autoscaling/v2  # Versión de la API que permite métricas avanzadas (v2)
+apiVersion: autoscaling/v2  # Versión avanzada que permite más tipos de métricas
 kind: HorizontalPodAutoscaler
 
 # ---------------------------------------------------------------
 # METADATOS DE IDENTIFICACIÓN
 # ---------------------------------------------------------------
 metadata:
-  name: nginx-hpa            # Nombre del objeto HPA dentro del namespace
+  name: nginx-basic-hpa            # Nombre único del objeto HPA
+  labels:
+    app: nginx-basic               # Etiqueta para trazabilidad
 
 # ---------------------------------------------------------------
 # ESPECIFICACIONES DEL ESCALADOR
 # ---------------------------------------------------------------
 spec:
-  # Referencia al Deployment que se quiere escalar
+  # Referencia directa al Deployment que se desea escalar
   scaleTargetRef:
-    apiVersion: apps/v1      # API del objeto destino (deployment)
-    kind: Deployment         # Tipo del objeto a escalar
-    name: nginx-test         # Nombre del Deployment que será escalado
+    apiVersion: apps/v1            # API del objeto destino (Deployment)
+    kind: Deployment               # Tipo del objeto a escalar
+    name: nginx-basic              # Nombre exacto del Deployment objetivo
 
-  # Límite inferior de réplicas (nunca escalará por debajo de 1 pod)
-  minReplicas: 1
-
-  # Límite superior de réplicas (no escalará más allá de 10 pods)
-  maxReplicas: 10
+  # ---------------------------------------------------------------
+  # RANGO DE ESCALADO PERMITIDO
+  # ---------------------------------------------------------------
+  minReplicas: 1                   # Límite inferior (siempre al menos 1 pod activo)
+  maxReplicas: 10                  # Límite superior (no escalará por encima de 10 pods)
 
   # ---------------------------------------------------------------
   # MÉTRICA DE ESCALADO: Utilización promedio del recurso CPU
   # ---------------------------------------------------------------
   metrics:
-    - type: Resource          # Tipo de métrica: recurso del sistema (CPU, memory, etc.)
+    - type: Resource               # Tipo de métrica basada en recursos del sistema
       resource:
-        name: cpu             # Se monitoriza el uso del recurso CPU
+        name: cpu                 # Se monitoriza el uso de CPU
         target:
-          type: Utilization   # Tipo de objetivo: porcentaje de utilización
-          averageUtilization: 25  # Umbral de uso promedio. Si se supera el 25% de CPU, se escala.
+          type: Utilization       # Objetivo definido como porcentaje de uso
+          averageUtilization: 25  # Si el uso promedio supera 25%, se activa el escalado
