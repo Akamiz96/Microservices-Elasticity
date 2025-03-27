@@ -1,0 +1,2 @@
+total_requests,vus_max,cpu_total_millicores,cpu_per_request,cpu_per_vu
+303,10,16,0.0528,1.6
