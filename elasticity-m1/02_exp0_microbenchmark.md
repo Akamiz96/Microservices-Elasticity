@@ -122,17 +122,19 @@ files/microbenchmark/
 ├── manifests/                            # Archivos YAML para despliegue
 │   ├── deployment.yaml                   # Deployment del pod nginx con requests/limits
 │   └── hpa.yaml                          # Autoscaler HPA con CPU objetivo = 25%
-├── loadtest/
-│   └── benchmark_test.js                # Script k6 para generar carga controlada
 ├── scripts/
 │   └── metric_collector_microbenchmark.sh # Recolector de CPU y n. de pods
+│   └── benchmark_test.js                # Script k6 para generar carga controlada
 ├── output/
 │   ├── microbenchmark_metrics.csv        # Métricas recolectadas por el script
 │   └── k6_summary.json                   # Resumen de carga generado por k6
-├── files/
-│   ├── microbenchmark_summary.txt        # Resultados legibles por humanos
-│   └── microbenchmark_summary.csv        # Resultados estructurados en una fila CSV
 └── analysis/
+    ├── files/
+    │   ├── microbenchmark_summary.txt        # Resultados legibles por humanos
+    │   └── microbenchmark_summary.csv        # Resultados estructurados en una fila CSV
+    ├── images/
+    │   ├── cpu_usage_per_pod.png           # Grafica sobre el uso de CPU por pod 
+    │   └── pod_count_over_time.png        # Grafica de pods a traves del tiempo
     ├── plot_cpu_usage.py                 # Genera gráfico de uso de CPU por pod
     ├── plot_pod_count.py                 # Gráfico del n. de pods activos
     ├── analyze_microbenchmark.py         # Calcula CPU/request y CPU/VU
