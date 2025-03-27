@@ -23,11 +23,10 @@
 BASE_DIR="microbenchmark"
 MANIFESTS_DIR="$BASE_DIR/manifests"
 SCRIPTS_DIR="$BASE_DIR/scripts"
-LOADTEST_DIR="$BASE_DIR/loadtest"
 OUTPUT_DIR="$BASE_DIR/output"
 FILES_DIR="$BASE_DIR/files"
 METRIC_SCRIPT="$SCRIPTS_DIR/metric_collector_microbenchmark.sh"
-BENCHMARK_SCRIPT="$LOADTEST_DIR/benchmark_test.js"
+BENCHMARK_SCRIPT="$SCRIPTS_DIR/benchmark_test.js"
 ANALYSIS_DIR="$BASE_DIR/analysis"
 
 # ---------------------------------------------------------------
