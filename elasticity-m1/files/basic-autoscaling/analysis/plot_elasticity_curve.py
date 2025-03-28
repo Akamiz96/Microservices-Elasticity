@@ -99,6 +99,10 @@ df_combined = pd.merge_asof(
     tolerance=pd.Timedelta("10s")
 )
 
+
+# ✅ Eliminar filas incompletas para evitar cortes en la gráfica
+df_combined.dropna(subset=["demand", "supply"], inplace=True)
+
 # ---------------------------------------------------------------
 # ETAPA 6: Graficar curva de elasticidad
 # ---------------------------------------------------------------
@@ -116,9 +120,17 @@ for i in range(len(df_combined) - 1):
     elif s0 > d0:
         plt.fill_between([t0, t1], [d0, d1], [s0, s1], color="skyblue", alpha=0.3, label="Overprovisioning" if i == 0 else "")
 
+# ---------------------------------------------------------------
+# SUBTÍTULO: Nombre del deployment a partir del nombre del pod
+# ---------------------------------------------------------------
+primer_pod = df["pod"].iloc[0]
+deployment_name = "-".join(primer_pod.split("-")[:-2])  # Elimina sufijos de replicaset
+subtitle = f"Deployment: {deployment_name}"
+
 plt.xlabel("Tiempo")
 plt.ylabel("CPU (millicores)")
-plt.title("Curva de Elasticidad: Demanda vs Oferta")
+plt.title("Curva de Elasticidad: Demanda vs Oferta", fontsize=16)
+plt.suptitle(subtitle, fontsize=10, y=0.93)
 plt.xticks(rotation=45)
 plt.grid()
 plt.legend()
