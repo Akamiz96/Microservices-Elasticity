@@ -91,7 +91,13 @@ df_vus["demand"] = df_vus["vus"] * cpu_per_vu
 # ---------------------------------------------------------------
 # ETAPA 5: Unir demanda y oferta por timestamp
 # ---------------------------------------------------------------
-df_combined = pd.merge(df_supply, df_vus, on="timestamp", how="inner")
+df_combined = pd.merge_asof(
+    df_vus.sort_values("timestamp"),
+    df_supply.sort_values("timestamp"),
+    on="timestamp",
+    direction="nearest",
+    tolerance=pd.Timedelta("10s")
+)
 
 # ---------------------------------------------------------------
 # ETAPA 6: Graficar curva de elasticidad
