@@ -19,6 +19,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from datetime import datetime, timedelta
 import os
+from matplotlib.patches import Patch
 
 # ==============================================================================
 # IMPORTANTE: MODIFICAR SEGÚN MICROBENCHMARK
@@ -120,6 +121,16 @@ for i in range(len(df_combined) - 1):
     elif s0 > d0:
         plt.fill_between([t0, t1], [d0, d1], [s0, s1], color="skyblue", alpha=0.3, label="Overprovisioning" if i == 0 else "")
 
+
+# Crear parches personalizados si alguna categoría no apareció primero
+handles, labels = plt.gca().get_legend_handles_labels()
+
+if "Underprovisioning" not in labels:
+    handles.append(Patch(color="orange", alpha=0.3, label="Underprovisioning"))
+
+if "Overprovisioning" not in labels:
+    handles.append(Patch(color="skyblue", alpha=0.3, label="Overprovisioning"))
+
 # ---------------------------------------------------------------
 # SUBTÍTULO: Nombre del deployment a partir del nombre del pod
 # ---------------------------------------------------------------
@@ -130,15 +141,15 @@ subtitle = f"Deployment: {deployment_name}"
 plt.xlabel("Tiempo")
 plt.ylabel("CPU (millicores)")
 plt.title("Curva de Elasticidad: Demanda vs Oferta", fontsize=16)
-plt.suptitle(subtitle, fontsize=10, y=0.93)
+plt.suptitle(subtitle, fontsize=10)
 plt.xticks(rotation=45)
 plt.grid()
-plt.legend()
+plt.legend(handles=handles)
 plt.tight_layout()
 
 # ---------------------------------------------------------------
 # GUARDAR LA GRÁFICA
 # ---------------------------------------------------------------
-os.makedirs("analysis/images", exist_ok=True)
-plt.savefig("analysis/images/elasticity_curve.png")
+os.makedirs("images", exist_ok=True)
+plt.savefig("images/elasticity_curve.png")
 plt.show()

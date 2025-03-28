@@ -51,15 +51,15 @@ plt.suptitle("Uso de CPU por pod a lo largo del tiempo", fontsize=16)
 # ---------------------------------------------------------------
 # GUARDAR GRAFICO PRINCIPAL
 # ---------------------------------------------------------------
-os.makedirs("analysis/images", exist_ok=True)
-main_image_path = "analysis/images/cpu_usage_per_pod.png"
+os.makedirs("images", exist_ok=True)
+main_image_path = "images/cpu_usage_per_pod.png"
 plt.savefig(main_image_path)
 plt.show()
 
 # ---------------------------------------------------------------
 # GRAFICOS INDIVIDUALES POR POD
 # ---------------------------------------------------------------
-individual_dir = "analysis/images/cpu_pod"
+individual_dir = "images/cpu_pod"
 os.makedirs(individual_dir, exist_ok=True)
 
 for idx, pod in enumerate(pods_unicos, start=1):
