@@ -23,7 +23,7 @@ WORKDIR /app
 # Copiar scripts de análisis y dependencias
 COPY plot_cpu_usage.py .
 COPY plot_pod_count.py .
-COPY analyze_basic_load.py .
+COPY plot_elasticity_curve.py .
 COPY requirements.txt .
 
 # Instalar dependencias necesarias
@@ -33,4 +33,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 RUN mkdir -p output analysis/images analysis/files
 
 # Comando por defecto al ejecutar el contenedor: correr los scripts de análisis
-CMD ["sh", "-c", "python plot_cpu_usage.py && python plot_pod_count.py && python analyze_basic_load.py"]
+CMD ["sh", "-c", "python plot_cpu_usage.py && python plot_pod_count.py && python plot_elasticity_curve.py"]
