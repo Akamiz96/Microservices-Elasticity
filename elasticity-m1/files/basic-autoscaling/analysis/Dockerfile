@@ -4,33 +4,44 @@
 #              `exp1_basic-autoscaling`, incluyendo visualizaciones y estimaciones.
 #
 # AUTOR: Alejandro Castro Martínez
-# FECHA DE MODIFICACIÓN: 28 de marzo de 2025
+# FECHA DE MODIFICACIÓN: 29 de marzo de 2025
 # CONTEXTO:
-#   - Este contenedor se usa exclusivamente para ejecutar los scripts:
+#   - Este contenedor ejecuta automáticamente:
+#       - filter_scaling_events.py
 #       - plot_cpu_usage.py
 #       - plot_pod_count.py
+#       - plot_pod_count_with_events.py
 #       - plot_elasticity_curve.py
-#   - Requiere que los volúmenes 'output/', 'analysis/images/' y 'analysis/files/' estén montados.
-#   - Debe ser ejecutado desde la raíz de 'files/basic-autoscaling/'.
+#       - plot_elasticity_curve_with_events.py
+#   - Requiere los volúmenes 'output/', 'analysis/images/' y 'analysis/files/' montados.
 # ------------------------------------------------------------------------------
 
-# Imagen base con Python 3 ligero
+# Imagen base ligera con Python 3
 FROM python:3.10-slim
 
-# Establecer el directorio de trabajo dentro del contenedor
+# Establecer directorio de trabajo
 WORKDIR /app
 
-# Copiar scripts de análisis y dependencias
+# Copiar scripts de análisis
+COPY filter_scaling_events.py .
 COPY plot_cpu_usage.py .
 COPY plot_pod_count.py .
+COPY plot_pod_count_with_events.py .
 COPY plot_elasticity_curve.py .
+COPY plot_elasticity_curve_with_events.py .
 COPY requirements.txt .
 
-# Instalar dependencias necesarias
+# Instalar dependencias
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Crear carpetas para entrada/salida (montadas como volúmenes en tiempo de ejecución)
+# Crear carpetas necesarias (aunque serán sobrescritas por los volúmenes)
 RUN mkdir -p output images files
 
-# Comando por defecto: ejecutar los 3 scripts secuencialmente
-CMD ["sh", "-c", "python plot_cpu_usage.py && python plot_pod_count.py && python plot_elasticity_curve.py"]
+# Comando por defecto: ejecutar todo el flujo de análisis
+CMD ["sh", "-c", "\
+    python filter_scaling_events.py && \
+    python plot_cpu_usage.py && \
+    python plot_pod_count.py && \
+    python plot_pod_count_with_events.py && \
+    python plot_elasticity_curve.py && \
+    python plot_elasticity_curve_with_events.py"]
