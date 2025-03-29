@@ -5,12 +5,13 @@
 # DESCRIPCIÓN: Automatiza el flujo completo del experimento básico de elasticidad:
 #              - Despliegue de recursos NGINX + HPA en Kubernetes
 #              - Recolección de métricas de CPU y pods
+#              - Captura de eventos del Deployment (escalado)
 #              - Ejecución de prueba escalonada con k6
 #              - Análisis completo de elasticidad (gráficos y métricas)
 #              - Limpieza de recursos
 #
 # AUTOR: Alejandro Castro Martínez
-# FECHA DE MODIFICACIÓN: 27 de marzo de 2025
+# FECHA DE MODIFICACIÓN: 29 de marzo de 2025
 # CONTEXTO:
 #   - Utilizado para calcular y visualizar la elasticidad de un microservicio
 #     usando la métrica de oferta vs demanda en función del tiempo.
@@ -24,6 +25,7 @@ MANIFESTS_DIR="$BASE_DIR/manifests"
 SCRIPTS_DIR="$BASE_DIR/scripts"
 OUTPUT_DIR="$BASE_DIR/output"
 METRIC_SCRIPT="$SCRIPTS_DIR/metric_collector_basic.sh"
+EVENTS_SCRIPT="$SCRIPTS_DIR/capture_deployment_events.sh"
 LOAD_SCRIPT="$SCRIPTS_DIR/basic_load_test.js"
 ANALYSIS_DIR="$BASE_DIR/analysis"
 FILES_DIR="$ANALYSIS_DIR/files"
@@ -53,13 +55,20 @@ echo ""
 read -p "Presiona ENTER para continuar una vez que hayas actualizado la IP..."
 
 # ---------------------------------------------------------------
-# PASO 3: Iniciar recolección de métricas en segundo plano
+# PASO 3: Iniciar recolección de métricas y eventos en segundo plano
 # ---------------------------------------------------------------
-echo "[Paso 3] Iniciando recolección de métricas..."
+echo "[Paso 3] Iniciando recolección de métricas y eventos del deployment..."
+
+# Recolector de métricas
 bash "$METRIC_SCRIPT" &
 METRIC_PID=$!
 
+# Captura de eventos
+bash "$EVENTS_SCRIPT" > "$FILES_DIR/deployment_events.log" &
+EVENTS_PID=$!
+
 echo "[Info] Recolector de métricas iniciado con PID $METRIC_PID"
+echo "[Info] Captura de eventos iniciada con PID $EVENTS_PID"
 sleep 5
 
 # ---------------------------------------------------------------
@@ -78,10 +87,11 @@ echo "[Paso 5] Esperando 30 segundos adicionales para observar estabilización..
 sleep 30
 
 # ---------------------------------------------------------------
-# PASO 6: Detener recolección de métricas
+# PASO 6: Detener procesos de recolección
 # ---------------------------------------------------------------
-echo "[Paso 6] Deteniendo recolección de métricas..."
+echo "[Paso 6] Deteniendo recolección de métricas y eventos..."
 kill "$METRIC_PID"
+kill "$EVENTS_PID"
 
 # ---------------------------------------------------------------
 # PASO 7: Ejecutar análisis y visualizaciones
@@ -91,6 +101,7 @@ echo "[Paso 7] Ejecutando análisis automático con Docker..."
 docker build -t basic-autoscaling-analysis "$ANALYSIS_DIR"
 docker run --rm \
   -v "$(pwd)/$OUTPUT_DIR:/app/output" \
+  -v "$(pwd)/$FILES_DIR:/app/files" \
   -v "$(pwd)/$ANALYSIS_DIR/images:/app/images" \
   basic-autoscaling-analysis
 
@@ -111,9 +122,12 @@ echo "Archivos generados:"
 echo "  - Métricas del sistema:           $OUTPUT_DIR/basic_metrics.csv"
 echo "  - Resumen de carga (k6):          $OUTPUT_DIR/k6_summary.json"
 echo "  - Timestamp de inicio k6:         $OUTPUT_DIR/k6_start_time.txt"
+echo "  - Eventos del deployment:         $FILES_DIR/deployment_events.log"
 echo ""
 echo "Imágenes generadas en:"
-echo "  - Curva de CPU por pod:           $ANALYSIS_DIR/images/cpu_usage_per_pod.png"
+echo "  - CPU por pod:                    $ANALYSIS_DIR/images/cpu_usage_per_pod.png"
+echo "  - CPU por pod + eventos:          $ANALYSIS_DIR/images/cpu_usage_per_pod_with_events.png"
 echo "  - Evolución de pods:              $ANALYSIS_DIR/images/pod_count_over_time.png"
-echo "  - Curva de elasticidad:           $ANALYSIS_DIR/images/elasticity_curve.png"
-
+echo "  - Pods + eventos:                 $ANALYSIS_DIR/images/pod_count_over_time_with_events.png"
+echo "  - Elasticidad:                    $ANALYSIS_DIR/images/elasticity_curve.png"
+echo "  - Elasticidad + eventos:          $ANALYSIS_DIR/images/elasticity_curve_with_events.png"
