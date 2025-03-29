@@ -25,7 +25,7 @@ df = df[["timestamp", "pod", "%cpu"]]
 # ==============================================================================
 # ETAPA 2: CARGA DE EVENTOS DE ESCALAMIENTO
 # ==============================================================================
-df_events = pd.read_csv("files/filtered_deployment_events.csv")
+df_events = pd.read_csv("output/filtered_deployment_events.csv")
 df_events["timestamp"] = pd.to_datetime(df_events["timestamp"], errors="coerce")
 
 # ==============================================================================

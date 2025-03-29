@@ -15,12 +15,17 @@
 # ---------------------------------------------------------------
 # CONFIGURACIÓN
 # ---------------------------------------------------------------
-OUTPUT_DIR="basic-autoscaling/output"
-OUTPUT_FILE="$OUTPUT_DIR/scaling_events.csv"
-NAMESPACE="default"
-DEPLOYMENT_NAME="nginx-test"
+OUTPUT_DIR="basic-autoscaling/output"                  # Carpeta donde se guardará el CSV
+OUTPUT_FILE="$OUTPUT_DIR/basic_metrics.csv"            # Archivo de salida fijo
 
-mkdir -p "$OUTPUT_DIR"
+NAMESPACE="default"                                    # Namespace a monitorear
+DEPLOYMENT_NAME="nginx-basic"                          # Deployment objetivo
+INTERVAL=10                                            # Intervalo de recolección (segundos)
+
+# ---------------------------------------------------------------
+# PREPARACIÓN DEL DIRECTORIO DE SALIDA
+# ---------------------------------------------------------------
+mkdir -p "$OUTPUT_DIR"                                 # Crear carpeta si no existe
 
 # Encabezado del archivo CSV
 echo "timestamp,scaling_direction,message" > "$OUTPUT_FILE"
@@ -42,5 +47,3 @@ kubectl get events -n "$NAMESPACE" --field-selector involvedObject.name=$DEPLOYM
         echo "$TIMESTAMP,down,\"$MESSAGE\"" >> "$OUTPUT_FILE"
     fi
 done
-
-echo "[✔] Eventos de escalamiento guardados en $OUTPUT_FILE"

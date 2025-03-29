@@ -9,7 +9,7 @@
 # CONTEXTO:
 #   - Requiere:
 #       - output/basic_metrics.csv → para graficar número de pods en el tiempo.
-#       - analysis/files/filtered_deployment_events.csv → para los eventos HPA.
+#       - output/filtered_deployment_events.csv → para los eventos HPA.
 # ------------------------------------------------------------------------------
 
 import pandas as pd
@@ -26,7 +26,7 @@ df["num_pods"] = pd.to_numeric(df["num_pods"], errors="coerce")
 # ---------------------------------------------------------------
 # CARGA DE EVENTOS DE ESCALAMIENTO
 # ---------------------------------------------------------------
-df_events = pd.read_csv("files/filtered_deployment_events.csv")
+df_events = pd.read_csv("output/filtered_deployment_events.csv")
 df_events["timestamp"] = pd.to_datetime(df_events["timestamp"], errors="coerce")
 
 # ---------------------------------------------------------------
