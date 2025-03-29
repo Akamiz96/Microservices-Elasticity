@@ -46,17 +46,32 @@ sleep 2
 # 3. Instalación de kubeadm, kubelet y kubectl
 # ================================================
 echo "[FASE 3] Instalando herramientas de Kubernetes..."
+
 if ! command -v kubeadm &> /dev/null; then
-    sudo apt install -y apt-transport-https ca-certificates curl
-    curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
-    echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+    sudo apt install -y apt-transport-https ca-certificates curl gnupg
+
+    # Crear el directorio para la clave si no existe
+    sudo mkdir -p /etc/apt/keyrings
+
+    # Descargar y almacenar la nueva clave GPG
+    curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.29/deb/Release.key | \
+        gpg --dearmor | sudo tee /etc/apt/keyrings/kubernetes-apt-keyring.gpg > /dev/null
+
+    # Agregar el nuevo repositorio
+    echo "deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] \
+https://pkgs.k8s.io/core:/stable:/v1.29/deb/ /" | \
+        sudo tee /etc/apt/sources.list.d/kubernetes.list
+
+    # Actualizar e instalar los paquetes
     sudo apt update
     sudo apt install -y kubelet kubeadm kubectl
     sudo apt-mark hold kubelet kubeadm kubectl
 else
     echo "kubeadm, kubelet y kubectl ya están instalados."
 fi
+
 sleep 2
+
 
 # ================================================
 # 4. Configuración del entorno
