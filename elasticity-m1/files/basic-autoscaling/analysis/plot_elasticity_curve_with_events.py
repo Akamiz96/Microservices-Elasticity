@@ -10,7 +10,7 @@
 #   - Utiliza como entrada:
 #       - output/basic_metrics.csv → oferta observada (CPU real).
 #       - output/k6_start_time.txt → timestamp inicial del experimento.
-#       - output/filtered_deployment_events.csv → eventos reales del HPA.
+#       - output/scaling_events_clean.csv → eventos reales del HPA.
 #   - La demanda se simula desde los stages de k6 y el CPU por VU
 #     obtenido del microbenchmark.
 # ------------------------------------------------------------------------------
@@ -90,7 +90,7 @@ df_combined = pd.merge_asof(
 # ---------------------------------------------------------------
 # ETAPA 5: CARGA DE EVENTOS DE ESCALAMIENTO
 # ---------------------------------------------------------------
-df_events = pd.read_csv("output/filtered_deployment_events.csv")
+df_events = pd.read_csv("output/scaling_events_clean.csv")
 df_events["timestamp"] = pd.to_datetime(df_events["timestamp"], errors="coerce")
 
 # ---------------------------------------------------------------

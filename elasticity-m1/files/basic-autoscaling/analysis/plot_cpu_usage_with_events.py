@@ -6,6 +6,10 @@
 #
 # AUTOR: Alejandro Castro Martínez
 # FECHA DE MODIFICACIÓN: 29 de marzo de 2025
+# CONTEXTO:
+#   - Utiliza como entrada:
+#       - output/basic_metrics.csv → oferta observada (CPU real).
+#       - output/scaling_events_clean.csv → eventos reales del HPA.
 # ------------------------------------------------------------------------------
 
 import pandas as pd
@@ -25,7 +29,7 @@ df = df[["timestamp", "pod", "%cpu"]]
 # ==============================================================================
 # ETAPA 2: CARGA DE EVENTOS DE ESCALAMIENTO
 # ==============================================================================
-df_events = pd.read_csv("output/filtered_deployment_events.csv")
+df_events = pd.read_csv("output/scaling_events_clean.csv")
 df_events["timestamp"] = pd.to_datetime(df_events["timestamp"], errors="coerce")
 
 # ==============================================================================

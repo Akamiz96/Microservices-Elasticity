@@ -16,7 +16,7 @@
 # CONFIGURACIÓN
 # ---------------------------------------------------------------
 OUTPUT_DIR="basic-autoscaling/output"                  # Carpeta donde se guardará el CSV
-OUTPUT_FILE="$OUTPUT_DIR/basic_metrics.csv"            # Archivo de salida fijo
+OUTPUT_FILE="$OUTPUT_DIR/scaling_events.csv"           # Archivo de salida fijo
 
 NAMESPACE="default"                                    # Namespace a monitorear
 DEPLOYMENT_NAME="nginx-basic"                          # Deployment objetivo

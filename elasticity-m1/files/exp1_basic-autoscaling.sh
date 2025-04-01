@@ -64,7 +64,7 @@ bash "$METRIC_SCRIPT" &
 METRIC_PID=$!
 
 # Captura de eventos
-bash "$EVENTS_SCRIPT" > "$FILES_DIR/deployment_events.log" &
+bash "$EVENTS_SCRIPT" &
 EVENTS_PID=$!
 
 echo "[Info] Recolector de métricas iniciado con PID $METRIC_PID"
@@ -122,7 +122,7 @@ echo "Archivos generados:"
 echo "  - Métricas del sistema:           $OUTPUT_DIR/basic_metrics.csv"
 echo "  - Resumen de carga (k6):          $OUTPUT_DIR/k6_summary.json"
 echo "  - Timestamp de inicio k6:         $OUTPUT_DIR/k6_start_time.txt"
-echo "  - Eventos del deployment:         $FILES_DIR/deployment_events.log"
+echo "  - Eventos del deployment:         $OUTPUT_DIR/scaling_events.csv"
 echo ""
 echo "Imágenes generadas en:"
 echo "  - CPU por pod:                    $ANALYSIS_DIR/images/cpu_usage_per_pod.png"
