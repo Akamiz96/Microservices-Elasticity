@@ -85,6 +85,6 @@ for idx, (pod, color) in enumerate(zip(pods_unicos, palette), start=1):
     plt.tight_layout()
     plt.xticks(rotation=45)
 
-    output_path = f"images/cpu_pod_events/pod{idx}_cpu_with_events.png"
+    output_path = f"images/cpu_pod/pod{idx}_cpu_with_events.png"
     plt.savefig(output_path)
     plt.close()
