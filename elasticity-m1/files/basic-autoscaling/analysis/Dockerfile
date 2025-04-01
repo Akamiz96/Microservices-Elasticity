@@ -24,11 +24,12 @@ WORKDIR /app
 
 # Copiar scripts de análisis
 COPY filter_scaling_events.py .
+COPY plot_cpu_usage_with_events .
 COPY plot_cpu_usage.py .
-COPY plot_pod_count.py .
-COPY plot_pod_count_with_events.py .
-COPY plot_elasticity_curve.py .
 COPY plot_elasticity_curve_with_events.py .
+COPY plot_elasticity_curve.py .
+COPY plot_pod_count_with_events.py .
+COPY plot_pod_count.py .
 COPY requirements.txt .
 
 # Instalar dependencias

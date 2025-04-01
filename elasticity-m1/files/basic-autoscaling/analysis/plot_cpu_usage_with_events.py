@@ -60,7 +60,6 @@ plt.suptitle("Uso de CPU por Pod en el Tiempo con Eventos de Escalamiento", y=0.
 plt.tight_layout(rect=[0, 0, 1, 0.96])
 
 # Guardar gráfico general
-os.makedirs("images/cpu_pod_events", exist_ok=True)
 plt.savefig("images/cpu_usage_per_pod_with_events.png")
 plt.close()
 
