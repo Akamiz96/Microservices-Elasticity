@@ -27,3 +27,16 @@ id_rsa*
 *.pem
 *.crt
 *.key
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de configuración local
+*.log
+*.swp
+*.swo
+
+# Directorio de plantillas (NO ignorar .github/PULL_REQUEST_TEMPLATE/)
+!.github/
+!.github/PULL_REQUEST_TEMPLATE/

@@ -157,3 +157,15 @@ cd elasticlab
 
 Este proyecto está bajo la licencia **Apache 2.0**. Consulta el archivo `LICENSE` para más detalles.
 
+---
+
+## 🤝 Contribuciones
+
+Este repositorio incluye plantillas de Pull Request en **español** e **inglés**.
+
+Cuando abras un nuevo PR, GitHub te permitirá elegir una de las siguientes plantillas:
+
+- 📄 `pr_template_es.md` – Plantilla en español
+- 📄 `pr_template_en.md` – Template in English
+
+Por favor, usa una de ellas para facilitar la revisión y mantener la consistencia del proyecto. 🚀
