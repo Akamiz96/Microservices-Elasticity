@@ -51,7 +51,7 @@ for i, (pod, color) in enumerate(zip(pods_unicos, palette)):
 
     # Dibujar eventos de escalamiento
     for _, event in df_events.iterrows():
-        line_color = "green" if event["scale_action"] == "scaleup" else "red"
+        line_color = "green" if event["scaling_direction"] == "scaleup" else "red"
         axes[i].axvline(event["timestamp"], color=line_color, linestyle="--", alpha=0.7)
 
 axes[-1].set_xlabel("Tiempo")
