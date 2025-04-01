@@ -2,16 +2,16 @@
 
 # ------------------------------------------------------------------------------
 # ARCHIVO: capture_deployment_events.sh
-# DESCRIPCIÓN: Script para recolectar eventos de escalamiento del Deployment
-#              en Kubernetes, registrando únicamente los eventos "Scaled up"
-#              o "Scaled down". Se guarda un log estructurado con timestamp real.
+# DESCRIPCIÓN: Script para recolectar periódicamente todos los eventos del tipo
+#              Deployment en Kubernetes, registrándolos con timestamp real del sistema.
+#              Esta versión no filtra eventos de escalamiento, sino que los deja
+#              todos en un log plano que luego puede ser procesado por un script externo.
 #
 # AUTOR: Alejandro Castro Martínez
-# FECHA DE MODIFICACIÓN: 29 de marzo de 2025
+# FECHA DE MODIFICACIÓN: 30 de marzo de 2025
 # CONTEXTO:
-#   - Este script captura eventos generados por el HPA durante la ejecución
-#     de una prueba de elasticidad.
-#   - Se ejecuta en segundo plano y se sincroniza con la recolección de métricas.
+#   - Se ejecuta en segundo plano durante la prueba de carga.
+#   - El procesamiento posterior del log permite extraer los eventos de escalamiento.
 # ------------------------------------------------------------------------------
 
 # ---------------------------------------------------------------
@@ -25,41 +25,20 @@ DEPLOYMENT_NAME="nginx-basic"                          # Nombre del deployment o
 INTERVAL=10                                            # Intervalo de muestreo en segundos
 
 # ---------------------------------------------------------------
-# PREPARACIÓN DEL DIRECTORIO DE SALIDA
-# ---------------------------------------------------------------
-mkdir -p "$OUTPUT_DIR"                                 # Asegurar que exista la carpeta de salida
-
-# Encabezado del archivo CSV
-echo "timestamp,scaling_direction,message" > "$OUTPUT_FILE"
-
-# ---------------------------------------------------------------
 # BUCLE DE RECOLECCIÓN DE EVENTOS
 # ---------------------------------------------------------------
 while true; do
-    TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S")             # Timestamp real del sistema
+    TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S")  # Timestamp del sistema en tiempo real
 
-    # Obtener eventos recientes del deployment, ordenados por fecha de creación
-    EVENTS=$(kubectl get events -n "$NAMESPACE" --sort-by=.metadata.creationTimestamp | grep "deployment/$DEPLOYMENT_NAME" | grep -E "Scaled up|Scaled down")
+    # Obtener eventos del tipo Deployment, ordenados por su creación
+    EVENTS=$(kubectl get events --sort-by=.metadata.creationTimestamp -n $NAMESPACE | grep $DEPLOYMENT_NAME)
 
-    # Si hay eventos, procesarlos línea por línea
+    # Si se encontraron eventos, procesarlos uno por uno
     if [[ ! -z "$EVENTS" ]]; then
         while IFS= read -r LINE; do
-
-            # Determinar tipo de evento (escalado hacia arriba o hacia abajo)
-            if echo "$LINE" | grep -q "Scaled up"; then
-                DIRECTION="scaleup"
-            else
-                DIRECTION="scaledown"
-            fi
-
-            # Escapar comillas internas para que el CSV no se rompa
-            MESSAGE=$(echo "$LINE" | sed 's/"/""/g')
-
-            # Escribir línea estructurada en el CSV
-            echo "\"$TIMESTAMP\",\"$DIRECTION\",\"$MESSAGE\"" >> "$OUTPUT_FILE"
+            echo "[$TIMESTAMP] $LINE" >> $OUTPUT_FILE
         done <<< "$EVENTS"
     fi
 
-    # Esperar antes del siguiente ciclo
-    sleep "$INTERVAL"
+    sleep $INTERVAL
 done

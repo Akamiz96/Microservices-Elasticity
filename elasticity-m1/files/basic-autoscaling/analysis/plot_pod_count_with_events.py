@@ -37,7 +37,7 @@ plt.plot(df["timestamp"], df["num_pods"], label="Active Pods", marker="o", linew
 
 # Dibujar líneas verticales para eventos
 for _, event in df_events.iterrows():
-    color = "green" if event["scaling_direction"] == "scaleup" else "red"
+    color = "green" if event["scale_action"] == "scaleup" else "red"
     plt.axvline(x=event["timestamp"], color=color, linestyle="--", alpha=0.7)
 
 plt.xlabel("Tiempo")

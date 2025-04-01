@@ -112,7 +112,7 @@ for i in range(len(df_combined) - 1):
 
 # Eventos HPA: líneas verticales
 for _, event in df_events.iterrows():
-    color = "green" if event["scaling_direction"] == "scaleup" else "red"
+    color = "green" if event["scale_action"] == "scaleup" else "red"
     plt.axvline(event["timestamp"], color=color, linestyle="--", alpha=0.7, linewidth=1.2)
 
 plt.xlabel("Tiempo")
