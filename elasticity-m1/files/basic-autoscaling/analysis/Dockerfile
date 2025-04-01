@@ -41,6 +41,7 @@ RUN mkdir -p output images files
 CMD ["sh", "-c", "\
     python filter_scaling_events.py && \
     python plot_cpu_usage.py && \
+    python plot_cpu_usage_with_events.py && \
     python plot_pod_count.py && \
     python plot_pod_count_with_events.py && \
     python plot_elasticity_curve.py && \
