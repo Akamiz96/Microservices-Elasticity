@@ -13870,3 +13870,747 @@
 [2025-04-01 15:31:38] 4m53s       Normal    Created                        pod/nginx-basic-76dd66bf4f-4gg96          Created container nginx
 [2025-04-01 15:31:38] 4m53s       Normal    Pulled                         pod/nginx-basic-76dd66bf4f-4gg96          Successfully pulled image "nginx:latest" in 1.746s (1.746s including waiting). Image size: 72180980 bytes.
 [2025-04-01 15:31:38] 4m53s       Normal    Started                        pod/nginx-basic-76dd66bf4f-4gg96          Started container nginx
+[2025-04-02 13:22:02] 23s         Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-wdf2z          Successfully assigned default/nginx-basic-76dd66bf4f-wdf2z to worker7
+[2025-04-02 13:22:02] 23s         Normal    Pulling                        pod/nginx-basic-76dd66bf4f-wdf2z          Pulling image "nginx:latest"
+[2025-04-02 13:22:02] 23s         Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-wdf2z
+[2025-04-02 13:22:02] 23s         Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 1
+[2025-04-02 13:22:02] 22s         Normal    Pulled                         pod/nginx-basic-76dd66bf4f-wdf2z          Successfully pulled image "nginx:latest" in 771ms (771ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:22:02] 22s         Normal    Created                        pod/nginx-basic-76dd66bf4f-wdf2z          Created container nginx
+[2025-04-02 13:22:02] 22s         Normal    Started                        pod/nginx-basic-76dd66bf4f-wdf2z          Started container nginx
+[2025-04-02 13:22:02] 8s          Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:22:02] 8s          Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:22:12] 33s         Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-wdf2z          Successfully assigned default/nginx-basic-76dd66bf4f-wdf2z to worker7
+[2025-04-02 13:22:12] 33s         Normal    Pulling                        pod/nginx-basic-76dd66bf4f-wdf2z          Pulling image "nginx:latest"
+[2025-04-02 13:22:12] 33s         Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-wdf2z
+[2025-04-02 13:22:12] 33s         Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 1
+[2025-04-02 13:22:12] 32s         Normal    Pulled                         pod/nginx-basic-76dd66bf4f-wdf2z          Successfully pulled image "nginx:latest" in 771ms (771ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:22:12] 32s         Normal    Created                        pod/nginx-basic-76dd66bf4f-wdf2z          Created container nginx
+[2025-04-02 13:22:12] 32s         Normal    Started                        pod/nginx-basic-76dd66bf4f-wdf2z          Started container nginx
+[2025-04-02 13:22:12] 18s         Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:22:12] 18s         Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:22:12] 3s          Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:22:12] 3s          Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:22:22] 43s         Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-wdf2z          Successfully assigned default/nginx-basic-76dd66bf4f-wdf2z to worker7
+[2025-04-02 13:22:22] 43s         Normal    Pulling                        pod/nginx-basic-76dd66bf4f-wdf2z          Pulling image "nginx:latest"
+[2025-04-02 13:22:22] 43s         Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-wdf2z
+[2025-04-02 13:22:22] 43s         Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 1
+[2025-04-02 13:22:22] 42s         Normal    Pulled                         pod/nginx-basic-76dd66bf4f-wdf2z          Successfully pulled image "nginx:latest" in 771ms (771ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:22:22] 42s         Normal    Created                        pod/nginx-basic-76dd66bf4f-wdf2z          Created container nginx
+[2025-04-02 13:22:22] 42s         Normal    Started                        pod/nginx-basic-76dd66bf4f-wdf2z          Started container nginx
+[2025-04-02 13:22:22] 28s         Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:22:22] 28s         Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:22:22] 13s         Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:22:22] 13s         Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:22:32] 53s         Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-wdf2z          Successfully assigned default/nginx-basic-76dd66bf4f-wdf2z to worker7
+[2025-04-02 13:22:32] 53s         Normal    Pulling                        pod/nginx-basic-76dd66bf4f-wdf2z          Pulling image "nginx:latest"
+[2025-04-02 13:22:32] 53s         Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-wdf2z
+[2025-04-02 13:22:32] 53s         Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 1
+[2025-04-02 13:22:32] 52s         Normal    Pulled                         pod/nginx-basic-76dd66bf4f-wdf2z          Successfully pulled image "nginx:latest" in 771ms (771ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:22:32] 52s         Normal    Created                        pod/nginx-basic-76dd66bf4f-wdf2z          Created container nginx
+[2025-04-02 13:22:32] 52s         Normal    Started                        pod/nginx-basic-76dd66bf4f-wdf2z          Started container nginx
+[2025-04-02 13:22:32] 38s         Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:22:32] 38s         Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:22:32] 23s         Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:22:32] 23s         Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:22:42] 63s         Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-wdf2z          Successfully assigned default/nginx-basic-76dd66bf4f-wdf2z to worker7
+[2025-04-02 13:22:42] 63s         Normal    Pulling                        pod/nginx-basic-76dd66bf4f-wdf2z          Pulling image "nginx:latest"
+[2025-04-02 13:22:42] 63s         Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-wdf2z
+[2025-04-02 13:22:42] 63s         Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 1
+[2025-04-02 13:22:42] 62s         Normal    Pulled                         pod/nginx-basic-76dd66bf4f-wdf2z          Successfully pulled image "nginx:latest" in 771ms (771ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:22:42] 62s         Normal    Created                        pod/nginx-basic-76dd66bf4f-wdf2z          Created container nginx
+[2025-04-02 13:22:42] 62s         Normal    Started                        pod/nginx-basic-76dd66bf4f-wdf2z          Started container nginx
+[2025-04-02 13:22:42] 48s         Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:22:42] 48s         Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:22:42] 33s         Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:22:42] 33s         Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:22:52] 74s         Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-wdf2z          Successfully assigned default/nginx-basic-76dd66bf4f-wdf2z to worker7
+[2025-04-02 13:22:52] 74s         Normal    Pulling                        pod/nginx-basic-76dd66bf4f-wdf2z          Pulling image "nginx:latest"
+[2025-04-02 13:22:52] 74s         Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-wdf2z
+[2025-04-02 13:22:52] 74s         Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 1
+[2025-04-02 13:22:52] 73s         Normal    Pulled                         pod/nginx-basic-76dd66bf4f-wdf2z          Successfully pulled image "nginx:latest" in 771ms (771ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:22:52] 73s         Normal    Created                        pod/nginx-basic-76dd66bf4f-wdf2z          Created container nginx
+[2025-04-02 13:22:52] 73s         Normal    Started                        pod/nginx-basic-76dd66bf4f-wdf2z          Started container nginx
+[2025-04-02 13:22:52] 59s         Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:22:52] 59s         Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:22:52] 44s         Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:22:52] 44s         Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:23:03] 84s         Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-wdf2z          Successfully assigned default/nginx-basic-76dd66bf4f-wdf2z to worker7
+[2025-04-02 13:23:03] 84s         Normal    Pulling                        pod/nginx-basic-76dd66bf4f-wdf2z          Pulling image "nginx:latest"
+[2025-04-02 13:23:03] 84s         Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-wdf2z
+[2025-04-02 13:23:03] 84s         Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 1
+[2025-04-02 13:23:03] 83s         Normal    Pulled                         pod/nginx-basic-76dd66bf4f-wdf2z          Successfully pulled image "nginx:latest" in 771ms (771ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:23:03] 83s         Normal    Created                        pod/nginx-basic-76dd66bf4f-wdf2z          Created container nginx
+[2025-04-02 13:23:03] 83s         Normal    Started                        pod/nginx-basic-76dd66bf4f-wdf2z          Started container nginx
+[2025-04-02 13:23:03] 69s         Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:23:03] 69s         Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:23:03] 54s         Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:23:03] 54s         Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:23:13] 94s         Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-wdf2z          Successfully assigned default/nginx-basic-76dd66bf4f-wdf2z to worker7
+[2025-04-02 13:23:13] 94s         Normal    Pulling                        pod/nginx-basic-76dd66bf4f-wdf2z          Pulling image "nginx:latest"
+[2025-04-02 13:23:13] 94s         Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-wdf2z
+[2025-04-02 13:23:13] 94s         Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 1
+[2025-04-02 13:23:13] 93s         Normal    Pulled                         pod/nginx-basic-76dd66bf4f-wdf2z          Successfully pulled image "nginx:latest" in 771ms (771ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:23:13] 93s         Normal    Created                        pod/nginx-basic-76dd66bf4f-wdf2z          Created container nginx
+[2025-04-02 13:23:13] 93s         Normal    Started                        pod/nginx-basic-76dd66bf4f-wdf2z          Started container nginx
+[2025-04-02 13:23:13] 79s         Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:23:13] 79s         Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:23:13] 64s         Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:23:13] 64s         Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:23:23] 104s        Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-wdf2z          Successfully assigned default/nginx-basic-76dd66bf4f-wdf2z to worker7
+[2025-04-02 13:23:23] 104s        Normal    Pulling                        pod/nginx-basic-76dd66bf4f-wdf2z          Pulling image "nginx:latest"
+[2025-04-02 13:23:23] 104s        Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-wdf2z
+[2025-04-02 13:23:23] 104s        Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 1
+[2025-04-02 13:23:23] 103s        Normal    Pulled                         pod/nginx-basic-76dd66bf4f-wdf2z          Successfully pulled image "nginx:latest" in 771ms (771ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:23:23] 103s        Normal    Created                        pod/nginx-basic-76dd66bf4f-wdf2z          Created container nginx
+[2025-04-02 13:23:23] 103s        Normal    Started                        pod/nginx-basic-76dd66bf4f-wdf2z          Started container nginx
+[2025-04-02 13:23:23] 89s         Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:23:23] 89s         Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:23:23] 74s         Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:23:23] 74s         Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:23:33] 114s        Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-wdf2z          Successfully assigned default/nginx-basic-76dd66bf4f-wdf2z to worker7
+[2025-04-02 13:23:33] 114s        Normal    Pulling                        pod/nginx-basic-76dd66bf4f-wdf2z          Pulling image "nginx:latest"
+[2025-04-02 13:23:33] 114s        Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-wdf2z
+[2025-04-02 13:23:33] 114s        Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 1
+[2025-04-02 13:23:33] 113s        Normal    Pulled                         pod/nginx-basic-76dd66bf4f-wdf2z          Successfully pulled image "nginx:latest" in 771ms (771ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:23:33] 113s        Normal    Created                        pod/nginx-basic-76dd66bf4f-wdf2z          Created container nginx
+[2025-04-02 13:23:33] 113s        Normal    Started                        pod/nginx-basic-76dd66bf4f-wdf2z          Started container nginx
+[2025-04-02 13:23:33] 99s         Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:23:33] 99s         Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:23:33] 84s         Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:23:33] 84s         Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:23:43] 2m4s        Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-wdf2z          Successfully assigned default/nginx-basic-76dd66bf4f-wdf2z to worker7
+[2025-04-02 13:23:43] 2m4s        Normal    Pulling                        pod/nginx-basic-76dd66bf4f-wdf2z          Pulling image "nginx:latest"
+[2025-04-02 13:23:43] 2m4s        Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-wdf2z
+[2025-04-02 13:23:43] 2m4s        Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 1
+[2025-04-02 13:23:43] 2m3s        Normal    Pulled                         pod/nginx-basic-76dd66bf4f-wdf2z          Successfully pulled image "nginx:latest" in 771ms (771ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:23:43] 2m3s        Normal    Created                        pod/nginx-basic-76dd66bf4f-wdf2z          Created container nginx
+[2025-04-02 13:23:43] 2m3s        Normal    Started                        pod/nginx-basic-76dd66bf4f-wdf2z          Started container nginx
+[2025-04-02 13:23:43] 109s        Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:23:43] 109s        Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:23:43] 94s         Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:23:43] 94s         Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:23:53] 2m14s       Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-wdf2z          Successfully assigned default/nginx-basic-76dd66bf4f-wdf2z to worker7
+[2025-04-02 13:23:53] 2m14s       Normal    Pulling                        pod/nginx-basic-76dd66bf4f-wdf2z          Pulling image "nginx:latest"
+[2025-04-02 13:23:53] 2m14s       Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-wdf2z
+[2025-04-02 13:23:53] 2m14s       Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 1
+[2025-04-02 13:23:53] 2m13s       Normal    Pulled                         pod/nginx-basic-76dd66bf4f-wdf2z          Successfully pulled image "nginx:latest" in 771ms (771ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:23:53] 2m13s       Normal    Created                        pod/nginx-basic-76dd66bf4f-wdf2z          Created container nginx
+[2025-04-02 13:23:53] 2m13s       Normal    Started                        pod/nginx-basic-76dd66bf4f-wdf2z          Started container nginx
+[2025-04-02 13:23:53] 119s        Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:23:53] 119s        Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:23:53] 104s        Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:23:53] 104s        Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:24:03] 2m24s       Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-wdf2z          Successfully assigned default/nginx-basic-76dd66bf4f-wdf2z to worker7
+[2025-04-02 13:24:03] 2m24s       Normal    Pulling                        pod/nginx-basic-76dd66bf4f-wdf2z          Pulling image "nginx:latest"
+[2025-04-02 13:24:03] 2m24s       Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-wdf2z
+[2025-04-02 13:24:03] 2m24s       Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 1
+[2025-04-02 13:24:03] 2m23s       Normal    Pulled                         pod/nginx-basic-76dd66bf4f-wdf2z          Successfully pulled image "nginx:latest" in 771ms (771ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:24:03] 2m23s       Normal    Created                        pod/nginx-basic-76dd66bf4f-wdf2z          Created container nginx
+[2025-04-02 13:24:03] 2m23s       Normal    Started                        pod/nginx-basic-76dd66bf4f-wdf2z          Started container nginx
+[2025-04-02 13:24:03] 2m9s        Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:24:03] 2m9s        Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:24:03] 114s        Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:24:03] 114s        Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:24:13] 2m34s       Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-wdf2z          Successfully assigned default/nginx-basic-76dd66bf4f-wdf2z to worker7
+[2025-04-02 13:24:13] 2m34s       Normal    Pulling                        pod/nginx-basic-76dd66bf4f-wdf2z          Pulling image "nginx:latest"
+[2025-04-02 13:24:13] 2m34s       Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-wdf2z
+[2025-04-02 13:24:13] 2m34s       Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 1
+[2025-04-02 13:24:13] 2m33s       Normal    Pulled                         pod/nginx-basic-76dd66bf4f-wdf2z          Successfully pulled image "nginx:latest" in 771ms (771ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:24:13] 2m33s       Normal    Created                        pod/nginx-basic-76dd66bf4f-wdf2z          Created container nginx
+[2025-04-02 13:24:13] 2m33s       Normal    Started                        pod/nginx-basic-76dd66bf4f-wdf2z          Started container nginx
+[2025-04-02 13:24:13] 2m19s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:24:13] 2m19s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:24:13] 2m4s        Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:24:13] 2m4s        Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:24:23] 2m44s       Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-wdf2z          Successfully assigned default/nginx-basic-76dd66bf4f-wdf2z to worker7
+[2025-04-02 13:24:23] 2m44s       Normal    Pulling                        pod/nginx-basic-76dd66bf4f-wdf2z          Pulling image "nginx:latest"
+[2025-04-02 13:24:23] 2m44s       Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-wdf2z
+[2025-04-02 13:24:23] 2m44s       Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 1
+[2025-04-02 13:24:23] 2m43s       Normal    Pulled                         pod/nginx-basic-76dd66bf4f-wdf2z          Successfully pulled image "nginx:latest" in 771ms (771ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:24:23] 2m43s       Normal    Created                        pod/nginx-basic-76dd66bf4f-wdf2z          Created container nginx
+[2025-04-02 13:24:23] 2m43s       Normal    Started                        pod/nginx-basic-76dd66bf4f-wdf2z          Started container nginx
+[2025-04-02 13:24:23] 2m29s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:24:23] 2m29s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:24:23] 2m14s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:24:23] 2m14s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:24:33] 2m54s       Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-wdf2z          Successfully assigned default/nginx-basic-76dd66bf4f-wdf2z to worker7
+[2025-04-02 13:24:33] 2m54s       Normal    Pulling                        pod/nginx-basic-76dd66bf4f-wdf2z          Pulling image "nginx:latest"
+[2025-04-02 13:24:33] 2m54s       Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-wdf2z
+[2025-04-02 13:24:33] 2m54s       Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 1
+[2025-04-02 13:24:33] 2m53s       Normal    Pulled                         pod/nginx-basic-76dd66bf4f-wdf2z          Successfully pulled image "nginx:latest" in 771ms (771ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:24:33] 2m53s       Normal    Created                        pod/nginx-basic-76dd66bf4f-wdf2z          Created container nginx
+[2025-04-02 13:24:33] 2m53s       Normal    Started                        pod/nginx-basic-76dd66bf4f-wdf2z          Started container nginx
+[2025-04-02 13:24:33] 2m39s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:24:33] 2m39s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:24:33] 2m24s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:24:33] 2m24s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:24:43] 3m4s        Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 1
+[2025-04-02 13:24:43] 3m4s        Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-wdf2z
+[2025-04-02 13:24:43] 3m4s        Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-wdf2z          Successfully assigned default/nginx-basic-76dd66bf4f-wdf2z to worker7
+[2025-04-02 13:24:43] 3m4s        Normal    Pulling                        pod/nginx-basic-76dd66bf4f-wdf2z          Pulling image "nginx:latest"
+[2025-04-02 13:24:43] 3m3s        Normal    Pulled                         pod/nginx-basic-76dd66bf4f-wdf2z          Successfully pulled image "nginx:latest" in 771ms (771ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:24:43] 3m3s        Normal    Started                        pod/nginx-basic-76dd66bf4f-wdf2z          Started container nginx
+[2025-04-02 13:24:43] 3m3s        Normal    Created                        pod/nginx-basic-76dd66bf4f-wdf2z          Created container nginx
+[2025-04-02 13:24:43] 2m49s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:24:43] 2m49s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:24:43] 2m34s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:24:43] 2m34s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:24:43] 4s          Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-mv2mk
+[2025-04-02 13:24:43] 4s          Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-mv2mk          Successfully assigned default/nginx-basic-76dd66bf4f-mv2mk to worker7
+[2025-04-02 13:24:43] 4s          Normal    SuccessfulRescale              horizontalpodautoscaler/nginx-basic-hpa   New size: 2; reason: cpu resource utilization (percentage of request) above target
+[2025-04-02 13:24:43] 4s          Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 2 from 1
+[2025-04-02 13:24:43] 3s          Normal    Started                        pod/nginx-basic-76dd66bf4f-mv2mk          Started container nginx
+[2025-04-02 13:24:43] 3s          Normal    Created                        pod/nginx-basic-76dd66bf4f-mv2mk          Created container nginx
+[2025-04-02 13:24:43] 3s          Normal    Pulled                         pod/nginx-basic-76dd66bf4f-mv2mk          Successfully pulled image "nginx:latest" in 757ms (757ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:24:43] 3s          Normal    Pulling                        pod/nginx-basic-76dd66bf4f-mv2mk          Pulling image "nginx:latest"
+[2025-04-02 13:24:53] 3m14s       Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 1
+[2025-04-02 13:24:53] 3m14s       Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-wdf2z
+[2025-04-02 13:24:53] 3m14s       Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-wdf2z          Successfully assigned default/nginx-basic-76dd66bf4f-wdf2z to worker7
+[2025-04-02 13:24:53] 3m14s       Normal    Pulling                        pod/nginx-basic-76dd66bf4f-wdf2z          Pulling image "nginx:latest"
+[2025-04-02 13:24:53] 3m13s       Normal    Pulled                         pod/nginx-basic-76dd66bf4f-wdf2z          Successfully pulled image "nginx:latest" in 771ms (771ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:24:53] 3m13s       Normal    Started                        pod/nginx-basic-76dd66bf4f-wdf2z          Started container nginx
+[2025-04-02 13:24:53] 3m13s       Normal    Created                        pod/nginx-basic-76dd66bf4f-wdf2z          Created container nginx
+[2025-04-02 13:24:53] 2m59s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:24:53] 2m59s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:24:53] 2m44s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:24:53] 2m44s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:24:53] 14s         Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-mv2mk
+[2025-04-02 13:24:53] 14s         Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-mv2mk          Successfully assigned default/nginx-basic-76dd66bf4f-mv2mk to worker7
+[2025-04-02 13:24:53] 14s         Normal    SuccessfulRescale              horizontalpodautoscaler/nginx-basic-hpa   New size: 2; reason: cpu resource utilization (percentage of request) above target
+[2025-04-02 13:24:53] 14s         Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 2 from 1
+[2025-04-02 13:24:53] 13s         Normal    Started                        pod/nginx-basic-76dd66bf4f-mv2mk          Started container nginx
+[2025-04-02 13:24:53] 13s         Normal    Created                        pod/nginx-basic-76dd66bf4f-mv2mk          Created container nginx
+[2025-04-02 13:24:53] 13s         Normal    Pulled                         pod/nginx-basic-76dd66bf4f-mv2mk          Successfully pulled image "nginx:latest" in 757ms (757ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:24:53] 13s         Normal    Pulling                        pod/nginx-basic-76dd66bf4f-mv2mk          Pulling image "nginx:latest"
+[2025-04-02 13:25:03] 3m24s       Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 1
+[2025-04-02 13:25:03] 3m24s       Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-wdf2z
+[2025-04-02 13:25:03] 3m24s       Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-wdf2z          Successfully assigned default/nginx-basic-76dd66bf4f-wdf2z to worker7
+[2025-04-02 13:25:03] 3m24s       Normal    Pulling                        pod/nginx-basic-76dd66bf4f-wdf2z          Pulling image "nginx:latest"
+[2025-04-02 13:25:03] 3m23s       Normal    Pulled                         pod/nginx-basic-76dd66bf4f-wdf2z          Successfully pulled image "nginx:latest" in 771ms (771ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:25:03] 3m23s       Normal    Started                        pod/nginx-basic-76dd66bf4f-wdf2z          Started container nginx
+[2025-04-02 13:25:03] 3m23s       Normal    Created                        pod/nginx-basic-76dd66bf4f-wdf2z          Created container nginx
+[2025-04-02 13:25:03] 3m9s        Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:25:03] 3m9s        Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:25:03] 2m54s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:25:03] 2m54s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:25:03] 24s         Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-mv2mk
+[2025-04-02 13:25:03] 24s         Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-mv2mk          Successfully assigned default/nginx-basic-76dd66bf4f-mv2mk to worker7
+[2025-04-02 13:25:03] 24s         Normal    SuccessfulRescale              horizontalpodautoscaler/nginx-basic-hpa   New size: 2; reason: cpu resource utilization (percentage of request) above target
+[2025-04-02 13:25:03] 24s         Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 2 from 1
+[2025-04-02 13:25:03] 23s         Normal    Started                        pod/nginx-basic-76dd66bf4f-mv2mk          Started container nginx
+[2025-04-02 13:25:03] 23s         Normal    Created                        pod/nginx-basic-76dd66bf4f-mv2mk          Created container nginx
+[2025-04-02 13:25:03] 23s         Normal    Pulled                         pod/nginx-basic-76dd66bf4f-mv2mk          Successfully pulled image "nginx:latest" in 757ms (757ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:25:03] 23s         Normal    Pulling                        pod/nginx-basic-76dd66bf4f-mv2mk          Pulling image "nginx:latest"
+[2025-04-02 13:25:13] 3m34s       Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 1
+[2025-04-02 13:25:13] 3m34s       Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-wdf2z
+[2025-04-02 13:25:13] 3m34s       Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-wdf2z          Successfully assigned default/nginx-basic-76dd66bf4f-wdf2z to worker7
+[2025-04-02 13:25:13] 3m34s       Normal    Pulling                        pod/nginx-basic-76dd66bf4f-wdf2z          Pulling image "nginx:latest"
+[2025-04-02 13:25:13] 3m33s       Normal    Pulled                         pod/nginx-basic-76dd66bf4f-wdf2z          Successfully pulled image "nginx:latest" in 771ms (771ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:25:13] 3m33s       Normal    Started                        pod/nginx-basic-76dd66bf4f-wdf2z          Started container nginx
+[2025-04-02 13:25:13] 3m33s       Normal    Created                        pod/nginx-basic-76dd66bf4f-wdf2z          Created container nginx
+[2025-04-02 13:25:13] 3m19s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:25:13] 3m19s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:25:13] 3m4s        Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:25:13] 3m4s        Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:25:13] 34s         Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-mv2mk
+[2025-04-02 13:25:13] 34s         Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-mv2mk          Successfully assigned default/nginx-basic-76dd66bf4f-mv2mk to worker7
+[2025-04-02 13:25:13] 34s         Normal    SuccessfulRescale              horizontalpodautoscaler/nginx-basic-hpa   New size: 2; reason: cpu resource utilization (percentage of request) above target
+[2025-04-02 13:25:13] 34s         Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 2 from 1
+[2025-04-02 13:25:13] 33s         Normal    Started                        pod/nginx-basic-76dd66bf4f-mv2mk          Started container nginx
+[2025-04-02 13:25:13] 33s         Normal    Created                        pod/nginx-basic-76dd66bf4f-mv2mk          Created container nginx
+[2025-04-02 13:25:13] 33s         Normal    Pulled                         pod/nginx-basic-76dd66bf4f-mv2mk          Successfully pulled image "nginx:latest" in 757ms (757ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:25:13] 33s         Normal    Pulling                        pod/nginx-basic-76dd66bf4f-mv2mk          Pulling image "nginx:latest"
+[2025-04-02 13:25:23] 3m44s       Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 1
+[2025-04-02 13:25:23] 3m44s       Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-wdf2z
+[2025-04-02 13:25:23] 3m44s       Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-wdf2z          Successfully assigned default/nginx-basic-76dd66bf4f-wdf2z to worker7
+[2025-04-02 13:25:23] 3m44s       Normal    Pulling                        pod/nginx-basic-76dd66bf4f-wdf2z          Pulling image "nginx:latest"
+[2025-04-02 13:25:23] 3m43s       Normal    Pulled                         pod/nginx-basic-76dd66bf4f-wdf2z          Successfully pulled image "nginx:latest" in 771ms (771ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:25:23] 3m43s       Normal    Started                        pod/nginx-basic-76dd66bf4f-wdf2z          Started container nginx
+[2025-04-02 13:25:23] 3m43s       Normal    Created                        pod/nginx-basic-76dd66bf4f-wdf2z          Created container nginx
+[2025-04-02 13:25:23] 3m29s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:25:23] 3m29s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:25:23] 3m14s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:25:23] 3m14s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:25:23] 44s         Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-mv2mk
+[2025-04-02 13:25:23] 44s         Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-mv2mk          Successfully assigned default/nginx-basic-76dd66bf4f-mv2mk to worker7
+[2025-04-02 13:25:23] 44s         Normal    SuccessfulRescale              horizontalpodautoscaler/nginx-basic-hpa   New size: 2; reason: cpu resource utilization (percentage of request) above target
+[2025-04-02 13:25:23] 44s         Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 2 from 1
+[2025-04-02 13:25:23] 43s         Normal    Started                        pod/nginx-basic-76dd66bf4f-mv2mk          Started container nginx
+[2025-04-02 13:25:23] 43s         Normal    Created                        pod/nginx-basic-76dd66bf4f-mv2mk          Created container nginx
+[2025-04-02 13:25:23] 43s         Normal    Pulled                         pod/nginx-basic-76dd66bf4f-mv2mk          Successfully pulled image "nginx:latest" in 757ms (757ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:25:23] 43s         Normal    Pulling                        pod/nginx-basic-76dd66bf4f-mv2mk          Pulling image "nginx:latest"
+[2025-04-02 13:25:33] 3m54s       Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 1
+[2025-04-02 13:25:33] 3m54s       Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-wdf2z
+[2025-04-02 13:25:33] 3m54s       Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-wdf2z          Successfully assigned default/nginx-basic-76dd66bf4f-wdf2z to worker7
+[2025-04-02 13:25:33] 3m54s       Normal    Pulling                        pod/nginx-basic-76dd66bf4f-wdf2z          Pulling image "nginx:latest"
+[2025-04-02 13:25:33] 3m53s       Normal    Pulled                         pod/nginx-basic-76dd66bf4f-wdf2z          Successfully pulled image "nginx:latest" in 771ms (771ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:25:33] 3m53s       Normal    Started                        pod/nginx-basic-76dd66bf4f-wdf2z          Started container nginx
+[2025-04-02 13:25:33] 3m53s       Normal    Created                        pod/nginx-basic-76dd66bf4f-wdf2z          Created container nginx
+[2025-04-02 13:25:33] 3m39s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:25:33] 3m39s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:25:33] 3m24s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:25:33] 3m24s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:25:33] 54s         Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-mv2mk
+[2025-04-02 13:25:33] 54s         Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-mv2mk          Successfully assigned default/nginx-basic-76dd66bf4f-mv2mk to worker7
+[2025-04-02 13:25:33] 54s         Normal    SuccessfulRescale              horizontalpodautoscaler/nginx-basic-hpa   New size: 2; reason: cpu resource utilization (percentage of request) above target
+[2025-04-02 13:25:33] 54s         Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 2 from 1
+[2025-04-02 13:25:33] 53s         Normal    Started                        pod/nginx-basic-76dd66bf4f-mv2mk          Started container nginx
+[2025-04-02 13:25:33] 53s         Normal    Created                        pod/nginx-basic-76dd66bf4f-mv2mk          Created container nginx
+[2025-04-02 13:25:33] 53s         Normal    Pulled                         pod/nginx-basic-76dd66bf4f-mv2mk          Successfully pulled image "nginx:latest" in 757ms (757ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:25:33] 53s         Normal    Pulling                        pod/nginx-basic-76dd66bf4f-mv2mk          Pulling image "nginx:latest"
+[2025-04-02 13:25:43] 4m4s        Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 1
+[2025-04-02 13:25:43] 4m4s        Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-wdf2z
+[2025-04-02 13:25:43] 4m4s        Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-wdf2z          Successfully assigned default/nginx-basic-76dd66bf4f-wdf2z to worker7
+[2025-04-02 13:25:43] 4m4s        Normal    Pulling                        pod/nginx-basic-76dd66bf4f-wdf2z          Pulling image "nginx:latest"
+[2025-04-02 13:25:43] 4m3s        Normal    Pulled                         pod/nginx-basic-76dd66bf4f-wdf2z          Successfully pulled image "nginx:latest" in 771ms (771ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:25:43] 4m3s        Normal    Started                        pod/nginx-basic-76dd66bf4f-wdf2z          Started container nginx
+[2025-04-02 13:25:43] 4m3s        Normal    Created                        pod/nginx-basic-76dd66bf4f-wdf2z          Created container nginx
+[2025-04-02 13:25:43] 3m49s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:25:43] 3m49s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:25:43] 3m34s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:25:43] 3m34s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:25:43] 64s         Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-mv2mk
+[2025-04-02 13:25:43] 64s         Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-mv2mk          Successfully assigned default/nginx-basic-76dd66bf4f-mv2mk to worker7
+[2025-04-02 13:25:43] 64s         Normal    SuccessfulRescale              horizontalpodautoscaler/nginx-basic-hpa   New size: 2; reason: cpu resource utilization (percentage of request) above target
+[2025-04-02 13:25:43] 64s         Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 2 from 1
+[2025-04-02 13:25:43] 63s         Normal    Started                        pod/nginx-basic-76dd66bf4f-mv2mk          Started container nginx
+[2025-04-02 13:25:43] 63s         Normal    Created                        pod/nginx-basic-76dd66bf4f-mv2mk          Created container nginx
+[2025-04-02 13:25:43] 63s         Normal    Pulled                         pod/nginx-basic-76dd66bf4f-mv2mk          Successfully pulled image "nginx:latest" in 757ms (757ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:25:43] 63s         Normal    Pulling                        pod/nginx-basic-76dd66bf4f-mv2mk          Pulling image "nginx:latest"
+[2025-04-02 13:25:53] 4m14s       Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 1
+[2025-04-02 13:25:53] 4m14s       Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-wdf2z
+[2025-04-02 13:25:53] 4m14s       Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-wdf2z          Successfully assigned default/nginx-basic-76dd66bf4f-wdf2z to worker7
+[2025-04-02 13:25:53] 4m14s       Normal    Pulling                        pod/nginx-basic-76dd66bf4f-wdf2z          Pulling image "nginx:latest"
+[2025-04-02 13:25:53] 4m13s       Normal    Pulled                         pod/nginx-basic-76dd66bf4f-wdf2z          Successfully pulled image "nginx:latest" in 771ms (771ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:25:53] 4m13s       Normal    Started                        pod/nginx-basic-76dd66bf4f-wdf2z          Started container nginx
+[2025-04-02 13:25:53] 4m13s       Normal    Created                        pod/nginx-basic-76dd66bf4f-wdf2z          Created container nginx
+[2025-04-02 13:25:53] 3m59s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:25:53] 3m59s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:25:53] 3m44s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:25:53] 3m44s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:25:53] 74s         Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-mv2mk
+[2025-04-02 13:25:53] 74s         Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-mv2mk          Successfully assigned default/nginx-basic-76dd66bf4f-mv2mk to worker7
+[2025-04-02 13:25:53] 74s         Normal    SuccessfulRescale              horizontalpodautoscaler/nginx-basic-hpa   New size: 2; reason: cpu resource utilization (percentage of request) above target
+[2025-04-02 13:25:53] 74s         Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 2 from 1
+[2025-04-02 13:25:53] 73s         Normal    Started                        pod/nginx-basic-76dd66bf4f-mv2mk          Started container nginx
+[2025-04-02 13:25:53] 73s         Normal    Created                        pod/nginx-basic-76dd66bf4f-mv2mk          Created container nginx
+[2025-04-02 13:25:53] 73s         Normal    Pulled                         pod/nginx-basic-76dd66bf4f-mv2mk          Successfully pulled image "nginx:latest" in 757ms (757ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:25:53] 73s         Normal    Pulling                        pod/nginx-basic-76dd66bf4f-mv2mk          Pulling image "nginx:latest"
+[2025-04-02 13:26:03] 4m24s       Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 1
+[2025-04-02 13:26:03] 4m24s       Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-wdf2z
+[2025-04-02 13:26:03] 4m24s       Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-wdf2z          Successfully assigned default/nginx-basic-76dd66bf4f-wdf2z to worker7
+[2025-04-02 13:26:03] 4m24s       Normal    Pulling                        pod/nginx-basic-76dd66bf4f-wdf2z          Pulling image "nginx:latest"
+[2025-04-02 13:26:03] 4m23s       Normal    Pulled                         pod/nginx-basic-76dd66bf4f-wdf2z          Successfully pulled image "nginx:latest" in 771ms (771ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:26:03] 4m23s       Normal    Started                        pod/nginx-basic-76dd66bf4f-wdf2z          Started container nginx
+[2025-04-02 13:26:03] 4m23s       Normal    Created                        pod/nginx-basic-76dd66bf4f-wdf2z          Created container nginx
+[2025-04-02 13:26:03] 4m9s        Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:26:03] 4m9s        Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:26:03] 3m54s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:26:03] 3m54s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:26:03] 84s         Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-mv2mk
+[2025-04-02 13:26:03] 84s         Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-mv2mk          Successfully assigned default/nginx-basic-76dd66bf4f-mv2mk to worker7
+[2025-04-02 13:26:03] 84s         Normal    SuccessfulRescale              horizontalpodautoscaler/nginx-basic-hpa   New size: 2; reason: cpu resource utilization (percentage of request) above target
+[2025-04-02 13:26:03] 84s         Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 2 from 1
+[2025-04-02 13:26:03] 83s         Normal    Started                        pod/nginx-basic-76dd66bf4f-mv2mk          Started container nginx
+[2025-04-02 13:26:03] 83s         Normal    Created                        pod/nginx-basic-76dd66bf4f-mv2mk          Created container nginx
+[2025-04-02 13:26:03] 83s         Normal    Pulled                         pod/nginx-basic-76dd66bf4f-mv2mk          Successfully pulled image "nginx:latest" in 757ms (757ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:26:03] 83s         Normal    Pulling                        pod/nginx-basic-76dd66bf4f-mv2mk          Pulling image "nginx:latest"
+[2025-04-02 13:26:13] 4m34s       Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 1
+[2025-04-02 13:26:13] 4m34s       Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-wdf2z
+[2025-04-02 13:26:13] 4m34s       Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-wdf2z          Successfully assigned default/nginx-basic-76dd66bf4f-wdf2z to worker7
+[2025-04-02 13:26:13] 4m34s       Normal    Pulling                        pod/nginx-basic-76dd66bf4f-wdf2z          Pulling image "nginx:latest"
+[2025-04-02 13:26:13] 4m33s       Normal    Pulled                         pod/nginx-basic-76dd66bf4f-wdf2z          Successfully pulled image "nginx:latest" in 771ms (771ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:26:13] 4m33s       Normal    Started                        pod/nginx-basic-76dd66bf4f-wdf2z          Started container nginx
+[2025-04-02 13:26:13] 4m33s       Normal    Created                        pod/nginx-basic-76dd66bf4f-wdf2z          Created container nginx
+[2025-04-02 13:26:13] 4m19s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:26:13] 4m19s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:26:13] 4m4s        Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:26:13] 4m4s        Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:26:13] 94s         Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-mv2mk
+[2025-04-02 13:26:13] 94s         Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-mv2mk          Successfully assigned default/nginx-basic-76dd66bf4f-mv2mk to worker7
+[2025-04-02 13:26:13] 94s         Normal    SuccessfulRescale              horizontalpodautoscaler/nginx-basic-hpa   New size: 2; reason: cpu resource utilization (percentage of request) above target
+[2025-04-02 13:26:13] 94s         Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 2 from 1
+[2025-04-02 13:26:13] 93s         Normal    Started                        pod/nginx-basic-76dd66bf4f-mv2mk          Started container nginx
+[2025-04-02 13:26:13] 93s         Normal    Created                        pod/nginx-basic-76dd66bf4f-mv2mk          Created container nginx
+[2025-04-02 13:26:13] 93s         Normal    Pulled                         pod/nginx-basic-76dd66bf4f-mv2mk          Successfully pulled image "nginx:latest" in 757ms (757ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:26:13] 93s         Normal    Pulling                        pod/nginx-basic-76dd66bf4f-mv2mk          Pulling image "nginx:latest"
+[2025-04-02 13:26:23] 4m44s       Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 1
+[2025-04-02 13:26:23] 4m44s       Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-wdf2z
+[2025-04-02 13:26:23] 4m44s       Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-wdf2z          Successfully assigned default/nginx-basic-76dd66bf4f-wdf2z to worker7
+[2025-04-02 13:26:23] 4m44s       Normal    Pulling                        pod/nginx-basic-76dd66bf4f-wdf2z          Pulling image "nginx:latest"
+[2025-04-02 13:26:23] 4m43s       Normal    Pulled                         pod/nginx-basic-76dd66bf4f-wdf2z          Successfully pulled image "nginx:latest" in 771ms (771ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:26:23] 4m43s       Normal    Started                        pod/nginx-basic-76dd66bf4f-wdf2z          Started container nginx
+[2025-04-02 13:26:23] 4m43s       Normal    Created                        pod/nginx-basic-76dd66bf4f-wdf2z          Created container nginx
+[2025-04-02 13:26:23] 4m29s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:26:23] 4m29s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:26:23] 4m14s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:26:23] 4m14s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:26:23] 104s        Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-mv2mk
+[2025-04-02 13:26:23] 104s        Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-mv2mk          Successfully assigned default/nginx-basic-76dd66bf4f-mv2mk to worker7
+[2025-04-02 13:26:23] 104s        Normal    SuccessfulRescale              horizontalpodautoscaler/nginx-basic-hpa   New size: 2; reason: cpu resource utilization (percentage of request) above target
+[2025-04-02 13:26:23] 104s        Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 2 from 1
+[2025-04-02 13:26:23] 103s        Normal    Started                        pod/nginx-basic-76dd66bf4f-mv2mk          Started container nginx
+[2025-04-02 13:26:23] 103s        Normal    Created                        pod/nginx-basic-76dd66bf4f-mv2mk          Created container nginx
+[2025-04-02 13:26:23] 103s        Normal    Pulled                         pod/nginx-basic-76dd66bf4f-mv2mk          Successfully pulled image "nginx:latest" in 757ms (757ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:26:23] 103s        Normal    Pulling                        pod/nginx-basic-76dd66bf4f-mv2mk          Pulling image "nginx:latest"
+[2025-04-02 13:26:33] 4m55s       Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 1
+[2025-04-02 13:26:33] 4m55s       Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-wdf2z
+[2025-04-02 13:26:33] 4m55s       Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-wdf2z          Successfully assigned default/nginx-basic-76dd66bf4f-wdf2z to worker7
+[2025-04-02 13:26:33] 4m55s       Normal    Pulling                        pod/nginx-basic-76dd66bf4f-wdf2z          Pulling image "nginx:latest"
+[2025-04-02 13:26:33] 4m54s       Normal    Pulled                         pod/nginx-basic-76dd66bf4f-wdf2z          Successfully pulled image "nginx:latest" in 771ms (771ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:26:33] 4m54s       Normal    Started                        pod/nginx-basic-76dd66bf4f-wdf2z          Started container nginx
+[2025-04-02 13:26:33] 4m54s       Normal    Created                        pod/nginx-basic-76dd66bf4f-wdf2z          Created container nginx
+[2025-04-02 13:26:33] 4m40s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:26:33] 4m40s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:26:33] 4m25s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:26:33] 4m25s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:26:33] 115s        Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-mv2mk
+[2025-04-02 13:26:33] 115s        Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-mv2mk          Successfully assigned default/nginx-basic-76dd66bf4f-mv2mk to worker7
+[2025-04-02 13:26:33] 115s        Normal    SuccessfulRescale              horizontalpodautoscaler/nginx-basic-hpa   New size: 2; reason: cpu resource utilization (percentage of request) above target
+[2025-04-02 13:26:33] 115s        Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 2 from 1
+[2025-04-02 13:26:33] 114s        Normal    Started                        pod/nginx-basic-76dd66bf4f-mv2mk          Started container nginx
+[2025-04-02 13:26:33] 114s        Normal    Created                        pod/nginx-basic-76dd66bf4f-mv2mk          Created container nginx
+[2025-04-02 13:26:33] 114s        Normal    Pulled                         pod/nginx-basic-76dd66bf4f-mv2mk          Successfully pulled image "nginx:latest" in 757ms (757ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:26:33] 114s        Normal    Pulling                        pod/nginx-basic-76dd66bf4f-mv2mk          Pulling image "nginx:latest"
+[2025-04-02 13:26:44] 5m5s        Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 1
+[2025-04-02 13:26:44] 5m5s        Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-wdf2z
+[2025-04-02 13:26:44] 5m5s        Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-wdf2z          Successfully assigned default/nginx-basic-76dd66bf4f-wdf2z to worker7
+[2025-04-02 13:26:44] 5m5s        Normal    Pulling                        pod/nginx-basic-76dd66bf4f-wdf2z          Pulling image "nginx:latest"
+[2025-04-02 13:26:44] 5m4s        Normal    Pulled                         pod/nginx-basic-76dd66bf4f-wdf2z          Successfully pulled image "nginx:latest" in 771ms (771ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:26:44] 5m4s        Normal    Started                        pod/nginx-basic-76dd66bf4f-wdf2z          Started container nginx
+[2025-04-02 13:26:44] 5m4s        Normal    Created                        pod/nginx-basic-76dd66bf4f-wdf2z          Created container nginx
+[2025-04-02 13:26:44] 4m50s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:26:44] 4m50s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:26:44] 4m35s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:26:44] 4m35s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:26:44] 2m5s        Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-mv2mk
+[2025-04-02 13:26:44] 2m5s        Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-mv2mk          Successfully assigned default/nginx-basic-76dd66bf4f-mv2mk to worker7
+[2025-04-02 13:26:44] 2m5s        Normal    SuccessfulRescale              horizontalpodautoscaler/nginx-basic-hpa   New size: 2; reason: cpu resource utilization (percentage of request) above target
+[2025-04-02 13:26:44] 2m5s        Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 2 from 1
+[2025-04-02 13:26:44] 2m4s        Normal    Started                        pod/nginx-basic-76dd66bf4f-mv2mk          Started container nginx
+[2025-04-02 13:26:44] 2m4s        Normal    Created                        pod/nginx-basic-76dd66bf4f-mv2mk          Created container nginx
+[2025-04-02 13:26:44] 2m4s        Normal    Pulled                         pod/nginx-basic-76dd66bf4f-mv2mk          Successfully pulled image "nginx:latest" in 757ms (757ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:26:44] 2m4s        Normal    Pulling                        pod/nginx-basic-76dd66bf4f-mv2mk          Pulling image "nginx:latest"
+[2025-04-02 13:26:54] 5m15s       Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 1
+[2025-04-02 13:26:54] 5m15s       Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-wdf2z
+[2025-04-02 13:26:54] 5m15s       Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-wdf2z          Successfully assigned default/nginx-basic-76dd66bf4f-wdf2z to worker7
+[2025-04-02 13:26:54] 5m15s       Normal    Pulling                        pod/nginx-basic-76dd66bf4f-wdf2z          Pulling image "nginx:latest"
+[2025-04-02 13:26:54] 5m14s       Normal    Pulled                         pod/nginx-basic-76dd66bf4f-wdf2z          Successfully pulled image "nginx:latest" in 771ms (771ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:26:54] 5m14s       Normal    Started                        pod/nginx-basic-76dd66bf4f-wdf2z          Started container nginx
+[2025-04-02 13:26:54] 5m14s       Normal    Created                        pod/nginx-basic-76dd66bf4f-wdf2z          Created container nginx
+[2025-04-02 13:26:54] 5m          Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:26:54] 5m          Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:26:54] 4m45s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:26:54] 4m45s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:26:54] 2m15s       Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-mv2mk
+[2025-04-02 13:26:54] 2m15s       Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-mv2mk          Successfully assigned default/nginx-basic-76dd66bf4f-mv2mk to worker7
+[2025-04-02 13:26:54] 2m15s       Normal    SuccessfulRescale              horizontalpodautoscaler/nginx-basic-hpa   New size: 2; reason: cpu resource utilization (percentage of request) above target
+[2025-04-02 13:26:54] 2m15s       Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 2 from 1
+[2025-04-02 13:26:54] 2m14s       Normal    Started                        pod/nginx-basic-76dd66bf4f-mv2mk          Started container nginx
+[2025-04-02 13:26:54] 2m14s       Normal    Created                        pod/nginx-basic-76dd66bf4f-mv2mk          Created container nginx
+[2025-04-02 13:26:54] 2m14s       Normal    Pulled                         pod/nginx-basic-76dd66bf4f-mv2mk          Successfully pulled image "nginx:latest" in 757ms (757ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:26:54] 2m14s       Normal    Pulling                        pod/nginx-basic-76dd66bf4f-mv2mk          Pulling image "nginx:latest"
+[2025-04-02 13:27:04] 5m25s       Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 1
+[2025-04-02 13:27:04] 5m25s       Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-wdf2z
+[2025-04-02 13:27:04] 5m25s       Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-wdf2z          Successfully assigned default/nginx-basic-76dd66bf4f-wdf2z to worker7
+[2025-04-02 13:27:04] 5m25s       Normal    Pulling                        pod/nginx-basic-76dd66bf4f-wdf2z          Pulling image "nginx:latest"
+[2025-04-02 13:27:04] 5m24s       Normal    Pulled                         pod/nginx-basic-76dd66bf4f-wdf2z          Successfully pulled image "nginx:latest" in 771ms (771ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:27:04] 5m24s       Normal    Started                        pod/nginx-basic-76dd66bf4f-wdf2z          Started container nginx
+[2025-04-02 13:27:04] 5m24s       Normal    Created                        pod/nginx-basic-76dd66bf4f-wdf2z          Created container nginx
+[2025-04-02 13:27:04] 5m10s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:27:04] 5m10s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:27:04] 4m55s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:27:04] 4m55s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:27:04] 2m25s       Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-mv2mk
+[2025-04-02 13:27:04] 2m25s       Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-mv2mk          Successfully assigned default/nginx-basic-76dd66bf4f-mv2mk to worker7
+[2025-04-02 13:27:04] 2m25s       Normal    SuccessfulRescale              horizontalpodautoscaler/nginx-basic-hpa   New size: 2; reason: cpu resource utilization (percentage of request) above target
+[2025-04-02 13:27:04] 2m25s       Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 2 from 1
+[2025-04-02 13:27:04] 2m24s       Normal    Started                        pod/nginx-basic-76dd66bf4f-mv2mk          Started container nginx
+[2025-04-02 13:27:04] 2m24s       Normal    Created                        pod/nginx-basic-76dd66bf4f-mv2mk          Created container nginx
+[2025-04-02 13:27:04] 2m24s       Normal    Pulled                         pod/nginx-basic-76dd66bf4f-mv2mk          Successfully pulled image "nginx:latest" in 757ms (757ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:27:04] 2m24s       Normal    Pulling                        pod/nginx-basic-76dd66bf4f-mv2mk          Pulling image "nginx:latest"
+[2025-04-02 13:27:14] 5m35s       Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 1
+[2025-04-02 13:27:14] 5m35s       Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-wdf2z
+[2025-04-02 13:27:14] 5m35s       Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-wdf2z          Successfully assigned default/nginx-basic-76dd66bf4f-wdf2z to worker7
+[2025-04-02 13:27:14] 5m35s       Normal    Pulling                        pod/nginx-basic-76dd66bf4f-wdf2z          Pulling image "nginx:latest"
+[2025-04-02 13:27:14] 5m34s       Normal    Pulled                         pod/nginx-basic-76dd66bf4f-wdf2z          Successfully pulled image "nginx:latest" in 771ms (771ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:27:14] 5m34s       Normal    Started                        pod/nginx-basic-76dd66bf4f-wdf2z          Started container nginx
+[2025-04-02 13:27:14] 5m34s       Normal    Created                        pod/nginx-basic-76dd66bf4f-wdf2z          Created container nginx
+[2025-04-02 13:27:14] 5m20s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:27:14] 5m20s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:27:14] 5m5s        Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:27:14] 5m5s        Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:27:14] 2m35s       Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-mv2mk
+[2025-04-02 13:27:14] 2m35s       Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-mv2mk          Successfully assigned default/nginx-basic-76dd66bf4f-mv2mk to worker7
+[2025-04-02 13:27:14] 2m35s       Normal    SuccessfulRescale              horizontalpodautoscaler/nginx-basic-hpa   New size: 2; reason: cpu resource utilization (percentage of request) above target
+[2025-04-02 13:27:14] 2m35s       Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 2 from 1
+[2025-04-02 13:27:14] 2m34s       Normal    Started                        pod/nginx-basic-76dd66bf4f-mv2mk          Started container nginx
+[2025-04-02 13:27:14] 2m34s       Normal    Created                        pod/nginx-basic-76dd66bf4f-mv2mk          Created container nginx
+[2025-04-02 13:27:14] 2m34s       Normal    Pulled                         pod/nginx-basic-76dd66bf4f-mv2mk          Successfully pulled image "nginx:latest" in 757ms (757ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:27:14] 2m34s       Normal    Pulling                        pod/nginx-basic-76dd66bf4f-mv2mk          Pulling image "nginx:latest"
+[2025-04-02 13:27:24] 5m45s       Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 1
+[2025-04-02 13:27:24] 5m45s       Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-wdf2z
+[2025-04-02 13:27:24] 5m45s       Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-wdf2z          Successfully assigned default/nginx-basic-76dd66bf4f-wdf2z to worker7
+[2025-04-02 13:27:24] 5m45s       Normal    Pulling                        pod/nginx-basic-76dd66bf4f-wdf2z          Pulling image "nginx:latest"
+[2025-04-02 13:27:24] 5m44s       Normal    Pulled                         pod/nginx-basic-76dd66bf4f-wdf2z          Successfully pulled image "nginx:latest" in 771ms (771ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:27:24] 5m44s       Normal    Started                        pod/nginx-basic-76dd66bf4f-wdf2z          Started container nginx
+[2025-04-02 13:27:24] 5m44s       Normal    Created                        pod/nginx-basic-76dd66bf4f-wdf2z          Created container nginx
+[2025-04-02 13:27:24] 5m30s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:27:24] 5m30s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:27:24] 5m15s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:27:24] 5m15s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:27:24] 2m45s       Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-mv2mk
+[2025-04-02 13:27:24] 2m45s       Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-mv2mk          Successfully assigned default/nginx-basic-76dd66bf4f-mv2mk to worker7
+[2025-04-02 13:27:24] 2m45s       Normal    SuccessfulRescale              horizontalpodautoscaler/nginx-basic-hpa   New size: 2; reason: cpu resource utilization (percentage of request) above target
+[2025-04-02 13:27:24] 2m45s       Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 2 from 1
+[2025-04-02 13:27:24] 2m44s       Normal    Started                        pod/nginx-basic-76dd66bf4f-mv2mk          Started container nginx
+[2025-04-02 13:27:24] 2m44s       Normal    Created                        pod/nginx-basic-76dd66bf4f-mv2mk          Created container nginx
+[2025-04-02 13:27:24] 2m44s       Normal    Pulled                         pod/nginx-basic-76dd66bf4f-mv2mk          Successfully pulled image "nginx:latest" in 757ms (757ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:27:24] 2m44s       Normal    Pulling                        pod/nginx-basic-76dd66bf4f-mv2mk          Pulling image "nginx:latest"
+[2025-04-02 13:27:34] 5m55s       Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 1
+[2025-04-02 13:27:34] 5m55s       Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-wdf2z
+[2025-04-02 13:27:34] 5m55s       Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-wdf2z          Successfully assigned default/nginx-basic-76dd66bf4f-wdf2z to worker7
+[2025-04-02 13:27:34] 5m55s       Normal    Pulling                        pod/nginx-basic-76dd66bf4f-wdf2z          Pulling image "nginx:latest"
+[2025-04-02 13:27:34] 5m54s       Normal    Pulled                         pod/nginx-basic-76dd66bf4f-wdf2z          Successfully pulled image "nginx:latest" in 771ms (771ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:27:34] 5m54s       Normal    Started                        pod/nginx-basic-76dd66bf4f-wdf2z          Started container nginx
+[2025-04-02 13:27:34] 5m54s       Normal    Created                        pod/nginx-basic-76dd66bf4f-wdf2z          Created container nginx
+[2025-04-02 13:27:34] 5m40s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:27:34] 5m40s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:27:34] 5m25s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:27:34] 5m25s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:27:34] 2m55s       Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-mv2mk
+[2025-04-02 13:27:34] 2m55s       Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-mv2mk          Successfully assigned default/nginx-basic-76dd66bf4f-mv2mk to worker7
+[2025-04-02 13:27:34] 2m55s       Normal    SuccessfulRescale              horizontalpodautoscaler/nginx-basic-hpa   New size: 2; reason: cpu resource utilization (percentage of request) above target
+[2025-04-02 13:27:34] 2m55s       Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 2 from 1
+[2025-04-02 13:27:34] 2m54s       Normal    Started                        pod/nginx-basic-76dd66bf4f-mv2mk          Started container nginx
+[2025-04-02 13:27:34] 2m54s       Normal    Created                        pod/nginx-basic-76dd66bf4f-mv2mk          Created container nginx
+[2025-04-02 13:27:34] 2m54s       Normal    Pulled                         pod/nginx-basic-76dd66bf4f-mv2mk          Successfully pulled image "nginx:latest" in 757ms (757ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:27:34] 2m54s       Normal    Pulling                        pod/nginx-basic-76dd66bf4f-mv2mk          Pulling image "nginx:latest"
+[2025-04-02 13:27:44] 6m5s        Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 1
+[2025-04-02 13:27:44] 6m5s        Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-wdf2z
+[2025-04-02 13:27:44] 6m5s        Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-wdf2z          Successfully assigned default/nginx-basic-76dd66bf4f-wdf2z to worker7
+[2025-04-02 13:27:44] 6m5s        Normal    Pulling                        pod/nginx-basic-76dd66bf4f-wdf2z          Pulling image "nginx:latest"
+[2025-04-02 13:27:44] 6m4s        Normal    Pulled                         pod/nginx-basic-76dd66bf4f-wdf2z          Successfully pulled image "nginx:latest" in 771ms (771ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:27:44] 6m4s        Normal    Started                        pod/nginx-basic-76dd66bf4f-wdf2z          Started container nginx
+[2025-04-02 13:27:44] 6m4s        Normal    Created                        pod/nginx-basic-76dd66bf4f-wdf2z          Created container nginx
+[2025-04-02 13:27:44] 5m50s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:27:44] 5m50s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:27:44] 5m35s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:27:44] 5m35s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:27:44] 3m5s        Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-mv2mk
+[2025-04-02 13:27:44] 3m5s        Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-mv2mk          Successfully assigned default/nginx-basic-76dd66bf4f-mv2mk to worker7
+[2025-04-02 13:27:44] 3m5s        Normal    SuccessfulRescale              horizontalpodautoscaler/nginx-basic-hpa   New size: 2; reason: cpu resource utilization (percentage of request) above target
+[2025-04-02 13:27:44] 3m5s        Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 2 from 1
+[2025-04-02 13:27:44] 3m4s        Normal    Started                        pod/nginx-basic-76dd66bf4f-mv2mk          Started container nginx
+[2025-04-02 13:27:44] 3m4s        Normal    Created                        pod/nginx-basic-76dd66bf4f-mv2mk          Created container nginx
+[2025-04-02 13:27:44] 3m4s        Normal    Pulled                         pod/nginx-basic-76dd66bf4f-mv2mk          Successfully pulled image "nginx:latest" in 757ms (757ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:27:44] 3m4s        Normal    Pulling                        pod/nginx-basic-76dd66bf4f-mv2mk          Pulling image "nginx:latest"
+[2025-04-02 13:27:54] 6m15s       Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 1
+[2025-04-02 13:27:54] 6m15s       Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-wdf2z
+[2025-04-02 13:27:54] 6m15s       Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-wdf2z          Successfully assigned default/nginx-basic-76dd66bf4f-wdf2z to worker7
+[2025-04-02 13:27:54] 6m15s       Normal    Pulling                        pod/nginx-basic-76dd66bf4f-wdf2z          Pulling image "nginx:latest"
+[2025-04-02 13:27:54] 6m14s       Normal    Pulled                         pod/nginx-basic-76dd66bf4f-wdf2z          Successfully pulled image "nginx:latest" in 771ms (771ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:27:54] 6m14s       Normal    Started                        pod/nginx-basic-76dd66bf4f-wdf2z          Started container nginx
+[2025-04-02 13:27:54] 6m14s       Normal    Created                        pod/nginx-basic-76dd66bf4f-wdf2z          Created container nginx
+[2025-04-02 13:27:54] 6m          Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:27:54] 6m          Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:27:54] 5m45s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:27:54] 5m45s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:27:54] 3m15s       Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-mv2mk
+[2025-04-02 13:27:54] 3m15s       Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-mv2mk          Successfully assigned default/nginx-basic-76dd66bf4f-mv2mk to worker7
+[2025-04-02 13:27:54] 3m15s       Normal    SuccessfulRescale              horizontalpodautoscaler/nginx-basic-hpa   New size: 2; reason: cpu resource utilization (percentage of request) above target
+[2025-04-02 13:27:54] 3m15s       Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 2 from 1
+[2025-04-02 13:27:54] 3m14s       Normal    Started                        pod/nginx-basic-76dd66bf4f-mv2mk          Started container nginx
+[2025-04-02 13:27:54] 3m14s       Normal    Created                        pod/nginx-basic-76dd66bf4f-mv2mk          Created container nginx
+[2025-04-02 13:27:54] 3m14s       Normal    Pulled                         pod/nginx-basic-76dd66bf4f-mv2mk          Successfully pulled image "nginx:latest" in 757ms (757ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:27:54] 3m14s       Normal    Pulling                        pod/nginx-basic-76dd66bf4f-mv2mk          Pulling image "nginx:latest"
+[2025-04-02 13:28:04] 6m25s       Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 1
+[2025-04-02 13:28:04] 6m25s       Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-wdf2z
+[2025-04-02 13:28:04] 6m25s       Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-wdf2z          Successfully assigned default/nginx-basic-76dd66bf4f-wdf2z to worker7
+[2025-04-02 13:28:04] 6m25s       Normal    Pulling                        pod/nginx-basic-76dd66bf4f-wdf2z          Pulling image "nginx:latest"
+[2025-04-02 13:28:04] 6m24s       Normal    Pulled                         pod/nginx-basic-76dd66bf4f-wdf2z          Successfully pulled image "nginx:latest" in 771ms (771ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:28:04] 6m24s       Normal    Started                        pod/nginx-basic-76dd66bf4f-wdf2z          Started container nginx
+[2025-04-02 13:28:04] 6m24s       Normal    Created                        pod/nginx-basic-76dd66bf4f-wdf2z          Created container nginx
+[2025-04-02 13:28:04] 6m10s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:28:04] 6m10s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:28:04] 5m55s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:28:04] 5m55s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:28:04] 3m25s       Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-mv2mk
+[2025-04-02 13:28:04] 3m25s       Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-mv2mk          Successfully assigned default/nginx-basic-76dd66bf4f-mv2mk to worker7
+[2025-04-02 13:28:04] 3m25s       Normal    SuccessfulRescale              horizontalpodautoscaler/nginx-basic-hpa   New size: 2; reason: cpu resource utilization (percentage of request) above target
+[2025-04-02 13:28:04] 3m25s       Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 2 from 1
+[2025-04-02 13:28:04] 3m24s       Normal    Started                        pod/nginx-basic-76dd66bf4f-mv2mk          Started container nginx
+[2025-04-02 13:28:04] 3m24s       Normal    Created                        pod/nginx-basic-76dd66bf4f-mv2mk          Created container nginx
+[2025-04-02 13:28:04] 3m24s       Normal    Pulled                         pod/nginx-basic-76dd66bf4f-mv2mk          Successfully pulled image "nginx:latest" in 757ms (757ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:28:04] 3m24s       Normal    Pulling                        pod/nginx-basic-76dd66bf4f-mv2mk          Pulling image "nginx:latest"
+[2025-04-02 13:28:14] 6m35s       Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 1
+[2025-04-02 13:28:14] 6m35s       Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-wdf2z
+[2025-04-02 13:28:14] 6m35s       Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-wdf2z          Successfully assigned default/nginx-basic-76dd66bf4f-wdf2z to worker7
+[2025-04-02 13:28:14] 6m35s       Normal    Pulling                        pod/nginx-basic-76dd66bf4f-wdf2z          Pulling image "nginx:latest"
+[2025-04-02 13:28:14] 6m34s       Normal    Pulled                         pod/nginx-basic-76dd66bf4f-wdf2z          Successfully pulled image "nginx:latest" in 771ms (771ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:28:14] 6m34s       Normal    Started                        pod/nginx-basic-76dd66bf4f-wdf2z          Started container nginx
+[2025-04-02 13:28:14] 6m34s       Normal    Created                        pod/nginx-basic-76dd66bf4f-wdf2z          Created container nginx
+[2025-04-02 13:28:14] 6m20s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:28:14] 6m20s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:28:14] 6m5s        Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:28:14] 6m5s        Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:28:14] 3m35s       Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-mv2mk
+[2025-04-02 13:28:14] 3m35s       Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-mv2mk          Successfully assigned default/nginx-basic-76dd66bf4f-mv2mk to worker7
+[2025-04-02 13:28:14] 3m35s       Normal    SuccessfulRescale              horizontalpodautoscaler/nginx-basic-hpa   New size: 2; reason: cpu resource utilization (percentage of request) above target
+[2025-04-02 13:28:14] 3m35s       Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 2 from 1
+[2025-04-02 13:28:14] 3m34s       Normal    Started                        pod/nginx-basic-76dd66bf4f-mv2mk          Started container nginx
+[2025-04-02 13:28:14] 3m34s       Normal    Created                        pod/nginx-basic-76dd66bf4f-mv2mk          Created container nginx
+[2025-04-02 13:28:14] 3m34s       Normal    Pulled                         pod/nginx-basic-76dd66bf4f-mv2mk          Successfully pulled image "nginx:latest" in 757ms (757ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:28:14] 3m34s       Normal    Pulling                        pod/nginx-basic-76dd66bf4f-mv2mk          Pulling image "nginx:latest"
+[2025-04-02 13:28:24] 6m45s       Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 1
+[2025-04-02 13:28:24] 6m45s       Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-wdf2z
+[2025-04-02 13:28:24] 6m45s       Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-wdf2z          Successfully assigned default/nginx-basic-76dd66bf4f-wdf2z to worker7
+[2025-04-02 13:28:24] 6m45s       Normal    Pulling                        pod/nginx-basic-76dd66bf4f-wdf2z          Pulling image "nginx:latest"
+[2025-04-02 13:28:24] 6m44s       Normal    Pulled                         pod/nginx-basic-76dd66bf4f-wdf2z          Successfully pulled image "nginx:latest" in 771ms (771ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:28:24] 6m44s       Normal    Started                        pod/nginx-basic-76dd66bf4f-wdf2z          Started container nginx
+[2025-04-02 13:28:24] 6m44s       Normal    Created                        pod/nginx-basic-76dd66bf4f-wdf2z          Created container nginx
+[2025-04-02 13:28:24] 6m30s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:28:24] 6m30s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:28:24] 6m15s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:28:24] 6m15s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:28:24] 3m45s       Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-mv2mk
+[2025-04-02 13:28:24] 3m45s       Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-mv2mk          Successfully assigned default/nginx-basic-76dd66bf4f-mv2mk to worker7
+[2025-04-02 13:28:24] 3m45s       Normal    SuccessfulRescale              horizontalpodautoscaler/nginx-basic-hpa   New size: 2; reason: cpu resource utilization (percentage of request) above target
+[2025-04-02 13:28:24] 3m45s       Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 2 from 1
+[2025-04-02 13:28:24] 3m44s       Normal    Started                        pod/nginx-basic-76dd66bf4f-mv2mk          Started container nginx
+[2025-04-02 13:28:24] 3m44s       Normal    Created                        pod/nginx-basic-76dd66bf4f-mv2mk          Created container nginx
+[2025-04-02 13:28:24] 3m44s       Normal    Pulled                         pod/nginx-basic-76dd66bf4f-mv2mk          Successfully pulled image "nginx:latest" in 757ms (757ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:28:24] 3m44s       Normal    Pulling                        pod/nginx-basic-76dd66bf4f-mv2mk          Pulling image "nginx:latest"
+[2025-04-02 13:28:34] 6m55s       Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 1
+[2025-04-02 13:28:34] 6m55s       Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-wdf2z
+[2025-04-02 13:28:34] 6m55s       Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-wdf2z          Successfully assigned default/nginx-basic-76dd66bf4f-wdf2z to worker7
+[2025-04-02 13:28:34] 6m55s       Normal    Pulling                        pod/nginx-basic-76dd66bf4f-wdf2z          Pulling image "nginx:latest"
+[2025-04-02 13:28:34] 6m54s       Normal    Pulled                         pod/nginx-basic-76dd66bf4f-wdf2z          Successfully pulled image "nginx:latest" in 771ms (771ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:28:34] 6m54s       Normal    Started                        pod/nginx-basic-76dd66bf4f-wdf2z          Started container nginx
+[2025-04-02 13:28:34] 6m54s       Normal    Created                        pod/nginx-basic-76dd66bf4f-wdf2z          Created container nginx
+[2025-04-02 13:28:34] 6m40s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:28:34] 6m40s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:28:34] 6m25s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:28:34] 6m25s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:28:34] 3m55s       Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-mv2mk
+[2025-04-02 13:28:34] 3m55s       Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-mv2mk          Successfully assigned default/nginx-basic-76dd66bf4f-mv2mk to worker7
+[2025-04-02 13:28:34] 3m55s       Normal    SuccessfulRescale              horizontalpodautoscaler/nginx-basic-hpa   New size: 2; reason: cpu resource utilization (percentage of request) above target
+[2025-04-02 13:28:34] 3m55s       Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 2 from 1
+[2025-04-02 13:28:34] 3m54s       Normal    Started                        pod/nginx-basic-76dd66bf4f-mv2mk          Started container nginx
+[2025-04-02 13:28:34] 3m54s       Normal    Created                        pod/nginx-basic-76dd66bf4f-mv2mk          Created container nginx
+[2025-04-02 13:28:34] 3m54s       Normal    Pulled                         pod/nginx-basic-76dd66bf4f-mv2mk          Successfully pulled image "nginx:latest" in 757ms (757ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:28:34] 3m54s       Normal    Pulling                        pod/nginx-basic-76dd66bf4f-mv2mk          Pulling image "nginx:latest"
+[2025-04-02 13:28:44] 7m5s        Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 1
+[2025-04-02 13:28:44] 7m5s        Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-wdf2z
+[2025-04-02 13:28:44] 7m5s        Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-wdf2z          Successfully assigned default/nginx-basic-76dd66bf4f-wdf2z to worker7
+[2025-04-02 13:28:44] 7m5s        Normal    Pulling                        pod/nginx-basic-76dd66bf4f-wdf2z          Pulling image "nginx:latest"
+[2025-04-02 13:28:44] 7m4s        Normal    Pulled                         pod/nginx-basic-76dd66bf4f-wdf2z          Successfully pulled image "nginx:latest" in 771ms (771ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:28:44] 7m4s        Normal    Started                        pod/nginx-basic-76dd66bf4f-wdf2z          Started container nginx
+[2025-04-02 13:28:44] 7m4s        Normal    Created                        pod/nginx-basic-76dd66bf4f-wdf2z          Created container nginx
+[2025-04-02 13:28:44] 6m50s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:28:44] 6m50s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:28:44] 6m35s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:28:44] 6m35s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:28:44] 4m5s        Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-mv2mk
+[2025-04-02 13:28:44] 4m5s        Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-mv2mk          Successfully assigned default/nginx-basic-76dd66bf4f-mv2mk to worker7
+[2025-04-02 13:28:44] 4m5s        Normal    SuccessfulRescale              horizontalpodautoscaler/nginx-basic-hpa   New size: 2; reason: cpu resource utilization (percentage of request) above target
+[2025-04-02 13:28:44] 4m5s        Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 2 from 1
+[2025-04-02 13:28:44] 4m4s        Normal    Started                        pod/nginx-basic-76dd66bf4f-mv2mk          Started container nginx
+[2025-04-02 13:28:44] 4m4s        Normal    Created                        pod/nginx-basic-76dd66bf4f-mv2mk          Created container nginx
+[2025-04-02 13:28:44] 4m4s        Normal    Pulled                         pod/nginx-basic-76dd66bf4f-mv2mk          Successfully pulled image "nginx:latest" in 757ms (757ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:28:44] 4m4s        Normal    Pulling                        pod/nginx-basic-76dd66bf4f-mv2mk          Pulling image "nginx:latest"
+[2025-04-02 13:28:54] 7m15s       Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 1
+[2025-04-02 13:28:54] 7m15s       Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-wdf2z
+[2025-04-02 13:28:54] 7m15s       Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-wdf2z          Successfully assigned default/nginx-basic-76dd66bf4f-wdf2z to worker7
+[2025-04-02 13:28:54] 7m15s       Normal    Pulling                        pod/nginx-basic-76dd66bf4f-wdf2z          Pulling image "nginx:latest"
+[2025-04-02 13:28:54] 7m14s       Normal    Pulled                         pod/nginx-basic-76dd66bf4f-wdf2z          Successfully pulled image "nginx:latest" in 771ms (771ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:28:54] 7m14s       Normal    Started                        pod/nginx-basic-76dd66bf4f-wdf2z          Started container nginx
+[2025-04-02 13:28:54] 7m14s       Normal    Created                        pod/nginx-basic-76dd66bf4f-wdf2z          Created container nginx
+[2025-04-02 13:28:54] 7m          Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:28:54] 7m          Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:28:54] 6m45s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:28:54] 6m45s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:28:54] 4m15s       Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-mv2mk
+[2025-04-02 13:28:54] 4m15s       Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-mv2mk          Successfully assigned default/nginx-basic-76dd66bf4f-mv2mk to worker7
+[2025-04-02 13:28:54] 4m15s       Normal    SuccessfulRescale              horizontalpodautoscaler/nginx-basic-hpa   New size: 2; reason: cpu resource utilization (percentage of request) above target
+[2025-04-02 13:28:54] 4m15s       Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 2 from 1
+[2025-04-02 13:28:54] 4m14s       Normal    Started                        pod/nginx-basic-76dd66bf4f-mv2mk          Started container nginx
+[2025-04-02 13:28:54] 4m14s       Normal    Created                        pod/nginx-basic-76dd66bf4f-mv2mk          Created container nginx
+[2025-04-02 13:28:54] 4m14s       Normal    Pulled                         pod/nginx-basic-76dd66bf4f-mv2mk          Successfully pulled image "nginx:latest" in 757ms (757ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:28:54] 4m14s       Normal    Pulling                        pod/nginx-basic-76dd66bf4f-mv2mk          Pulling image "nginx:latest"
+[2025-04-02 13:29:04] 7m25s       Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 1
+[2025-04-02 13:29:04] 7m25s       Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-wdf2z
+[2025-04-02 13:29:04] 7m25s       Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-wdf2z          Successfully assigned default/nginx-basic-76dd66bf4f-wdf2z to worker7
+[2025-04-02 13:29:04] 7m25s       Normal    Pulling                        pod/nginx-basic-76dd66bf4f-wdf2z          Pulling image "nginx:latest"
+[2025-04-02 13:29:04] 7m24s       Normal    Pulled                         pod/nginx-basic-76dd66bf4f-wdf2z          Successfully pulled image "nginx:latest" in 771ms (771ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:29:04] 7m24s       Normal    Started                        pod/nginx-basic-76dd66bf4f-wdf2z          Started container nginx
+[2025-04-02 13:29:04] 7m24s       Normal    Created                        pod/nginx-basic-76dd66bf4f-wdf2z          Created container nginx
+[2025-04-02 13:29:04] 7m10s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:29:04] 7m10s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:29:04] 6m55s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:29:04] 6m55s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:29:04] 4m25s       Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-mv2mk
+[2025-04-02 13:29:04] 4m25s       Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-mv2mk          Successfully assigned default/nginx-basic-76dd66bf4f-mv2mk to worker7
+[2025-04-02 13:29:04] 4m25s       Normal    SuccessfulRescale              horizontalpodautoscaler/nginx-basic-hpa   New size: 2; reason: cpu resource utilization (percentage of request) above target
+[2025-04-02 13:29:04] 4m25s       Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 2 from 1
+[2025-04-02 13:29:04] 4m24s       Normal    Started                        pod/nginx-basic-76dd66bf4f-mv2mk          Started container nginx
+[2025-04-02 13:29:04] 4m24s       Normal    Created                        pod/nginx-basic-76dd66bf4f-mv2mk          Created container nginx
+[2025-04-02 13:29:04] 4m24s       Normal    Pulled                         pod/nginx-basic-76dd66bf4f-mv2mk          Successfully pulled image "nginx:latest" in 757ms (757ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:29:04] 4m24s       Normal    Pulling                        pod/nginx-basic-76dd66bf4f-mv2mk          Pulling image "nginx:latest"
+[2025-04-02 13:29:14] 7m35s       Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 1
+[2025-04-02 13:29:14] 7m35s       Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-wdf2z
+[2025-04-02 13:29:14] 7m35s       Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-wdf2z          Successfully assigned default/nginx-basic-76dd66bf4f-wdf2z to worker7
+[2025-04-02 13:29:14] 7m35s       Normal    Pulling                        pod/nginx-basic-76dd66bf4f-wdf2z          Pulling image "nginx:latest"
+[2025-04-02 13:29:14] 7m34s       Normal    Pulled                         pod/nginx-basic-76dd66bf4f-wdf2z          Successfully pulled image "nginx:latest" in 771ms (771ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:29:14] 7m34s       Normal    Started                        pod/nginx-basic-76dd66bf4f-wdf2z          Started container nginx
+[2025-04-02 13:29:14] 7m34s       Normal    Created                        pod/nginx-basic-76dd66bf4f-wdf2z          Created container nginx
+[2025-04-02 13:29:14] 7m20s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:29:14] 7m20s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:29:14] 7m5s        Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:29:14] 7m5s        Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:29:14] 4m35s       Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-mv2mk
+[2025-04-02 13:29:14] 4m35s       Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-mv2mk          Successfully assigned default/nginx-basic-76dd66bf4f-mv2mk to worker7
+[2025-04-02 13:29:14] 4m35s       Normal    SuccessfulRescale              horizontalpodautoscaler/nginx-basic-hpa   New size: 2; reason: cpu resource utilization (percentage of request) above target
+[2025-04-02 13:29:14] 4m35s       Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 2 from 1
+[2025-04-02 13:29:14] 4m34s       Normal    Started                        pod/nginx-basic-76dd66bf4f-mv2mk          Started container nginx
+[2025-04-02 13:29:14] 4m34s       Normal    Created                        pod/nginx-basic-76dd66bf4f-mv2mk          Created container nginx
+[2025-04-02 13:29:14] 4m34s       Normal    Pulled                         pod/nginx-basic-76dd66bf4f-mv2mk          Successfully pulled image "nginx:latest" in 757ms (757ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:29:14] 4m34s       Normal    Pulling                        pod/nginx-basic-76dd66bf4f-mv2mk          Pulling image "nginx:latest"
+[2025-04-02 13:29:24] 7m45s       Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 1
+[2025-04-02 13:29:24] 7m45s       Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-wdf2z
+[2025-04-02 13:29:24] 7m45s       Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-wdf2z          Successfully assigned default/nginx-basic-76dd66bf4f-wdf2z to worker7
+[2025-04-02 13:29:24] 7m45s       Normal    Pulling                        pod/nginx-basic-76dd66bf4f-wdf2z          Pulling image "nginx:latest"
+[2025-04-02 13:29:24] 7m44s       Normal    Pulled                         pod/nginx-basic-76dd66bf4f-wdf2z          Successfully pulled image "nginx:latest" in 771ms (771ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:29:24] 7m44s       Normal    Started                        pod/nginx-basic-76dd66bf4f-wdf2z          Started container nginx
+[2025-04-02 13:29:24] 7m44s       Normal    Created                        pod/nginx-basic-76dd66bf4f-wdf2z          Created container nginx
+[2025-04-02 13:29:24] 7m30s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:29:24] 7m30s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:29:24] 7m15s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:29:24] 7m15s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:29:24] 4m45s       Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-mv2mk
+[2025-04-02 13:29:24] 4m45s       Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-mv2mk          Successfully assigned default/nginx-basic-76dd66bf4f-mv2mk to worker7
+[2025-04-02 13:29:24] 4m45s       Normal    SuccessfulRescale              horizontalpodautoscaler/nginx-basic-hpa   New size: 2; reason: cpu resource utilization (percentage of request) above target
+[2025-04-02 13:29:24] 4m45s       Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 2 from 1
+[2025-04-02 13:29:24] 4m44s       Normal    Started                        pod/nginx-basic-76dd66bf4f-mv2mk          Started container nginx
+[2025-04-02 13:29:24] 4m44s       Normal    Created                        pod/nginx-basic-76dd66bf4f-mv2mk          Created container nginx
+[2025-04-02 13:29:24] 4m44s       Normal    Pulled                         pod/nginx-basic-76dd66bf4f-mv2mk          Successfully pulled image "nginx:latest" in 757ms (757ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:29:24] 4m44s       Normal    Pulling                        pod/nginx-basic-76dd66bf4f-mv2mk          Pulling image "nginx:latest"
+[2025-04-02 13:29:34] 7m55s       Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 1
+[2025-04-02 13:29:34] 7m55s       Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-wdf2z
+[2025-04-02 13:29:34] 7m55s       Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-wdf2z          Successfully assigned default/nginx-basic-76dd66bf4f-wdf2z to worker7
+[2025-04-02 13:29:34] 7m55s       Normal    Pulling                        pod/nginx-basic-76dd66bf4f-wdf2z          Pulling image "nginx:latest"
+[2025-04-02 13:29:34] 7m54s       Normal    Pulled                         pod/nginx-basic-76dd66bf4f-wdf2z          Successfully pulled image "nginx:latest" in 771ms (771ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:29:34] 7m54s       Normal    Started                        pod/nginx-basic-76dd66bf4f-wdf2z          Started container nginx
+[2025-04-02 13:29:34] 7m54s       Normal    Created                        pod/nginx-basic-76dd66bf4f-wdf2z          Created container nginx
+[2025-04-02 13:29:34] 7m40s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:29:34] 7m40s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+[2025-04-02 13:29:34] 7m25s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx-basic-hpa   failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:29:34] 7m25s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx-basic-hpa   invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+[2025-04-02 13:29:34] 4m55s       Normal    SuccessfulCreate               replicaset/nginx-basic-76dd66bf4f         Created pod: nginx-basic-76dd66bf4f-mv2mk
+[2025-04-02 13:29:34] 4m55s       Normal    Scheduled                      pod/nginx-basic-76dd66bf4f-mv2mk          Successfully assigned default/nginx-basic-76dd66bf4f-mv2mk to worker7
+[2025-04-02 13:29:34] 4m55s       Normal    SuccessfulRescale              horizontalpodautoscaler/nginx-basic-hpa   New size: 2; reason: cpu resource utilization (percentage of request) above target
+[2025-04-02 13:29:34] 4m55s       Normal    ScalingReplicaSet              deployment/nginx-basic                    Scaled up replica set nginx-basic-76dd66bf4f to 2 from 1
+[2025-04-02 13:29:34] 4m54s       Normal    Started                        pod/nginx-basic-76dd66bf4f-mv2mk          Started container nginx
+[2025-04-02 13:29:34] 4m54s       Normal    Created                        pod/nginx-basic-76dd66bf4f-mv2mk          Created container nginx
+[2025-04-02 13:29:34] 4m54s       Normal    Pulled                         pod/nginx-basic-76dd66bf4f-mv2mk          Successfully pulled image "nginx:latest" in 757ms (757ms including waiting). Image size: 72180980 bytes.
+[2025-04-02 13:29:34] 4m54s       Normal    Pulling                        pod/nginx-basic-76dd66bf4f-mv2mk          Pulling image "nginx:latest"
