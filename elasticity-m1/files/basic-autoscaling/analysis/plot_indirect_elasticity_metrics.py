@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Cargar archivo CSV
-df_k6 = pd.read_csv("k6_results.csv")
+df_k6 = pd.read_csv("output/k6_results.csv")
 
 # Convertir timestamps a datetime
 df_k6["timestamp"] = pd.to_datetime(df_k6["timestamp"], unit="s")
