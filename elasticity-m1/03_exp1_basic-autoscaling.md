@@ -171,7 +171,7 @@ El flujo completo del experimento puede ejecutarse automáticamente mediante el 
 
 ### 📍 Ubicación
 ```
-exp1_basic-autoscaling.sh
+files/exp1_basic-autoscaling.sh
 ```
 
 ### ▶️ Ejecución
