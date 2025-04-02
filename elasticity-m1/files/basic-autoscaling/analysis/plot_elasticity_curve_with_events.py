@@ -28,6 +28,7 @@ import json
 # ==============================================================================
 cpu_per_vu = 1.50    # millicores por VU
 cpu_per_req = 0.05   # millicores por request
+requests_per_vu_per_second = 1  # Asumido por diseño del benchmark (1 request/seg por VU)
 # ==============================================================================
 
 # ---------------------------------------------------------------
@@ -72,7 +73,7 @@ for stage in stages:
         vus_time_series.append({
             "timestamp": current_time + timedelta(seconds=t),
             "vus": vus,
-            "reqs": vus  # Asumimos 1 request por VU por segundo (puedes cambiar esto)
+            "reqs": vus * requests_per_vu_per_second * 10  # 10s de intervalo
         })
     prev_target = target
     current_time += timedelta(seconds=duration_s)
