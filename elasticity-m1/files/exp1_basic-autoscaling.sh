@@ -78,7 +78,7 @@ echo "[Paso 4] Ejecutando prueba de carga con k6..."
 K6_START_TIME=$(date +"%Y-%m-%d %H:%M:%S")
 echo "$K6_START_TIME" > "$OUTPUT_DIR/k6_start_time.txt"
 
-k6 run --summary-export "$OUTPUT_DIR/k6_summary.json" "$LOAD_SCRIPT"
+k6 run --out csv="$OUTPUT_DIR/k6_results.csv" --summary-export "$OUTPUT_DIR/k6_summary.json" "$LOAD_SCRIPT"
 
 # ---------------------------------------------------------------
 # PASO 5: Esperar breve periodo para capturar post-carga
