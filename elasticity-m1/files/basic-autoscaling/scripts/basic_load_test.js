@@ -17,13 +17,13 @@
 
 import http from 'k6/http';   // Módulo para realizar solicitudes HTTP
 import { sleep } from 'k6';   // Módulo para simular tiempo de espera entre solicitudes
-import { readFileSync } from 'k6/fs'; // Módulo para leer archivos desde disco
+import { text } from 'k6/x/json'; // Módulo para leer archivos desde disco
 
 
 // ------------------------------------------------------------------------------
 // CARGA DE CONFIGURACIÓN EXTERNA DESDE UN ARCHIVO JSON
 // ------------------------------------------------------------------------------
-const config = JSON.parse(readFileSync('k6_configs/config.json')); 
+const config = JSON.parse(open('k6_configs/config.json')); 
 
 // ------------------------------------------------------------------------------
 // CONFIGURACIÓN DE LA PRUEBA DE CARGA
