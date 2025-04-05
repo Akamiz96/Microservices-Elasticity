@@ -17,22 +17,21 @@
 
 import http from 'k6/http';   // Módulo para realizar solicitudes HTTP
 import { sleep } from 'k6';   // Módulo para simular tiempo de espera entre solicitudes
+import { readFileSync } from 'k6/fs'; // Módulo para leer archivos desde disco
+
+
+// ------------------------------------------------------------------------------
+// CARGA DE CONFIGURACIÓN EXTERNA DESDE UN ARCHIVO JSON
+// ------------------------------------------------------------------------------
+const config = JSON.parse(readFileSync('k6_configs/config.json')); 
 
 // ------------------------------------------------------------------------------
 // CONFIGURACIÓN DE LA PRUEBA DE CARGA
 // stages: define cómo evoluciona la carga (usuarios virtuales) a lo largo del tiempo
 // ------------------------------------------------------------------------------
 export let options = {
-  stages: [
-    { duration: '1m', target: 50 },   // Subida progresiva de carga
-    { duration: '3m', target: 150 },  // Carga alta sostenida (debería activar el HPA)
-    { duration: '2m', target: 50 },   // Reducción progresiva
-    { duration: '1m', target: 0 },    // Descenso total de la carga
-  ],
-  thresholds: {
-    http_req_duration: ['p(95)<500'], // El 95% de las solicitudes debe responder en < 500 ms
-    http_req_failed: ['rate<0.01'],   // Menos del 1% de fallos aceptado
-  },
+  stages: config.stages,
+  thresholds: config.thresholds,
 };
 
 // ------------------------------------------------------------------------------
