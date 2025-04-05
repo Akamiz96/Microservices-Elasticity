@@ -17,6 +17,9 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import os
 
+individual_dir = "images/cpu_pod"
+os.makedirs(individual_dir, exist_ok=True)
+
 # ==============================================================================
 # ETAPA 1: CARGA DE MÉTRICAS DE USO DE CPU
 # ==============================================================================
@@ -60,7 +63,7 @@ plt.suptitle("Uso de CPU por Pod en el Tiempo con Eventos de Escalamiento", y=0.
 plt.tight_layout(rect=[0, 0, 1, 0.96])
 
 # Guardar gráfico general
-plt.savefig("images/cpu_usage_per_pod_with_events.png")
+plt.savefig("images/cpu_pod/cpu_usage_per_pod_with_events.png")
 plt.close()
 
 # ==============================================================================

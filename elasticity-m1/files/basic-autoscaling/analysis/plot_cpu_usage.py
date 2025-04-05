@@ -17,6 +17,9 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import os
 
+individual_dir = "images/cpu_pod"
+os.makedirs(individual_dir, exist_ok=True)
+
 # ---------------------------------------------------------------
 # CARGA DE DATOS
 # ---------------------------------------------------------------
@@ -52,7 +55,7 @@ plt.suptitle("Uso de CPU por pod a lo largo del tiempo", fontsize=16)
 # GUARDAR GRAFICO PRINCIPAL
 # ---------------------------------------------------------------
 os.makedirs("images", exist_ok=True)
-main_image_path = "images/cpu_usage_per_pod.png"
+main_image_path = "images/cpu_pod/cpu_usage_per_pod.png"
 plt.savefig(main_image_path)
 plt.show()
 

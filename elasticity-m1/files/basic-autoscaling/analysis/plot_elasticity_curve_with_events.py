@@ -23,6 +23,9 @@ from matplotlib.patches import Patch
 import os
 import json
 
+individual_dir = "images/elasticity"
+os.makedirs(individual_dir, exist_ok=True)
+
 # ==============================================================================
 # PARÁMETROS DEL MICROBENCHMARK (modificar si cambian los valores)
 # ==============================================================================
@@ -81,6 +84,13 @@ for stage in stages:
 df_vus = pd.DataFrame(vus_time_series)
 
 # ---------------------------------------------------------------
+# ETAPA 4: Obtener nombre del deployment desde el primer pod
+# ---------------------------------------------------------------
+primer_pod = df["pod"].iloc[0]
+deployment_name = "-".join(primer_pod.split("-")[:-2])
+subtitle = f"Deployment: {deployment_name}"
+
+# ---------------------------------------------------------------
 # FUNCIÓN PARA GRAFICAR UNA CURVA DE ELASTICIDAD
 # ---------------------------------------------------------------
 def plot_elasticity(df_combined, metric_label, output_file):
@@ -106,7 +116,8 @@ def plot_elasticity(df_combined, metric_label, output_file):
     # Estética y leyenda
     plt.xlabel("Tiempo")
     plt.ylabel("CPU (millicores)")
-    plt.title(f"Curva de Elasticidad con Eventos - {metric_label}")
+    plt.suptitle(subtitle, fontsize=10)
+    plt.title(f"Curva de Elasticidad con Eventos ({metric_label})")
     plt.xticks(rotation=45)
     plt.grid()
 
@@ -122,16 +133,16 @@ def plot_elasticity(df_combined, metric_label, output_file):
     plt.close()
 
 # ---------------------------------------------------------------
-# ETAPA 4: GENERAR Y GUARDAR LAS DOS GRÁFICAS
+# ETAPA 5: GENERAR Y GUARDAR LAS DOS GRÁFICAS
 # ---------------------------------------------------------------
 # Demanda basada en VUs
 df_vus["demand"] = df_vus["vus"] * cpu_per_vu
 df_comb_vu = pd.merge_asof(df_vus.sort_values("timestamp"), df_supply, on="timestamp", direction="nearest", tolerance=pd.Timedelta("10s"))
 df_comb_vu.dropna(inplace=True)
-plot_elasticity(df_comb_vu, "Basada en VUs", "images/elasticity_curve_vus_with_events.png")
+plot_elasticity(df_comb_vu, "Basada en VUs", "images/elasticity/elasticity_curve_vus_with_events.png")
 
 # Demanda basada en requests
 df_vus["demand"] = df_vus["reqs"] * cpu_per_req
 df_comb_req = pd.merge_asof(df_vus.sort_values("timestamp"), df_supply, on="timestamp", direction="nearest", tolerance=pd.Timedelta("10s"))
 df_comb_req.dropna(inplace=True)
-plot_elasticity(df_comb_req, "Basada en Requests", "images/elasticity_curve_reqs_with_events.png")
+plot_elasticity(df_comb_req, "Basada en Requests", "images/elasticity/elasticity_curve_reqs_with_events.png")

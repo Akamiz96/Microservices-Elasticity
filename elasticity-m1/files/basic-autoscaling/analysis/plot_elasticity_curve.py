@@ -18,6 +18,10 @@ from datetime import datetime, timedelta
 import os
 from matplotlib.patches import Patch
 
+
+individual_dir = "images/elasticity"
+os.makedirs(individual_dir, exist_ok=True)
+
 # ==============================================================================
 # PARÁMETROS MANUALES (CAMBIAR SEGÚN EL MICROBENCHMARK)
 # ==============================================================================
@@ -145,13 +149,13 @@ os.makedirs("images", exist_ok=True)
 plot_elasticity_curve(
     df_combined,
     demand_col="demand_vu",
-    output_file="images/elasticity_curve_vu.png",
-    title="Curva de Elasticidad (basada en VUs)"
+    output_file="images/elasticity/elasticity_curve_vu.png",
+    title="Curva de Elasticidad (Basada en VUs)"
 )
 
 plot_elasticity_curve(
     df_combined,
     demand_col="demand_req",
-    output_file="images/elasticity_curve_req.png",
-    title="Curva de Elasticidad (basada en Requests)"
+    output_file="images/elasticity/elasticity_curve_req.png",
+    title="Curva de Elasticidad (Basada en Requests)"
 )

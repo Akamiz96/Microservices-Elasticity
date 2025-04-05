@@ -39,7 +39,7 @@ plt.tight_layout()
 # ---------------------------------------------------------------
 # GUARDADO DE LA IMAGEN
 # ---------------------------------------------------------------
-os.makedirs("images", exist_ok=True)
-output_path = "images/pod_count_over_time.png"
+os.makedirs("images/pod_count", exist_ok=True)
+output_path = "images/pod_count/pod_count_over_time.png"
 plt.savefig(output_path)
 plt.show()
