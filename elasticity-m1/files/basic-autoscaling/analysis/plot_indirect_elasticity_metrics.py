@@ -11,7 +11,7 @@ import os
 INPUT_CSV = "output/k6_results.csv"
 
 # Carpeta de salida para los gráficos
-OUTPUT_DIR = "indirect_metrics"
+OUTPUT_DIR = "images/indirect_metrics"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # =============================
