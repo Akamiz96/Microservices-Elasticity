@@ -8,7 +8,7 @@ import os
 # =============================
 
 # Ruta del archivo CSV exportado por k6
-INPUT_CSV = "k6_results.csv"
+INPUT_CSV = "output/k6_results.csv"
 
 # Carpeta de salida para los gráficos
 OUTPUT_DIR = "indirect_metrics"
