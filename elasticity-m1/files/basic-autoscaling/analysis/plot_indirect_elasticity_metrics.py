@@ -19,6 +19,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import os
+from datetime import datetime
 
 # =============================
 # CONFIGURACIÓN INICIAL
@@ -28,9 +29,14 @@ import os
 INPUT_CSV = "output/k6_results.csv"
 EVENTS_CSV = "output/scaling_events_clean.csv"
 OUTPUT_DIR = "images/indirect_metrics"
+k6_start_file = "output/k6_start_time.txt"
 
 # Crear carpeta de salida si no existe
 os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+# Leer el tiempo real de inicio del experimento desde el archivo externo
+with open(k6_start_file, "r") as f:
+    k6_start_time  = pd.to_datetime(f.read().strip())
 
 # =============================
 # CARGA Y PROCESAMIENTO DE DATOS
@@ -39,6 +45,8 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 # Leer resultados de k6 y convertir timestamps a datetime
 df_k6 = pd.read_csv(INPUT_CSV)
 df_k6["timestamp"] = pd.to_datetime(df_k6["timestamp"], unit="s")
+offset = k6_start_time - df_k6["timestamp"].min()
+df_k6["timestamp"] += offset
 
 # Agrupar por timestamp y tipo de métrica, promediando los valores
 grouped = df_k6.groupby(["timestamp", "metric_name"]).agg({"metric_value": "mean"}).reset_index()
