@@ -17,7 +17,6 @@
 
 import http from 'k6/http';   // Módulo para realizar solicitudes HTTP
 import { sleep } from 'k6';   // Módulo para simular tiempo de espera entre solicitudes
-import { text } from 'k6/x/json'; // Módulo para leer archivos desde disco
 
 
 // ------------------------------------------------------------------------------
