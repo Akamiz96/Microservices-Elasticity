@@ -253,7 +253,7 @@ A continuación se analizan las gráficas generadas durante la ejecución:
 
 #### 🔹 Número de pods activos
 
-![Evolución de pods](images/pod_count_over_time.png)
+![Evolución de pods](images/microbenchmark/pod_count_over_time.png)
 
 Este gráfico muestra que durante toda la duración del experimento el número de pods activos fue constante e igual a **1**. Esto era esperable, ya que:
 
@@ -267,7 +267,7 @@ La ausencia de escalamiento confirma que el sistema operó en un rango de carga 
 
 #### 🔹 Uso relativo de CPU (%)
 
-![Uso de CPU por pod](images/cpu_usage_per_pod.png)
+![Uso de CPU por pod](images/microbenchmark/cpu_usage_per_pod.png)
 
 Este gráfico muestra el porcentaje de uso de CPU del pod de NGINX a lo largo del tiempo.
 

@@ -1,4 +1,4 @@
-# 🚀 03 - Escalamiento Básico con HPA (`exp1_basic-autoscaling`)
+# 🚀 Escalamiento Básico con HPA (`exp1_basic-autoscaling`)
 
 Este documento describe el flujo completo del primer experimento de elasticidad, en el cual se evalúa cómo un sistema Kubernetes responde a una carga progresiva utilizando el Horizontal Pod Autoscaler (HPA). 
 
