@@ -33,7 +33,9 @@ Este documento describe el primer experimento de elasticidad, en el que se eval�
 > # ==============================================================================
 > # IMPORTANTE: AJUSTAR SEGÚN MICROBENCHMARK
 > # ==============================================================================
-> cpu_per_vu = 1.50  # millicores por VU (valor estimado a partir del microbenchmark)
+> cpu_per_vu = 1.50    # millicores por VU
+> cpu_per_req = 0.05   # millicores por request
+> requests_per_vu_per_second = 1  # Asumido por diseño del benchmark (1 request/seg por VU)
 > ```
 
 ---

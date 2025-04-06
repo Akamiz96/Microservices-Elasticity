@@ -31,6 +31,7 @@ COPY plot_pod_count_with_events.py .
 COPY plot_pod_count.py .
 COPY plot_cpu_usage_with_events.py .
 COPY plot_indirect_elasticity_metrics.py .
+COPY calculate_elasticity_metrics.py .
 COPY requirements.txt .
 
 # Instalar dependencias
@@ -48,4 +49,5 @@ CMD ["sh", "-c", "\
     python plot_pod_count_with_events.py && \
     python plot_elasticity_curve.py && \
     python plot_elasticity_curve_with_events.py && \
-    python plot_indirect_elasticity_metrics.py"]
+    python plot_indirect_elasticity_metrics.py && \
+    python calculate_elasticity_metrics.py"]
