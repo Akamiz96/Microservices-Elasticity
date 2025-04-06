@@ -179,6 +179,34 @@ def calcular_metricas(df_demand, label, output_path, θ_up, θ_down, df_bloques)
     # Eₗ: mide la capacidad global del sistema para ajustarse de manera eficiente
     E_l = 1 / (θ * μ) if θ * μ > 0 else 0
 
+    # -------------------------------------------------------------------------------
+    # MÉTRICAS COMPLEMENTARIAS
+    # -------------------------------------------------------------------------------
+
+    # E_global: elasticidad complementaria basada en penalización simple
+    # Mide qué tan bien se evita tanto sub como sobreaprovisionamiento.
+    # Valor ideal cercano a 1. Disminuye si hay mucho desajuste.
+    E_global = 1 - ((ΣU + ΣO) / T_seconds) if T_seconds > 0 else 0
+
+    # R_U: tasa promedio de subaprovisionamiento por segundo
+    # Útil para comparar la intensidad del desajuste en relación al tiempo.
+    R_U = ΣU / T_seconds if T_seconds > 0 else 0
+
+    # R_O: tasa promedio de sobreaprovisionamiento por segundo
+    R_O = ΣO / T_seconds if T_seconds > 0 else 0
+
+    # theta_pct: porcentaje del tiempo total dedicado a reconfiguraciones
+    # Muestra cuánto del experimento se usó activamente en escalar.
+    theta_pct = (θ / T_seconds) * 100 if T_seconds > 0 else 0
+
+    # theta_up_pct y theta_down_pct: porcentaje de tiempo en escalamiento hacia arriba y hacia abajo
+    theta_up_pct = (θ_up / T_seconds) * 100 if T_seconds > 0 else 0
+    theta_down_pct = (θ_down / T_seconds) * 100 if T_seconds > 0 else 0
+
+    # tiempo_util: porcentaje de tiempo útil del sistema (sin reconfigurar)
+    tiempo_util = 100 - theta_pct
+
+
     # ------------------------
     # SALIDA DE RESULTADOS
     # ------------------------
@@ -213,6 +241,15 @@ def calcular_metricas(df_demand, label, output_path, θ_up, θ_down, df_bloques)
         f.write("6. Bloques de reconfiguración detectados:\n")
         for _, row in df_bloques.iterrows():
             f.write(f"   - [{row['tipo']}] {row['start']} → {row['end']} | {row['duracion']:.1f} s, {row['eventos']} eventos\n")
+        
+        f.write("7. Métricas complementarias:\n")
+        f.write(f"   - Elasticidad total (E): {E_global:.4f}\n")
+        f.write(f"   - Subaprovisionamiento relativo (R_U): {R_U:.4f} millicore/s\n")
+        f.write(f"   - Sobreaprovisionamiento relativo (R_O): {R_O:.4f} millicore/s\n")
+        f.write(f"   - Porcentaje de tiempo en reconfiguración (θ%%): {theta_pct:.2f} %\n")
+        f.write(f"       - ScaleUp: {theta_up_pct:.2f} %\n")
+        f.write(f"       - ScaleDown: {theta_down_pct:.2f} %\n")
+        f.write(f"   - Porcentaje de tiempo útil: {tiempo_util:.2f} %\n\n")
 
 # ============================================================================
 # ETAPA 1: Cargar métricas de Kubernetes (oferta de CPU)
