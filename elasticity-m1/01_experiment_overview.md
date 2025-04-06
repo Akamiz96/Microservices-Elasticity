@@ -8,7 +8,7 @@ Este documento resume los distintos experimentos realizados para analizar la **e
 
 Antes de realizar experimentos de elasticidad, se llevó a cabo un microbenchmark para estimar el consumo promedio de CPU por cada **request** y por cada **usuario virtual (VU)** en el entorno de pruebas. Estos valores son fundamentales para convertir la carga de trabajo en demanda estimada de CPU.
 
-📄 [Ver detalle del microbenchmark](01_exp0_microbenchmark.md)
+📄 [Ver detalle del microbenchmark](02_exp0_microbenchmark.md)
 
 ---
 
