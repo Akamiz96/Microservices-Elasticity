@@ -59,7 +59,7 @@ for i, (pod, color) in enumerate(zip(pods_unicos, palette)):
 
 axes[-1].set_xlabel("Tiempo")
 plt.xticks(rotation=45)
-plt.suptitle("Uso de CPU por Pod en el Tiempo con Eventos de Escalamiento", y=0.92)
+plt.suptitle("Uso de CPU por Pod en el Tiempo con Eventos de Escalamiento", fontsize=16)
 plt.tight_layout(rect=[0, 0, 1, 0.96])
 
 # Guardar gráfico general
