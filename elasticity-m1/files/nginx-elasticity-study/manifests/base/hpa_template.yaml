@@ -1,0 +1,54 @@
+# ------------------------------------------------------------------------------
+# ARCHIVO: hpa_template.yaml
+# DESCRIPCIÓN: Plantilla de manifiesto para generar múltiples HPA (HorizontalPodAutoscaler)
+#              con diferentes configuraciones de escalamiento automático basado en CPU.
+#
+# AUTOR: Alejandro Castro Martínez
+# FECHA DE MODIFICACIÓN: 08 de abril de 2025
+# CONTEXTO:
+#   - Utilizado en el estudio `nginx-elasticity-study` para evaluar el impacto de distintas
+#     configuraciones del HPA sobre la elasticidad del microservicio NGINX.
+#   - Este archivo es una plantilla; los valores de escalado se reemplazan automáticamente
+#     mediante un script generador.
+# ------------------------------------------------------------------------------
+
+# ---------------------------------------------------------------
+# DEFINICIÓN DEL OBJETO: HorizontalPodAutoscaler (v2 API)
+# ---------------------------------------------------------------
+apiVersion: autoscaling/v2           # Versión de la API que permite políticas avanzadas y métricas personalizadas
+kind: HorizontalPodAutoscaler        # Tipo de objeto que gestiona el escalamiento automático
+
+# ---------------------------------------------------------------
+# METADATOS DE IDENTIFICACIÓN
+# ---------------------------------------------------------------
+metadata:
+  name: nginx-basic-hpa              # Nombre del objeto HPA
+  labels:
+    app: nginx-basic                 # Etiqueta para asociarlo con el microservicio NGINX
+
+# ---------------------------------------------------------------
+# ESPECIFICACIONES DEL ESCALADOR
+# ---------------------------------------------------------------
+spec:
+  # Referencia al Deployment que será escalado automáticamente
+  scaleTargetRef:
+    apiVersion: apps/v1              # API del objeto objetivo (Deployment estándar)
+    kind: Deployment                 # Tipo de recurso a escalar
+    name: nginx-basic                # Nombre del Deployment al que aplica este HPA
+
+  # ---------------------------------------------------------------
+  # RANGO DE ESCALADO PERMITIDO
+  # ---------------------------------------------------------------
+  minReplicas: __MIN_REPLICAS__      # Número mínimo de pods que deben estar activos
+  maxReplicas: __MAX_REPLICAS__      # Número máximo de pods permitidos en escalamiento
+
+  # ---------------------------------------------------------------
+  # MÉTRICA DE ESCALADO: Utilización promedio del recurso CPU
+  # ---------------------------------------------------------------
+  metrics:
+    - type: Resource                 # Tipo de métrica usada: recurso del sistema (CPU, en este caso)
+      resource:
+        name: cpu                   # Se monitoriza el uso del recurso CPU
+        target:
+          type: Utilization         # Tipo de objetivo: porcentaje de uso de CPU
+          averageUtilization: __TARGET_CPU__  # Umbral de uso promedio que activa escalado
