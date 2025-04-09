@@ -1,0 +1,70 @@
+# ------------------------------------------------------------------------------
+# ARCHIVO: nginx-deployment.yaml
+# DESCRIPCIÓN: Este manifiesto crea un Deployment y un Service en Kubernetes
+#              para ejecutar y exponer una aplicación basada en NGINX.
+#
+# AUTOR: Alejandro Castro Martínez
+# FECHA DE MODIFICACIÓN: 08 de abril de 2025
+# CONTEXTO:
+#   - Este deployment es utilizado en el experimento de elasticidad
+#     `exp2_nginx-elasticity-study`.
+#   - El servicio expone NGINX mediante un NodePort, permitiendo pruebas de carga externas.
+#   - Compatible con escalado automático basado en uso de CPU (ver `base/hpa_template.yaml`).
+# ------------------------------------------------------------------------------
+
+# ---------------------------------------------------------------
+# DEPLOYMENT: Lanza pods con la imagen de nginx y configura límites de recursos
+# ---------------------------------------------------------------
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-basic              # Nombre del Deployment (referenciado en el HPA)
+  labels:
+    app: nginx-basic             # Etiqueta común para identificar los pods del deployment
+
+spec:
+  replicas: 1                    # Réplica inicial. Será gestionada dinámicamente por el HPA.
+
+  selector:
+    matchLabels:
+      app: nginx-basic           # Selector para identificar los pods gestionados
+
+  template:
+    metadata:
+      labels:
+        app: nginx-basic         # Etiqueta que debe coincidir con el selector
+
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:latest   # Imagen base de NGINX desde Docker Hub
+
+          ports:
+            - containerPort: 80 # Puerto expuesto dentro del contenedor
+
+          # Definición de recursos (crucial para que HPA pueda calcular uso relativo)
+          resources:
+            requests:
+              cpu: 100m         # Solicitud mínima de CPU (0.1 core)
+              memory: 64Mi      # Solicitud mínima de memoria
+            limits:
+              cpu: 500m         # Límite máximo de CPU permitido (0.5 core)
+              memory: 128Mi     # Límite máximo de memoria
+
+---
+# ---------------------------------------------------------------
+# SERVICE: Expone el Deployment a través de un NodePort externo
+# ---------------------------------------------------------------
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-basic-service           # Nombre del servicio (referenciado desde k6)
+spec:
+  type: NodePort                      # Permite acceder desde fuera del clúster usando la IP del nodo
+  selector:
+    app: nginx-basic                  # Asocia este servicio a los pods etiquetados como nginx-basic
+  ports:
+    - protocol: TCP
+      port: 80                        # Puerto lógico del servicio dentro del clúster
+      targetPort: 80                  # Puerto del contenedor al que se redirige el tráfico
+      nodePort: 30080                 # Puerto externo accesible desde fuera del clúster (http://<node>:30080)
