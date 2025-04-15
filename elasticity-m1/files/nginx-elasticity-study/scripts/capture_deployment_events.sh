@@ -30,14 +30,14 @@ LOAD_ID="$2"
 # ---------------------------------------------------------------
 # CONFIGURACIÓN GENERAL
 # ---------------------------------------------------------------
-OUTPUT_DIR="nginx-elasticity-study/output"
-OUTPUT_FILE="$OUTPUT_DIR/HPA_${HPA_ID}_LOAD_${LOAD_ID}_events.log"
+OUTPUT_DIR="nginx-elasticity-study/output"                          # Carpeta donde se guardará el archivo
+OUTPUT_FILE="$OUTPUT_DIR/HPA_${HPA_ID}_LOAD_${LOAD_ID}_events.csv"  # Archivo de salida con los eventos
 
-NAMESPACE="default"
-DEPLOYMENT_NAME="nginx-basic"
-INTERVAL=10
+NAMESPACE="default"                         # Namespace donde se encuentra el deployment
+DEPLOYMENT_NAME="nginx-basic"               # Nombre del deployment objetivo
+INTERVAL=10                                 # Intervalo de muestreo en segundos
 
-mkdir -p "$OUTPUT_DIR"
+mkdir -p "$OUTPUT_DIR"                      # Crear el directorio de salida si no existe
 
 # ---------------------------------------------------------------
 # BUCLE DE RECOLECCIÓN DE EVENTOS

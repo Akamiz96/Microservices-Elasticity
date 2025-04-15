@@ -24,6 +24,8 @@ NAMESPACE="default"                                    # Namespace donde se encu
 DEPLOYMENT_NAME="nginx-basic"                          # Nombre del deployment objetivo
 INTERVAL=10                                            # Intervalo de muestreo en segundos
 
+
+mkdir -p "$OUTPUT_DIR"                      # Crear el directorio de salida si no existe
 # ---------------------------------------------------------------
 # BUCLE DE RECOLECCIÓN DE EVENTOS
 # ---------------------------------------------------------------
