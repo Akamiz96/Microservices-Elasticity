@@ -1,25 +1,42 @@
 # ------------------------------------------------------------------------------
 # ARCHIVO: plot_pod_count.py
 # DESCRIPCIÓN: Script para graficar la evolución del número de pods activos
-#              durante la ejecución del experimento básico de elasticidad.
+#              durante la ejecución del experimento `exp2_nginx-elasticity-study`.
 #
 # AUTOR: Alejandro Castro Martínez
-# FECHA DE MODIFICACIÓN: 27 de marzo de 2025
+# FECHA DE MODIFICACIÓN: 15 de abril de 2025
 # CONTEXTO:
-#   - Este script forma parte del análisis del experimento `exp1_basic-autoscaling`.
-#   - Utiliza como entrada 'output/basic_metrics.csv'.
-#   - Guarda la imagen resultante en 'analysis/images/pod_count_over_time.png'.
+#   - Se ejecuta dentro de un contenedor con las variables de entorno:
+#       HPA_ID  → configuración del autoscaler (C1-C9)
+#       LOAD_ID → patrón de carga aplicado (L01-L06)
+#   - Entrada:
+#       output/HPA_<HPA_ID>_LOAD_<LOAD_ID>_metrics.csv
+#   - Salida:
+#       images/HPA_<HPA_ID>_LOAD_<LOAD_ID>/pod_count/pod_count_over_time.png
 # ------------------------------------------------------------------------------
 
+import os
 import pandas as pd
 import matplotlib.pyplot as plt
-import os
+
+# ---------------------------------------------------------------
+# LECTURA DE VARIABLES DE ENTORNO
+# ---------------------------------------------------------------
+HPA_ID = os.getenv("HPA_ID", "C1")
+LOAD_ID = os.getenv("LOAD_ID", "L01")
+
+# ---------------------------------------------------------------
+# DEFINICIÓN DE RUTAS
+# ---------------------------------------------------------------
+input_path = f"output/HPA_{HPA_ID}_LOAD_{LOAD_ID}_metrics.csv"
+output_dir = f"images/HPA_{HPA_ID}_LOAD_{LOAD_ID}/pod_count"
+os.makedirs(output_dir, exist_ok=True)
+output_path = os.path.join(output_dir, "pod_count_over_time.png")
 
 # ---------------------------------------------------------------
 # CARGA DE DATOS
 # ---------------------------------------------------------------
-file_path = "output/basic_metrics.csv"
-df = pd.read_csv(file_path, usecols=["timestamp", "num_pods"])
+df = pd.read_csv(input_path, usecols=["timestamp", "num_pods"])
 df["timestamp"] = pd.to_datetime(df["timestamp"], errors="coerce")
 df["num_pods"] = pd.to_numeric(df["num_pods"], errors="coerce")
 
@@ -39,7 +56,5 @@ plt.tight_layout()
 # ---------------------------------------------------------------
 # GUARDADO DE LA IMAGEN
 # ---------------------------------------------------------------
-os.makedirs("images/pod_count", exist_ok=True)
-output_path = "images/pod_count/pod_count_over_time.png"
 plt.savefig(output_path)
-plt.show()
+plt.close()

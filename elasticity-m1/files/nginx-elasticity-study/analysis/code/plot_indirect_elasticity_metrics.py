@@ -5,14 +5,15 @@
 #              comportamiento de elasticidad del sistema.
 #
 # AUTOR: Alejandro Castro Martínez
-# FECHA DE MODIFICACIÓN: 5 de abril de 2025
+# FECHA DE MODIFICACIÓN: 15 de abril de 2025
 # CONTEXTO:
 #   - Este script genera visualizaciones basadas en resultados de pruebas de carga
 #     realizadas con k6, permitiendo observar el efecto de escalamiento automático.
 #   - Requiere los archivos:
-#       - output/k6_results.csv (resultados de k6)
-#       - output/scaling_events_clean.csv (eventos de escalamiento)
-#   - Las imágenes se guardan en el directorio: images/indirect_metrics/
+#       - output/HPA_<HPA_ID>_LOAD_<LOAD_ID>_results.csv
+#       - output/HPA_<HPA_ID>_LOAD_<LOAD_ID>_events_clean.csv
+#       - output/HPA_<HPA_ID>_LOAD_<LOAD_ID>_k6_start_time.txt
+#   - Las imágenes se guardan en: images/HPA_<HPA_ID>_LOAD_<LOAD_ID>/indirect_metrics/
 # ------------------------------------------------------------------------------
 
 import pandas as pd
@@ -25,18 +26,22 @@ from datetime import datetime
 # CONFIGURACIÓN INICIAL
 # =============================
 
-# Rutas de entrada y salida
-INPUT_CSV = "output/k6_results.csv"
-EVENTS_CSV = "output/scaling_events_clean.csv"
-OUTPUT_DIR = "images/indirect_metrics"
-k6_start_file = "output/k6_start_time.txt"
+# Leer valores desde variables de entorno
+HPA_ID = os.getenv("HPA_ID", "C1")
+LOAD_ID = os.getenv("LOAD_ID", "L01")
+
+# Construcción dinámica de rutas
+INPUT_CSV = f"output/HPA_{HPA_ID}_LOAD_{LOAD_ID}_results.csv"
+EVENTS_CSV = f"output/HPA_{HPA_ID}_LOAD_{LOAD_ID}_events_clean.csv"
+k6_start_file = f"output/HPA_{HPA_ID}_LOAD_{LOAD_ID}_k6_start_time.txt"
+OUTPUT_DIR = f"images/HPA_{HPA_ID}_LOAD_{LOAD_ID}/indirect_metrics"
 
 # Crear carpeta de salida si no existe
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # Leer el tiempo real de inicio del experimento desde el archivo externo
 with open(k6_start_file, "r") as f:
-    k6_start_time  = pd.to_datetime(f.read().strip())
+    k6_start_time = pd.to_datetime(f.read().strip())
 
 # =============================
 # CARGA Y PROCESAMIENTO DE DATOS
@@ -45,6 +50,8 @@ with open(k6_start_file, "r") as f:
 # Leer resultados de k6 y convertir timestamps a datetime
 df_k6 = pd.read_csv(INPUT_CSV)
 df_k6["timestamp"] = pd.to_datetime(df_k6["timestamp"], unit="s")
+
+# Sincronizar el tiempo de los resultados con el tiempo real de inicio
 offset = k6_start_time - df_k6["timestamp"].min()
 df_k6["timestamp"] += offset
 
@@ -75,7 +82,6 @@ def add_scaling_event_lines(ax, df_events):
         color = "green" if event["scale_action"] == "scaleup" else "red"
         ax.axvline(x=event["timestamp"], color=color, linestyle="--", alpha=0.7)
 
-
 # =============================
 # 1. LATENCIA PROMEDIO
 # =============================
@@ -101,7 +107,7 @@ fig1e.savefig(f"{OUTPUT_DIR}/latency_avg_events.png")
 # 2. ERRORES HTTP POR SEGUNDO
 # =============================
 
-# Crear serie de errores (aquí se asume cero si no hay métrica disponible)
+# Crear serie de errores (se asume 0 si no hay métricas reportadas)
 full_time_index = pivoted.index
 errors_series = pd.Series(0, index=full_time_index, name="Errores")
 
@@ -147,14 +153,14 @@ fig3e.savefig(f"{OUTPUT_DIR}/throughput_events.png")
 # 4. THROUGHPUT VS VUs
 # =============================
 
-# Filtrar y agrupar métricas de VUs y requests
+# Filtrar métricas de VUs y requests, agrupando por timestamp
 vus_df = df_k6[df_k6["metric_name"] == "vus"].groupby("timestamp").agg({"metric_value": "mean"})
 rps_df = df_k6[df_k6["metric_name"] == "http_reqs"].groupby("timestamp").agg({"metric_value": "mean"})
 
-# Unir métricas por timestamp
+# Unir las dos métricas por timestamp para graficarlas juntas
 merged = pd.merge(vus_df, rps_df, left_index=True, right_index=True, suffixes=("_vus", "_rps"))
 
-# Gráfico de dispersión: throughput vs VUs
+# Gráfico de dispersión: requests/s vs número de VUs
 fig4, ax4 = plt.subplots(figsize=(6, 6))
 sns.scatterplot(data=merged, x="metric_value_vus", y="metric_value_rps", ax=ax4)
 ax4.set_title("Throughput vs VUs")

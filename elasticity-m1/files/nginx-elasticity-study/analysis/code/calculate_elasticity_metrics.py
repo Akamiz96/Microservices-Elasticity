@@ -4,15 +4,14 @@
 #              oferta de CPU en un experimento de escalamiento automático.
 #
 # AUTOR: Alejandro Castro Martínez
-# FECHA DE MODIFICACIÓN: 5 de abril de 2025
+# FECHA DE MODIFICACIÓN: 15 de abril de 2025
 # CONTEXTO:
-#   - El script estima elasticidades y métricas relacionadas para dos tipos de demanda:
-#       (1) en función de los VUs (usuarios virtuales)
-#       (2) en función del número de requests.
-#   - Utiliza los resultados del microbenchmark para convertir demanda en CPU.
-#   - Guarda los resultados en archivos de texto para cada tipo de demanda.
+#   - Este script estima métricas de elasticidad basadas en datos recolectados
+#     durante experimentos con cargas definidas en stages.json y eventos de HPA.
+#   - Utiliza variables de entorno para identificar el experimento actual.
 # ------------------------------------------------------------------------------
 
+import os
 import pandas as pd
 import json
 from datetime import datetime, timedelta
@@ -22,30 +21,30 @@ import numpy as np
 # CONFIGURACIÓN DEL EXPERIMENTO Y PARÁMETROS
 # ============================================================================
 
+# Cargar IDs desde variables de entorno
+HPA_ID = os.getenv("HPA_ID", "C1")
+LOAD_ID = os.getenv("LOAD_ID", "L01")
+
+# Parámetros del microbenchmark y del experimento
 cpu_per_vu = 1.50    # millicores por VU (estimado en microbenchmark)
 cpu_per_req = 0.05   # millicores por request (estimado en microbenchmark)
 requests_per_vu_per_second = 1  # tasa asumida de requests por VU por segundo
 sampling_interval = 10          # intervalo de muestreo en segundos
 reconfig_threshold = 30         # umbral para agrupar eventos de escalamiento
 
+# Rutas de archivos de entrada/salida
+metrics_file = f"output/HPA_{HPA_ID}_LOAD_{LOAD_ID}_metrics.csv"
+events_file = f"output/HPA_{HPA_ID}_LOAD_{LOAD_ID}_events_clean.csv"
+k6_start_file = f"output/HPA_{HPA_ID}_LOAD_{LOAD_ID}_k6_start_time.txt"
+stages_file = f"k6_configs/{LOAD_ID}_config.json"
+output_metrics_vu = f"output/HPA_{HPA_ID}_LOAD_{LOAD_ID}_elasticity_metrics_vus.txt"
+output_metrics_req = f"output/HPA_{HPA_ID}_LOAD_{LOAD_ID}_elasticity_metrics_requests.txt"
+
 # ============================================================================
 # FUNCIÓN AUXILIAR: calcular tiempo de reconfiguración (agrupado por tipo)
 # ============================================================================
 
 def calcular_tiempo_reconfiguracion(events_csv, threshold_seconds=30):
-    """
-    Agrupa eventos de escalamiento cercanos en el tiempo y calcula la duración
-    total de los bloques de reconfiguración por tipo.
-
-    Parámetros:
-    - events_csv (str): Ruta al CSV con eventos de escalamiento.
-    - threshold_seconds (int): Umbral máximo de separación para agrupar eventos.
-
-    Retorna:
-    - θ_up (float): Tiempo total en segundos en bloques de escalamiento hacia arriba.
-    - θ_down (float): Tiempo total en segundos en bloques de escalamiento hacia abajo.
-    - df_bloques (pd.DataFrame): Información detallada de cada bloque agrupado.
-    """
     df = pd.read_csv(events_csv, parse_dates=["timestamp"])
     df = df.sort_values("timestamp")
     resultados = []
@@ -85,20 +84,6 @@ def calcular_tiempo_reconfiguracion(events_csv, threshold_seconds=30):
 # ============================================================================
 
 def calcular_metricas(df_demand, label, output_path, θ_up, θ_down, df_bloques):
-    """
-    Calcula todas las métricas de elasticidad a partir de la oferta y la demanda.
-
-    Parámetros:
-    - df_demand (pd.DataFrame): Serie temporal con la demanda (millicores).
-    - label (str): Etiqueta para identificar el tipo de demanda en los resultados.
-    - output_path (str): Ruta al archivo de salida de texto.
-    - θ_up (float): Tiempo total en bloques de escalamiento hacia arriba.
-    - θ_down (float): Tiempo total en bloques de escalamiento hacia abajo.
-    - df_bloques (pd.DataFrame): Detalles de bloques de reconfiguración.
-
-    Retorna:
-    - None. Escribe resultados en el archivo especificado.
-    """
     df_comb = pd.merge_asof(
         df_demand.sort_values("timestamp"),
         df_supply,
@@ -108,108 +93,43 @@ def calcular_metricas(df_demand, label, output_path, θ_up, θ_down, df_bloques)
     )
     df_comb.dropna(inplace=True)
 
-    # Duración total del experimento
     T = df_comb["timestamp"].max() - df_comb["timestamp"].min()
     T_seconds = T.total_seconds()
     T_minutes = T_seconds / 60
 
-    # ------------------------
-    # SUB/SOBREAPROVISIONAMIENTO
-    # ------------------------
-
-    # Subaprovisionamiento: cuando la demanda supera la oferta
     df_comb["under"] = df_comb["demand"] - df_comb["supply"]
     df_comb["under"] = df_comb["under"].apply(lambda x: x if x > 0 else 0)
-
-    # Sobreaprovisionamiento: cuando la oferta supera la demanda
     df_comb["over"] = df_comb["supply"] - df_comb["demand"]
     df_comb["over"] = df_comb["over"].apply(lambda x: x if x > 0 else 0)
 
-    # ΣU y ΣO son las áreas acumuladas de sub/sobreaprovisionamiento (millicores * segundos)
     ΣU = df_comb["under"].sum() * sampling_interval
     ΣO = df_comb["over"].sum() * sampling_interval
 
-    # ------------------------
-    # TIEMPOS Y PROMEDIOS
-    # ------------------------
-
     under_periods = df_comb[df_comb["under"] > 0]
     over_periods = df_comb[df_comb["over"] > 0]
-
-    # ΣA y ΣB son los tiempos totales en los que hubo sub/sobreaprovisionamiento
     ΣA = len(under_periods) * sampling_interval
     ΣB = len(over_periods) * sampling_interval
-
-    # A̅ y B̅: proporción del tiempo total que se pasó en cada estado
     A_bar = ΣA / T_seconds if T_seconds > 0 else 0
     B_bar = ΣB / T_seconds if T_seconds > 0 else 0
-
-    # Ū y Ō: intensidad media de sub/sobreaprovisionamiento durante sus períodos
     U_bar = ΣU / ΣA if ΣA > 0 else 0
     O_bar = ΣO / ΣB if ΣB > 0 else 0
 
-    # ------------------------
-    # PRECISIÓN
-    # ------------------------
-
-    # Pᵤ y P𝑑: precisión del sistema para evitar sub/sobreaprovisionamiento
-    # Mientras menores sean, mejor se está ajustando la oferta a la demanda
     P_u = ΣU / T_seconds if T_seconds > 0 else 0
     P_d = ΣO / T_seconds if T_seconds > 0 else 0
-
-    # ------------------------
-    # ELASTICIDADES PARCIALES
-    # ------------------------
-
-    # Eᵤ = 1 / (A̅ × Ū)
     E_u = 1 / (A_bar * U_bar) if A_bar * U_bar > 0 else 0
-
-    # E𝑑 = 1 / (B̅ × Ō)
     E_d = 1 / (B_bar * O_bar) if B_bar * O_bar > 0 else 0
 
-    # ------------------------
-    # ELASTICIDAD TOTAL
-    # ------------------------
-
-    θ = θ_up + θ_down  # tiempo total de reconfiguración
-
-    # μ: intensidad media de desajuste respecto al total de muestras
+    θ = θ_up + θ_down
     μ = (ΣU + ΣO) / (T_seconds * len(df_comb)) if len(df_comb) > 0 else 0
-
-    # Eₗ: mide la capacidad global del sistema para ajustarse de manera eficiente
     E_l = 1 / (θ * μ) if θ * μ > 0 else 0
 
-    # -------------------------------------------------------------------------------
-    # MÉTRICAS COMPLEMENTARIAS
-    # -------------------------------------------------------------------------------
-
-    # E_global: elasticidad complementaria basada en penalización simple
-    # Mide qué tan bien se evita tanto sub como sobreaprovisionamiento.
-    # Valor ideal cercano a 1. Disminuye si hay mucho desajuste.
     E_global = 1 - ((ΣU + ΣO) / T_seconds) if T_seconds > 0 else 0
-
-    # R_U: tasa promedio de subaprovisionamiento por segundo
-    # Útil para comparar la intensidad del desajuste en relación al tiempo.
     R_U = ΣU / T_seconds if T_seconds > 0 else 0
-
-    # R_O: tasa promedio de sobreaprovisionamiento por segundo
     R_O = ΣO / T_seconds if T_seconds > 0 else 0
-
-    # theta_pct: porcentaje del tiempo total dedicado a reconfiguraciones
-    # Muestra cuánto del experimento se usó activamente en escalar.
     theta_pct = (θ / T_seconds) * 100 if T_seconds > 0 else 0
-
-    # theta_up_pct y theta_down_pct: porcentaje de tiempo en escalamiento hacia arriba y hacia abajo
     theta_up_pct = (θ_up / T_seconds) * 100 if T_seconds > 0 else 0
     theta_down_pct = (θ_down / T_seconds) * 100 if T_seconds > 0 else 0
-
-    # tiempo_util: porcentaje de tiempo útil del sistema (sin reconfigurar)
     tiempo_util = 100 - theta_pct
-
-
-    # ------------------------
-    # SALIDA DE RESULTADOS
-    # ------------------------
 
     with open(output_path, "w") as f:
         f.write(f"=== MÉTRICAS DE ELASTICIDAD ({label}) ===\n\n")
@@ -241,7 +161,7 @@ def calcular_metricas(df_demand, label, output_path, θ_up, θ_down, df_bloques)
         f.write("6. Bloques de reconfiguración detectados:\n")
         for _, row in df_bloques.iterrows():
             f.write(f"   - [{row['tipo']}] {row['start']} → {row['end']} | {row['duracion']:.1f} s, {row['eventos']} eventos\n")
-        
+
         f.write("7. Métricas complementarias:\n")
         f.write(f"   - Elasticidad total (E): {E_global:.4f}\n")
         f.write(f"   - Subaprovisionamiento relativo (R_U): {R_U:.4f} millicore/s\n")
@@ -252,29 +172,26 @@ def calcular_metricas(df_demand, label, output_path, θ_up, θ_down, df_bloques)
         f.write(f"   - Porcentaje de tiempo útil: {tiempo_util:.2f} %\n\n")
 
 # ============================================================================
-# ETAPA 1: Cargar métricas de Kubernetes (oferta de CPU)
+# ETAPA 1: Cargar métricas observadas (oferta)
 # ============================================================================
-
-df_metrics = pd.read_csv("output/basic_metrics.csv")
+df_metrics = pd.read_csv(metrics_file)
 df_metrics["timestamp"] = pd.to_datetime(df_metrics["timestamp"])
 df_metrics["cpu(millicores)"] = pd.to_numeric(df_metrics["cpu(millicores)"], errors="coerce")
 df_supply = df_metrics.groupby("timestamp")["cpu(millicores)"].sum().reset_index()
 df_supply.rename(columns={"cpu(millicores)": "supply"}, inplace=True)
 
 # ============================================================================
-# ETAPA 2: Leer tiempo de inicio de k6 y etapas definidas
+# ETAPA 2: Leer tiempo de inicio de carga y los stages
 # ============================================================================
-
-with open("output/k6_start_time.txt") as f:
+with open(k6_start_file) as f:
     k6_start_time = datetime.strptime(f.read().strip(), "%Y-%m-%d %H:%M:%S")
 
-with open("output/stages.json") as f:
-    stages = json.load(f)
+with open(stages_file) as f:
+    stages = json.load(f)["stages"]
 
 # ============================================================================
-# ETAPA 3: Generar serie de demanda en función de VUs y Requests
+# ETAPA 3: Generar demanda estimada a partir de los stages
 # ============================================================================
-
 def parse_duration(d): return int(d[:-1]) * (60 if d.endswith("m") else 1)
 
 vus_series = []
@@ -298,24 +215,17 @@ for stage in stages:
 df_vus = pd.DataFrame(vus_series)
 
 # ============================================================================
-# ETAPA 4: Calcular bloques de reconfiguración a partir de eventos
+# ETAPA 4: Calcular reconfiguraciones detectadas
 # ============================================================================
-
-θ_up, θ_down, df_bloques = calcular_tiempo_reconfiguracion(
-    "output/scaling_events_clean.csv",
-    threshold_seconds=reconfig_threshold
-)
+θ_up, θ_down, df_bloques = calcular_tiempo_reconfiguracion(events_file, reconfig_threshold)
 
 # ============================================================================
-# ETAPA 5: Calcular métricas usando ambas formas de demanda
+# ETAPA 5: Calcular métricas por VUs y por Requests
 # ============================================================================
-
-# Por VUs
 df_vus_vu = df_vus.copy()
 df_vus_vu["demand"] = df_vus_vu["vus"] * cpu_per_vu
-calcular_metricas(df_vus_vu, "Basado en VUs", "output/elasticity_metrics_vus.txt", θ_up, θ_down, df_bloques)
+calcular_metricas(df_vus_vu, "Basado en VUs", output_metrics_vu, θ_up, θ_down, df_bloques)
 
-# Por requests
 df_vus_req = df_vus.copy()
 df_vus_req["demand"] = df_vus_req["reqs"] * cpu_per_req
-calcular_metricas(df_vus_req, "Basado en Requests", "output/elasticity_metrics_requests.txt", θ_up, θ_down, df_bloques)
+calcular_metricas(df_vus_req, "Basado en Requests", output_metrics_req, θ_up, θ_down, df_bloques)

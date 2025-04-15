@@ -1,29 +1,44 @@
 # ------------------------------------------------------------------------------
 # ARCHIVO: plot_cpu_usage.py
 # DESCRIPCIÓN: Script para graficar el uso de CPU (%) de cada pod durante la
-#              ejecución del experimento básico de elasticidad (exp1_basic-autoscaling).
+#              ejecución del experimento `exp2_nginx-elasticity-study`.
 #              Genera una visualización compuesta y gráficos individuales por pod.
 #
 # AUTOR: Alejandro Castro Martínez
-# FECHA DE MODIFICACIÓN: 27 de marzo de 2025
+# FECHA DE MODIFICACIÓN: 15 de abril de 2025
 # CONTEXTO:
-#   - Este script se ejecuta dentro de un contenedor Docker con volúmenes montados.
-#   - Utiliza como entrada el archivo 'output/basic_metrics.csv'.
-#   - Guarda gráficos en 'analysis/images/'.
+#   - Se ejecuta dentro de un contenedor con las variables de entorno:
+#       HPA_ID  → configuración del autoscaler (C1-C9)
+#       LOAD_ID → patrón de carga aplicado (L01-L06)
+#   - Utiliza como entrada el archivo:
+#       output/HPA_<HPA_ID>_LOAD_<LOAD_ID>_metrics.csv
+#   - Guarda los resultados en:
+#       images/HPA_<HPA_ID>_LOAD_<LOAD_ID>/cpu_pod/
 # ------------------------------------------------------------------------------
 
+import os
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-import os
 
-individual_dir = "images/cpu_pod"
-os.makedirs(individual_dir, exist_ok=True)
+# ---------------------------------------------------------------
+# LECTURA DE IDENTIFICADORES DESDE VARIABLES DE ENTORNO
+# ---------------------------------------------------------------
+HPA_ID = os.getenv("HPA_ID", "C1")
+LOAD_ID = os.getenv("LOAD_ID", "L01")
+
+# ---------------------------------------------------------------
+# DEFINICIÓN DE RUTAS DE ENTRADA Y SALIDA
+# ---------------------------------------------------------------
+file_path = f"output/HPA_{HPA_ID}_LOAD_{LOAD_ID}_metrics.csv"
+output_base = f"images/HPA_{HPA_ID}_LOAD_{LOAD_ID}/cpu_pod"
+
+# Crear las carpetas de salida si no existen
+os.makedirs(output_base, exist_ok=True)
 
 # ---------------------------------------------------------------
 # CARGA DE DATOS
 # ---------------------------------------------------------------
-file_path = "output/basic_metrics.csv"
 df = pd.read_csv(file_path, delimiter=",", dtype=str, on_bad_lines="skip")
 df["timestamp"] = pd.to_datetime(df["timestamp"], errors='coerce')
 df["%cpu"] = df["%cpu"].str.replace(",", ".", regex=False)
@@ -48,23 +63,19 @@ for i, (pod, color) in enumerate(zip(pods_unicos, palette)):
     axes[i].grid()
 
 axes[-1].set_xlabel("Tiempo")
-plt.tight_layout(rect=[0, 0, 1, 0.96])  # Evita superposición del título
+plt.tight_layout(rect=[0, 0, 1, 0.96])
 plt.suptitle("Uso de CPU por pod a lo largo del tiempo", fontsize=16)
 
 # ---------------------------------------------------------------
 # GUARDAR GRAFICO PRINCIPAL
 # ---------------------------------------------------------------
-os.makedirs("images", exist_ok=True)
-main_image_path = "images/cpu_pod/cpu_usage_per_pod.png"
+main_image_path = os.path.join(output_base, "cpu_usage_per_pod.png")
 plt.savefig(main_image_path)
 plt.show()
 
 # ---------------------------------------------------------------
 # GRAFICOS INDIVIDUALES POR POD
 # ---------------------------------------------------------------
-individual_dir = "images/cpu_pod"
-os.makedirs(individual_dir, exist_ok=True)
-
 for idx, pod in enumerate(pods_unicos, start=1):
     pod_df = df[df["pod"] == pod]
     plt.figure(figsize=(10, 5))
@@ -74,8 +85,8 @@ for idx, pod in enumerate(pods_unicos, start=1):
     plt.ylabel("% CPU")
     plt.grid()
     plt.tight_layout()
-    
+
     filename = f"pod{idx}_cpu.png"
-    path = os.path.join(individual_dir, filename)
+    path = os.path.join(output_base, filename)
     plt.savefig(path)
     plt.close()
