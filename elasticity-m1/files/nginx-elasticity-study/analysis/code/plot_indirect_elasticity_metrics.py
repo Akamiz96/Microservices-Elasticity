@@ -31,7 +31,7 @@ HPA_ID = os.getenv("HPA_ID", "C1")
 LOAD_ID = os.getenv("LOAD_ID", "L01")
 
 # Construcción dinámica de rutas
-INPUT_CSV = f"output/HPA_{HPA_ID}_LOAD_{LOAD_ID}_results.csv"
+INPUT_CSV = f"output/HPA_{HPA_ID}_LOAD_{LOAD_ID}_k6_results.csv"
 EVENTS_CSV = f"output/HPA_{HPA_ID}_LOAD_{LOAD_ID}_events_clean.csv"
 k6_start_file = f"output/HPA_{HPA_ID}_LOAD_{LOAD_ID}_k6_start_time.txt"
 OUTPUT_DIR = f"images/HPA_{HPA_ID}_LOAD_{LOAD_ID}/indirect_metrics"
