@@ -51,9 +51,9 @@ FIRST_RUN=true
 # ---------------------------------------------------------------
 for HPA_ID in "${HPAS[@]}"; do
   for LOAD_ID in "${LOADS[@]}"; do
-    echo "==============================================================="
-    echo "Ejecutando experimento HPA: $HPA_ID | Carga: $LOAD_ID"
-    echo "==============================================================="
+    echo "===============================================================" > "$LOG_CENTRAL"
+    echo "Ejecutando experimento HPA: $HPA_ID | Carga: $LOAD_ID" > "$LOG_CENTRAL"
+    echo "===============================================================" > "$LOG_CENTRAL"
 
     START_TIME=$(date +"%Y-%m-%d %H:%M:%S")
     LOG_FILE="$LOG_DIR/${HPA_ID}_${LOAD_ID}.txt"
@@ -71,18 +71,18 @@ for HPA_ID in "${HPAS[@]}"; do
     # ---------------------------------------------------------------
     # PASO 2: Mostrar IP del clúster (solo en primera ejecución)
     # ---------------------------------------------------------------
-    if [ "$FIRST_RUN" = true ]; then
-      echo "[Paso 2] IP de los nodos del clúster:" | tee -a "$LOG_FILE"
-      kubectl get nodes -o wide 2>&1 | tee -a "$LOG_FILE"
-      echo ""
-      echo "Edita el archivo:"
-      echo "    $LOAD_SCRIPT"
-      echo "y reemplaza la dirección '<IP_DEL_CLUSTER>' por la IP externa de uno de los nodos"
-      echo "que aparece en la columna 'EXTERNAL-IP' o 'INTERNAL-IP'."
-      echo ""
-      read -p "Presiona ENTER para continuar una vez que hayas actualizado la IP..."
-      FIRST_RUN=false
-    fi
+    # if [ "$FIRST_RUN" = true ]; then
+    #   echo "[Paso 2] IP de los nodos del clúster:" | tee -a "$LOG_FILE"
+    #   kubectl get nodes -o wide 2>&1 | tee -a "$LOG_FILE"
+    #   echo ""
+    #   echo "Edita el archivo:"
+    #   echo "    $LOAD_SCRIPT"
+    #   echo "y reemplaza la dirección '<IP_DEL_CLUSTER>' por la IP externa de uno de los nodos"
+    #   echo "que aparece en la columna 'EXTERNAL-IP' o 'INTERNAL-IP'."
+    #   echo ""
+    #   read -p "Presiona ENTER para continuar una vez que hayas actualizado la IP..."
+    #   FIRST_RUN=false
+    # fi
 
     # ---------------------------------------------------------------
     # PASO 3: Iniciar recolección de métricas y eventos
