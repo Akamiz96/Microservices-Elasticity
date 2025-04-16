@@ -25,7 +25,7 @@ LOG_DIR="exp_logs/nginx-elasticity-study"
 METRIC_SCRIPT="$SCRIPTS_DIR/metric_collector_basic.sh"
 EVENTS_SCRIPT="$SCRIPTS_DIR/capture_deployment_events.sh"
 LOAD_SCRIPT="$SCRIPTS_DIR/load_test_runner.js"
-K6_CONFIG_DIR="scripts/k6_configs"
+K6_CONFIG_DIR="$SCRIPTS_DIR/k6_configs"
 
 mkdir -p "$LOG_DIR"
 LOG_CENTRAL="$LOG_DIR/experiment_log.txt"
@@ -104,7 +104,7 @@ for HPA_ID in "${HPAS[@]}"; do
     K6_START_TIME=$(date +"%Y-%m-%d %H:%M:%S")
     echo "$K6_START_TIME" > "$OUTPUT_DIR/HPA_${HPA_ID}_LOAD_${LOAD_ID}_k6_start_time.txt"
 
-    K6_CONF="$K6_CONFIG_DIR/${LOAD_ID}_config.json"
+    K6_CONF="${LOAD_ID}_config.json"
     k6 run --out csv="$OUTPUT_DIR/HPA_${HPA_ID}_LOAD_${LOAD_ID}_k6_results.csv" \
            --summary-export "$OUTPUT_DIR/HPA_${HPA_ID}_LOAD_${LOAD_ID}_summary.json" \
            -e K6_CONF="$K6_CONF" \
