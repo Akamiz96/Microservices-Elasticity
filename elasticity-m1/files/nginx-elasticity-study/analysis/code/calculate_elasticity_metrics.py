@@ -46,6 +46,8 @@ output_metrics_req = f"output/HPA_{HPA_ID}_LOAD_{LOAD_ID}_elasticity_metrics_req
 
 def calcular_tiempo_reconfiguracion(events_csv, threshold_seconds=30):
     df = pd.read_csv(events_csv, parse_dates=["timestamp"])
+    df["timestamp"] = pd.to_datetime(df["timestamp"], errors="coerce")
+    df = df.dropna(subset=["timestamp"])
     df = df.sort_values("timestamp")
     resultados = []
 

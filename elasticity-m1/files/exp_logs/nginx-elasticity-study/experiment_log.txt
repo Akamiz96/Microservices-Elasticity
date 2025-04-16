@@ -1,0 +1,8 @@
+Inicio del experimento: mar 15 abr 2025 19:26:22 -05
+[2025-04-15 19:26:22] Inicio del experimento C1 - L01
+[2025-04-15 19:35:01] Fin del experimento C1 - L01
+Fin del experimento: mar 15 abr 2025 19:35:31 -05
+Inicio del experimento: mar 15 abr 2025 19:43:11 -05
+[2025-04-15 19:43:11] Inicio del experimento C1 - L01
+[2025-04-15 19:51:29] Fin del experimento C1 - L01
+Fin del experimento: mar 15 abr 2025 19:51:59 -05
