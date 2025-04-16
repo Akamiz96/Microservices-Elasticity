@@ -36,7 +36,7 @@ LOAD_SCRIPT="$SCRIPTS_DIR/load_test_runner.js"
 
 mkdir -p "$LOG_DIR"
 LOG_CENTRAL="$LOG_DIR/experiment_log.txt"
-echo "Inicio del experimento: $(date)" >> "$LOG_CENTRAL"
+echo "Inicio del experimento: $(date)" | tee -a "$LOG_CENTRAL"
 
 # ---------------------------------------------------------------
 # LISTA DE CONFIGURACIONES A PROBAR
@@ -51,14 +51,12 @@ FIRST_RUN=true
 # ---------------------------------------------------------------
 for HPA_ID in "${HPAS[@]}"; do
   for LOAD_ID in "${LOADS[@]}"; do
-    echo "===============================================================" > "$LOG_CENTRAL"
-    echo "Ejecutando experimento HPA: $HPA_ID | Carga: $LOAD_ID" > "$LOG_CENTRAL"
-    echo "===============================================================" > "$LOG_CENTRAL"
 
     START_TIME=$(date +"%Y-%m-%d %H:%M:%S")
     LOG_FILE="$LOG_DIR/${HPA_ID}_${LOAD_ID}.txt"
-    echo "[$START_TIME] Inicio del experimento $HPA_ID - $LOAD_ID" >> "$LOG_CENTRAL"
-    echo "Inicio: $START_TIME" > "$LOG_FILE"
+    echo "==============================================================" | tee -a "$LOG_CENTRAL"
+    echo "[$START_TIME] Inicio del experimento $HPA_ID - $LOAD_ID" | tee -a "$LOG_CENTRAL"
+    echo "Inicio: $START_TIME" | tee -a "$LOG_FILE"
 
     # ---------------------------------------------------------------
     # PASO 1: Desplegar manifiestos en Kubernetes
@@ -106,19 +104,24 @@ for HPA_ID in "${HPAS[@]}"; do
            --summary-export "$OUTPUT_DIR/HPA_${HPA_ID}_LOAD_${LOAD_ID}_summary.json" \
            -e K6_CONF="$K6_CONF" \
            "$LOAD_SCRIPT" 2>&1 | tee -a "$LOG_FILE"
-    sleep 30
+    
+    # ---------------------------------------------------------------
+    # PASO 5: Esperar breve periodo para capturar post-carga
+    # ---------------------------------------------------------------
+    echo "[Paso 5] Esperando 10 minutos adicionales para observar estabilización..." | tee -a "$LOG_FILE"
+    sleep 10m
 
     # ---------------------------------------------------------------
-    # PASO 5: Detener procesos de recolección
+    # PASO 6: Detener procesos de recolección
     # ---------------------------------------------------------------
-    echo "[Paso 5] Deteniendo procesos..." | tee -a "$LOG_FILE"
+    echo "[Paso 6] Deteniendo procesos..." | tee -a "$LOG_FILE"
     kill "$METRIC_PID"
     kill "$EVENTS_PID"
 
     # ---------------------------------------------------------------
-    # PASO 6: Análisis con Docker
+    # PASO 7: Análisis con Docker
     # ---------------------------------------------------------------
-    echo "[Paso 6] Ejecutando análisis con Docker..." | tee -a "$LOG_FILE"
+    echo "[Paso 7] Ejecutando análisis con Docker..." | tee -a "$LOG_FILE"
     docker build -t nginx-elasticity-analysis "$ANALYSIS_DIR" 2>&1 | tee -a "$LOG_FILE"
     docker run --rm \
       -v "$(pwd)/$OUTPUT_DIR:/app/output" \
@@ -129,16 +132,16 @@ for HPA_ID in "${HPAS[@]}"; do
       nginx-elasticity-analysis 2>&1 | tee -a "$LOG_FILE"
 
     # ---------------------------------------------------------------
-    # PASO 7: Eliminar recursos de Kubernetes
+    # PASO 8: Eliminar recursos de Kubernetes
     # ---------------------------------------------------------------
-    echo "[Paso 7] Limpiando recursos de Kubernetes..." | tee -a "$LOG_FILE"
+    echo "[Paso 8] Limpiando recursos de Kubernetes..." | tee -a "$LOG_FILE"
     kubectl delete -f "$MANIFESTS_DIR/nginx-deployment.yaml" 2>&1 | tee -a "$LOG_FILE"
     kubectl delete -f "$MANIFESTS_DIR/generated/${HPA_ID}_hpa.yaml" 2>&1 | tee -a "$LOG_FILE"
 
     # ---------------------------------------------------------------
-    # PASO 8: Organizar archivos del experimento
+    # PASO 9: Organizar archivos del experimento
     # ---------------------------------------------------------------
-    echo "[Paso 8] Moviendo archivos a subcarpeta HPA_${HPA_ID}_LOAD_${LOAD_ID}..." | tee -a "$LOG_FILE"
+    echo "[Paso 9] Moviendo archivos a subcarpeta HPA_${HPA_ID}_LOAD_${LOAD_ID}..." | tee -a "$LOG_FILE"
     EXP_OUTPUT_DIR="$OUTPUT_DIR/HPA_${HPA_ID}_LOAD_${LOAD_ID}"
     mkdir -p "$EXP_OUTPUT_DIR"
     mv "$OUTPUT_DIR"/HPA_${HPA_ID}_LOAD_${LOAD_ID}_* "$EXP_OUTPUT_DIR"/
@@ -147,10 +150,10 @@ for HPA_ID in "${HPAS[@]}"; do
     # FIN DEL EXPERIMENTO
     # ---------------------------------------------------------------
     END_TIME=$(date +"%Y-%m-%d %H:%M:%S")
-    echo "[$END_TIME] Fin del experimento $HPA_ID - $LOAD_ID" >> "$LOG_CENTRAL"
-    echo "Fin: $END_TIME" >> "$LOG_FILE"
+    echo "[$END_TIME] Fin del experimento $HPA_ID - $LOAD_ID" | tee -a "$LOG_CENTRAL"
+    echo "Fin: $END_TIME" | tee -a "$LOG_FILE"
 
-    echo "Esperando 60 segundos antes del siguiente experimento..."
+    echo "Esperando 60 segundos antes del siguiente experimento..." | tee -a "$LOG_FILE"
     sleep 60
   done
 done
@@ -158,5 +161,9 @@ done
 # ---------------------------------------------------------------
 # FINALIZACIÓN GENERAL
 # ---------------------------------------------------------------
-echo "Fin del experimento: $(date)" >> "$LOG_CENTRAL"
-echo "Todos los experimentos han sido ejecutados satisfactoriamente."
+echo "==============================================================" | tee -a "$LOG_CENTRAL"
+echo "Fin del experimento: $(date)" | tee -a "$LOG_CENTRAL"
+echo "==============================================================" | tee -a "$LOG_CENTRAL"
+echo "Todos los experimentos han sido ejecutados satisfactoriamente." | tee -a "$LOG_CENTRAL"
+echo "==============================================================" | tee -a "$LOG_CENTRAL"
+
