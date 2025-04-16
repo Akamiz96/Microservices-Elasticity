@@ -1,0 +1,25 @@
+timestamp,pod,cpu(millicores),memory(bytes),%cpu,num_pods
+2025-04-15 22:32:41,nginx-basic-76dd66bf4f-ld9vm,0,15Mi,0,1
+2025-04-15 22:32:51,nginx-basic-76dd66bf4f-ld9vm,1,15Mi,1.00,1
+2025-04-15 22:33:01,nginx-basic-76dd66bf4f-ld9vm,1,15Mi,1.00,1
+2025-04-15 22:33:11,nginx-basic-76dd66bf4f-ld9vm,1,15Mi,1.00,1
+2025-04-15 22:33:22,nginx-basic-76dd66bf4f-ld9vm,14,16Mi,14.00,1
+2025-04-15 22:33:32,nginx-basic-76dd66bf4f-ld9vm,14,16Mi,14.00,1
+2025-04-15 22:33:42,nginx-basic-76dd66bf4f-ld9vm,49,16Mi,49.00,1
+2025-04-15 22:33:52,nginx-basic-76dd66bf4f-ld9vm,83,16Mi,83.00,1
+2025-04-15 22:34:02,nginx-basic-76dd66bf4f-ld9vm,85,16Mi,85.00,1
+2025-04-15 22:34:12,nginx-basic-76dd66bf4f-ld9vm,85,16Mi,85.00,1
+2025-04-15 22:34:22,nginx-basic-76dd66bf4f-ld9vm,92,16Mi,92.00,1
+2025-04-15 22:34:32,nginx-basic-76dd66bf4f-ld9vm,90,16Mi,90.00,1
+2025-04-15 22:34:42,nginx-basic-76dd66bf4f-ld9vm,90,16Mi,90.00,1
+2025-04-15 22:34:53,nginx-basic-76dd66bf4f-ld9vm,94,16Mi,94.00,1
+2025-04-15 22:35:03,nginx-basic-76dd66bf4f-ld9vm,93,16Mi,93.00,1
+2025-04-15 22:35:13,nginx-basic-76dd66bf4f-ld9vm,93,16Mi,93.00,1
+2025-04-15 22:35:23,nginx-basic-76dd66bf4f-ld9vm,99,16Mi,99.00,1
+2025-04-15 22:35:33,nginx-basic-76dd66bf4f-ld9vm,104,16Mi,104.00,1
+2025-04-15 22:35:43,nginx-basic-76dd66bf4f-ld9vm,104,16Mi,104.00,1
+2025-04-15 22:35:53,nginx-basic-76dd66bf4f-ld9vm,90,16Mi,90.00,1
+2025-04-15 22:36:03,nginx-basic-76dd66bf4f-ld9vm,37,16Mi,37.00,1
+2025-04-15 22:36:13,nginx-basic-76dd66bf4f-ld9vm,37,16Mi,37.00,1
+2025-04-15 22:36:24,nginx-basic-76dd66bf4f-ld9vm,4,16Mi,4.00,1
+2025-04-15 22:36:34,nginx-basic-76dd66bf4f-ld9vm,0,16Mi,0,1

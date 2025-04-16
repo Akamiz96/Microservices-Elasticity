@@ -1,11 +1,8 @@
-Inicio: 2025-04-15 20:21:36
+Inicio: 2025-04-15 20:43:16
 [Paso 1] Aplicando manifiestos...
-deployment.apps/nginx-basic created
-service/nginx-basic-service created
-horizontalpodautoscaler.autoscaling/nginx-basic-hpa created
-[Paso 2] IP de los nodos del clúster:
-NAME      STATUS   ROLES           AGE   VERSION   INTERNAL-IP    EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION       CONTAINER-RUNTIME
-worker7   Ready    control-plane   11d   v1.31.1   10.195.20.20   <none>        Ubuntu 20.04.6 LTS   5.15.0-131-generic   containerd://1.7.24
+deployment.apps/nginx-basic unchanged
+service/nginx-basic-service unchanged
+horizontalpodautoscaler.autoscaling/nginx-basic-hpa unchanged
 [Paso 3] Iniciando recolección de métricas y eventos...
 [Paso 4] Ejecutando prueba de carga...
 
@@ -722,13 +719,13 @@ default   [  55% ] 16/20 VUs  3m52.0s/7m00.0s
 running (3m53.0s), 16/20 VUs, 2017 complete and 0 interrupted iterations
 default   [  55% ] 16/20 VUs  3m53.0s/7m00.0s
 
-running (3m54.0s), 16/20 VUs, 2032 complete and 0 interrupted iterations
+running (3m54.0s), 16/20 VUs, 2033 complete and 0 interrupted iterations
 default   [  56% ] 16/20 VUs  3m54.0s/7m00.0s
 
-running (3m55.0s), 16/20 VUs, 2048 complete and 0 interrupted iterations
+running (3m55.0s), 16/20 VUs, 2049 complete and 0 interrupted iterations
 default   [  56% ] 16/20 VUs  3m55.0s/7m00.0s
 
-running (3m56.0s), 16/20 VUs, 2064 complete and 0 interrupted iterations
+running (3m56.0s), 16/20 VUs, 2065 complete and 0 interrupted iterations
 default   [  56% ] 16/20 VUs  3m56.0s/7m00.0s
 
 running (3m57.0s), 16/20 VUs, 2080 complete and 0 interrupted iterations
@@ -839,25 +836,25 @@ default   [  65% ] 18/20 VUs  4m31.0s/7m00.0s
 running (4m32.0s), 18/20 VUs, 2672 complete and 0 interrupted iterations
 default   [  65% ] 18/20 VUs  4m32.0s/7m00.0s
 
-running (4m33.0s), 18/20 VUs, 2690 complete and 0 interrupted iterations
+running (4m33.0s), 18/20 VUs, 2689 complete and 0 interrupted iterations
 default   [  65% ] 18/20 VUs  4m33.0s/7m00.0s
 
-running (4m34.0s), 18/20 VUs, 2708 complete and 0 interrupted iterations
+running (4m34.0s), 18/20 VUs, 2707 complete and 0 interrupted iterations
 default   [  65% ] 18/20 VUs  4m34.0s/7m00.0s
 
-running (4m35.0s), 18/20 VUs, 2726 complete and 0 interrupted iterations
+running (4m35.0s), 18/20 VUs, 2725 complete and 0 interrupted iterations
 default   [  65% ] 18/20 VUs  4m35.0s/7m00.0s
 
-running (4m36.0s), 18/20 VUs, 2744 complete and 0 interrupted iterations
+running (4m36.0s), 18/20 VUs, 2743 complete and 0 interrupted iterations
 default   [  66% ] 18/20 VUs  4m36.0s/7m00.0s
 
-running (4m37.0s), 18/20 VUs, 2762 complete and 0 interrupted iterations
+running (4m37.0s), 18/20 VUs, 2761 complete and 0 interrupted iterations
 default   [  66% ] 18/20 VUs  4m37.0s/7m00.0s
 
-running (4m38.0s), 18/20 VUs, 2780 complete and 0 interrupted iterations
+running (4m38.0s), 18/20 VUs, 2779 complete and 0 interrupted iterations
 default   [  66% ] 18/20 VUs  4m38.0s/7m00.0s
 
-running (4m39.0s), 18/20 VUs, 2798 complete and 0 interrupted iterations
+running (4m39.0s), 18/20 VUs, 2797 complete and 0 interrupted iterations
 default   [  66% ] 18/20 VUs  4m39.0s/7m00.0s
 
 running (4m40.0s), 18/20 VUs, 2815 complete and 0 interrupted iterations
@@ -974,13 +971,13 @@ default   [  75% ] 18/20 VUs  5m16.0s/7m00.0s
 running (5m17.0s), 18/20 VUs, 3517 complete and 0 interrupted iterations
 default   [  75% ] 18/20 VUs  5m17.0s/7m00.0s
 
-running (5m18.0s), 18/20 VUs, 3535 complete and 0 interrupted iterations
+running (5m18.0s), 18/20 VUs, 3534 complete and 0 interrupted iterations
 default   [  76% ] 18/20 VUs  5m18.0s/7m00.0s
 
-running (5m19.0s), 17/20 VUs, 3553 complete and 0 interrupted iterations
+running (5m19.0s), 17/20 VUs, 3552 complete and 0 interrupted iterations
 default   [  76% ] 17/20 VUs  5m19.0s/7m00.0s
 
-running (5m20.0s), 17/20 VUs, 3570 complete and 0 interrupted iterations
+running (5m20.0s), 17/20 VUs, 3569 complete and 0 interrupted iterations
 default   [  76% ] 17/20 VUs  5m20.0s/7m00.0s
 
 running (5m21.0s), 17/20 VUs, 3586 complete and 0 interrupted iterations
@@ -1287,7 +1284,7 @@ default   [ 100% ] 01/20 VUs  7m00.0s/7m00.0s
   █ THRESHOLDS 
 
     http_req_duration
-    ✓ 'p(95)<500' p(95)=727.8µs
+    ✓ 'p(95)<500' p(95)=726.93µs
 
     http_req_failed
     ✓ 'rate<0.01' rate=0.00%
@@ -1296,14 +1293,14 @@ default   [ 100% ] 01/20 VUs  7m00.0s/7m00.0s
   █ TOTAL RESULTS 
 
     HTTP
-    http_req_duration.......................................................: avg=594.11µs min=88.2µs med=665.63µs max=2.71ms p(90)=712.72µs p(95)=727.8µs
-      { expected_response:true }............................................: avg=594.11µs min=88.2µs med=665.63µs max=2.71ms p(90)=712.72µs p(95)=727.8µs
+    http_req_duration.......................................................: avg=599.39µs min=85.16µs med=668.29µs max=1.99ms p(90)=713.84µs p(95)=726.93µs
+      { expected_response:true }............................................: avg=599.39µs min=85.16µs med=668.29µs max=1.99ms p(90)=713.84µs p(95)=726.93µs
     http_req_failed.........................................................: 0.00%  0 out of 4470
-    http_reqs...............................................................: 4470   10.626511/s
+    http_reqs...............................................................: 4470   10.626671/s
 
     EXECUTION
-    iteration_duration......................................................: avg=1s       min=1s     med=1s       max=1s     p(90)=1s       p(95)=1s     
-    iterations..............................................................: 4470   10.626511/s
+    iteration_duration......................................................: avg=1s       min=1s      med=1s       max=1s     p(90)=1s       p(95)=1s      
+    iterations..............................................................: 4470   10.626671/s
     vus.....................................................................: 1      min=1         max=20
     vus_max.................................................................: 20     min=20        max=20
 
@@ -1335,82 +1332,32 @@ default ✓ [ 100% ] 00/20 VUs  7m0s
 #4 DONE 0.0s
 
 #5 [internal] load build context
-#5 transferring context: 11.63kB done
+#5 transferring context: 528B done
 #5 DONE 0.0s
 
-#6 [2/6] WORKDIR /app
+#6 [5/6] RUN pip install --no-cache-dir -r requirements.txt
 #6 CACHED
 
-#7 [3/6] COPY code/ .
-#7 DONE 0.0s
+#7 [2/6] WORKDIR /app
+#7 CACHED
 
 #8 [4/6] COPY requirements.txt .
-#8 DONE 0.0s
+#8 CACHED
 
-#9 [5/6] RUN pip install --no-cache-dir -r requirements.txt
-#9 1.254 Collecting pandas
-#9 1.313   Downloading pandas-2.2.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (13.1 MB)
-#9 1.506      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.1/13.1 MB 73.9 MB/s eta 0:00:00
-#9 1.766 Collecting matplotlib
-#9 1.771   Downloading matplotlib-3.10.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (8.6 MB)
-#9 1.864      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.6/8.6 MB 93.5 MB/s eta 0:00:00
-#9 1.898 Collecting seaborn
-#9 1.905   Downloading seaborn-0.13.2-py3-none-any.whl (294 kB)
-#9 1.910      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 294.9/294.9 kB 80.3 MB/s eta 0:00:00
-#9 2.270 Collecting numpy>=1.22.4
-#9 2.273   Downloading numpy-2.2.4-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.4 MB)
-#9 2.467      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.4/16.4 MB 84.4 MB/s eta 0:00:00
-#9 2.519 Collecting tzdata>=2022.7
-#9 2.524   Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
-#9 2.533      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 347.8/347.8 kB 80.2 MB/s eta 0:00:00
-#9 2.563 Collecting python-dateutil>=2.8.2
-#9 2.566   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
-#9 2.570      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 81.8 MB/s eta 0:00:00
-#9 2.615 Collecting pytz>=2020.1
-#9 2.619   Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
-#9 2.627      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 509.2/509.2 kB 80.6 MB/s eta 0:00:00
-#9 2.672 Collecting pyparsing>=2.3.1
-#9 2.677   Downloading pyparsing-3.2.3-py3-none-any.whl (111 kB)
-#9 2.679      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 111.1/111.1 kB 433.8 MB/s eta 0:00:00
-#9 2.792 Collecting contourpy>=1.0.1
-#9 2.796   Downloading contourpy-1.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (325 kB)
-#9 2.801      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 325.0/325.0 kB 82.9 MB/s eta 0:00:00
-#9 2.890 Collecting kiwisolver>=1.3.1
-#9 2.894   Downloading kiwisolver-1.4.8-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (1.6 MB)
-#9 2.915      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 82.7 MB/s eta 0:00:00
-#9 3.123 Collecting fonttools>=4.22.0
-#9 3.129   Downloading fonttools-4.57.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.6 MB)
-#9 3.183      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.6/4.6 MB 90.2 MB/s eta 0:00:00
-#9 3.226 Collecting cycler>=0.10
-#9 3.230   Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
-#9 3.520 Collecting pillow>=8
-#9 3.526   Downloading pillow-11.2.1-cp310-cp310-manylinux_2_28_x86_64.whl (4.6 MB)
-#9 3.585      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.6/4.6 MB 80.6 MB/s eta 0:00:00
-#9 3.652 Collecting packaging>=20.0
-#9 3.655   Downloading packaging-24.2-py3-none-any.whl (65 kB)
-#9 3.657      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 65.5/65.5 kB 315.7 MB/s eta 0:00:00
-#9 3.762 Collecting six>=1.5
-#9 3.765   Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
-#9 3.946 Installing collected packages: pytz, tzdata, six, pyparsing, pillow, packaging, numpy, kiwisolver, fonttools, cycler, python-dateutil, contourpy, pandas, matplotlib, seaborn
-#9 9.651 Successfully installed contourpy-1.3.2 cycler-0.12.1 fonttools-4.57.0 kiwisolver-1.4.8 matplotlib-3.10.1 numpy-2.2.4 packaging-24.2 pandas-2.2.3 pillow-11.2.1 pyparsing-3.2.3 python-dateutil-2.9.0.post0 pytz-2025.2 seaborn-0.13.2 six-1.17.0 tzdata-2025.2
-#9 9.652 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
-#9 9.758 
-#9 9.758 [notice] A new release of pip is available: 23.0.1 -> 25.0.1
-#9 9.758 [notice] To update, run: pip install --upgrade pip
-#9 DONE 10.0s
+#9 [3/6] COPY code/ .
+#9 CACHED
 
 #10 [6/6] RUN mkdir -p output images files
-#10 DONE 0.2s
+#10 CACHED
 
 #11 exporting to image
-#11 exporting layers
-#11 exporting layers 0.8s done
+#11 exporting layers done
 #11 writing image sha256:847ddf17083882221aabcbd320068f051f8d3f84e428e3c43f919f57d81cc276 done
 #11 naming to docker.io/library/nginx-elasticity-analysis done
-#11 DONE 0.8s
+#11 DONE 0.0s
 [Paso 7] Limpiando recursos de Kubernetes...
 deployment.apps "nginx-basic" deleted
 service "nginx-basic-service" deleted
 horizontalpodautoscaler.autoscaling "nginx-basic-hpa" deleted
 [Paso 8] Moviendo archivos a subcarpeta HPA_C1_LOAD_L01...
-Fin: 2025-04-15 20:29:55
+Fin: 2025-04-15 20:51:19

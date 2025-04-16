@@ -1,0 +1,25 @@
+timestamp,pod,cpu(millicores),memory(bytes),%cpu,num_pods
+2025-04-15 20:59:53,nginx-basic-76dd66bf4f-frdt6,0,15Mi,0,1
+2025-04-15 21:00:04,nginx-basic-76dd66bf4f-frdt6,1,15Mi,1.00,1
+2025-04-15 21:00:14,nginx-basic-76dd66bf4f-frdt6,1,15Mi,1.00,1
+2025-04-15 21:00:24,nginx-basic-76dd66bf4f-frdt6,1,15Mi,1.00,1
+2025-04-15 21:00:34,nginx-basic-76dd66bf4f-frdt6,19,16Mi,19.00,1
+2025-04-15 21:00:44,nginx-basic-76dd66bf4f-frdt6,19,16Mi,19.00,1
+2025-04-15 21:00:54,nginx-basic-76dd66bf4f-frdt6,55,17Mi,55.00,1
+2025-04-15 21:01:04,nginx-basic-76dd66bf4f-frdt6,80,16Mi,80.00,1
+2025-04-15 21:01:14,nginx-basic-76dd66bf4f-frdt6,80,16Mi,80.00,1
+2025-04-15 21:01:24,nginx-basic-76dd66bf4f-frdt6,84,16Mi,84.00,1
+2025-04-15 21:01:35,nginx-basic-76dd66bf4f-frdt6,97,16Mi,97.00,1
+2025-04-15 21:01:45,nginx-basic-76dd66bf4f-frdt6,97,16Mi,97.00,1
+2025-04-15 21:01:55,nginx-basic-76dd66bf4f-frdt6,91,16Mi,91.00,1
+2025-04-15 21:02:05,nginx-basic-76dd66bf4f-frdt6,93,17Mi,93.00,1
+2025-04-15 21:02:15,nginx-basic-76dd66bf4f-frdt6,93,17Mi,93.00,1
+2025-04-15 21:02:25,nginx-basic-76dd66bf4f-frdt6,97,16Mi,97.00,1
+2025-04-15 21:02:35,nginx-basic-76dd66bf4f-frdt6,102,16Mi,102.00,1
+2025-04-15 21:02:45,nginx-basic-76dd66bf4f-frdt6,102,16Mi,102.00,1
+2025-04-15 21:02:55,nginx-basic-76dd66bf4f-frdt6,97,16Mi,97.00,1
+2025-04-15 21:03:06,nginx-basic-76dd66bf4f-frdt6,76,16Mi,76.00,1
+2025-04-15 21:03:16,nginx-basic-76dd66bf4f-frdt6,76,16Mi,76.00,1
+2025-04-15 21:03:26,nginx-basic-76dd66bf4f-frdt6,30,16Mi,30.00,1
+2025-04-15 21:03:36,nginx-basic-76dd66bf4f-frdt6,1,16Mi,1.00,1
+2025-04-15 21:03:46,nginx-basic-76dd66bf4f-frdt6,1,16Mi,1.00,1
