@@ -104,7 +104,7 @@ for HPA_ID in "${HPAS[@]}"; do
     K6_START_TIME=$(date +"%Y-%m-%d %H:%M:%S")
     echo "$K6_START_TIME" > "$OUTPUT_DIR/HPA_${HPA_ID}_LOAD_${LOAD_ID}_k6_start_time.txt"
 
-    K6_CONF="${LOAD_ID}_config.json"
+    K6_CONF="k6_configs/${LOAD_ID}_config.json"
     k6 run --out csv="$OUTPUT_DIR/HPA_${HPA_ID}_LOAD_${LOAD_ID}_k6_results.csv" \
            --summary-export "$OUTPUT_DIR/HPA_${HPA_ID}_LOAD_${LOAD_ID}_summary.json" \
            -e K6_CONF="$K6_CONF" \
