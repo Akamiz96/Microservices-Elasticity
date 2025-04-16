@@ -41,8 +41,8 @@ echo "Inicio del experimento: $(date)" >> "$LOG_CENTRAL"
 # ---------------------------------------------------------------
 # LISTA DE CONFIGURACIONES A PROBAR
 # ---------------------------------------------------------------
-HPAS=(C1)
-LOADS=(L01)
+HPAS=(C1 C2 C3 C4 C5 C6 C7 C8 C9)
+LOADS=(L01 L02 L03 L04 L05 L06)
 
 FIRST_RUN=true
 
