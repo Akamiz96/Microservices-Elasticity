@@ -108,8 +108,8 @@ for HPA_ID in "${HPAS[@]}"; do
     # ---------------------------------------------------------------
     # PASO 5: Esperar breve periodo para capturar post-carga
     # ---------------------------------------------------------------
-    echo "[Paso 5] Esperando 10 minutos adicionales para observar estabilización..." | tee -a "$LOG_FILE"
-    sleep 10m
+    echo "[Paso 5] Esperando 60 segundos adicionales para observar estabilización..." | tee -a "$LOG_FILE"
+    sleep 60
 
     # ---------------------------------------------------------------
     # PASO 6: Detener procesos de recolección
@@ -153,8 +153,8 @@ for HPA_ID in "${HPAS[@]}"; do
     echo "[$END_TIME] Fin del experimento $HPA_ID - $LOAD_ID" | tee -a "$LOG_CENTRAL"
     echo "Fin: $END_TIME" | tee -a "$LOG_FILE"
 
-    echo "Esperando 60 segundos antes del siguiente experimento..." | tee -a "$LOG_FILE"
-    sleep 60
+    echo "Esperando 5 minutos antes del siguiente experimento..." | tee -a "$LOG_FILE"
+    sleep 5m
   done
 done
 
