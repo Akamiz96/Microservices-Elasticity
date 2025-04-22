@@ -105,7 +105,7 @@ subtitle = f"Deployment: {deployment_name}"
 # ==============================================================================
 # ETAPA 6: FUNCIÓN PARA GRAFICAR CURVAS CON EVENTOS DE ESCALAMIENTO
 # ==============================================================================
-def plot_elasticity(df_combined, metric_label, output_file):
+def plot_elasticity(df_combined, metric_label, output_file, events_df=None):
     plt.figure(figsize=(14, 7))
     plt.plot(df_combined["timestamp"], df_combined["demand"], label="Demanda estimada (millicores)", color="red", linewidth=2)
     plt.plot(df_combined["timestamp"], df_combined["supply"], label="Oferta observada (millicores)", color="blue", linewidth=2)
@@ -119,10 +119,11 @@ def plot_elasticity(df_combined, metric_label, output_file):
         elif s0 > d0:
             plt.fill_between([t0, t1], [d0, d1], [s0, s1], color="skyblue", alpha=0.3, label="Overprovisioning" if i == 0 else "")
 
-    # Dibujar líneas de eventos
-    for _, event in df_events.iterrows():
-        color = "green" if event["scale_action"] == "scaleup" else "red"
-        plt.axvline(event["timestamp"], color=color, linestyle="--", alpha=0.7)
+    # Dibujar líneas de eventos si se proporcionan
+    if events_df is not None:
+        for _, event in events_df.iterrows():
+            color = "green" if event["scale_action"] == "scaleup" else "red"
+            plt.axvline(event["timestamp"], color=color, linestyle="--", alpha=0.7)
 
     plt.xlabel("Tiempo")
     plt.ylabel("CPU (millicores)")
@@ -148,9 +149,40 @@ def plot_elasticity(df_combined, metric_label, output_file):
 df_vus["demand"] = df_vus["vus"] * cpu_per_vu
 df_comb_vu = pd.merge_asof(df_vus.sort_values("timestamp"), df_supply, on="timestamp", direction="nearest", tolerance=pd.Timedelta("10s"))
 df_comb_vu.dropna(inplace=True)
-plot_elasticity(df_comb_vu, "Basada en VUs", os.path.join(output_dir, "elasticity_curve_vus_with_events.png"))
+
+# Gráfica completa con todos los eventos
+plot_elasticity(
+    df_comb_vu,
+    "Basada en VUs (con todos los eventos)",
+    os.path.join(output_dir, "elasticity_curve_vus_with_all_events.png"),
+    events_df=df_events
+)
+
+# Gráfica solo con eventos de escalado hacia arriba
+plot_elasticity(
+    df_comb_vu,
+    "Basada en VUs (solo scaleup)",
+    os.path.join(output_dir, "elasticity_curve_vus_with_scaleup_only.png"),
+    events_df=df_events[df_events["scale_action"] == "scaleup"]
+)
+
 
 df_vus["demand"] = df_vus["reqs"] * cpu_per_req
 df_comb_req = pd.merge_asof(df_vus.sort_values("timestamp"), df_supply, on="timestamp", direction="nearest", tolerance=pd.Timedelta("10s"))
 df_comb_req.dropna(inplace=True)
-plot_elasticity(df_comb_req, "Basada en Requests", os.path.join(output_dir, "elasticity_curve_reqs_with_events.png"))
+
+# Gráfica completa con todos los eventos
+plot_elasticity(
+    df_comb_req,
+    "Basada en Requests (con todos los eventos)",
+    os.path.join(output_dir, "elasticity_curve_reqs_with_all_events.png"),
+    events_df=df_events
+)
+
+# Gráfica solo con eventos de escalado hacia arriba
+plot_elasticity(
+    df_comb_req,
+    "Basada en Requests (solo scaleup)",
+    os.path.join(output_dir, "elasticity_curve_reqs_with_scaleup_only.png"),
+    events_df=df_events[df_events["scale_action"] == "scaleup"]
+)

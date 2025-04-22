@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------
-# ARCHIVO: plot_elasticity_curve_with_events.py
+# ARCHIVO: plot_elasticity_curve.py
 # DESCRIPCIÓN: Genera gráficas de elasticidad comparando demanda estimada
 #              (por VU y por request) vs oferta observada, con eventos HPA.
 #
@@ -124,11 +124,6 @@ def plot_elasticity(df_combined, metric_label, output_file):
         elif s0 > d0:
             plt.fill_between([t0, t1], [d0, d1], [s0, s1], color="skyblue", alpha=0.3,
                              label="Overprovisioning" if i == 0 else "")
-
-    # Agregar líneas verticales para eventos de escalamiento (verde = scaleup, rojo = scaledown)
-    for _, event in df_events.iterrows():
-        color = "green" if event["scale_action"] == "scaleup" else "red"
-        plt.axvline(event["timestamp"], color=color, linestyle="--", alpha=0.7)
 
     # Formato de gráfico
     plt.xlabel("Tiempo")

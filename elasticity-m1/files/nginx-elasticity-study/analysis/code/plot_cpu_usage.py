@@ -64,7 +64,7 @@ for i, (pod, color) in enumerate(zip(pods_unicos, palette)):
 
 axes[-1].set_xlabel("Tiempo")
 plt.tight_layout(rect=[0, 0, 1, 0.96])
-plt.suptitle("Uso de CPU por pod a lo largo del tiempo", fontsize=16)
+plt.title("Uso de CPU por pod a lo largo del tiempo")
 
 # ---------------------------------------------------------------
 # GUARDAR GRAFICO PRINCIPAL
