@@ -1,38 +1,38 @@
 === MÉTRICAS DE ELASTICIDAD (Basado en VUs) ===
 
 1. Duración del período de evaluación (T):
-   - Desde: 2025-04-16 19:39:37
-   - Hasta: 2025-04-16 19:44:27
+   - Desde: 2025-04-22 21:45:52
+   - Hasta: 2025-04-22 21:50:42
    - Total: 0 days 00:04:50 (290.00 s, 4.83 min)
 
 2. Recursos acumulados:
-   - ΣU (subaprovisionamiento): 48020.00 millicore-s
+   - ΣU (subaprovisionamiento): 48390.00 millicore-s
    - ΣO (sobreaprovisionamiento): 0.00 millicore-s
 
 3. Tiempo en reconfiguración (θ):
-   - Total: 21.00 s (0.35 min)
-   -   ScaleUp: 21.00 s
+   - Total: 30.00 s (0.50 min)
+   -   ScaleUp: 30.00 s
    -   ScaleDown: 0.00 s
 
 4. Tiempos en estados de (sub/sobre)aprovisionamiento:
-   - ΣA (sub): 290.00 s |  A̅: 1.00 | Ū: 165.59 millicores
+   - ΣA (sub): 290.00 s |  A̅: 1.00 | Ū: 166.86 millicores
    - ΣB (sobre): 0.00 s |  B̅: 0.00 | Ō: 0.00 millicores
 
 5. Métricas derivadas:
-   - Precisión de escalado hacia arriba (Pᵤ): 165.5862 millicore/s
+   - Precisión de escalado hacia arriba (Pᵤ): 166.8621 millicore/s
    - Precisión de escalado hacia abajo (P𝑑): 0.0000 millicore/s
    - Elasticidad de escalado hacia arriba (Eᵤ): 0.0060
    - Elasticidad de escalado hacia abajo (E𝑑): 0.0000
-   - Elasticidad total (Eₗ): 0.0086
+   - Elasticidad total (Eₗ): 0.0060
 
 6. Bloques de reconfiguración detectados:
-   - [scaleup] 2025-04-16 19:39:45 → 2025-04-16 19:40:06 | 21.0 s, 6 eventos
+   - [scaleup] 2025-04-22 21:45:52 → 2025-04-22 21:46:22 | 30.0 s, 7 eventos
 7. Métricas complementarias:
-   - Elasticidad total (E): -164.5862
-   - Subaprovisionamiento relativo (R_U): 165.5862 millicore/s
+   - Elasticidad total (E): -165.8621
+   - Subaprovisionamiento relativo (R_U): 166.8621 millicore/s
    - Sobreaprovisionamiento relativo (R_O): 0.0000 millicore/s
-   - Porcentaje de tiempo en reconfiguración (θ%%): 7.24 %
-       - ScaleUp: 7.24 %
+   - Porcentaje de tiempo en reconfiguración (θ%%): 10.34 %
+       - ScaleUp: 10.34 %
        - ScaleDown: 0.00 %
-   - Porcentaje de tiempo útil: 92.76 %
+   - Porcentaje de tiempo útil: 89.66 %
 

@@ -1,12 +1,12 @@
 === MÉTRICAS DE ELASTICIDAD (Basado en VUs) ===
 
 1. Duración del período de evaluación (T):
-   - Desde: 2025-04-16 18:27:48
-   - Hasta: 2025-04-16 18:31:38
+   - Desde: 2025-04-22 20:17:58
+   - Hasta: 2025-04-22 20:21:48
    - Total: 0 days 00:03:50 (230.00 s, 3.83 min)
 
 2. Recursos acumulados:
-   - ΣU (subaprovisionamiento): 45740.00 millicore-s
+   - ΣU (subaprovisionamiento): 46290.00 millicore-s
    - ΣO (sobreaprovisionamiento): 0.00 millicore-s
 
 3. Tiempo en reconfiguración (θ):
@@ -15,23 +15,23 @@
    -   ScaleDown: 1.00 s
 
 4. Tiempos en estados de (sub/sobre)aprovisionamiento:
-   - ΣA (sub): 230.00 s |  A̅: 1.00 | Ū: 198.87 millicores
+   - ΣA (sub): 230.00 s |  A̅: 1.00 | Ū: 201.26 millicores
    - ΣB (sobre): 0.00 s |  B̅: 0.00 | Ō: 0.00 millicores
 
 5. Métricas derivadas:
-   - Precisión de escalado hacia arriba (Pᵤ): 198.8696 millicore/s
+   - Precisión de escalado hacia arriba (Pᵤ): 201.2609 millicore/s
    - Precisión de escalado hacia abajo (P𝑑): 0.0000 millicore/s
    - Elasticidad de escalado hacia arriba (Eᵤ): 0.0050
    - Elasticidad de escalado hacia abajo (E𝑑): 0.0000
    - Elasticidad total (Eₗ): 0.0015
 
 6. Bloques de reconfiguración detectados:
-   - [scaleup] 2025-04-16 18:27:56 → 2025-04-16 18:28:17 | 21.0 s, 6 eventos
-   - [scaleup] 2025-04-16 18:29:07 → 2025-04-16 18:30:07 | 60.0 s, 10 eventos
-   - [scaledown] 2025-04-16 18:35:52 → 2025-04-16 18:35:53 | 1.0 s, 2 eventos
+   - [scaleup] 2025-04-22 20:17:58 → 2025-04-22 20:18:28 | 30.0 s, 7 eventos
+   - [scaleup] 2025-04-22 20:19:17 → 2025-04-22 20:20:08 | 51.0 s, 10 eventos
+   - [scaledown] 2025-04-22 20:26:03 → 2025-04-22 20:26:04 | 1.0 s, 2 eventos
 7. Métricas complementarias:
-   - Elasticidad total (E): -197.8696
-   - Subaprovisionamiento relativo (R_U): 198.8696 millicore/s
+   - Elasticidad total (E): -200.2609
+   - Subaprovisionamiento relativo (R_U): 201.2609 millicore/s
    - Sobreaprovisionamiento relativo (R_O): 0.0000 millicore/s
    - Porcentaje de tiempo en reconfiguración (θ%%): 35.65 %
        - ScaleUp: 35.22 %

@@ -1,0 +1,25 @@
+timestamp,scale_action,reason
+2025-04-23 02:01:49,scaleup,Scaled up replica set nginx-basic-76dd66bf4f to 1
+2025-04-23 02:01:58,scaleup,Scaled up replica set nginx-basic-76dd66bf4f to 1
+2025-04-23 02:01:59,scaleup,Scaled up replica set nginx-basic-76dd66bf4f to 1
+2025-04-23 02:02:00,scaleup,Scaled up replica set nginx-basic-76dd66bf4f to 1
+2025-04-23 02:02:08,scaleup,Scaled up replica set nginx-basic-76dd66bf4f to 1
+2025-04-23 02:02:09,scaleup,Scaled up replica set nginx-basic-76dd66bf4f to 1
+2025-04-23 02:02:10,scaleup,Scaled up replica set nginx-basic-76dd66bf4f to 1
+2025-04-23 02:02:18,scaleup,Scaled up replica set nginx-basic-76dd66bf4f to 1
+2025-04-23 02:02:19,scaleup,Scaled up replica set nginx-basic-76dd66bf4f to 1
+2025-04-23 02:02:20,scaleup,Scaled up replica set nginx-basic-76dd66bf4f to 1
+2025-04-23 02:04:38,scaleup,Scaled up replica set nginx-basic-76dd66bf4f to 2 from 1
+2025-04-23 02:04:39,scaleup,Scaled up replica set nginx-basic-76dd66bf4f to 2 from 1
+2025-04-23 02:04:40,scaleup,Scaled up replica set nginx-basic-76dd66bf4f to 2 from 1
+2025-04-23 02:04:49,scaleup,Scaled up replica set nginx-basic-76dd66bf4f to 2 from 1
+2025-04-23 02:04:59,scaleup,Scaled up replica set nginx-basic-76dd66bf4f to 2 from 1
+2025-04-23 02:05:00,scaleup,Scaled up replica set nginx-basic-76dd66bf4f to 2 from 1
+2025-04-23 02:05:09,scaleup,Scaled up replica set nginx-basic-76dd66bf4f to 2 from 1
+2025-04-23 02:05:10,scaleup,Scaled up replica set nginx-basic-76dd66bf4f to 2 from 1
+2025-04-23 02:05:19,scaleup,Scaled up replica set nginx-basic-76dd66bf4f to 2 from 1
+2025-04-23 02:05:20,scaleup,Scaled up replica set nginx-basic-76dd66bf4f to 2 from 1
+2025-04-23 02:05:29,scaleup,Scaled up replica set nginx-basic-76dd66bf4f to 2 from 1
+2025-04-23 02:05:30,scaleup,Scaled up replica set nginx-basic-76dd66bf4f to 2 from 1
+2025-04-23 02:10:38,scaledown,Scaled down replica set nginx-basic-76dd66bf4f to 1 from 2
+2025-04-23 02:10:39,scaledown,Scaled down replica set nginx-basic-76dd66bf4f to 1 from 2

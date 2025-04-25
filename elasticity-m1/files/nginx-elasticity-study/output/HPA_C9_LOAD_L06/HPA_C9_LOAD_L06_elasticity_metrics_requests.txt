@@ -1,0 +1,38 @@
+=== MÉTRICAS DE ELASTICIDAD (Basado en Requests) ===
+
+1. Duración del período de evaluación (T):
+   - Desde: 2025-04-23 05:32:10
+   - Hasta: 2025-04-23 05:38:30
+   - Total: 0 days 00:06:20 (380.00 s, 6.33 min)
+
+2. Recursos acumulados:
+   - ΣU (subaprovisionamiento): 11040.00 millicore-s
+   - ΣO (sobreaprovisionamiento): 200.00 millicore-s
+
+3. Tiempo en reconfiguración (θ):
+   - Total: 30.00 s (0.50 min)
+   -   ScaleUp: 30.00 s
+   -   ScaleDown: 0.00 s
+
+4. Tiempos en estados de (sub/sobre)aprovisionamiento:
+   - ΣA (sub): 370.00 s |  A̅: 0.97 | Ū: 29.84 millicores
+   - ΣB (sobre): 10.00 s |  B̅: 0.03 | Ō: 20.00 millicores
+
+5. Métricas derivadas:
+   - Precisión de escalado hacia arriba (Pᵤ): 29.0526 millicore/s
+   - Precisión de escalado hacia abajo (P𝑑): 0.5263 millicore/s
+   - Elasticidad de escalado hacia arriba (Eᵤ): 0.0344
+   - Elasticidad de escalado hacia abajo (E𝑑): 1.9000
+   - Elasticidad total (Eₗ): 0.0440
+
+6. Bloques de reconfiguración detectados:
+   - [scaleup] 2025-04-23 05:32:10 → 2025-04-23 05:32:40 | 30.0 s, 10 eventos
+7. Métricas complementarias:
+   - Elasticidad total (E): -28.5789
+   - Subaprovisionamiento relativo (R_U): 29.0526 millicore/s
+   - Sobreaprovisionamiento relativo (R_O): 0.5263 millicore/s
+   - Porcentaje de tiempo en reconfiguración (θ%%): 7.89 %
+       - ScaleUp: 7.89 %
+       - ScaleDown: 0.00 %
+   - Porcentaje de tiempo útil: 92.11 %
+

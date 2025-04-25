@@ -1,0 +1,21 @@
+timestamp,scale_action,reason
+2025-04-23 05:08:34,scaleup,Scaled up replica set nginx-basic-76dd66bf4f to 1
+2025-04-23 05:08:35,scaleup,Scaled up replica set nginx-basic-76dd66bf4f to 1
+2025-04-23 05:08:43,scaleup,Scaled up replica set nginx-basic-76dd66bf4f to 1
+2025-04-23 05:08:44,scaleup,Scaled up replica set nginx-basic-76dd66bf4f to 1
+2025-04-23 05:08:45,scaleup,Scaled up replica set nginx-basic-76dd66bf4f to 1
+2025-04-23 05:08:53,scaleup,Scaled up replica set nginx-basic-76dd66bf4f to 1
+2025-04-23 05:08:54,scaleup,Scaled up replica set nginx-basic-76dd66bf4f to 1
+2025-04-23 05:08:55,scaleup,Scaled up replica set nginx-basic-76dd66bf4f to 1
+2025-04-23 05:09:03,scaleup,Scaled up replica set nginx-basic-76dd66bf4f to 1
+2025-04-23 05:09:04,scaleup,Scaled up replica set nginx-basic-76dd66bf4f to 1
+2025-04-23 05:09:05,scaleup,Scaled up replica set nginx-basic-76dd66bf4f to 1
+2025-04-23 05:15:39,scaleup,Scaled up replica set nginx-basic-76dd66bf4f to 2 from 1
+2025-04-23 05:15:40,scaleup,Scaled up replica set nginx-basic-76dd66bf4f to 2 from 1
+2025-04-23 05:15:45,scaleup,Scaled up replica set nginx-basic-76dd66bf4f to 2 from 1
+2025-04-23 05:15:55,scaleup,Scaled up replica set nginx-basic-76dd66bf4f to 2 from 1
+2025-04-23 05:16:05,scaleup,Scaled up replica set nginx-basic-76dd66bf4f to 2 from 1
+2025-04-23 05:16:15,scaleup,Scaled up replica set nginx-basic-76dd66bf4f to 2 from 1
+2025-04-23 05:16:25,scaleup,Scaled up replica set nginx-basic-76dd66bf4f to 2 from 1
+2025-04-23 05:20:54,scaledown,Scaled down replica set nginx-basic-76dd66bf4f to 1 from 2
+2025-04-23 05:20:55,scaledown,Scaled down replica set nginx-basic-76dd66bf4f to 1 from 2

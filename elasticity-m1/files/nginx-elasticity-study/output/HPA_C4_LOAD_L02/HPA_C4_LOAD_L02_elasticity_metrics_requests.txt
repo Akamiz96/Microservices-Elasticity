@@ -1,39 +1,39 @@
 === MÉTRICAS DE ELASTICIDAD (Basado en Requests) ===
 
 1. Duración del período de evaluación (T):
-   - Desde: 2025-04-16 16:12:28
-   - Hasta: 2025-04-16 16:17:18
+   - Desde: 2025-04-22 17:30:36
+   - Hasta: 2025-04-22 17:35:26
    - Total: 0 days 00:04:50 (290.00 s, 4.83 min)
 
 2. Recursos acumulados:
-   - ΣU (subaprovisionamiento): 7930.00 millicore-s
-   - ΣO (sobreaprovisionamiento): 200.00 millicore-s
+   - ΣU (subaprovisionamiento): 8045.00 millicore-s
+   - ΣO (sobreaprovisionamiento): 195.00 millicore-s
 
 3. Tiempo en reconfiguración (θ):
-   - Total: 155.00 s (2.58 min)
-   -   ScaleUp: 139.00 s
-   -   ScaleDown: 16.00 s
+   - Total: 181.00 s (3.02 min)
+   -   ScaleUp: 150.00 s
+   -   ScaleDown: 31.00 s
 
 4. Tiempos en estados de (sub/sobre)aprovisionamiento:
-   - ΣA (sub): 260.00 s |  A̅: 0.90 | Ū: 30.50 millicores
-   - ΣB (sobre): 40.00 s |  B̅: 0.14 | Ō: 5.00 millicores
+   - ΣA (sub): 270.00 s |  A̅: 0.93 | Ū: 29.80 millicores
+   - ΣB (sobre): 20.00 s |  B̅: 0.07 | Ō: 9.75 millicores
 
 5. Métricas derivadas:
-   - Precisión de escalado hacia arriba (Pᵤ): 27.3448 millicore/s
-   - Precisión de escalado hacia abajo (P𝑑): 0.6897 millicore/s
-   - Elasticidad de escalado hacia arriba (Eᵤ): 0.0366
-   - Elasticidad de escalado hacia abajo (E𝑑): 1.4500
-   - Elasticidad total (Eₗ): 0.0069
+   - Precisión de escalado hacia arriba (Pᵤ): 27.7414 millicore/s
+   - Precisión de escalado hacia abajo (P𝑑): 0.6724 millicore/s
+   - Elasticidad de escalado hacia arriba (Eᵤ): 0.0360
+   - Elasticidad de escalado hacia abajo (E𝑑): 1.4872
+   - Elasticidad total (Eₗ): 0.0058
 
 6. Bloques de reconfiguración detectados:
-   - [scaleup] 2025-04-16 16:12:28 → 2025-04-16 16:14:47 | 139.0 s, 53 eventos
-   - [scaledown] 2025-04-16 16:22:03 → 2025-04-16 16:22:19 | 16.0 s, 4 eventos
+   - [scaleup] 2025-04-22 17:30:36 → 2025-04-22 17:33:06 | 150.0 s, 67 eventos
+   - [scaledown] 2025-04-22 17:40:10 → 2025-04-22 17:40:41 | 31.0 s, 6 eventos
 7. Métricas complementarias:
-   - Elasticidad total (E): -27.0345
-   - Subaprovisionamiento relativo (R_U): 27.3448 millicore/s
-   - Sobreaprovisionamiento relativo (R_O): 0.6897 millicore/s
-   - Porcentaje de tiempo en reconfiguración (θ%%): 53.45 %
-       - ScaleUp: 47.93 %
-       - ScaleDown: 5.52 %
-   - Porcentaje de tiempo útil: 46.55 %
+   - Elasticidad total (E): -27.4138
+   - Subaprovisionamiento relativo (R_U): 27.7414 millicore/s
+   - Sobreaprovisionamiento relativo (R_O): 0.6724 millicore/s
+   - Porcentaje de tiempo en reconfiguración (θ%%): 62.41 %
+       - ScaleUp: 51.72 %
+       - ScaleDown: 10.69 %
+   - Porcentaje de tiempo útil: 37.59 %
 
