@@ -1,7 +1,0 @@
-# Dockerfile-s0
-FROM python:3.10-slim
-WORKDIR /app
-COPY service_s0.py /app/
-RUN pip install --no-cache-dir flask requests
-EXPOSE 5000
-CMD ["python", "service_s0.py"]

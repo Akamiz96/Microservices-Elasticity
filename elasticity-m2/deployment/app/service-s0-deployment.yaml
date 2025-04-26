@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: service-s0
+  namespace: elasticity-m2
+spec:
+  replicas: 1
+  selector:
+    matchLabels: { app: service-s0 }
+  template:
+    metadata:
+      labels: { app: service-s0 }
+    spec:
+      containers:
+      - name: service-s0
+        image: service-s0:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 5000
