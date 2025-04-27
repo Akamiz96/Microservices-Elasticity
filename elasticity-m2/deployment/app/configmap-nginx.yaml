@@ -1,3 +1,4 @@
+# deployment/app/configmap-nginx.yaml
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -5,12 +6,23 @@ metadata:
   namespace: elasticity-m2
 data:
   nginx.conf: |
-    ...
+    user  nginx;
+    worker_processes  auto;
+    error_log  /var/log/nginx/error.log warn;
+    pid        /var/run/nginx.pid;
+
+    events {
+      worker_connections  1024;
+    }
+
     http {
       include       /etc/nginx/mime.types;
       default_type  application/octet-stream;
       sendfile      on;
       keepalive_timeout  65;
+
+      # DNS interno de Kubernetes (ajusta si tu CoreDNS está en otro namespace)
+      resolver kube-dns.kube-system.svc.cluster.local valid=30s;
 
       upstream s0 {
         server service-s0.elasticity-m2.svc.cluster.local:5000;
@@ -18,6 +30,7 @@ data:
 
       server {
         listen 80;
+
         location /compute {
           proxy_pass         http://s0/compute$is_args$args;
           proxy_set_header   Host $host;
@@ -25,4 +38,3 @@ data:
         }
       }
     }
-    ...
