@@ -87,12 +87,12 @@ kill "$PID_NGINX"
 # ---------------------------------------------------------------
 echo "[Paso 7] Ejecutando análisis automático en contenedor Docker..."
 
-docker build -t microbenchmark-analysis "$ANALYSIS_DIR"
+docker build -t microbenchmark-analysis-2m "$ANALYSIS_DIR"
 docker run --rm \
   -v "$(pwd)/$OUTPUT_DIR:/app/output" \
   -v "$(pwd)/$FILES_DIR:/app/files" \
   -v "$(pwd)/$IMAGES_DIR:/app/images" \
-  microbenchmark-analysis
+  microbenchmark-analysis-2m
 
 # ---------------------------------------------------------------
 # PASO 8: Eliminar recursos del clúster
