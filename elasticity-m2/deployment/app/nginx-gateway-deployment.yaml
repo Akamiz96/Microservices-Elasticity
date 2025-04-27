@@ -6,22 +6,24 @@ metadata:
 spec:
   replicas: 1
   selector:
-    matchLabels: { app: nginx-gateway }
+    matchLabels:
+      app: nginx-gateway
   template:
     metadata:
-      labels: { app: nginx-gateway }
+      labels:
+        app: nginx-gateway
     spec:
       containers:
       - name: nginx
-        image: nginx:latest
-        imagePullPolicy: IfNotPresent
+        image: nginx
         ports:
         - containerPort: 80
+        command: ["/bin/sh", "-c", "sleep 5 && exec nginx -g 'daemon off;'"]
         volumeMounts:
-        - name: config
+        - name: nginx-config-volume
           mountPath: /etc/nginx/nginx.conf
           subPath: nginx.conf
       volumes:
-      - name: config
+      - name: nginx-config-volume
         configMap:
           name: nginx-gateway-config

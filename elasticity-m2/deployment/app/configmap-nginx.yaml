@@ -1,4 +1,3 @@
-# deployment/app/configmap-nginx.yaml
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -21,11 +20,12 @@ data:
       sendfile      on;
       keepalive_timeout  65;
 
-      # DNS interno de Kubernetes - USANDO IP DIRECTA
+      # DNS interno de Kubernetes usando IP directa
       resolver 10.96.0.10 valid=30s;
 
       upstream s0 {
         server service-s0.elasticity-m2.svc.cluster.local:5000;
+        keepalive 32;
       }
 
       server {
@@ -35,6 +35,9 @@ data:
           proxy_pass         http://s0/compute$is_args$args;
           proxy_set_header   Host $host;
           proxy_set_header   X-Real-IP $remote_addr;
+          proxy_connect_timeout 5s;
+          proxy_read_timeout 10s;
+          proxy_next_upstream error timeout invalid_header http_500 http_502 http_503 http_504;
         }
       }
     }
