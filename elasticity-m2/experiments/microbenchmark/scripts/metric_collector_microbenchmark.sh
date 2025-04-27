@@ -49,8 +49,8 @@ while true; do
     # Obtener lista de pods activos asociados al deployment
     # Se filtra por etiqueta app=<deployment> para evitar interferencias
     # --------------------------------------------------------------------------
-    POD_LIST=$(kubectl get pods -n "$NAMESPACE" -l app="$DEPLOYMENT_NAME" --no-headers 2>/dev/null | awk '{print $1}')
-
+    POD_LIST=$(kubectl get pods -n "$NAMESPACE" --no-headers 2>/dev/null | grep "$DEPLOYMENT_NAME" | awk '{print $1}')
+    
     # --------------------------------------------------------------------------
     # Verificar si hay pods activos disponibles
     # Si no hay, registrar información y esperar al siguiente ciclo
