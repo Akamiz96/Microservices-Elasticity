@@ -45,21 +45,50 @@ echo "timestamp,pod,cpu(millicores),memory(bytes),%cpu,num_pods" > "$OUTPUT_FILE
 while true; do
     TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S")                  # Obtener timestamp actual
 
-    # Obtener el número de pods activos para el deployment específico
-    NUM_PODS=$(kubectl get pods -n "$NAMESPACE" -l app="$DEPLOYMENT_NAME" --no-headers | wc -l)
-
     # --------------------------------------------------------------------------
-    # Recolectar métricas de los pods asociados al deployment usando 'kubectl top'
+    # Obtener lista de pods activos asociados al deployment
     # Se filtra por etiqueta app=<deployment> para evitar interferencias
     # --------------------------------------------------------------------------
-    kubectl top pod -n "$NAMESPACE" --no-headers | grep "$DEPLOYMENT_NAME" | while read -r POD CPU MEM; do
-        CPU_VAL=${CPU%m}  # Eliminar la 'm' (millicores)
+    POD_LIST=$(kubectl get pods -n "$NAMESPACE" -l app="$DEPLOYMENT_NAME" --no-headers 2>/dev/null | awk '{print $1}')
+
+    # --------------------------------------------------------------------------
+    # Verificar si hay pods activos disponibles
+    # Si no hay, registrar información y esperar al siguiente ciclo
+    # --------------------------------------------------------------------------
+    if [ -z "$POD_LIST" ]; then
+        echo "[Info] [$TIMESTAMP] No pods disponibles para '$DEPLOYMENT_NAME'."
+        sleep "$INTERVAL"
+        continue
+    fi
+
+    NUM_PODS=$(echo "$POD_LIST" | wc -l)  # Contar número de pods activos
+
+    # --------------------------------------------------------------------------
+    # Recolectar métricas de cada pod usando 'kubectl top'
+    # La salida tiene el formato: <pod-name> <cpu> <memory>
+    # Para cada pod:
+    #   - cpu: en millicores (ej. 125m → 125)
+    #   - memory: tal como lo reporta Kubernetes
+    #   - %cpu: calculado en relación con el recurso solicitado
+    # --------------------------------------------------------------------------
+    for POD in $POD_LIST; do
+        METRICS=$(kubectl top pod "$POD" -n "$NAMESPACE" --no-headers 2>/dev/null)
+
+        if [ -z "$METRICS" ]; then
+            echo "[Warning] [$TIMESTAMP] No se pudo obtener métricas para pod '$POD'."
+            continue
+        fi
+
+        CPU=$(echo "$METRICS" | awk '{print $2}')
+        MEM=$(echo "$METRICS" | awk '{print $3}')
+
+        CPU_VAL=${CPU%m}  # Eliminar la 'm' de millicores
 
         # Obtener el CPU solicitado en el pod (resources.requests.cpu)
         REQUESTS_CPU=$(kubectl get pod "$POD" -n "$NAMESPACE" -o jsonpath="{.spec.containers[0].resources.requests.cpu}" 2>/dev/null)
         REQUESTS_CPU_VAL=$(echo "$REQUESTS_CPU" | sed 's/m//')
 
-        # Si no hay valor definido, asumir 1000m (1 core)
+        # Si no hay valor definido, asumir 1000m (equivalente a 1 core)
         [[ -z "$REQUESTS_CPU_VAL" ]] && REQUESTS_CPU_VAL=1000
 
         # Calcular el porcentaje de uso respecto al CPU solicitado
