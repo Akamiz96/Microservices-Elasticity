@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-config
+data:
+  nginx.conf: |
+    events { }
+
+    http {
+      upstream flask_app {
+          server 10.195.20.20:30007;  # Tu IP fija y NodePort de Flask
+      }
+
+      server {
+          listen 80;
+
+          location /compute {
+              proxy_pass http://flask_app/compute;
+          }
+      }
+    }
+

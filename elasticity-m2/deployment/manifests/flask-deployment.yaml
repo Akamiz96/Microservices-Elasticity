@@ -16,6 +16,7 @@ spec:
     spec:
       containers:
       - name: flask
-        image: flask-fib-app:latest  # Imagen local construida
+        image: docker.io/library/flask-fib-app:latest
+        imagePullPolicy: Never
         ports:
         - containerPort: 5000

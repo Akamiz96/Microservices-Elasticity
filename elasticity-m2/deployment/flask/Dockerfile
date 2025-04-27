@@ -4,7 +4,7 @@ FROM python:3.10-slim
 WORKDIR /app
 
 # Copia el código de s0
-COPY ../code/service-s0.py .
+COPY service-s0.py .
 
 # Instala Flask
 RUN pip install --no-cache-dir flask
