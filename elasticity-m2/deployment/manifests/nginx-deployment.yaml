@@ -1,24 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-gateway
-  namespace: elasticity-m2
+  name: nginx-app
+  labels:
+    app: nginx
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nginx-gateway
+      app: nginx
   template:
     metadata:
       labels:
-        app: nginx-gateway
+        app: nginx
     spec:
       containers:
       - name: nginx
-        image: nginx
+        image: nginx:latest
         ports:
         - containerPort: 80
-        command: ["/bin/sh", "-c", "sleep 5 && exec nginx -g 'daemon off;'"]
         volumeMounts:
         - name: nginx-config-volume
           mountPath: /etc/nginx/nginx.conf
@@ -26,4 +26,4 @@ spec:
       volumes:
       - name: nginx-config-volume
         configMap:
-          name: nginx-gateway-config
+          name: nginx-config
