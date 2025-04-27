@@ -11,7 +11,7 @@
 set -euo pipefail
 
 # Variables
-MANIFESTS_DIR="manifests"
+MANIFESTS_DIR="./deployment/manifests"
 
 echo "========================================="
 echo " INICIO DE LA LIMPIEZA DE RECURSOS"
