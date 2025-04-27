@@ -21,8 +21,8 @@ data:
       sendfile      on;
       keepalive_timeout  65;
 
-      # DNS interno de Kubernetes (ajusta si tu CoreDNS está en otro namespace)
-      resolver kube-dns.kube-system.svc.cluster.local valid=30s;
+      # DNS interno de Kubernetes - USANDO IP DIRECTA
+      resolver 10.96.0.10 valid=30s;
 
       upstream s0 {
         server service-s0.elasticity-m2.svc.cluster.local:5000;
