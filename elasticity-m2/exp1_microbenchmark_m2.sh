@@ -25,11 +25,11 @@ MANIFESTS_DEPLOY="$DEPLOY_DIR/manifests"
 MANIFESTS_EXPERIMENT="$EXPERIMENT_DIR/manifests"
 OUTPUT_DIR="$EXPERIMENT_DIR/output"
 FILES_DIR="$EXPERIMENT_DIR/files"
-IMAGES_DIR="$EXPERIMENT_DIR/images"
+IMAGES_DIR="$EXPERIMENT_DIR/analysis/images"
 SCRIPTS_DIR="$EXPERIMENT_DIR/scripts"
 COLLECTOR_SCRIPT="$SCRIPTS_DIR/metric_collector_microbenchmark.sh"
 BENCHMARK_SCRIPT="$SCRIPTS_DIR/benchmark_test.js"
-ANALYSIS_DIR="$EXPERIMENT_DIR"
+ANALYSIS_DIR="$EXPERIMENT_DIR/analysis"
 
 # ---------------------------------------------------------------
 # PASO 1: Desplegar recursos base
