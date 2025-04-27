@@ -1,6 +1,6 @@
 📊 Microbenchmark Summary – nginx-app
 Total requests: 302
 Máximo de VUs: 10
-Total CPU usada: 22.00 millicores
-CPU por request: 0.07 millicores/request
-CPU por VU: 2.20 millicores/VU
+Total CPU usada: 18.00 millicores
+CPU por request: 0.06 millicores/request
+CPU por VU: 1.80 millicores/VU

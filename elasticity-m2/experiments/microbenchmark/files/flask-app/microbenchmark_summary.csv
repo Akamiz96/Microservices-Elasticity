@@ -1,2 +1,2 @@
 deployment,total_requests,vus_max,cpu_total_millicores,cpu_per_request,cpu_per_vu
-flask-app,302,10,238,0.7881,23.8
+flask-app,302,10,248,0.8212,24.8

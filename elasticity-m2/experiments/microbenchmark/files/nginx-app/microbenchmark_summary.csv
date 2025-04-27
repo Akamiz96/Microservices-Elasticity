@@ -1,2 +1,2 @@
 deployment,total_requests,vus_max,cpu_total_millicores,cpu_per_request,cpu_per_vu
-nginx-app,302,10,22,0.0728,2.2
+nginx-app,302,10,18,0.0596,1.8
