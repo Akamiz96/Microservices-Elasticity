@@ -1,0 +1,6 @@
+📊 Microbenchmark Summary – flask-app
+Total requests: 302
+Máximo de VUs: 10
+Total CPU usada: 238.00 millicores
+CPU por request: 0.79 millicores/request
+CPU por VU: 23.80 millicores/VU
