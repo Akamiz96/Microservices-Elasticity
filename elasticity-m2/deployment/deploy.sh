@@ -12,8 +12,8 @@ set -euo pipefail
 
 # Variables
 IMAGE="flask-fib-app:latest"
-FLASK_DIR="flask"
-MANIFESTS_DIR="manifests"
+FLASK_DIR="deployment/flask"
+MANIFESTS_DIR="deployment/manifests"
 
 echo "========================================="
 echo " INICIO DEL DESPLIEGUE AUTOMATICO"
