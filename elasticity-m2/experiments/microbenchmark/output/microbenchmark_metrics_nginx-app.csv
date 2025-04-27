@@ -1,0 +1,11 @@
+timestamp,pod,cpu(millicores),memory(bytes),%cpu,num_pods
+2025-04-27 16:34:57,nginx-app-599cdbddb-6dx4g,0,2Mi,0,0
+2025-04-27 16:35:07,nginx-app-599cdbddb-6dx4g,1,2Mi,0,0
+2025-04-27 16:35:17,nginx-app-599cdbddb-6dx4g,1,2Mi,0,0
+2025-04-27 16:35:27,nginx-app-599cdbddb-6dx4g,1,2Mi,0,0
+2025-04-27 16:35:37,nginx-app-599cdbddb-6dx4g,2,2Mi,0,0
+2025-04-27 16:35:47,nginx-app-599cdbddb-6dx4g,2,2Mi,0,0
+2025-04-27 16:35:57,nginx-app-599cdbddb-6dx4g,4,2Mi,0,0
+2025-04-27 16:36:07,nginx-app-599cdbddb-6dx4g,4,2Mi,0,0
+2025-04-27 16:36:18,nginx-app-599cdbddb-6dx4g,4,2Mi,0,0
+2025-04-27 16:36:28,nginx-app-599cdbddb-6dx4g,0,2Mi,0,0
