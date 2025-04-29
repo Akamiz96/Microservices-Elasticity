@@ -118,6 +118,7 @@ docker build -t basic-autoscaling-analysis-m2 "$ANALYSIS_DIR"
 docker run --rm \
   -v "$(pwd)/$OUTPUT_DIR:/app/output" \
   -v "$(pwd)/$ANALYSIS_DIR/images:/app/images" \
+  -v "$(pwd)/$FILES_DIR:/app/files" \
   basic-autoscaling-analysis-m2
 
 # ---------------------------------------------------------------
