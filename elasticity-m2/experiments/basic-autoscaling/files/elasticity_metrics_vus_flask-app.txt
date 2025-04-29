@@ -1,0 +1,30 @@
+=== MÉTRICAS DE ELASTICIDAD (Basado en VUs – flask-app) ===
+
+Duración total: 0 days 00:06:50 (410.00 s, 6.83 min)
+
+ΣU: 683892.00 millicore-s
+ΣO: 10.00 millicore-s
+
+Tiempo en reconfiguración (θ): 46.00 s
+  - ScaleUp: 46.00 s
+  - ScaleDown: 0.00 s
+
+Tiempos de sub/sobreaprovisionamiento:
+  - ΣA: 410.00 s | A̅: 1.00 | Ū: 1668.03
+  - ΣB: 10.00 s | B̅: 0.02 | Ō: 1.00
+
+Precisión:
+  - Pᵤ: 1668.0293 | P𝑑: 0.0244
+
+Elasticidades parciales:
+  - Eᵤ: 0.0006 | E𝑑: 41.0000
+
+Elasticidad total (Eₗ): 0.0005
+
+Elasticidad Global (E): -1667.0537
+R_U: 1668.0293 | R_O: 0.0244
+Porcentaje reconfiguración (θ%%): 11.22% (Up: 11.22% / Down: 0.00%)
+Tiempo útil del sistema: 88.78%
+
+Bloques de reconfiguración detectados:
+  - [scaleup] 2025-04-29 16:34:37 → 2025-04-29 16:35:23 (46.0s, 6 eventos)

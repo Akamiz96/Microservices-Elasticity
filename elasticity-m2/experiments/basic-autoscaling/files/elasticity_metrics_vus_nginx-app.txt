@@ -1,0 +1,30 @@
+=== MÉTRICAS DE ELASTICIDAD (Basado en VUs – nginx-app) ===
+
+Duración total: 0 days 00:06:50 (410.00 s, 6.83 min)
+
+ΣU: 51352.00 millicore-s
+ΣO: 0.00 millicore-s
+
+Tiempo en reconfiguración (θ): 1.00 s
+  - ScaleUp: 1.00 s
+  - ScaleDown: 0.00 s
+
+Tiempos de sub/sobreaprovisionamiento:
+  - ΣA: 410.00 s | A̅: 1.00 | Ū: 125.25
+  - ΣB: 0.00 s | B̅: 0.00 | Ō: 0.00
+
+Precisión:
+  - Pᵤ: 125.2488 | P𝑑: 0.0000
+
+Elasticidades parciales:
+  - Eᵤ: 0.0080 | E𝑑: 0.0000
+
+Elasticidad total (Eₗ): 0.3353
+
+Elasticidad Global (E): -124.2488
+R_U: 125.2488 | R_O: 0.0000
+Porcentaje reconfiguración (θ%%): 0.24% (Up: 0.24% / Down: 0.00%)
+Tiempo útil del sistema: 99.76%
+
+Bloques de reconfiguración detectados:
+  - [scaleup] 2025-04-29 16:38:07 → 2025-04-29 16:38:08 (1.0s, 2 eventos)
