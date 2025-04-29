@@ -22,7 +22,7 @@ import glob
 # CONFIGURACIÓN GENERAL
 # ==============================================================================
 input_dir = "output"
-images_base_dir = "images"
+images_base_dir = "images/pod_count"
 os.makedirs(images_base_dir, exist_ok=True)
 
 # Buscar todos los eventos disponibles

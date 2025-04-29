@@ -24,7 +24,10 @@ import os
 # ============================================================================
 
 input_dir = "output"
-output_dir = "output"
+output_dir = "files"
+
+# Verificar si el directorio de salida existe, si no, crearlo
+os.makedirs(output_dir, exist_ok=True)
 
 # Parámetros generales
 requests_per_vu_per_second = 1

@@ -21,7 +21,7 @@ import glob
 # CONFIGURACIÓN GENERAL
 # ---------------------------------------------------------------
 input_dir = "output"
-output_dir = "images"
+output_dir = "images/cpu_pod"
 os.makedirs(output_dir, exist_ok=True)
 
 # ---------------------------------------------------------------

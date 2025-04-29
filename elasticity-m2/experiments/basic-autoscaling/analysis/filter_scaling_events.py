@@ -87,15 +87,12 @@ for file_path in event_files:
     deployment_name = filename.replace("scaling_events_", "").replace(".csv", "")
     output_file = os.path.join(input_dir, f"scaling_events_clean_{deployment_name}.csv")
 
-    print(f"[INFO] Procesando archivo: {file_path}")
-
     events = []
 
     # Leer archivo línea por línea
     with open(file_path, "r") as file:
         for line in file:
             match = pattern.search(line)
-            print(f"Match found: {match}")  # Debug: mostrar coincidencia encontrada
             if match:
                 timestamp_str, relative_time, event_type, _, deployment_name_in_line, reason = match.groups()
                 print(f"Timestamp: {timestamp_str}, Relative Time: {relative_time}, Event Type: {event_type}, Deployment: {deployment_name_in_line}, Reason: {reason}")
@@ -125,6 +122,3 @@ for file_path in event_files:
         df = df.drop_duplicates()                   # Eliminar duplicados exactos
         df = df.sort_values(by="timestamp")          # Orden cronológico
         df.to_csv(output_file, index=False)          # Guardar resultados limpios
-        print(f"[INFO] Resultados guardados en {output_file}")
-    else:
-        print(f"[INFO] No se encontraron eventos relevantes para {deployment_name}.")
