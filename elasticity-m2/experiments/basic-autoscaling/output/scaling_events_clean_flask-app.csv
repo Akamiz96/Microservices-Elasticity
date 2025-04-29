@@ -1,0 +1,5 @@
+timestamp,scale_action,reason
+2025-04-29 16:17:17,scaleup,Scaled up replica set flask-app-865b4476d6 to 4 from 1
+2025-04-29 16:17:33,scaleup,Scaled up replica set flask-app-865b4476d6 to 7 from 4
+2025-04-29 16:17:48,scaleup,Scaled up replica set flask-app-865b4476d6 to 9 from 7
+2025-04-29 16:18:03,scaleup,Scaled up replica set flask-app-865b4476d6 to 10 from 9
