@@ -54,11 +54,11 @@ sleep 20
 # ---------------------------------------------------------------
 echo "[Paso 3] Obteniendo IP de los nodos:"
 kubectl get nodes -o wide
-echo ""
-echo "Edita el archivo:"
-echo "    $LOAD_SCRIPT"
-echo "y actualiza la IP externa del nodo."
-read -p "Presiona ENTER una vez hayas actualizado la IP correcta en el script de carga..."
+# echo ""
+# echo "Edita el archivo:"
+# echo "    $LOAD_SCRIPT"
+# echo "y actualiza la IP externa del nodo."
+# read -p "Presiona ENTER una vez hayas actualizado la IP correcta en el script de carga..."
 
 # ---------------------------------------------------------------
 # PASO 4: Iniciar recolección de métricas y captura de eventos
