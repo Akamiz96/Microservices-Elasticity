@@ -8,21 +8,22 @@
 # AUTOR: Alejandro Castro Martínez
 # FECHA DE MODIFICACIÓN: 30 de marzo de 2025
 # CONTEXTO:
-#   - Requiere un archivo `scaling_events.csv` generado previamente.
+#   - Requiere archivos `scaling_events_<deployment>.csv` generados previamente.
 #   - Excluye eventos previos al inicio de la carga (según `k6_start_time.txt`).
-#   - Genera un archivo limpio y estructurado: `scaling_events_clean.csv`.
+#   - Genera archivos limpios y estructurados: `scaling_events_clean_<deployment>.csv`.
 # ------------------------------------------------------------------------------
 
 import pandas as pd
 import re
+import os
+import glob
 from datetime import datetime, timedelta
 
 # ---------------------------------------------------------------
 # CONFIGURACIÓN DE ARCHIVOS DE ENTRADA Y SALIDA
 # ---------------------------------------------------------------
-file_path = "../output/scaling_events_flask-app.csv"                  # Archivo crudo con eventos recolectados del clúster
-output_file = "../output/scaling_events_clean_flask-app.csv"          # Archivo limpio que será generado
-k6_start_file = "../output/k6_start_time.txt"               # Archivo con timestamp del inicio real de la prueba
+input_dir = "output"
+k6_start_file = os.path.join(input_dir, "k6_start_time.txt")
 
 # ---------------------------------------------------------------
 # EXPRESIÓN REGULAR PARA PARSEAR CADA LÍNEA DEL LOG
@@ -77,35 +78,53 @@ with open(k6_start_file, "r") as f:
     k6_start_timestamp = datetime.strptime(f.read().strip(), "%Y-%m-%d %H:%M:%S")
 
 # ---------------------------------------------------------------
-# PARSEO Y FILTRADO DE EVENTOS RELEVANTES
+# PROCESAR TODOS LOS ARCHIVOS DE EVENTOS DISPONIBLES
 # ---------------------------------------------------------------
-events = []
+event_files = glob.glob(os.path.join(input_dir, "scaling_events_*.csv"))
 
-# Leer archivo línea por línea
-with open(file_path, "r") as file:
-    for line in file:
-        match = pattern.search(line)
-        print(f"Match found: {match}")  # Debug: mostrar coincidencia encontrada
-        if match:
-            timestamp_str, relative_time, event_type, _, deployment_name, reason = match.groups()
-            print(f"Timestamp: {timestamp_str}, Relative Time: {relative_time}, Event Type: {event_type}, Deployment: {deployment_name}, Reason: {reason}")
-            base_timestamp = datetime.strptime(timestamp_str, "%Y-%m-%d %H:%M:%S")
-            corrected_timestamp = base_timestamp - parse_relative_time(relative_time)
+for file_path in event_files:
+    filename = os.path.basename(file_path)
+    deployment_name = filename.replace("scaling_events_", "").replace(".csv", "")
+    output_file = os.path.join(input_dir, f"scaling_events_clean_{deployment_name}.csv")
 
-            # Filtrar eventos que ocurrieron antes del inicio del test con k6
-            if corrected_timestamp < k6_start_timestamp:
-                continue
+    print(f"[INFO] Procesando archivo: {file_path}")
 
-            # Clasificar el evento como "scaleup" o "scaledown"
-            scale_action = "scaleup" if "Scaled up" in reason else "scaledown"
+    events = []
 
-            # Guardar evento válido
-            events.append((corrected_timestamp.strftime("%Y-%m-%d %H:%M:%S"), scale_action, reason))
+    # Leer archivo línea por línea
+    with open(file_path, "r") as file:
+        for line in file:
+            match = pattern.search(line)
+            print(f"Match found: {match}")  # Debug: mostrar coincidencia encontrada
+            if match:
+                timestamp_str, relative_time, event_type, _, deployment_name_in_line, reason = match.groups()
+                print(f"Timestamp: {timestamp_str}, Relative Time: {relative_time}, Event Type: {event_type}, Deployment: {deployment_name_in_line}, Reason: {reason}")
+                base_timestamp = datetime.strptime(timestamp_str, "%Y-%m-%d %H:%M:%S")
+                corrected_timestamp = base_timestamp - parse_relative_time(relative_time)
 
-# ---------------------------------------------------------------
-# CONVERSIÓN A DATAFRAME Y EXPORTACIÓN A CSV
-# ---------------------------------------------------------------
-df = pd.DataFrame(events, columns=["timestamp", "scale_action", "reason"])
-df = df.drop_duplicates()                   # Eliminar duplicados exactos
-df = df.sort_values(by="timestamp")        # Orden cronológico
-df.to_csv(output_file, index=False)        # Guardar resultados limpios
+                # Filtrar eventos que ocurrieron antes del inicio del test con k6
+                if corrected_timestamp < k6_start_timestamp:
+                    continue
+
+                # Clasificar el evento como "scaleup" o "scaledown"
+                if "Scaled up" in reason:
+                    scale_action = "scaleup"
+                elif "Scaled down" in reason:
+                    scale_action = "scaledown"
+                else:
+                    continue  # Ignorar eventos que no sean escalado
+
+                # Guardar evento válido
+                events.append((corrected_timestamp.strftime("%Y-%m-%d %H:%M:%S"), scale_action, reason))
+
+    # ---------------------------------------------------------------
+    # CONVERSIÓN A DATAFRAME Y EXPORTACIÓN A CSV
+    # ---------------------------------------------------------------
+    if events:
+        df = pd.DataFrame(events, columns=["timestamp", "scale_action", "reason"])
+        df = df.drop_duplicates()                   # Eliminar duplicados exactos
+        df = df.sort_values(by="timestamp")          # Orden cronológico
+        df.to_csv(output_file, index=False)          # Guardar resultados limpios
+        print(f"[INFO] Resultados guardados en {output_file}")
+    else:
+        print(f"[INFO] No se encontraron eventos relevantes para {deployment_name}.")
