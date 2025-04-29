@@ -37,18 +37,17 @@ mkdir -p "$OUTPUT_DIR"                                        # Crear carpeta de
 # BUCLE DE RECOLECCIÓN DE EVENTOS
 # ---------------------------------------------------------------
 while true; do
-    TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S")                    # Timestamp actual del sistema
+    TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S")  # Timestamp del sistema en tiempo real
 
-    # Obtener eventos relacionados al Deployment ordenados por creación
+    # Obtener eventos del tipo Deployment, ordenados por su creación
     EVENTS=$(kubectl get events --sort-by=.metadata.creationTimestamp -n $NAMESPACE | grep $DEPLOYMENT_NAME)
 
     # Si se encontraron eventos, procesarlos uno por uno
     if [[ ! -z "$EVENTS" ]]; then
         while IFS= read -r LINE; do
-            # Guardar el timestamp del sistema + el evento crudo en el archivo CSV
-            echo "\"$TIMESTAMP\",\"$LINE\"" >> "$OUTPUT_FILE"
+            echo "[$TIMESTAMP] $LINE" >> $OUTPUT_FILE
         done <<< "$EVENTS"
     fi
 
-    sleep "$INTERVAL"
+    sleep $INTERVAL
 done
