@@ -19,17 +19,17 @@ echo "========================================="
 echo " INICIO DEL DESPLIEGUE AUTOMATICO"
 echo "========================================="
 
-# 1. Construir imagen Flask
-echo "Construyendo imagen de Flask..."
-cd "$FLASK_DIR"
-docker build -t "$IMAGE" .
-cd - > /dev/null
-echo "Imagen $IMAGE construida correctamente."
+# # 1. Construir imagen Flask
+# echo "Construyendo imagen de Flask..."
+# cd "$FLASK_DIR"
+# docker build -t "$IMAGE" .
+# cd - > /dev/null
+# echo "Imagen $IMAGE construida correctamente."
 
-# 2. Importar imagen a containerd
-echo "Importando imagen en containerd..."
-docker save "$IMAGE" | sudo ctr -n k8s.io images import -
-echo "Imagen importada en containerd."
+# # 2. Importar imagen a containerd
+# echo "Importando imagen en containerd..."
+# docker save "$IMAGE" | sudo ctr -n k8s.io images import -
+# echo "Imagen importada en containerd."
 
 # 3. Aplicar ConfigMap primero
 echo "Aplicando ConfigMap de NGINX..."

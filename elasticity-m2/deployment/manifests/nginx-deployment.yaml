@@ -20,6 +20,14 @@ spec:
         image: nginx:latest
         ports:
         - containerPort: 80
+        # Definición de recursos (crucial para que HPA pueda calcular uso relativo)
+        resources:
+          requests:
+            cpu: 100m         # Solicitud mínima de CPU (0.1 core)
+            memory: 64Mi      # Solicitud mínima de memoria
+          limits:
+            cpu: 500m         # Límite máximo de CPU permitido (0.5 core)
+            memory: 128Mi     # Límite máximo de memoria
         volumeMounts:
         - name: nginx-config-volume
           mountPath: /etc/nginx/nginx.conf
