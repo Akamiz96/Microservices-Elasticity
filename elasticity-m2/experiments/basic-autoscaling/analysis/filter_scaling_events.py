@@ -21,8 +21,8 @@ from datetime import datetime, timedelta
 # ---------------------------------------------------------------
 # CONFIGURACIÓN DE ARCHIVOS DE ENTRADA Y SALIDA
 # ---------------------------------------------------------------
-input_dir = "experiments/basic-autoscaling/output"
-output_dir = "experiments/basic-autoscaling/output"
+input_dir = "output"
+output_dir = "output"
 k6_start_file = os.path.join(input_dir, "k6_start_time.txt")
 
 # ---------------------------------------------------------------

@@ -8,9 +8,9 @@
 # CONTEXTO:
 #   - Adaptado para experiments/basic-autoscaling.
 #   - Entrada:
-#       - experiments/basic-autoscaling/output/basic_metrics_<deployment>.csv
-#       - experiments/basic-autoscaling/output/scaling_events_clean_<deployment>.csv
-#       - experiments/basic-autoscaling/output/stages.json
+#       - output/basic_metrics_<deployment>.csv
+#       - output/scaling_events_clean_<deployment>.csv
+#       - output/stages.json
 # ------------------------------------------------------------------------------
 
 import pandas as pd
@@ -23,8 +23,8 @@ import os
 # CONFIGURACIÓN GENERAL
 # ============================================================================
 
-input_dir = "experiments/basic-autoscaling/output"
-output_dir = "experiments/basic-autoscaling/output"
+input_dir = "output"
+output_dir = "output"
 
 # Parámetros generales
 requests_per_vu_per_second = 1

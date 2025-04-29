@@ -9,8 +9,8 @@
 # CONTEXTO:
 #   - Adaptado para experiments/basic-autoscaling.
 #   - Entrada:
-#       - experiments/basic-autoscaling/output/k6_results.csv
-#       - experiments/basic-autoscaling/output/scaling_events_clean_nginx-app.csv
+#       - output/k6_results.csv
+#       - output/scaling_events_clean_nginx-app.csv
 # ------------------------------------------------------------------------------
 
 import pandas as pd
@@ -24,8 +24,8 @@ from datetime import datetime
 # =============================
 
 # Rutas de entrada y salida
-input_dir = "experiments/basic-autoscaling/output"
-output_dir = "experiments/basic-autoscaling/images/indirect_metrics"
+input_dir = "output"
+output_dir = "images/indirect_metrics"
 
 INPUT_CSV = os.path.join(input_dir, "k6_results.csv")
 EVENTS_CSV = os.path.join(input_dir, "scaling_events_clean_nginx-app.csv")  # Usamos eventos de NGINX

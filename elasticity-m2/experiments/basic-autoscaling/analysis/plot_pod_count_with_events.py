@@ -9,8 +9,8 @@
 # CONTEXTO:
 #   - Adaptado para experiments/basic-autoscaling.
 #   - Entrada:
-#       - experiments/basic-autoscaling/output/basic_metrics_<deployment>.csv
-#       - experiments/basic-autoscaling/output/scaling_events_clean_<deployment>.csv
+#       - output/basic_metrics_<deployment>.csv
+#       - output/scaling_events_clean_<deployment>.csv
 # ------------------------------------------------------------------------------
 
 import pandas as pd
@@ -21,8 +21,8 @@ import glob
 # ==============================================================================
 # CONFIGURACIÓN GENERAL
 # ==============================================================================
-input_dir = "experiments/basic-autoscaling/output"
-images_base_dir = "experiments/basic-autoscaling/images"
+input_dir = "output"
+images_base_dir = "images"
 os.makedirs(images_base_dir, exist_ok=True)
 
 # Buscar todos los eventos disponibles

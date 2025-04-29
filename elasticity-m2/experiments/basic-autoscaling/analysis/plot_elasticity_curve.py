@@ -24,8 +24,8 @@ import glob
 # ==============================================================================
 # CONFIGURACIÓN GENERAL
 # ==============================================================================
-input_dir = "experiments/basic-autoscaling/output"
-output_dir_base = "experiments/basic-autoscaling/images"
+input_dir = "output"
+output_dir_base = "images"
 os.makedirs(output_dir_base, exist_ok=True)
 
 # Definiciones específicas por deployment
