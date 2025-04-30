@@ -2,27 +2,27 @@
 
 Duración total: 0 days 00:06:50 (410.00 s, 6.83 min)
 
-ΣU: 5806.00 millicore-s
-ΣO: 12.00 millicore-s
+ΣU: 5816.00 millicore-s
+ΣO: 32.00 millicore-s
 
 Tiempo en reconfiguración (θ): 0.00 s
   - ScaleUp: 0.00 s
   - ScaleDown: 0.00 s
 
 Tiempos de sub/sobreaprovisionamiento:
-  - ΣA: 390.00 s | A̅: 0.95 | Ū: 14.89
-  - ΣB: 10.00 s | B̅: 0.02 | Ō: 1.20
+  - ΣA: 390.00 s | A̅: 0.95 | Ū: 14.91
+  - ΣB: 30.00 s | B̅: 0.07 | Ō: 1.07
 
 Precisión:
-  - Pᵤ: 14.1610 | P𝑑: 0.0293
+  - Pᵤ: 14.1854 | P𝑑: 0.0780
 
 Elasticidades parciales:
-  - Eᵤ: 0.0706 | E𝑑: 34.1667
+  - Eᵤ: 0.0705 | E𝑑: 12.8125
 
 Elasticidad total (Eₗ): 0.0000
 
-Elasticidad Global (E): -13.1902
-R_U: 14.1610 | R_O: 0.0293
+Elasticidad Global (E): -13.2634
+R_U: 14.1854 | R_O: 0.0780
 Porcentaje reconfiguración (θ%%): 0.00% (Up: 0.00% / Down: 0.00%)
 Tiempo útil del sistema: 100.00%
 
