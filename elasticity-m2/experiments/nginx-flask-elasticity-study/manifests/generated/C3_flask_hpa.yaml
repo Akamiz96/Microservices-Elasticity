@@ -1,0 +1,27 @@
+# ------------------------------------------------------------------------------
+# ARCHIVO: hpa-flask.yaml
+# DESCRIPCIÓN: Crea un HorizontalPodAutoscaler para el Deployment flask-app
+#              basado en la utilización promedio de CPU.
+# AUTOR: Alejandro Castro Martínez
+# FECHA: 27 de abril de 2025
+# CONTEXTO: Proyecto Elasticity M2 - Escalado automático de microservicios
+# ------------------------------------------------------------------------------
+
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: flask-hpa
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: flask-app
+  minReplicas: 1
+  maxReplicas: 1
+  metrics:
+    - type: Resource
+      resource:
+        name: cpu
+        target:
+          type: Utilization
+          averageUtilization: 100  # Puedes ajustar este porcentaje según lo que quieras estudiar
