@@ -102,9 +102,13 @@ for HPA_NGINX in "${HPAS_NGINX[@]}"; do
       echo "[Paso 8] Moviendo resultados a carpeta de almacenamiento final..." | tee -a "$LOG_FILE"
       DEST_DIR="$RESULTS_DIR/$EXP_ID"
       mkdir -p "$DEST_DIR/images" "$DEST_DIR/output" "$DEST_DIR/files"
-      mv "$IMAGES_DIR"/* "$DEST_DIR/images/" 2>/dev/null
-      mv "$OUTPUT_DIR"/* "$DEST_DIR/output/" 2>/dev/null
-      mv "$FILES_DIR"/* "$DEST_DIR/files/" 2>/dev/null
+      echo "[Paso 8.1] Corrigiendo permisos antes de mover archivos..." | tee -a "$LOG_FILE"
+      chown -R "$USER:$USER" "$IMAGES_DIR" "$OUTPUT_DIR" "$FILES_DIR"
+
+      echo "[Paso 8.2] Moviendo resultados..." | tee -a "$LOG_FILE"
+      rsync -a --remove-source-files "$IMAGES_DIR/" "$DEST_DIR/images/"
+      rsync -a --remove-source-files "$OUTPUT_DIR/" "$DEST_DIR/output/"
+      rsync -a --remove-source-files "$FILES_DIR/" "$DEST_DIR/files/"
 
       echo "[Paso 9] Limpiando entorno de Kubernetes..." | tee -a "$LOG_FILE"
       bash "$DEPLOY_DIR/cleanup.sh" 2>&1 | tee -a "$LOG_FILE"
