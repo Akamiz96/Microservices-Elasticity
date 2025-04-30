@@ -22,7 +22,7 @@ from datetime import datetime, timedelta
 # ---------------------------------------------------------------
 # CONFIGURACIÓN DE ARCHIVOS DE ENTRADA Y SALIDA
 # ---------------------------------------------------------------
-input_dir = "../../results/N-C1-F-C1-L-L01/output"
+input_dir = "output"
 k6_start_file = os.path.join(input_dir, "k6_start_time.txt")
 
 # ---------------------------------------------------------------
