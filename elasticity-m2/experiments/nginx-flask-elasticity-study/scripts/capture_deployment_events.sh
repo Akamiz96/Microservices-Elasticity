@@ -27,7 +27,7 @@ DEPLOYMENT_NAME="$1"   # Nombre del deployment a monitorear
 # CONFIGURACIÓN GENERAL
 # ---------------------------------------------------------------
 NAMESPACE="default"                                           # Namespace donde se encuentra el deployment
-OUTPUT_DIR="experiments/basic-autoscaling/output"                # Carpeta donde se guardarán los logs
+OUTPUT_DIR="experiments/nginx-flask-elasticity-study/output"                # Carpeta donde se guardarán los logs
 OUTPUT_FILE="$OUTPUT_DIR/scaling_events_${DEPLOYMENT_NAME}.csv"  # Archivo de salida específico por deployment
 INTERVAL=10                                                   # Intervalo de muestreo en segundos
 
