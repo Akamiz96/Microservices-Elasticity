@@ -18,7 +18,7 @@
 # ---------------------------------------------------------------
 # CONFIGURACIÓN DE RUTAS Y VARIABLES GLOBALES
 # ---------------------------------------------------------------
-PROJECT_DIR="nginx-flask-elasticity-study"
+PROJECT_DIR="experiments/nginx-flask-elasticity-study"
 DEPLOY_DIR="$PROJECT_DIR/deployment"
 MANIFESTS_DIR="$PROJECT_DIR/manifests"
 K6_CONFIG_DIR="$PROJECT_DIR/scripts/k6_configs"
@@ -28,7 +28,7 @@ FILES_DIR="$PROJECT_DIR/files"
 IMAGES_DIR="$ANALYSIS_DIR/images"
 
 RESULTS_DIR="$PROJECT_DIR/results"
-LOG_DIR="exp_logs/nginx-flask-elasticity-study"
+LOG_DIR="experiments/nginx-flask-elasticity-study/exp_logs"
 mkdir -p "$RESULTS_DIR"
 mkdir -p "$LOG_DIR"
 LOG_CENTRAL="$LOG_DIR/experiment_log.txt"
