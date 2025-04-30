@@ -26,6 +26,9 @@ import os
 input_dir = "output"
 output_dir = "files"
 
+LOAD_ID = os.getenv("LOAD_ID", "L01")
+config_file = f"k6_configs/{LOAD_ID}_config.json"
+
 # Verificar si el directorio de salida existe, si no, crearlo
 os.makedirs(output_dir, exist_ok=True)
 
@@ -167,7 +170,7 @@ def calcular_metricas(df_demand, label, output_path, df_supply, θ_up, θ_down, 
 with open(os.path.join(input_dir, "k6_start_time.txt")) as f:
     k6_start_time = datetime.strptime(f.read().strip(), "%Y-%m-%d %H:%M:%S")
 
-with open(os.path.join(input_dir, "stages.json")) as f:
+with open(config_file) as f:
     stages = json.load(f)
 
 def parse_duration(d): return int(d[:-1]) * (60 if d.endswith("m") else 1)

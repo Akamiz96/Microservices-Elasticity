@@ -28,6 +28,9 @@ input_dir = "output"
 output_dir_base = "images"
 os.makedirs(output_dir_base, exist_ok=True)
 
+LOAD_ID = os.getenv("LOAD_ID", "L01")
+config_file = f"k6_configs/{LOAD_ID}_config.json"
+
 # Definiciones específicas por deployment
 microservices = {
     "flask-app": {
@@ -90,7 +93,7 @@ def plot_elasticity_curve(df, demand_col, output_file, title, subtitle):
 with open(os.path.join(input_dir, "k6_start_time.txt")) as f:
     k6_start_time = datetime.strptime(f.read().strip(), "%Y-%m-%d %H:%M:%S")
 
-with open(os.path.join(input_dir, "stages.json")) as f:
+with open(config_file) as f:
     stages = json.load(f)
 
 # Generar la serie de VUs y requests a lo largo del tiempo
