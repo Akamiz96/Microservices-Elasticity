@@ -99,6 +99,9 @@ for HPA_NGINX in "${HPAS_NGINX[@]}"; do
         -e LOAD_ID="$LOAD_ID" \
         elasticity-analysis 2>&1 | tee -a "$LOG_FILE"
 
+      echo "[Paso 7.1] Corrigiendo permisos post-análisis..." | tee -a "$LOG_FILE"
+      sudo chown -R "$USER:$USER" "$OUTPUT_DIR" "$FILES_DIR" "$IMAGES_DIR"
+      
       echo "[Paso 8] Moviendo resultados a carpeta de almacenamiento final..." | tee -a "$LOG_FILE"
       DEST_DIR="$RESULTS_DIR/$EXP_ID"
       mkdir -p "$DEST_DIR/images" "$DEST_DIR/output" "$DEST_DIR/files"
