@@ -1,0 +1,29 @@
+=== MÉTRICAS DE ELASTICIDAD (Basado en Requests – flask-app) ===
+
+Duración total: 0 days 00:06:50 (410.00 s, 6.83 min)
+
+ΣU: 9598.00 millicore-s
+ΣO: 312.00 millicore-s
+
+Tiempo en reconfiguración (θ): 0.00 s
+  - ScaleUp: 0.00 s
+  - ScaleDown: 0.00 s
+
+Tiempos de sub/sobreaprovisionamiento:
+  - ΣA: 370.00 s | A̅: 0.90 | Ū: 25.94
+  - ΣB: 40.00 s | B̅: 0.10 | Ō: 7.80
+
+Precisión:
+  - Pᵤ: 23.4098 | P𝑑: 0.7610
+
+Elasticidades parciales:
+  - Eᵤ: 0.0427 | E𝑑: 1.3141
+
+Elasticidad total (Eₗ): 0.0000
+
+Elasticidad Global (E): -23.1707
+R_U: 23.4098 | R_O: 0.7610
+Porcentaje reconfiguración (θ%%): 0.00% (Up: 0.00% / Down: 0.00%)
+Tiempo útil del sistema: 100.00%
+
+Bloques de reconfiguración detectados:
