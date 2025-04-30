@@ -23,11 +23,20 @@ from matplotlib.patches import Patch
 # CONFIGURACIÓN GENERAL
 # ==============================================================================
 input_dir = "output"
-output_dir = "images/elasticity"
-os.makedirs(output_dir, exist_ok=True)
+output_dir_base = "images"
 
-cpu_per_vu = 1.50       # millicores por VU
-cpu_per_req = 0.05      # millicores por request
+# Definiciones específicas por deployment
+microservices = {
+    "flask-app": {
+        "cpu_per_vu": 24.80,
+        "cpu_per_req": 0.82
+    },
+    "nginx-app": {
+        "cpu_per_vu": 1.80,
+        "cpu_per_req": 0.06
+    }
+}
+
 requests_per_vu_per_second = 1
 sampling_interval = 10
 
@@ -104,38 +113,47 @@ for stage in stages:
     prev_target = target
     current_time += timedelta(seconds=duration_s)
 
-df_vus = pd.DataFrame(vus_series)
-
 # ==============================================================================
-# ETAPA 2: Cargar oferta y eventos
+# ETAPA 2: Procesar cada microservicio
 # ==============================================================================
-df_metrics = pd.read_csv(os.path.join(input_dir, "basic_metrics_nginx-app.csv"))
-df_metrics["timestamp"] = pd.to_datetime(df_metrics["timestamp"])
-df_metrics["cpu(millicores)"] = pd.to_numeric(df_metrics["cpu(millicores)"], errors="coerce")
-df_supply = df_metrics.groupby("timestamp")["cpu(millicores)"].sum().reset_index()
-df_supply.rename(columns={"cpu(millicores)": "supply"}, inplace=True)
+for deployment_name, params in microservices.items():
+    print(f"[INFO] Procesando {deployment_name}")
 
-df_events = pd.read_csv(os.path.join(input_dir, "scaling_events_clean_nginx-app.csv"))
-df_events["timestamp"] = pd.to_datetime(df_events["timestamp"], errors="coerce")
+    output_dir = os.path.join(output_dir_base, deployment_name, "elasticity")
+    os.makedirs(output_dir, exist_ok=True)
 
-# ==============================================================================
-# ETAPA 3: Generar gráficas de elasticidad
-# ==============================================================================
+    metrics_file = os.path.join(input_dir, f"basic_metrics_{deployment_name}.csv")
+    events_file = os.path.join(input_dir, f"scaling_events_clean_{deployment_name}.csv")
 
-# --- Basado en VUs ---
-df_vus_vu = df_vus.copy()
-df_vus_vu["demand"] = df_vus_vu["vus"] * cpu_per_vu
-df_comb_vu = pd.merge_asof(df_vus_vu.sort_values("timestamp"), df_supply, on="timestamp", direction="nearest", tolerance=pd.Timedelta("10s"))
-df_comb_vu.dropna(inplace=True)
+    if not os.path.exists(metrics_file) or not os.path.exists(events_file):
+        print(f"[WARNING] Faltan archivos para {deployment_name}. Se omite.")
+        continue
 
-plot_elasticity(df_comb_vu, "Basada en VUs (con todos los eventos)", os.path.join(output_dir, "elasticity_curve_vus_with_all_events.png"), df_events)
-plot_elasticity(df_comb_vu, "Basada en VUs (solo scaleup)", os.path.join(output_dir, "elasticity_curve_vus_with_scaleup_only.png"), df_events[df_events["scale_action"] == "scaleup"])
+    df_metrics = pd.read_csv(metrics_file)
+    df_metrics["timestamp"] = pd.to_datetime(df_metrics["timestamp"])
+    df_metrics["cpu(millicores)"] = pd.to_numeric(df_metrics["cpu(millicores)"], errors="coerce")
+    df_supply = df_metrics.groupby("timestamp")["cpu(millicores)"].sum().reset_index()
+    df_supply.rename(columns={"cpu(millicores)": "supply"}, inplace=True)
 
-# --- Basado en Requests ---
-df_vus_req = df_vus.copy()
-df_vus_req["demand"] = df_vus_req["reqs"] * cpu_per_req
-df_comb_req = pd.merge_asof(df_vus_req.sort_values("timestamp"), df_supply, on="timestamp", direction="nearest", tolerance=pd.Timedelta("10s"))
-df_comb_req.dropna(inplace=True)
+    df_events = pd.read_csv(events_file)
+    df_events["timestamp"] = pd.to_datetime(df_events["timestamp"], errors="coerce")
 
-plot_elasticity(df_comb_req, "Basada en Requests (con todos los eventos)", os.path.join(output_dir, "elasticity_curve_reqs_with_all_events.png"), df_events)
-plot_elasticity(df_comb_req, "Basada en Requests (solo scaleup)", os.path.join(output_dir, "elasticity_curve_reqs_with_scaleup_only.png"), df_events[df_events["scale_action"] == "scaleup"])
+    df_vus = pd.DataFrame(vus_series)
+
+    # --- Basado en VUs ---
+    df_vus_vu = df_vus.copy()
+    df_vus_vu["demand"] = df_vus_vu["vus"] * params["cpu_per_vu"]
+    df_comb_vu = pd.merge_asof(df_vus_vu.sort_values("timestamp"), df_supply, on="timestamp", direction="nearest", tolerance=pd.Timedelta("10s"))
+    df_comb_vu.dropna(inplace=True)
+
+    plot_elasticity(df_comb_vu, "Basada en VUs (con todos los eventos)", os.path.join(output_dir, "elasticity_curve_vus_with_all_events.png"), df_events)
+    plot_elasticity(df_comb_vu, "Basada en VUs (solo scaleup)", os.path.join(output_dir, "elasticity_curve_vus_with_scaleup_only.png"), df_events[df_events["scale_action"] == "scaleup"])
+
+    # --- Basado en Requests ---
+    df_vus_req = df_vus.copy()
+    df_vus_req["demand"] = df_vus_req["reqs"] * params["cpu_per_req"]
+    df_comb_req = pd.merge_asof(df_vus_req.sort_values("timestamp"), df_supply, on="timestamp", direction="nearest", tolerance=pd.Timedelta("10s"))
+    df_comb_req.dropna(inplace=True)
+
+    plot_elasticity(df_comb_req, "Basada en Requests (con todos los eventos)", os.path.join(output_dir, "elasticity_curve_reqs_with_all_events.png"), df_events)
+    plot_elasticity(df_comb_req, "Basada en Requests (solo scaleup)", os.path.join(output_dir, "elasticity_curve_reqs_with_scaleup_only.png"), df_events[df_events["scale_action"] == "scaleup"])
