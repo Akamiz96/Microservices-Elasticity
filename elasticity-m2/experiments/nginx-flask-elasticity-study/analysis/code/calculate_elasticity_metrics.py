@@ -55,8 +55,13 @@ microservices = {
 
 def calcular_tiempo_reconfiguracion(events_csv, threshold_seconds=30):
     df = pd.read_csv(events_csv, parse_dates=["timestamp"])
+    df["timestamp"] = pd.to_datetime(df["timestamp"], errors="coerce")
+    df = df.dropna(subset=["timestamp"])
     df = df.sort_values("timestamp")
     resultados = []
+
+    if df.empty:
+        return 0, 0, pd.DataFrame(columns=["tipo", "grupo", "start", "end", "duracion", "eventos"])
 
     for tipo in ["scaleup", "scaledown"]:
         sub = df[df["scale_action"] == tipo].copy()
