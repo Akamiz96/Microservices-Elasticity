@@ -22,7 +22,7 @@ from datetime import datetime, timedelta
 # ---------------------------------------------------------------
 # CONFIGURACIÓN DE ARCHIVOS DE ENTRADA Y SALIDA
 # ---------------------------------------------------------------
-input_dir = "output"
+input_dir = "../../results/N-C1-F-C1-L-L01/output"
 k6_start_file = os.path.join(input_dir, "k6_start_time.txt")
 
 # ---------------------------------------------------------------
@@ -95,16 +95,16 @@ for file_path in event_files:
             match = pattern.search(line)
             if match:
                 timestamp_str, relative_time, event_type, _, deployment_name_in_line, reason = match.groups()
-                print(f"Timestamp: {timestamp_str}, Relative Time: {relative_time}, Event Type: {event_type}, Deployment: {deployment_name_in_line}, Reason: {reason}")
                 base_timestamp = datetime.strptime(timestamp_str, "%Y-%m-%d %H:%M:%S")
                 corrected_timestamp = base_timestamp - parse_relative_time(relative_time)
-
+                
                 # Filtrar eventos que ocurrieron antes del inicio del test con k6
                 if corrected_timestamp < k6_start_timestamp:
                     continue
 
                 # Clasificar el evento como "scaleup" o "scaledown"
                 if "Scaled up" in reason:
+                    print(f"Evento escalado: {corrected_timestamp} < {k6_start_timestamp}")
                     scale_action = "scaleup"
                 elif "Scaled down" in reason:
                     scale_action = "scaledown"
@@ -117,8 +117,7 @@ for file_path in event_files:
     # ---------------------------------------------------------------
     # CONVERSIÓN A DATAFRAME Y EXPORTACIÓN A CSV
     # ---------------------------------------------------------------
-    if events:
-        df = pd.DataFrame(events, columns=["timestamp", "scale_action", "reason"])
-        df = df.drop_duplicates()                   # Eliminar duplicados exactos
-        df = df.sort_values(by="timestamp")          # Orden cronológico
-        df.to_csv(output_file, index=False)          # Guardar resultados limpios
+    df = pd.DataFrame(events, columns=["timestamp", "scale_action", "reason"])
+    df = df.drop_duplicates()                   # Eliminar duplicados exactos
+    df = df.sort_values(by="timestamp")          # Orden cronológico
+    df.to_csv(output_file, index=False)          # Guardar resultados limpios
