@@ -1,0 +1,924 @@
+[2025-04-30 14:47:56] 55m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:47:56] 55m         Normal    Pulled                         pod/flask-app-865b4476d6-8gtcv      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:47:56] 55m         Normal    Created                        pod/flask-app-865b4476d6-8gtcv      Created container flask
+[2025-04-30 14:47:56] 55m         Normal    Started                        pod/flask-app-865b4476d6-8gtcv      Started container flask
+[2025-04-30 14:47:56] 55m         Normal    Scheduled                      pod/flask-app-865b4476d6-8gtcv      Successfully assigned default/flask-app-865b4476d6-8gtcv to worker7
+[2025-04-30 14:47:56] 55m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-8gtcv
+[2025-04-30 14:47:56] 37m         Normal    Killing                        pod/flask-app-865b4476d6-8gtcv      Stopping container flask
+[2025-04-30 14:47:56] 26m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-bb8h5
+[2025-04-30 14:47:56] 26m         Normal    Started                        pod/flask-app-865b4476d6-bb8h5      Started container flask
+[2025-04-30 14:47:56] 26m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:47:56] 26m         Normal    Created                        pod/flask-app-865b4476d6-bb8h5      Created container flask
+[2025-04-30 14:47:56] 26m         Normal    Scheduled                      pod/flask-app-865b4476d6-bb8h5      Successfully assigned default/flask-app-865b4476d6-bb8h5 to worker7
+[2025-04-30 14:47:56] 26m         Normal    Pulled                         pod/flask-app-865b4476d6-bb8h5      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:47:56] 9m25s       Normal    Killing                        pod/flask-app-865b4476d6-bb8h5      Stopping container flask
+[2025-04-30 14:47:56] 9m24s       Warning   FailedGetScale                 horizontalpodautoscaler/flask-hpa   deployments/scale.apps "flask-app" not found
+[2025-04-30 14:47:56] 20s         Normal    Pulled                         pod/flask-app-865b4476d6-sk4lt      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:47:56] 20s         Normal    Scheduled                      pod/flask-app-865b4476d6-sk4lt      Successfully assigned default/flask-app-865b4476d6-sk4lt to worker7
+[2025-04-30 14:47:56] 20s         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:47:56] 20s         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-sk4lt
+[2025-04-30 14:47:56] 20s         Normal    Started                        pod/flask-app-865b4476d6-sk4lt      Started container flask
+[2025-04-30 14:47:56] 20s         Normal    Created                        pod/flask-app-865b4476d6-sk4lt      Created container flask
+[2025-04-30 14:48:06] 55m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:48:06] 55m         Normal    Pulled                         pod/flask-app-865b4476d6-8gtcv      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:48:06] 55m         Normal    Created                        pod/flask-app-865b4476d6-8gtcv      Created container flask
+[2025-04-30 14:48:06] 55m         Normal    Started                        pod/flask-app-865b4476d6-8gtcv      Started container flask
+[2025-04-30 14:48:06] 55m         Normal    Scheduled                      pod/flask-app-865b4476d6-8gtcv      Successfully assigned default/flask-app-865b4476d6-8gtcv to worker7
+[2025-04-30 14:48:06] 55m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-8gtcv
+[2025-04-30 14:48:06] 37m         Normal    Killing                        pod/flask-app-865b4476d6-8gtcv      Stopping container flask
+[2025-04-30 14:48:06] 27m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-bb8h5
+[2025-04-30 14:48:06] 27m         Normal    Started                        pod/flask-app-865b4476d6-bb8h5      Started container flask
+[2025-04-30 14:48:06] 27m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:48:06] 27m         Normal    Created                        pod/flask-app-865b4476d6-bb8h5      Created container flask
+[2025-04-30 14:48:06] 27m         Normal    Scheduled                      pod/flask-app-865b4476d6-bb8h5      Successfully assigned default/flask-app-865b4476d6-bb8h5 to worker7
+[2025-04-30 14:48:06] 27m         Normal    Pulled                         pod/flask-app-865b4476d6-bb8h5      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:48:06] 9m35s       Normal    Killing                        pod/flask-app-865b4476d6-bb8h5      Stopping container flask
+[2025-04-30 14:48:06] 9m34s       Warning   FailedGetScale                 horizontalpodautoscaler/flask-hpa   deployments/scale.apps "flask-app" not found
+[2025-04-30 14:48:06] 30s         Normal    Pulled                         pod/flask-app-865b4476d6-sk4lt      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:48:06] 30s         Normal    Scheduled                      pod/flask-app-865b4476d6-sk4lt      Successfully assigned default/flask-app-865b4476d6-sk4lt to worker7
+[2025-04-30 14:48:06] 30s         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:48:06] 30s         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-sk4lt
+[2025-04-30 14:48:06] 30s         Normal    Started                        pod/flask-app-865b4476d6-sk4lt      Started container flask
+[2025-04-30 14:48:06] 30s         Normal    Created                        pod/flask-app-865b4476d6-sk4lt      Created container flask
+[2025-04-30 14:48:16] 55m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:48:16] 55m         Normal    Pulled                         pod/flask-app-865b4476d6-8gtcv      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:48:16] 55m         Normal    Created                        pod/flask-app-865b4476d6-8gtcv      Created container flask
+[2025-04-30 14:48:16] 55m         Normal    Started                        pod/flask-app-865b4476d6-8gtcv      Started container flask
+[2025-04-30 14:48:16] 55m         Normal    Scheduled                      pod/flask-app-865b4476d6-8gtcv      Successfully assigned default/flask-app-865b4476d6-8gtcv to worker7
+[2025-04-30 14:48:16] 55m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-8gtcv
+[2025-04-30 14:48:16] 38m         Normal    Killing                        pod/flask-app-865b4476d6-8gtcv      Stopping container flask
+[2025-04-30 14:48:16] 27m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-bb8h5
+[2025-04-30 14:48:16] 27m         Normal    Started                        pod/flask-app-865b4476d6-bb8h5      Started container flask
+[2025-04-30 14:48:16] 27m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:48:16] 27m         Normal    Created                        pod/flask-app-865b4476d6-bb8h5      Created container flask
+[2025-04-30 14:48:16] 27m         Normal    Scheduled                      pod/flask-app-865b4476d6-bb8h5      Successfully assigned default/flask-app-865b4476d6-bb8h5 to worker7
+[2025-04-30 14:48:16] 27m         Normal    Pulled                         pod/flask-app-865b4476d6-bb8h5      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:48:16] 9m45s       Normal    Killing                        pod/flask-app-865b4476d6-bb8h5      Stopping container flask
+[2025-04-30 14:48:16] 9m44s       Warning   FailedGetScale                 horizontalpodautoscaler/flask-hpa   deployments/scale.apps "flask-app" not found
+[2025-04-30 14:48:16] 40s         Normal    Pulled                         pod/flask-app-865b4476d6-sk4lt      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:48:16] 40s         Normal    Scheduled                      pod/flask-app-865b4476d6-sk4lt      Successfully assigned default/flask-app-865b4476d6-sk4lt to worker7
+[2025-04-30 14:48:16] 40s         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:48:16] 40s         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-sk4lt
+[2025-04-30 14:48:16] 40s         Normal    Started                        pod/flask-app-865b4476d6-sk4lt      Started container flask
+[2025-04-30 14:48:16] 40s         Normal    Created                        pod/flask-app-865b4476d6-sk4lt      Created container flask
+[2025-04-30 14:48:26] 55m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:48:26] 55m         Normal    Pulled                         pod/flask-app-865b4476d6-8gtcv      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:48:26] 55m         Normal    Created                        pod/flask-app-865b4476d6-8gtcv      Created container flask
+[2025-04-30 14:48:26] 55m         Normal    Started                        pod/flask-app-865b4476d6-8gtcv      Started container flask
+[2025-04-30 14:48:26] 55m         Normal    Scheduled                      pod/flask-app-865b4476d6-8gtcv      Successfully assigned default/flask-app-865b4476d6-8gtcv to worker7
+[2025-04-30 14:48:26] 55m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-8gtcv
+[2025-04-30 14:48:26] 38m         Normal    Killing                        pod/flask-app-865b4476d6-8gtcv      Stopping container flask
+[2025-04-30 14:48:26] 27m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-bb8h5
+[2025-04-30 14:48:26] 27m         Normal    Started                        pod/flask-app-865b4476d6-bb8h5      Started container flask
+[2025-04-30 14:48:26] 27m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:48:26] 27m         Normal    Created                        pod/flask-app-865b4476d6-bb8h5      Created container flask
+[2025-04-30 14:48:26] 27m         Normal    Scheduled                      pod/flask-app-865b4476d6-bb8h5      Successfully assigned default/flask-app-865b4476d6-bb8h5 to worker7
+[2025-04-30 14:48:26] 27m         Normal    Pulled                         pod/flask-app-865b4476d6-bb8h5      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:48:26] 9m55s       Normal    Killing                        pod/flask-app-865b4476d6-bb8h5      Stopping container flask
+[2025-04-30 14:48:26] 9m54s       Warning   FailedGetScale                 horizontalpodautoscaler/flask-hpa   deployments/scale.apps "flask-app" not found
+[2025-04-30 14:48:26] 50s         Normal    Pulled                         pod/flask-app-865b4476d6-sk4lt      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:48:26] 50s         Normal    Scheduled                      pod/flask-app-865b4476d6-sk4lt      Successfully assigned default/flask-app-865b4476d6-sk4lt to worker7
+[2025-04-30 14:48:26] 50s         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:48:26] 50s         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-sk4lt
+[2025-04-30 14:48:26] 50s         Normal    Started                        pod/flask-app-865b4476d6-sk4lt      Started container flask
+[2025-04-30 14:48:26] 50s         Normal    Created                        pod/flask-app-865b4476d6-sk4lt      Created container flask
+[2025-04-30 14:48:36] 56m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:48:36] 56m         Normal    Pulled                         pod/flask-app-865b4476d6-8gtcv      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:48:36] 56m         Normal    Created                        pod/flask-app-865b4476d6-8gtcv      Created container flask
+[2025-04-30 14:48:36] 56m         Normal    Started                        pod/flask-app-865b4476d6-8gtcv      Started container flask
+[2025-04-30 14:48:36] 56m         Normal    Scheduled                      pod/flask-app-865b4476d6-8gtcv      Successfully assigned default/flask-app-865b4476d6-8gtcv to worker7
+[2025-04-30 14:48:36] 56m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-8gtcv
+[2025-04-30 14:48:36] 38m         Normal    Killing                        pod/flask-app-865b4476d6-8gtcv      Stopping container flask
+[2025-04-30 14:48:36] 27m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-bb8h5
+[2025-04-30 14:48:36] 27m         Normal    Started                        pod/flask-app-865b4476d6-bb8h5      Started container flask
+[2025-04-30 14:48:36] 27m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:48:36] 27m         Normal    Created                        pod/flask-app-865b4476d6-bb8h5      Created container flask
+[2025-04-30 14:48:36] 27m         Normal    Scheduled                      pod/flask-app-865b4476d6-bb8h5      Successfully assigned default/flask-app-865b4476d6-bb8h5 to worker7
+[2025-04-30 14:48:36] 27m         Normal    Pulled                         pod/flask-app-865b4476d6-bb8h5      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:48:36] 10m         Normal    Killing                        pod/flask-app-865b4476d6-bb8h5      Stopping container flask
+[2025-04-30 14:48:36] 10m         Warning   FailedGetScale                 horizontalpodautoscaler/flask-hpa   deployments/scale.apps "flask-app" not found
+[2025-04-30 14:48:36] 60s         Normal    Pulled                         pod/flask-app-865b4476d6-sk4lt      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:48:36] 60s         Normal    Scheduled                      pod/flask-app-865b4476d6-sk4lt      Successfully assigned default/flask-app-865b4476d6-sk4lt to worker7
+[2025-04-30 14:48:36] 60s         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:48:36] 60s         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-sk4lt
+[2025-04-30 14:48:36] 60s         Normal    Started                        pod/flask-app-865b4476d6-sk4lt      Started container flask
+[2025-04-30 14:48:36] 60s         Normal    Created                        pod/flask-app-865b4476d6-sk4lt      Created container flask
+[2025-04-30 14:48:47] 56m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:48:47] 56m         Normal    Pulled                         pod/flask-app-865b4476d6-8gtcv      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:48:47] 56m         Normal    Created                        pod/flask-app-865b4476d6-8gtcv      Created container flask
+[2025-04-30 14:48:47] 56m         Normal    Started                        pod/flask-app-865b4476d6-8gtcv      Started container flask
+[2025-04-30 14:48:47] 56m         Normal    Scheduled                      pod/flask-app-865b4476d6-8gtcv      Successfully assigned default/flask-app-865b4476d6-8gtcv to worker7
+[2025-04-30 14:48:47] 56m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-8gtcv
+[2025-04-30 14:48:47] 38m         Normal    Killing                        pod/flask-app-865b4476d6-8gtcv      Stopping container flask
+[2025-04-30 14:48:47] 27m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-bb8h5
+[2025-04-30 14:48:47] 27m         Normal    Started                        pod/flask-app-865b4476d6-bb8h5      Started container flask
+[2025-04-30 14:48:47] 27m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:48:47] 27m         Normal    Created                        pod/flask-app-865b4476d6-bb8h5      Created container flask
+[2025-04-30 14:48:47] 27m         Normal    Scheduled                      pod/flask-app-865b4476d6-bb8h5      Successfully assigned default/flask-app-865b4476d6-bb8h5 to worker7
+[2025-04-30 14:48:47] 27m         Normal    Pulled                         pod/flask-app-865b4476d6-bb8h5      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:48:47] 10m         Normal    Killing                        pod/flask-app-865b4476d6-bb8h5      Stopping container flask
+[2025-04-30 14:48:47] 10m         Warning   FailedGetScale                 horizontalpodautoscaler/flask-hpa   deployments/scale.apps "flask-app" not found
+[2025-04-30 14:48:47] 71s         Normal    Pulled                         pod/flask-app-865b4476d6-sk4lt      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:48:47] 70s         Normal    Scheduled                      pod/flask-app-865b4476d6-sk4lt      Successfully assigned default/flask-app-865b4476d6-sk4lt to worker7
+[2025-04-30 14:48:47] 71s         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:48:47] 71s         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-sk4lt
+[2025-04-30 14:48:47] 71s         Normal    Started                        pod/flask-app-865b4476d6-sk4lt      Started container flask
+[2025-04-30 14:48:47] 71s         Normal    Created                        pod/flask-app-865b4476d6-sk4lt      Created container flask
+[2025-04-30 14:48:57] 56m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:48:57] 56m         Normal    Pulled                         pod/flask-app-865b4476d6-8gtcv      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:48:57] 56m         Normal    Created                        pod/flask-app-865b4476d6-8gtcv      Created container flask
+[2025-04-30 14:48:57] 56m         Normal    Started                        pod/flask-app-865b4476d6-8gtcv      Started container flask
+[2025-04-30 14:48:57] 56m         Normal    Scheduled                      pod/flask-app-865b4476d6-8gtcv      Successfully assigned default/flask-app-865b4476d6-8gtcv to worker7
+[2025-04-30 14:48:57] 56m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-8gtcv
+[2025-04-30 14:48:57] 38m         Normal    Killing                        pod/flask-app-865b4476d6-8gtcv      Stopping container flask
+[2025-04-30 14:48:57] 27m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-bb8h5
+[2025-04-30 14:48:57] 27m         Normal    Started                        pod/flask-app-865b4476d6-bb8h5      Started container flask
+[2025-04-30 14:48:57] 27m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:48:57] 27m         Normal    Created                        pod/flask-app-865b4476d6-bb8h5      Created container flask
+[2025-04-30 14:48:57] 27m         Normal    Scheduled                      pod/flask-app-865b4476d6-bb8h5      Successfully assigned default/flask-app-865b4476d6-bb8h5 to worker7
+[2025-04-30 14:48:57] 27m         Normal    Pulled                         pod/flask-app-865b4476d6-bb8h5      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:48:57] 10m         Normal    Killing                        pod/flask-app-865b4476d6-bb8h5      Stopping container flask
+[2025-04-30 14:48:57] 10m         Warning   FailedGetScale                 horizontalpodautoscaler/flask-hpa   deployments/scale.apps "flask-app" not found
+[2025-04-30 14:48:57] 81s         Normal    Pulled                         pod/flask-app-865b4476d6-sk4lt      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:48:57] 80s         Normal    Scheduled                      pod/flask-app-865b4476d6-sk4lt      Successfully assigned default/flask-app-865b4476d6-sk4lt to worker7
+[2025-04-30 14:48:57] 81s         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:48:57] 81s         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-sk4lt
+[2025-04-30 14:48:57] 81s         Normal    Started                        pod/flask-app-865b4476d6-sk4lt      Started container flask
+[2025-04-30 14:48:57] 81s         Normal    Created                        pod/flask-app-865b4476d6-sk4lt      Created container flask
+[2025-04-30 14:49:07] 56m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:49:07] 56m         Normal    Pulled                         pod/flask-app-865b4476d6-8gtcv      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:49:07] 56m         Normal    Created                        pod/flask-app-865b4476d6-8gtcv      Created container flask
+[2025-04-30 14:49:07] 56m         Normal    Started                        pod/flask-app-865b4476d6-8gtcv      Started container flask
+[2025-04-30 14:49:07] 56m         Normal    Scheduled                      pod/flask-app-865b4476d6-8gtcv      Successfully assigned default/flask-app-865b4476d6-8gtcv to worker7
+[2025-04-30 14:49:07] 56m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-8gtcv
+[2025-04-30 14:49:07] 38m         Normal    Killing                        pod/flask-app-865b4476d6-8gtcv      Stopping container flask
+[2025-04-30 14:49:07] 28m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-bb8h5
+[2025-04-30 14:49:07] 28m         Normal    Started                        pod/flask-app-865b4476d6-bb8h5      Started container flask
+[2025-04-30 14:49:07] 28m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:49:07] 28m         Normal    Created                        pod/flask-app-865b4476d6-bb8h5      Created container flask
+[2025-04-30 14:49:07] 28m         Normal    Scheduled                      pod/flask-app-865b4476d6-bb8h5      Successfully assigned default/flask-app-865b4476d6-bb8h5 to worker7
+[2025-04-30 14:49:07] 28m         Normal    Pulled                         pod/flask-app-865b4476d6-bb8h5      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:49:07] 10m         Normal    Killing                        pod/flask-app-865b4476d6-bb8h5      Stopping container flask
+[2025-04-30 14:49:07] 10m         Warning   FailedGetScale                 horizontalpodautoscaler/flask-hpa   deployments/scale.apps "flask-app" not found
+[2025-04-30 14:49:07] 91s         Normal    Pulled                         pod/flask-app-865b4476d6-sk4lt      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:49:07] 90s         Normal    Scheduled                      pod/flask-app-865b4476d6-sk4lt      Successfully assigned default/flask-app-865b4476d6-sk4lt to worker7
+[2025-04-30 14:49:07] 91s         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:49:07] 91s         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-sk4lt
+[2025-04-30 14:49:07] 91s         Normal    Started                        pod/flask-app-865b4476d6-sk4lt      Started container flask
+[2025-04-30 14:49:07] 91s         Normal    Created                        pod/flask-app-865b4476d6-sk4lt      Created container flask
+[2025-04-30 14:49:17] 56m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:49:17] 56m         Normal    Pulled                         pod/flask-app-865b4476d6-8gtcv      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:49:17] 56m         Normal    Created                        pod/flask-app-865b4476d6-8gtcv      Created container flask
+[2025-04-30 14:49:17] 56m         Normal    Started                        pod/flask-app-865b4476d6-8gtcv      Started container flask
+[2025-04-30 14:49:17] 56m         Normal    Scheduled                      pod/flask-app-865b4476d6-8gtcv      Successfully assigned default/flask-app-865b4476d6-8gtcv to worker7
+[2025-04-30 14:49:17] 56m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-8gtcv
+[2025-04-30 14:49:17] 39m         Normal    Killing                        pod/flask-app-865b4476d6-8gtcv      Stopping container flask
+[2025-04-30 14:49:17] 28m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-bb8h5
+[2025-04-30 14:49:17] 28m         Normal    Started                        pod/flask-app-865b4476d6-bb8h5      Started container flask
+[2025-04-30 14:49:17] 28m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:49:17] 28m         Normal    Created                        pod/flask-app-865b4476d6-bb8h5      Created container flask
+[2025-04-30 14:49:17] 28m         Normal    Scheduled                      pod/flask-app-865b4476d6-bb8h5      Successfully assigned default/flask-app-865b4476d6-bb8h5 to worker7
+[2025-04-30 14:49:17] 28m         Normal    Pulled                         pod/flask-app-865b4476d6-bb8h5      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:49:17] 10m         Normal    Killing                        pod/flask-app-865b4476d6-bb8h5      Stopping container flask
+[2025-04-30 14:49:17] 10m         Warning   FailedGetScale                 horizontalpodautoscaler/flask-hpa   deployments/scale.apps "flask-app" not found
+[2025-04-30 14:49:17] 101s        Normal    Pulled                         pod/flask-app-865b4476d6-sk4lt      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:49:17] 100s        Normal    Scheduled                      pod/flask-app-865b4476d6-sk4lt      Successfully assigned default/flask-app-865b4476d6-sk4lt to worker7
+[2025-04-30 14:49:17] 101s        Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:49:17] 101s        Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-sk4lt
+[2025-04-30 14:49:17] 101s        Normal    Started                        pod/flask-app-865b4476d6-sk4lt      Started container flask
+[2025-04-30 14:49:17] 101s        Normal    Created                        pod/flask-app-865b4476d6-sk4lt      Created container flask
+[2025-04-30 14:49:27] 56m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:49:27] 56m         Normal    Pulled                         pod/flask-app-865b4476d6-8gtcv      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:49:27] 56m         Normal    Created                        pod/flask-app-865b4476d6-8gtcv      Created container flask
+[2025-04-30 14:49:27] 56m         Normal    Started                        pod/flask-app-865b4476d6-8gtcv      Started container flask
+[2025-04-30 14:49:27] 56m         Normal    Scheduled                      pod/flask-app-865b4476d6-8gtcv      Successfully assigned default/flask-app-865b4476d6-8gtcv to worker7
+[2025-04-30 14:49:27] 56m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-8gtcv
+[2025-04-30 14:49:27] 39m         Normal    Killing                        pod/flask-app-865b4476d6-8gtcv      Stopping container flask
+[2025-04-30 14:49:27] 28m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-bb8h5
+[2025-04-30 14:49:27] 28m         Normal    Started                        pod/flask-app-865b4476d6-bb8h5      Started container flask
+[2025-04-30 14:49:27] 28m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:49:27] 28m         Normal    Created                        pod/flask-app-865b4476d6-bb8h5      Created container flask
+[2025-04-30 14:49:27] 28m         Normal    Scheduled                      pod/flask-app-865b4476d6-bb8h5      Successfully assigned default/flask-app-865b4476d6-bb8h5 to worker7
+[2025-04-30 14:49:27] 28m         Normal    Pulled                         pod/flask-app-865b4476d6-bb8h5      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:49:27] 10m         Normal    Killing                        pod/flask-app-865b4476d6-bb8h5      Stopping container flask
+[2025-04-30 14:49:27] 10m         Warning   FailedGetScale                 horizontalpodautoscaler/flask-hpa   deployments/scale.apps "flask-app" not found
+[2025-04-30 14:49:27] 111s        Normal    Pulled                         pod/flask-app-865b4476d6-sk4lt      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:49:27] 110s        Normal    Scheduled                      pod/flask-app-865b4476d6-sk4lt      Successfully assigned default/flask-app-865b4476d6-sk4lt to worker7
+[2025-04-30 14:49:27] 111s        Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:49:27] 111s        Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-sk4lt
+[2025-04-30 14:49:27] 111s        Normal    Started                        pod/flask-app-865b4476d6-sk4lt      Started container flask
+[2025-04-30 14:49:27] 111s        Normal    Created                        pod/flask-app-865b4476d6-sk4lt      Created container flask
+[2025-04-30 14:49:37] 57m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:49:37] 57m         Normal    Pulled                         pod/flask-app-865b4476d6-8gtcv      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:49:37] 57m         Normal    Created                        pod/flask-app-865b4476d6-8gtcv      Created container flask
+[2025-04-30 14:49:37] 57m         Normal    Started                        pod/flask-app-865b4476d6-8gtcv      Started container flask
+[2025-04-30 14:49:37] 57m         Normal    Scheduled                      pod/flask-app-865b4476d6-8gtcv      Successfully assigned default/flask-app-865b4476d6-8gtcv to worker7
+[2025-04-30 14:49:37] 57m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-8gtcv
+[2025-04-30 14:49:37] 39m         Normal    Killing                        pod/flask-app-865b4476d6-8gtcv      Stopping container flask
+[2025-04-30 14:49:37] 28m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-bb8h5
+[2025-04-30 14:49:37] 28m         Normal    Started                        pod/flask-app-865b4476d6-bb8h5      Started container flask
+[2025-04-30 14:49:37] 28m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:49:37] 28m         Normal    Created                        pod/flask-app-865b4476d6-bb8h5      Created container flask
+[2025-04-30 14:49:37] 28m         Normal    Scheduled                      pod/flask-app-865b4476d6-bb8h5      Successfully assigned default/flask-app-865b4476d6-bb8h5 to worker7
+[2025-04-30 14:49:37] 28m         Normal    Pulled                         pod/flask-app-865b4476d6-bb8h5      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:49:37] 11m         Normal    Killing                        pod/flask-app-865b4476d6-bb8h5      Stopping container flask
+[2025-04-30 14:49:37] 11m         Warning   FailedGetScale                 horizontalpodautoscaler/flask-hpa   deployments/scale.apps "flask-app" not found
+[2025-04-30 14:49:37] 2m1s        Normal    Pulled                         pod/flask-app-865b4476d6-sk4lt      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:49:37] 2m          Normal    Scheduled                      pod/flask-app-865b4476d6-sk4lt      Successfully assigned default/flask-app-865b4476d6-sk4lt to worker7
+[2025-04-30 14:49:37] 2m1s        Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:49:37] 2m1s        Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-sk4lt
+[2025-04-30 14:49:37] 2m1s        Normal    Started                        pod/flask-app-865b4476d6-sk4lt      Started container flask
+[2025-04-30 14:49:37] 2m1s        Normal    Created                        pod/flask-app-865b4476d6-sk4lt      Created container flask
+[2025-04-30 14:49:47] 57m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:49:47] 57m         Normal    Pulled                         pod/flask-app-865b4476d6-8gtcv      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:49:47] 57m         Normal    Created                        pod/flask-app-865b4476d6-8gtcv      Created container flask
+[2025-04-30 14:49:47] 57m         Normal    Started                        pod/flask-app-865b4476d6-8gtcv      Started container flask
+[2025-04-30 14:49:47] 57m         Normal    Scheduled                      pod/flask-app-865b4476d6-8gtcv      Successfully assigned default/flask-app-865b4476d6-8gtcv to worker7
+[2025-04-30 14:49:47] 57m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-8gtcv
+[2025-04-30 14:49:47] 39m         Normal    Killing                        pod/flask-app-865b4476d6-8gtcv      Stopping container flask
+[2025-04-30 14:49:47] 28m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-bb8h5
+[2025-04-30 14:49:47] 28m         Normal    Started                        pod/flask-app-865b4476d6-bb8h5      Started container flask
+[2025-04-30 14:49:47] 28m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:49:47] 28m         Normal    Created                        pod/flask-app-865b4476d6-bb8h5      Created container flask
+[2025-04-30 14:49:47] 28m         Normal    Scheduled                      pod/flask-app-865b4476d6-bb8h5      Successfully assigned default/flask-app-865b4476d6-bb8h5 to worker7
+[2025-04-30 14:49:47] 28m         Normal    Pulled                         pod/flask-app-865b4476d6-bb8h5      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:49:47] 11m         Normal    Killing                        pod/flask-app-865b4476d6-bb8h5      Stopping container flask
+[2025-04-30 14:49:47] 11m         Warning   FailedGetScale                 horizontalpodautoscaler/flask-hpa   deployments/scale.apps "flask-app" not found
+[2025-04-30 14:49:47] 2m11s       Normal    Pulled                         pod/flask-app-865b4476d6-sk4lt      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:49:47] 2m10s       Normal    Scheduled                      pod/flask-app-865b4476d6-sk4lt      Successfully assigned default/flask-app-865b4476d6-sk4lt to worker7
+[2025-04-30 14:49:47] 2m11s       Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:49:47] 2m11s       Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-sk4lt
+[2025-04-30 14:49:47] 2m11s       Normal    Started                        pod/flask-app-865b4476d6-sk4lt      Started container flask
+[2025-04-30 14:49:47] 2m11s       Normal    Created                        pod/flask-app-865b4476d6-sk4lt      Created container flask
+[2025-04-30 14:49:57] 57m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:49:57] 57m         Normal    Pulled                         pod/flask-app-865b4476d6-8gtcv      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:49:57] 57m         Normal    Created                        pod/flask-app-865b4476d6-8gtcv      Created container flask
+[2025-04-30 14:49:57] 57m         Normal    Started                        pod/flask-app-865b4476d6-8gtcv      Started container flask
+[2025-04-30 14:49:57] 57m         Normal    Scheduled                      pod/flask-app-865b4476d6-8gtcv      Successfully assigned default/flask-app-865b4476d6-8gtcv to worker7
+[2025-04-30 14:49:57] 57m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-8gtcv
+[2025-04-30 14:49:57] 39m         Normal    Killing                        pod/flask-app-865b4476d6-8gtcv      Stopping container flask
+[2025-04-30 14:49:57] 28m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-bb8h5
+[2025-04-30 14:49:57] 28m         Normal    Started                        pod/flask-app-865b4476d6-bb8h5      Started container flask
+[2025-04-30 14:49:57] 28m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:49:57] 28m         Normal    Created                        pod/flask-app-865b4476d6-bb8h5      Created container flask
+[2025-04-30 14:49:57] 28m         Normal    Scheduled                      pod/flask-app-865b4476d6-bb8h5      Successfully assigned default/flask-app-865b4476d6-bb8h5 to worker7
+[2025-04-30 14:49:57] 28m         Normal    Pulled                         pod/flask-app-865b4476d6-bb8h5      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:49:57] 11m         Normal    Killing                        pod/flask-app-865b4476d6-bb8h5      Stopping container flask
+[2025-04-30 14:49:57] 11m         Warning   FailedGetScale                 horizontalpodautoscaler/flask-hpa   deployments/scale.apps "flask-app" not found
+[2025-04-30 14:49:57] 2m21s       Normal    Pulled                         pod/flask-app-865b4476d6-sk4lt      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:49:57] 2m20s       Normal    Scheduled                      pod/flask-app-865b4476d6-sk4lt      Successfully assigned default/flask-app-865b4476d6-sk4lt to worker7
+[2025-04-30 14:49:57] 2m21s       Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:49:57] 2m21s       Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-sk4lt
+[2025-04-30 14:49:57] 2m21s       Normal    Started                        pod/flask-app-865b4476d6-sk4lt      Started container flask
+[2025-04-30 14:49:57] 2m21s       Normal    Created                        pod/flask-app-865b4476d6-sk4lt      Created container flask
+[2025-04-30 14:50:07] 57m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:50:07] 57m         Normal    Pulled                         pod/flask-app-865b4476d6-8gtcv      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:50:07] 57m         Normal    Created                        pod/flask-app-865b4476d6-8gtcv      Created container flask
+[2025-04-30 14:50:07] 57m         Normal    Started                        pod/flask-app-865b4476d6-8gtcv      Started container flask
+[2025-04-30 14:50:07] 57m         Normal    Scheduled                      pod/flask-app-865b4476d6-8gtcv      Successfully assigned default/flask-app-865b4476d6-8gtcv to worker7
+[2025-04-30 14:50:07] 57m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-8gtcv
+[2025-04-30 14:50:07] 39m         Normal    Killing                        pod/flask-app-865b4476d6-8gtcv      Stopping container flask
+[2025-04-30 14:50:07] 29m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-bb8h5
+[2025-04-30 14:50:07] 29m         Normal    Started                        pod/flask-app-865b4476d6-bb8h5      Started container flask
+[2025-04-30 14:50:07] 29m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:50:07] 29m         Normal    Created                        pod/flask-app-865b4476d6-bb8h5      Created container flask
+[2025-04-30 14:50:07] 29m         Normal    Scheduled                      pod/flask-app-865b4476d6-bb8h5      Successfully assigned default/flask-app-865b4476d6-bb8h5 to worker7
+[2025-04-30 14:50:07] 29m         Normal    Pulled                         pod/flask-app-865b4476d6-bb8h5      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:50:07] 11m         Normal    Killing                        pod/flask-app-865b4476d6-bb8h5      Stopping container flask
+[2025-04-30 14:50:07] 11m         Warning   FailedGetScale                 horizontalpodautoscaler/flask-hpa   deployments/scale.apps "flask-app" not found
+[2025-04-30 14:50:07] 2m31s       Normal    Pulled                         pod/flask-app-865b4476d6-sk4lt      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:50:07] 2m30s       Normal    Scheduled                      pod/flask-app-865b4476d6-sk4lt      Successfully assigned default/flask-app-865b4476d6-sk4lt to worker7
+[2025-04-30 14:50:07] 2m31s       Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:50:07] 2m31s       Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-sk4lt
+[2025-04-30 14:50:07] 2m31s       Normal    Started                        pod/flask-app-865b4476d6-sk4lt      Started container flask
+[2025-04-30 14:50:07] 2m31s       Normal    Created                        pod/flask-app-865b4476d6-sk4lt      Created container flask
+[2025-04-30 14:50:17] 57m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:50:17] 57m         Normal    Pulled                         pod/flask-app-865b4476d6-8gtcv      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:50:17] 57m         Normal    Created                        pod/flask-app-865b4476d6-8gtcv      Created container flask
+[2025-04-30 14:50:17] 57m         Normal    Started                        pod/flask-app-865b4476d6-8gtcv      Started container flask
+[2025-04-30 14:50:17] 57m         Normal    Scheduled                      pod/flask-app-865b4476d6-8gtcv      Successfully assigned default/flask-app-865b4476d6-8gtcv to worker7
+[2025-04-30 14:50:17] 57m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-8gtcv
+[2025-04-30 14:50:17] 40m         Normal    Killing                        pod/flask-app-865b4476d6-8gtcv      Stopping container flask
+[2025-04-30 14:50:17] 29m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-bb8h5
+[2025-04-30 14:50:17] 29m         Normal    Started                        pod/flask-app-865b4476d6-bb8h5      Started container flask
+[2025-04-30 14:50:17] 29m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:50:17] 29m         Normal    Created                        pod/flask-app-865b4476d6-bb8h5      Created container flask
+[2025-04-30 14:50:17] 29m         Normal    Scheduled                      pod/flask-app-865b4476d6-bb8h5      Successfully assigned default/flask-app-865b4476d6-bb8h5 to worker7
+[2025-04-30 14:50:17] 29m         Normal    Pulled                         pod/flask-app-865b4476d6-bb8h5      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:50:17] 11m         Normal    Killing                        pod/flask-app-865b4476d6-bb8h5      Stopping container flask
+[2025-04-30 14:50:17] 11m         Warning   FailedGetScale                 horizontalpodautoscaler/flask-hpa   deployments/scale.apps "flask-app" not found
+[2025-04-30 14:50:17] 2m41s       Normal    Pulled                         pod/flask-app-865b4476d6-sk4lt      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:50:17] 2m40s       Normal    Scheduled                      pod/flask-app-865b4476d6-sk4lt      Successfully assigned default/flask-app-865b4476d6-sk4lt to worker7
+[2025-04-30 14:50:17] 2m41s       Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:50:17] 2m41s       Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-sk4lt
+[2025-04-30 14:50:17] 2m41s       Normal    Started                        pod/flask-app-865b4476d6-sk4lt      Started container flask
+[2025-04-30 14:50:17] 2m41s       Normal    Created                        pod/flask-app-865b4476d6-sk4lt      Created container flask
+[2025-04-30 14:50:27] 57m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:50:27] 57m         Normal    Pulled                         pod/flask-app-865b4476d6-8gtcv      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:50:27] 57m         Normal    Created                        pod/flask-app-865b4476d6-8gtcv      Created container flask
+[2025-04-30 14:50:27] 57m         Normal    Started                        pod/flask-app-865b4476d6-8gtcv      Started container flask
+[2025-04-30 14:50:27] 57m         Normal    Scheduled                      pod/flask-app-865b4476d6-8gtcv      Successfully assigned default/flask-app-865b4476d6-8gtcv to worker7
+[2025-04-30 14:50:27] 57m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-8gtcv
+[2025-04-30 14:50:27] 40m         Normal    Killing                        pod/flask-app-865b4476d6-8gtcv      Stopping container flask
+[2025-04-30 14:50:27] 29m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-bb8h5
+[2025-04-30 14:50:27] 29m         Normal    Started                        pod/flask-app-865b4476d6-bb8h5      Started container flask
+[2025-04-30 14:50:27] 29m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:50:27] 29m         Normal    Created                        pod/flask-app-865b4476d6-bb8h5      Created container flask
+[2025-04-30 14:50:27] 29m         Normal    Scheduled                      pod/flask-app-865b4476d6-bb8h5      Successfully assigned default/flask-app-865b4476d6-bb8h5 to worker7
+[2025-04-30 14:50:27] 29m         Normal    Pulled                         pod/flask-app-865b4476d6-bb8h5      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:50:27] 11m         Normal    Killing                        pod/flask-app-865b4476d6-bb8h5      Stopping container flask
+[2025-04-30 14:50:27] 11m         Warning   FailedGetScale                 horizontalpodautoscaler/flask-hpa   deployments/scale.apps "flask-app" not found
+[2025-04-30 14:50:27] 2m51s       Normal    Pulled                         pod/flask-app-865b4476d6-sk4lt      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:50:27] 2m50s       Normal    Scheduled                      pod/flask-app-865b4476d6-sk4lt      Successfully assigned default/flask-app-865b4476d6-sk4lt to worker7
+[2025-04-30 14:50:27] 2m51s       Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:50:27] 2m51s       Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-sk4lt
+[2025-04-30 14:50:27] 2m51s       Normal    Started                        pod/flask-app-865b4476d6-sk4lt      Started container flask
+[2025-04-30 14:50:27] 2m51s       Normal    Created                        pod/flask-app-865b4476d6-sk4lt      Created container flask
+[2025-04-30 14:50:37] 58m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:50:37] 58m         Normal    Pulled                         pod/flask-app-865b4476d6-8gtcv      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:50:37] 58m         Normal    Created                        pod/flask-app-865b4476d6-8gtcv      Created container flask
+[2025-04-30 14:50:37] 58m         Normal    Started                        pod/flask-app-865b4476d6-8gtcv      Started container flask
+[2025-04-30 14:50:37] 58m         Normal    Scheduled                      pod/flask-app-865b4476d6-8gtcv      Successfully assigned default/flask-app-865b4476d6-8gtcv to worker7
+[2025-04-30 14:50:37] 58m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-8gtcv
+[2025-04-30 14:50:37] 40m         Normal    Killing                        pod/flask-app-865b4476d6-8gtcv      Stopping container flask
+[2025-04-30 14:50:37] 29m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-bb8h5
+[2025-04-30 14:50:37] 29m         Normal    Started                        pod/flask-app-865b4476d6-bb8h5      Started container flask
+[2025-04-30 14:50:37] 29m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:50:37] 29m         Normal    Created                        pod/flask-app-865b4476d6-bb8h5      Created container flask
+[2025-04-30 14:50:37] 29m         Normal    Scheduled                      pod/flask-app-865b4476d6-bb8h5      Successfully assigned default/flask-app-865b4476d6-bb8h5 to worker7
+[2025-04-30 14:50:37] 29m         Normal    Pulled                         pod/flask-app-865b4476d6-bb8h5      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:50:37] 12m         Normal    Killing                        pod/flask-app-865b4476d6-bb8h5      Stopping container flask
+[2025-04-30 14:50:37] 12m         Warning   FailedGetScale                 horizontalpodautoscaler/flask-hpa   deployments/scale.apps "flask-app" not found
+[2025-04-30 14:50:37] 3m1s        Normal    Pulled                         pod/flask-app-865b4476d6-sk4lt      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:50:37] 3m1s        Normal    Scheduled                      pod/flask-app-865b4476d6-sk4lt      Successfully assigned default/flask-app-865b4476d6-sk4lt to worker7
+[2025-04-30 14:50:37] 3m1s        Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:50:37] 3m1s        Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-sk4lt
+[2025-04-30 14:50:37] 3m1s        Normal    Started                        pod/flask-app-865b4476d6-sk4lt      Started container flask
+[2025-04-30 14:50:37] 3m1s        Normal    Created                        pod/flask-app-865b4476d6-sk4lt      Created container flask
+[2025-04-30 14:50:47] 58m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:50:47] 58m         Normal    Pulled                         pod/flask-app-865b4476d6-8gtcv      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:50:47] 58m         Normal    Created                        pod/flask-app-865b4476d6-8gtcv      Created container flask
+[2025-04-30 14:50:47] 58m         Normal    Started                        pod/flask-app-865b4476d6-8gtcv      Started container flask
+[2025-04-30 14:50:47] 58m         Normal    Scheduled                      pod/flask-app-865b4476d6-8gtcv      Successfully assigned default/flask-app-865b4476d6-8gtcv to worker7
+[2025-04-30 14:50:47] 58m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-8gtcv
+[2025-04-30 14:50:47] 40m         Normal    Killing                        pod/flask-app-865b4476d6-8gtcv      Stopping container flask
+[2025-04-30 14:50:47] 29m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-bb8h5
+[2025-04-30 14:50:47] 29m         Normal    Started                        pod/flask-app-865b4476d6-bb8h5      Started container flask
+[2025-04-30 14:50:47] 29m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:50:47] 29m         Normal    Created                        pod/flask-app-865b4476d6-bb8h5      Created container flask
+[2025-04-30 14:50:47] 29m         Normal    Scheduled                      pod/flask-app-865b4476d6-bb8h5      Successfully assigned default/flask-app-865b4476d6-bb8h5 to worker7
+[2025-04-30 14:50:47] 29m         Normal    Pulled                         pod/flask-app-865b4476d6-bb8h5      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:50:47] 12m         Normal    Killing                        pod/flask-app-865b4476d6-bb8h5      Stopping container flask
+[2025-04-30 14:50:47] 12m         Warning   FailedGetScale                 horizontalpodautoscaler/flask-hpa   deployments/scale.apps "flask-app" not found
+[2025-04-30 14:50:47] 3m11s       Normal    Pulled                         pod/flask-app-865b4476d6-sk4lt      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:50:47] 3m11s       Normal    Scheduled                      pod/flask-app-865b4476d6-sk4lt      Successfully assigned default/flask-app-865b4476d6-sk4lt to worker7
+[2025-04-30 14:50:47] 3m11s       Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:50:47] 3m11s       Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-sk4lt
+[2025-04-30 14:50:47] 3m11s       Normal    Started                        pod/flask-app-865b4476d6-sk4lt      Started container flask
+[2025-04-30 14:50:47] 3m11s       Normal    Created                        pod/flask-app-865b4476d6-sk4lt      Created container flask
+[2025-04-30 14:50:57] 58m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:50:57] 58m         Normal    Pulled                         pod/flask-app-865b4476d6-8gtcv      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:50:57] 58m         Normal    Created                        pod/flask-app-865b4476d6-8gtcv      Created container flask
+[2025-04-30 14:50:57] 58m         Normal    Started                        pod/flask-app-865b4476d6-8gtcv      Started container flask
+[2025-04-30 14:50:57] 58m         Normal    Scheduled                      pod/flask-app-865b4476d6-8gtcv      Successfully assigned default/flask-app-865b4476d6-8gtcv to worker7
+[2025-04-30 14:50:57] 58m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-8gtcv
+[2025-04-30 14:50:57] 40m         Normal    Killing                        pod/flask-app-865b4476d6-8gtcv      Stopping container flask
+[2025-04-30 14:50:57] 29m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-bb8h5
+[2025-04-30 14:50:57] 29m         Normal    Started                        pod/flask-app-865b4476d6-bb8h5      Started container flask
+[2025-04-30 14:50:57] 29m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:50:57] 29m         Normal    Created                        pod/flask-app-865b4476d6-bb8h5      Created container flask
+[2025-04-30 14:50:57] 29m         Normal    Scheduled                      pod/flask-app-865b4476d6-bb8h5      Successfully assigned default/flask-app-865b4476d6-bb8h5 to worker7
+[2025-04-30 14:50:57] 29m         Normal    Pulled                         pod/flask-app-865b4476d6-bb8h5      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:50:57] 12m         Normal    Killing                        pod/flask-app-865b4476d6-bb8h5      Stopping container flask
+[2025-04-30 14:50:57] 12m         Warning   FailedGetScale                 horizontalpodautoscaler/flask-hpa   deployments/scale.apps "flask-app" not found
+[2025-04-30 14:50:57] 3m21s       Normal    Pulled                         pod/flask-app-865b4476d6-sk4lt      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:50:57] 3m21s       Normal    Scheduled                      pod/flask-app-865b4476d6-sk4lt      Successfully assigned default/flask-app-865b4476d6-sk4lt to worker7
+[2025-04-30 14:50:57] 3m21s       Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:50:57] 3m21s       Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-sk4lt
+[2025-04-30 14:50:57] 3m21s       Normal    Started                        pod/flask-app-865b4476d6-sk4lt      Started container flask
+[2025-04-30 14:50:57] 3m21s       Normal    Created                        pod/flask-app-865b4476d6-sk4lt      Created container flask
+[2025-04-30 14:51:07] 58m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:51:07] 58m         Normal    Pulled                         pod/flask-app-865b4476d6-8gtcv      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:51:07] 58m         Normal    Created                        pod/flask-app-865b4476d6-8gtcv      Created container flask
+[2025-04-30 14:51:07] 58m         Normal    Started                        pod/flask-app-865b4476d6-8gtcv      Started container flask
+[2025-04-30 14:51:07] 58m         Normal    Scheduled                      pod/flask-app-865b4476d6-8gtcv      Successfully assigned default/flask-app-865b4476d6-8gtcv to worker7
+[2025-04-30 14:51:07] 58m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-8gtcv
+[2025-04-30 14:51:07] 40m         Normal    Killing                        pod/flask-app-865b4476d6-8gtcv      Stopping container flask
+[2025-04-30 14:51:07] 30m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-bb8h5
+[2025-04-30 14:51:07] 30m         Normal    Started                        pod/flask-app-865b4476d6-bb8h5      Started container flask
+[2025-04-30 14:51:07] 30m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:51:07] 30m         Normal    Created                        pod/flask-app-865b4476d6-bb8h5      Created container flask
+[2025-04-30 14:51:07] 30m         Normal    Scheduled                      pod/flask-app-865b4476d6-bb8h5      Successfully assigned default/flask-app-865b4476d6-bb8h5 to worker7
+[2025-04-30 14:51:07] 30m         Normal    Pulled                         pod/flask-app-865b4476d6-bb8h5      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:51:07] 12m         Normal    Killing                        pod/flask-app-865b4476d6-bb8h5      Stopping container flask
+[2025-04-30 14:51:07] 12m         Warning   FailedGetScale                 horizontalpodautoscaler/flask-hpa   deployments/scale.apps "flask-app" not found
+[2025-04-30 14:51:07] 3m31s       Normal    Pulled                         pod/flask-app-865b4476d6-sk4lt      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:51:07] 3m31s       Normal    Scheduled                      pod/flask-app-865b4476d6-sk4lt      Successfully assigned default/flask-app-865b4476d6-sk4lt to worker7
+[2025-04-30 14:51:07] 3m31s       Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:51:07] 3m31s       Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-sk4lt
+[2025-04-30 14:51:07] 3m31s       Normal    Started                        pod/flask-app-865b4476d6-sk4lt      Started container flask
+[2025-04-30 14:51:07] 3m31s       Normal    Created                        pod/flask-app-865b4476d6-sk4lt      Created container flask
+[2025-04-30 14:51:17] 58m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:51:17] 58m         Normal    Pulled                         pod/flask-app-865b4476d6-8gtcv      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:51:17] 58m         Normal    Created                        pod/flask-app-865b4476d6-8gtcv      Created container flask
+[2025-04-30 14:51:17] 58m         Normal    Started                        pod/flask-app-865b4476d6-8gtcv      Started container flask
+[2025-04-30 14:51:17] 58m         Normal    Scheduled                      pod/flask-app-865b4476d6-8gtcv      Successfully assigned default/flask-app-865b4476d6-8gtcv to worker7
+[2025-04-30 14:51:17] 58m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-8gtcv
+[2025-04-30 14:51:17] 41m         Normal    Killing                        pod/flask-app-865b4476d6-8gtcv      Stopping container flask
+[2025-04-30 14:51:17] 30m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-bb8h5
+[2025-04-30 14:51:17] 30m         Normal    Started                        pod/flask-app-865b4476d6-bb8h5      Started container flask
+[2025-04-30 14:51:17] 30m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:51:17] 30m         Normal    Created                        pod/flask-app-865b4476d6-bb8h5      Created container flask
+[2025-04-30 14:51:17] 30m         Normal    Scheduled                      pod/flask-app-865b4476d6-bb8h5      Successfully assigned default/flask-app-865b4476d6-bb8h5 to worker7
+[2025-04-30 14:51:17] 30m         Normal    Pulled                         pod/flask-app-865b4476d6-bb8h5      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:51:17] 12m         Normal    Killing                        pod/flask-app-865b4476d6-bb8h5      Stopping container flask
+[2025-04-30 14:51:17] 12m         Warning   FailedGetScale                 horizontalpodautoscaler/flask-hpa   deployments/scale.apps "flask-app" not found
+[2025-04-30 14:51:17] 3m41s       Normal    Pulled                         pod/flask-app-865b4476d6-sk4lt      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:51:17] 3m41s       Normal    Scheduled                      pod/flask-app-865b4476d6-sk4lt      Successfully assigned default/flask-app-865b4476d6-sk4lt to worker7
+[2025-04-30 14:51:17] 3m41s       Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:51:17] 3m41s       Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-sk4lt
+[2025-04-30 14:51:17] 3m41s       Normal    Started                        pod/flask-app-865b4476d6-sk4lt      Started container flask
+[2025-04-30 14:51:17] 3m41s       Normal    Created                        pod/flask-app-865b4476d6-sk4lt      Created container flask
+[2025-04-30 14:51:27] 58m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:51:27] 58m         Normal    Pulled                         pod/flask-app-865b4476d6-8gtcv      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:51:27] 58m         Normal    Created                        pod/flask-app-865b4476d6-8gtcv      Created container flask
+[2025-04-30 14:51:27] 58m         Normal    Started                        pod/flask-app-865b4476d6-8gtcv      Started container flask
+[2025-04-30 14:51:27] 58m         Normal    Scheduled                      pod/flask-app-865b4476d6-8gtcv      Successfully assigned default/flask-app-865b4476d6-8gtcv to worker7
+[2025-04-30 14:51:27] 58m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-8gtcv
+[2025-04-30 14:51:27] 41m         Normal    Killing                        pod/flask-app-865b4476d6-8gtcv      Stopping container flask
+[2025-04-30 14:51:27] 30m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-bb8h5
+[2025-04-30 14:51:27] 30m         Normal    Started                        pod/flask-app-865b4476d6-bb8h5      Started container flask
+[2025-04-30 14:51:27] 30m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:51:27] 30m         Normal    Created                        pod/flask-app-865b4476d6-bb8h5      Created container flask
+[2025-04-30 14:51:27] 30m         Normal    Scheduled                      pod/flask-app-865b4476d6-bb8h5      Successfully assigned default/flask-app-865b4476d6-bb8h5 to worker7
+[2025-04-30 14:51:27] 30m         Normal    Pulled                         pod/flask-app-865b4476d6-bb8h5      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:51:27] 12m         Normal    Killing                        pod/flask-app-865b4476d6-bb8h5      Stopping container flask
+[2025-04-30 14:51:27] 12m         Warning   FailedGetScale                 horizontalpodautoscaler/flask-hpa   deployments/scale.apps "flask-app" not found
+[2025-04-30 14:51:27] 3m51s       Normal    Pulled                         pod/flask-app-865b4476d6-sk4lt      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:51:27] 3m51s       Normal    Scheduled                      pod/flask-app-865b4476d6-sk4lt      Successfully assigned default/flask-app-865b4476d6-sk4lt to worker7
+[2025-04-30 14:51:27] 3m51s       Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:51:27] 3m51s       Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-sk4lt
+[2025-04-30 14:51:27] 3m51s       Normal    Started                        pod/flask-app-865b4476d6-sk4lt      Started container flask
+[2025-04-30 14:51:27] 3m51s       Normal    Created                        pod/flask-app-865b4476d6-sk4lt      Created container flask
+[2025-04-30 14:51:37] 59m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:51:37] 59m         Normal    Pulled                         pod/flask-app-865b4476d6-8gtcv      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:51:37] 59m         Normal    Created                        pod/flask-app-865b4476d6-8gtcv      Created container flask
+[2025-04-30 14:51:37] 59m         Normal    Started                        pod/flask-app-865b4476d6-8gtcv      Started container flask
+[2025-04-30 14:51:37] 59m         Normal    Scheduled                      pod/flask-app-865b4476d6-8gtcv      Successfully assigned default/flask-app-865b4476d6-8gtcv to worker7
+[2025-04-30 14:51:37] 59m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-8gtcv
+[2025-04-30 14:51:37] 41m         Normal    Killing                        pod/flask-app-865b4476d6-8gtcv      Stopping container flask
+[2025-04-30 14:51:37] 30m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-bb8h5
+[2025-04-30 14:51:37] 30m         Normal    Started                        pod/flask-app-865b4476d6-bb8h5      Started container flask
+[2025-04-30 14:51:37] 30m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:51:37] 30m         Normal    Created                        pod/flask-app-865b4476d6-bb8h5      Created container flask
+[2025-04-30 14:51:37] 30m         Normal    Scheduled                      pod/flask-app-865b4476d6-bb8h5      Successfully assigned default/flask-app-865b4476d6-bb8h5 to worker7
+[2025-04-30 14:51:37] 30m         Normal    Pulled                         pod/flask-app-865b4476d6-bb8h5      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:51:37] 13m         Normal    Killing                        pod/flask-app-865b4476d6-bb8h5      Stopping container flask
+[2025-04-30 14:51:37] 13m         Warning   FailedGetScale                 horizontalpodautoscaler/flask-hpa   deployments/scale.apps "flask-app" not found
+[2025-04-30 14:51:37] 4m1s        Normal    Pulled                         pod/flask-app-865b4476d6-sk4lt      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:51:37] 4m1s        Normal    Scheduled                      pod/flask-app-865b4476d6-sk4lt      Successfully assigned default/flask-app-865b4476d6-sk4lt to worker7
+[2025-04-30 14:51:37] 4m1s        Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:51:37] 4m1s        Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-sk4lt
+[2025-04-30 14:51:37] 4m1s        Normal    Started                        pod/flask-app-865b4476d6-sk4lt      Started container flask
+[2025-04-30 14:51:37] 4m1s        Normal    Created                        pod/flask-app-865b4476d6-sk4lt      Created container flask
+[2025-04-30 14:51:47] 59m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:51:47] 59m         Normal    Pulled                         pod/flask-app-865b4476d6-8gtcv      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:51:47] 59m         Normal    Created                        pod/flask-app-865b4476d6-8gtcv      Created container flask
+[2025-04-30 14:51:47] 59m         Normal    Started                        pod/flask-app-865b4476d6-8gtcv      Started container flask
+[2025-04-30 14:51:47] 59m         Normal    Scheduled                      pod/flask-app-865b4476d6-8gtcv      Successfully assigned default/flask-app-865b4476d6-8gtcv to worker7
+[2025-04-30 14:51:47] 59m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-8gtcv
+[2025-04-30 14:51:47] 41m         Normal    Killing                        pod/flask-app-865b4476d6-8gtcv      Stopping container flask
+[2025-04-30 14:51:47] 30m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-bb8h5
+[2025-04-30 14:51:47] 30m         Normal    Started                        pod/flask-app-865b4476d6-bb8h5      Started container flask
+[2025-04-30 14:51:47] 30m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:51:47] 30m         Normal    Created                        pod/flask-app-865b4476d6-bb8h5      Created container flask
+[2025-04-30 14:51:47] 30m         Normal    Scheduled                      pod/flask-app-865b4476d6-bb8h5      Successfully assigned default/flask-app-865b4476d6-bb8h5 to worker7
+[2025-04-30 14:51:47] 30m         Normal    Pulled                         pod/flask-app-865b4476d6-bb8h5      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:51:47] 13m         Normal    Killing                        pod/flask-app-865b4476d6-bb8h5      Stopping container flask
+[2025-04-30 14:51:47] 13m         Warning   FailedGetScale                 horizontalpodautoscaler/flask-hpa   deployments/scale.apps "flask-app" not found
+[2025-04-30 14:51:47] 4m11s       Normal    Pulled                         pod/flask-app-865b4476d6-sk4lt      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:51:47] 4m11s       Normal    Scheduled                      pod/flask-app-865b4476d6-sk4lt      Successfully assigned default/flask-app-865b4476d6-sk4lt to worker7
+[2025-04-30 14:51:47] 4m11s       Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:51:47] 4m11s       Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-sk4lt
+[2025-04-30 14:51:47] 4m11s       Normal    Started                        pod/flask-app-865b4476d6-sk4lt      Started container flask
+[2025-04-30 14:51:47] 4m11s       Normal    Created                        pod/flask-app-865b4476d6-sk4lt      Created container flask
+[2025-04-30 14:51:57] 59m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:51:57] 59m         Normal    Pulled                         pod/flask-app-865b4476d6-8gtcv      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:51:57] 59m         Normal    Created                        pod/flask-app-865b4476d6-8gtcv      Created container flask
+[2025-04-30 14:51:57] 59m         Normal    Started                        pod/flask-app-865b4476d6-8gtcv      Started container flask
+[2025-04-30 14:51:57] 59m         Normal    Scheduled                      pod/flask-app-865b4476d6-8gtcv      Successfully assigned default/flask-app-865b4476d6-8gtcv to worker7
+[2025-04-30 14:51:57] 59m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-8gtcv
+[2025-04-30 14:51:57] 41m         Normal    Killing                        pod/flask-app-865b4476d6-8gtcv      Stopping container flask
+[2025-04-30 14:51:57] 30m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-bb8h5
+[2025-04-30 14:51:57] 30m         Normal    Started                        pod/flask-app-865b4476d6-bb8h5      Started container flask
+[2025-04-30 14:51:57] 30m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:51:57] 30m         Normal    Created                        pod/flask-app-865b4476d6-bb8h5      Created container flask
+[2025-04-30 14:51:57] 30m         Normal    Scheduled                      pod/flask-app-865b4476d6-bb8h5      Successfully assigned default/flask-app-865b4476d6-bb8h5 to worker7
+[2025-04-30 14:51:57] 30m         Normal    Pulled                         pod/flask-app-865b4476d6-bb8h5      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:51:57] 13m         Normal    Killing                        pod/flask-app-865b4476d6-bb8h5      Stopping container flask
+[2025-04-30 14:51:57] 13m         Warning   FailedGetScale                 horizontalpodautoscaler/flask-hpa   deployments/scale.apps "flask-app" not found
+[2025-04-30 14:51:57] 4m22s       Normal    Pulled                         pod/flask-app-865b4476d6-sk4lt      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:51:57] 4m21s       Normal    Scheduled                      pod/flask-app-865b4476d6-sk4lt      Successfully assigned default/flask-app-865b4476d6-sk4lt to worker7
+[2025-04-30 14:51:57] 4m22s       Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:51:57] 4m22s       Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-sk4lt
+[2025-04-30 14:51:57] 4m22s       Normal    Started                        pod/flask-app-865b4476d6-sk4lt      Started container flask
+[2025-04-30 14:51:57] 4m22s       Normal    Created                        pod/flask-app-865b4476d6-sk4lt      Created container flask
+[2025-04-30 14:52:08] 59m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:52:08] 59m         Normal    Pulled                         pod/flask-app-865b4476d6-8gtcv      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:52:08] 59m         Normal    Created                        pod/flask-app-865b4476d6-8gtcv      Created container flask
+[2025-04-30 14:52:08] 59m         Normal    Started                        pod/flask-app-865b4476d6-8gtcv      Started container flask
+[2025-04-30 14:52:08] 59m         Normal    Scheduled                      pod/flask-app-865b4476d6-8gtcv      Successfully assigned default/flask-app-865b4476d6-8gtcv to worker7
+[2025-04-30 14:52:08] 59m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-8gtcv
+[2025-04-30 14:52:08] 41m         Normal    Killing                        pod/flask-app-865b4476d6-8gtcv      Stopping container flask
+[2025-04-30 14:52:08] 31m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-bb8h5
+[2025-04-30 14:52:08] 31m         Normal    Started                        pod/flask-app-865b4476d6-bb8h5      Started container flask
+[2025-04-30 14:52:08] 31m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:52:08] 31m         Normal    Created                        pod/flask-app-865b4476d6-bb8h5      Created container flask
+[2025-04-30 14:52:08] 31m         Normal    Scheduled                      pod/flask-app-865b4476d6-bb8h5      Successfully assigned default/flask-app-865b4476d6-bb8h5 to worker7
+[2025-04-30 14:52:08] 31m         Normal    Pulled                         pod/flask-app-865b4476d6-bb8h5      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:52:08] 13m         Normal    Killing                        pod/flask-app-865b4476d6-bb8h5      Stopping container flask
+[2025-04-30 14:52:08] 13m         Warning   FailedGetScale                 horizontalpodautoscaler/flask-hpa   deployments/scale.apps "flask-app" not found
+[2025-04-30 14:52:08] 4m32s       Normal    Pulled                         pod/flask-app-865b4476d6-sk4lt      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:52:08] 4m31s       Normal    Scheduled                      pod/flask-app-865b4476d6-sk4lt      Successfully assigned default/flask-app-865b4476d6-sk4lt to worker7
+[2025-04-30 14:52:08] 4m32s       Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:52:08] 4m32s       Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-sk4lt
+[2025-04-30 14:52:08] 4m32s       Normal    Started                        pod/flask-app-865b4476d6-sk4lt      Started container flask
+[2025-04-30 14:52:08] 4m32s       Normal    Created                        pod/flask-app-865b4476d6-sk4lt      Created container flask
+[2025-04-30 14:52:18] 59m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:52:18] 59m         Normal    Pulled                         pod/flask-app-865b4476d6-8gtcv      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:52:18] 59m         Normal    Created                        pod/flask-app-865b4476d6-8gtcv      Created container flask
+[2025-04-30 14:52:18] 59m         Normal    Started                        pod/flask-app-865b4476d6-8gtcv      Started container flask
+[2025-04-30 14:52:18] 59m         Normal    Scheduled                      pod/flask-app-865b4476d6-8gtcv      Successfully assigned default/flask-app-865b4476d6-8gtcv to worker7
+[2025-04-30 14:52:18] 59m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-8gtcv
+[2025-04-30 14:52:18] 42m         Normal    Killing                        pod/flask-app-865b4476d6-8gtcv      Stopping container flask
+[2025-04-30 14:52:18] 31m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-bb8h5
+[2025-04-30 14:52:18] 31m         Normal    Started                        pod/flask-app-865b4476d6-bb8h5      Started container flask
+[2025-04-30 14:52:18] 31m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:52:18] 31m         Normal    Created                        pod/flask-app-865b4476d6-bb8h5      Created container flask
+[2025-04-30 14:52:18] 31m         Normal    Scheduled                      pod/flask-app-865b4476d6-bb8h5      Successfully assigned default/flask-app-865b4476d6-bb8h5 to worker7
+[2025-04-30 14:52:18] 31m         Normal    Pulled                         pod/flask-app-865b4476d6-bb8h5      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:52:18] 13m         Normal    Killing                        pod/flask-app-865b4476d6-bb8h5      Stopping container flask
+[2025-04-30 14:52:18] 13m         Warning   FailedGetScale                 horizontalpodautoscaler/flask-hpa   deployments/scale.apps "flask-app" not found
+[2025-04-30 14:52:18] 4m42s       Normal    Pulled                         pod/flask-app-865b4476d6-sk4lt      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:52:18] 4m41s       Normal    Scheduled                      pod/flask-app-865b4476d6-sk4lt      Successfully assigned default/flask-app-865b4476d6-sk4lt to worker7
+[2025-04-30 14:52:18] 4m42s       Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:52:18] 4m42s       Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-sk4lt
+[2025-04-30 14:52:18] 4m42s       Normal    Started                        pod/flask-app-865b4476d6-sk4lt      Started container flask
+[2025-04-30 14:52:18] 4m42s       Normal    Created                        pod/flask-app-865b4476d6-sk4lt      Created container flask
+[2025-04-30 14:52:28] 59m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:52:28] 59m         Normal    Pulled                         pod/flask-app-865b4476d6-8gtcv      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:52:28] 59m         Normal    Created                        pod/flask-app-865b4476d6-8gtcv      Created container flask
+[2025-04-30 14:52:28] 59m         Normal    Started                        pod/flask-app-865b4476d6-8gtcv      Started container flask
+[2025-04-30 14:52:28] 59m         Normal    Scheduled                      pod/flask-app-865b4476d6-8gtcv      Successfully assigned default/flask-app-865b4476d6-8gtcv to worker7
+[2025-04-30 14:52:28] 59m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-8gtcv
+[2025-04-30 14:52:28] 42m         Normal    Killing                        pod/flask-app-865b4476d6-8gtcv      Stopping container flask
+[2025-04-30 14:52:28] 31m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-bb8h5
+[2025-04-30 14:52:28] 31m         Normal    Started                        pod/flask-app-865b4476d6-bb8h5      Started container flask
+[2025-04-30 14:52:28] 31m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:52:28] 31m         Normal    Created                        pod/flask-app-865b4476d6-bb8h5      Created container flask
+[2025-04-30 14:52:28] 31m         Normal    Scheduled                      pod/flask-app-865b4476d6-bb8h5      Successfully assigned default/flask-app-865b4476d6-bb8h5 to worker7
+[2025-04-30 14:52:28] 31m         Normal    Pulled                         pod/flask-app-865b4476d6-bb8h5      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:52:28] 13m         Normal    Killing                        pod/flask-app-865b4476d6-bb8h5      Stopping container flask
+[2025-04-30 14:52:28] 13m         Warning   FailedGetScale                 horizontalpodautoscaler/flask-hpa   deployments/scale.apps "flask-app" not found
+[2025-04-30 14:52:28] 4m52s       Normal    Pulled                         pod/flask-app-865b4476d6-sk4lt      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:52:28] 4m51s       Normal    Scheduled                      pod/flask-app-865b4476d6-sk4lt      Successfully assigned default/flask-app-865b4476d6-sk4lt to worker7
+[2025-04-30 14:52:28] 4m52s       Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:52:28] 4m52s       Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-sk4lt
+[2025-04-30 14:52:28] 4m52s       Normal    Started                        pod/flask-app-865b4476d6-sk4lt      Started container flask
+[2025-04-30 14:52:28] 4m52s       Normal    Created                        pod/flask-app-865b4476d6-sk4lt      Created container flask
+[2025-04-30 14:52:38] 60m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:52:38] 60m         Normal    Pulled                         pod/flask-app-865b4476d6-8gtcv      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:52:38] 60m         Normal    Created                        pod/flask-app-865b4476d6-8gtcv      Created container flask
+[2025-04-30 14:52:38] 60m         Normal    Started                        pod/flask-app-865b4476d6-8gtcv      Started container flask
+[2025-04-30 14:52:38] 60m         Normal    Scheduled                      pod/flask-app-865b4476d6-8gtcv      Successfully assigned default/flask-app-865b4476d6-8gtcv to worker7
+[2025-04-30 14:52:38] 60m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-8gtcv
+[2025-04-30 14:52:38] 42m         Normal    Killing                        pod/flask-app-865b4476d6-8gtcv      Stopping container flask
+[2025-04-30 14:52:38] 31m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-bb8h5
+[2025-04-30 14:52:38] 31m         Normal    Started                        pod/flask-app-865b4476d6-bb8h5      Started container flask
+[2025-04-30 14:52:38] 31m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:52:38] 31m         Normal    Created                        pod/flask-app-865b4476d6-bb8h5      Created container flask
+[2025-04-30 14:52:38] 31m         Normal    Scheduled                      pod/flask-app-865b4476d6-bb8h5      Successfully assigned default/flask-app-865b4476d6-bb8h5 to worker7
+[2025-04-30 14:52:38] 31m         Normal    Pulled                         pod/flask-app-865b4476d6-bb8h5      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:52:38] 14m         Normal    Killing                        pod/flask-app-865b4476d6-bb8h5      Stopping container flask
+[2025-04-30 14:52:38] 14m         Warning   FailedGetScale                 horizontalpodautoscaler/flask-hpa   deployments/scale.apps "flask-app" not found
+[2025-04-30 14:52:38] 5m2s        Normal    Pulled                         pod/flask-app-865b4476d6-sk4lt      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:52:38] 5m1s        Normal    Scheduled                      pod/flask-app-865b4476d6-sk4lt      Successfully assigned default/flask-app-865b4476d6-sk4lt to worker7
+[2025-04-30 14:52:38] 5m2s        Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:52:38] 5m2s        Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-sk4lt
+[2025-04-30 14:52:38] 5m2s        Normal    Started                        pod/flask-app-865b4476d6-sk4lt      Started container flask
+[2025-04-30 14:52:38] 5m2s        Normal    Created                        pod/flask-app-865b4476d6-sk4lt      Created container flask
+[2025-04-30 14:52:48] 60m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:52:48] 60m         Normal    Pulled                         pod/flask-app-865b4476d6-8gtcv      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:52:48] 60m         Normal    Created                        pod/flask-app-865b4476d6-8gtcv      Created container flask
+[2025-04-30 14:52:48] 60m         Normal    Started                        pod/flask-app-865b4476d6-8gtcv      Started container flask
+[2025-04-30 14:52:48] 60m         Normal    Scheduled                      pod/flask-app-865b4476d6-8gtcv      Successfully assigned default/flask-app-865b4476d6-8gtcv to worker7
+[2025-04-30 14:52:48] 60m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-8gtcv
+[2025-04-30 14:52:48] 42m         Normal    Killing                        pod/flask-app-865b4476d6-8gtcv      Stopping container flask
+[2025-04-30 14:52:48] 31m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-bb8h5
+[2025-04-30 14:52:48] 31m         Normal    Started                        pod/flask-app-865b4476d6-bb8h5      Started container flask
+[2025-04-30 14:52:48] 31m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:52:48] 31m         Normal    Created                        pod/flask-app-865b4476d6-bb8h5      Created container flask
+[2025-04-30 14:52:48] 31m         Normal    Scheduled                      pod/flask-app-865b4476d6-bb8h5      Successfully assigned default/flask-app-865b4476d6-bb8h5 to worker7
+[2025-04-30 14:52:48] 31m         Normal    Pulled                         pod/flask-app-865b4476d6-bb8h5      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:52:48] 14m         Normal    Killing                        pod/flask-app-865b4476d6-bb8h5      Stopping container flask
+[2025-04-30 14:52:48] 14m         Warning   FailedGetScale                 horizontalpodautoscaler/flask-hpa   deployments/scale.apps "flask-app" not found
+[2025-04-30 14:52:48] 5m12s       Normal    Pulled                         pod/flask-app-865b4476d6-sk4lt      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:52:48] 5m11s       Normal    Scheduled                      pod/flask-app-865b4476d6-sk4lt      Successfully assigned default/flask-app-865b4476d6-sk4lt to worker7
+[2025-04-30 14:52:48] 5m12s       Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:52:48] 5m12s       Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-sk4lt
+[2025-04-30 14:52:48] 5m12s       Normal    Started                        pod/flask-app-865b4476d6-sk4lt      Started container flask
+[2025-04-30 14:52:48] 5m12s       Normal    Created                        pod/flask-app-865b4476d6-sk4lt      Created container flask
+[2025-04-30 14:52:58] 60m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:52:58] 60m         Normal    Pulled                         pod/flask-app-865b4476d6-8gtcv      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:52:58] 60m         Normal    Created                        pod/flask-app-865b4476d6-8gtcv      Created container flask
+[2025-04-30 14:52:58] 60m         Normal    Started                        pod/flask-app-865b4476d6-8gtcv      Started container flask
+[2025-04-30 14:52:58] 60m         Normal    Scheduled                      pod/flask-app-865b4476d6-8gtcv      Successfully assigned default/flask-app-865b4476d6-8gtcv to worker7
+[2025-04-30 14:52:58] 60m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-8gtcv
+[2025-04-30 14:52:58] 42m         Normal    Killing                        pod/flask-app-865b4476d6-8gtcv      Stopping container flask
+[2025-04-30 14:52:58] 31m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-bb8h5
+[2025-04-30 14:52:58] 31m         Normal    Started                        pod/flask-app-865b4476d6-bb8h5      Started container flask
+[2025-04-30 14:52:58] 31m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:52:58] 31m         Normal    Created                        pod/flask-app-865b4476d6-bb8h5      Created container flask
+[2025-04-30 14:52:58] 31m         Normal    Scheduled                      pod/flask-app-865b4476d6-bb8h5      Successfully assigned default/flask-app-865b4476d6-bb8h5 to worker7
+[2025-04-30 14:52:58] 31m         Normal    Pulled                         pod/flask-app-865b4476d6-bb8h5      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:52:58] 14m         Normal    Killing                        pod/flask-app-865b4476d6-bb8h5      Stopping container flask
+[2025-04-30 14:52:58] 14m         Warning   FailedGetScale                 horizontalpodautoscaler/flask-hpa   deployments/scale.apps "flask-app" not found
+[2025-04-30 14:52:58] 5m22s       Normal    Pulled                         pod/flask-app-865b4476d6-sk4lt      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:52:58] 5m21s       Normal    Scheduled                      pod/flask-app-865b4476d6-sk4lt      Successfully assigned default/flask-app-865b4476d6-sk4lt to worker7
+[2025-04-30 14:52:58] 5m22s       Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:52:58] 5m22s       Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-sk4lt
+[2025-04-30 14:52:58] 5m22s       Normal    Started                        pod/flask-app-865b4476d6-sk4lt      Started container flask
+[2025-04-30 14:52:58] 5m22s       Normal    Created                        pod/flask-app-865b4476d6-sk4lt      Created container flask
+[2025-04-30 14:53:08] 60m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:53:08] 60m         Normal    Pulled                         pod/flask-app-865b4476d6-8gtcv      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:53:08] 60m         Normal    Created                        pod/flask-app-865b4476d6-8gtcv      Created container flask
+[2025-04-30 14:53:08] 60m         Normal    Started                        pod/flask-app-865b4476d6-8gtcv      Started container flask
+[2025-04-30 14:53:08] 60m         Normal    Scheduled                      pod/flask-app-865b4476d6-8gtcv      Successfully assigned default/flask-app-865b4476d6-8gtcv to worker7
+[2025-04-30 14:53:08] 60m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-8gtcv
+[2025-04-30 14:53:08] 42m         Normal    Killing                        pod/flask-app-865b4476d6-8gtcv      Stopping container flask
+[2025-04-30 14:53:08] 32m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-bb8h5
+[2025-04-30 14:53:08] 32m         Normal    Started                        pod/flask-app-865b4476d6-bb8h5      Started container flask
+[2025-04-30 14:53:08] 32m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:53:08] 32m         Normal    Created                        pod/flask-app-865b4476d6-bb8h5      Created container flask
+[2025-04-30 14:53:08] 32m         Normal    Scheduled                      pod/flask-app-865b4476d6-bb8h5      Successfully assigned default/flask-app-865b4476d6-bb8h5 to worker7
+[2025-04-30 14:53:08] 32m         Normal    Pulled                         pod/flask-app-865b4476d6-bb8h5      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:53:08] 14m         Normal    Killing                        pod/flask-app-865b4476d6-bb8h5      Stopping container flask
+[2025-04-30 14:53:08] 14m         Warning   FailedGetScale                 horizontalpodautoscaler/flask-hpa   deployments/scale.apps "flask-app" not found
+[2025-04-30 14:53:08] 5m32s       Normal    Pulled                         pod/flask-app-865b4476d6-sk4lt      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:53:08] 5m31s       Normal    Scheduled                      pod/flask-app-865b4476d6-sk4lt      Successfully assigned default/flask-app-865b4476d6-sk4lt to worker7
+[2025-04-30 14:53:08] 5m32s       Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:53:08] 5m32s       Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-sk4lt
+[2025-04-30 14:53:08] 5m32s       Normal    Started                        pod/flask-app-865b4476d6-sk4lt      Started container flask
+[2025-04-30 14:53:08] 5m32s       Normal    Created                        pod/flask-app-865b4476d6-sk4lt      Created container flask
+[2025-04-30 14:53:18] 60m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:53:18] 60m         Normal    Pulled                         pod/flask-app-865b4476d6-8gtcv      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:53:18] 60m         Normal    Created                        pod/flask-app-865b4476d6-8gtcv      Created container flask
+[2025-04-30 14:53:18] 60m         Normal    Started                        pod/flask-app-865b4476d6-8gtcv      Started container flask
+[2025-04-30 14:53:18] 60m         Normal    Scheduled                      pod/flask-app-865b4476d6-8gtcv      Successfully assigned default/flask-app-865b4476d6-8gtcv to worker7
+[2025-04-30 14:53:18] 60m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-8gtcv
+[2025-04-30 14:53:18] 43m         Normal    Killing                        pod/flask-app-865b4476d6-8gtcv      Stopping container flask
+[2025-04-30 14:53:18] 32m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-bb8h5
+[2025-04-30 14:53:18] 32m         Normal    Started                        pod/flask-app-865b4476d6-bb8h5      Started container flask
+[2025-04-30 14:53:18] 32m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:53:18] 32m         Normal    Created                        pod/flask-app-865b4476d6-bb8h5      Created container flask
+[2025-04-30 14:53:18] 32m         Normal    Scheduled                      pod/flask-app-865b4476d6-bb8h5      Successfully assigned default/flask-app-865b4476d6-bb8h5 to worker7
+[2025-04-30 14:53:18] 32m         Normal    Pulled                         pod/flask-app-865b4476d6-bb8h5      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:53:18] 14m         Normal    Killing                        pod/flask-app-865b4476d6-bb8h5      Stopping container flask
+[2025-04-30 14:53:18] 14m         Warning   FailedGetScale                 horizontalpodautoscaler/flask-hpa   deployments/scale.apps "flask-app" not found
+[2025-04-30 14:53:18] 5m42s       Normal    Pulled                         pod/flask-app-865b4476d6-sk4lt      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:53:18] 5m41s       Normal    Scheduled                      pod/flask-app-865b4476d6-sk4lt      Successfully assigned default/flask-app-865b4476d6-sk4lt to worker7
+[2025-04-30 14:53:18] 5m42s       Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:53:18] 5m42s       Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-sk4lt
+[2025-04-30 14:53:18] 5m42s       Normal    Started                        pod/flask-app-865b4476d6-sk4lt      Started container flask
+[2025-04-30 14:53:18] 5m42s       Normal    Created                        pod/flask-app-865b4476d6-sk4lt      Created container flask
+[2025-04-30 14:53:28] 60m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:53:28] 60m         Normal    Pulled                         pod/flask-app-865b4476d6-8gtcv      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:53:28] 60m         Normal    Created                        pod/flask-app-865b4476d6-8gtcv      Created container flask
+[2025-04-30 14:53:28] 60m         Normal    Started                        pod/flask-app-865b4476d6-8gtcv      Started container flask
+[2025-04-30 14:53:28] 60m         Normal    Scheduled                      pod/flask-app-865b4476d6-8gtcv      Successfully assigned default/flask-app-865b4476d6-8gtcv to worker7
+[2025-04-30 14:53:28] 60m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-8gtcv
+[2025-04-30 14:53:28] 43m         Normal    Killing                        pod/flask-app-865b4476d6-8gtcv      Stopping container flask
+[2025-04-30 14:53:28] 32m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-bb8h5
+[2025-04-30 14:53:28] 32m         Normal    Started                        pod/flask-app-865b4476d6-bb8h5      Started container flask
+[2025-04-30 14:53:28] 32m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:53:28] 32m         Normal    Created                        pod/flask-app-865b4476d6-bb8h5      Created container flask
+[2025-04-30 14:53:28] 32m         Normal    Scheduled                      pod/flask-app-865b4476d6-bb8h5      Successfully assigned default/flask-app-865b4476d6-bb8h5 to worker7
+[2025-04-30 14:53:28] 32m         Normal    Pulled                         pod/flask-app-865b4476d6-bb8h5      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:53:28] 14m         Normal    Killing                        pod/flask-app-865b4476d6-bb8h5      Stopping container flask
+[2025-04-30 14:53:28] 14m         Warning   FailedGetScale                 horizontalpodautoscaler/flask-hpa   deployments/scale.apps "flask-app" not found
+[2025-04-30 14:53:28] 5m52s       Normal    Pulled                         pod/flask-app-865b4476d6-sk4lt      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:53:28] 5m51s       Normal    Scheduled                      pod/flask-app-865b4476d6-sk4lt      Successfully assigned default/flask-app-865b4476d6-sk4lt to worker7
+[2025-04-30 14:53:28] 5m52s       Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:53:28] 5m52s       Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-sk4lt
+[2025-04-30 14:53:28] 5m52s       Normal    Started                        pod/flask-app-865b4476d6-sk4lt      Started container flask
+[2025-04-30 14:53:28] 5m52s       Normal    Created                        pod/flask-app-865b4476d6-sk4lt      Created container flask
+[2025-04-30 14:53:38] 43m         Normal    Killing                        pod/flask-app-865b4476d6-8gtcv      Stopping container flask
+[2025-04-30 14:53:38] 32m         Normal    Started                        pod/flask-app-865b4476d6-bb8h5      Started container flask
+[2025-04-30 14:53:38] 32m         Normal    Scheduled                      pod/flask-app-865b4476d6-bb8h5      Successfully assigned default/flask-app-865b4476d6-bb8h5 to worker7
+[2025-04-30 14:53:38] 32m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-bb8h5
+[2025-04-30 14:53:38] 32m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:53:38] 32m         Normal    Pulled                         pod/flask-app-865b4476d6-bb8h5      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:53:38] 32m         Normal    Created                        pod/flask-app-865b4476d6-bb8h5      Created container flask
+[2025-04-30 14:53:38] 15m         Normal    Killing                        pod/flask-app-865b4476d6-bb8h5      Stopping container flask
+[2025-04-30 14:53:38] 15m         Warning   FailedGetScale                 horizontalpodautoscaler/flask-hpa   deployments/scale.apps "flask-app" not found
+[2025-04-30 14:53:38] 6m2s        Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-sk4lt
+[2025-04-30 14:53:38] 6m2s        Normal    Created                        pod/flask-app-865b4476d6-sk4lt      Created container flask
+[2025-04-30 14:53:38] 6m2s        Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:53:38] 6m2s        Normal    Pulled                         pod/flask-app-865b4476d6-sk4lt      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:53:38] 6m1s        Normal    Scheduled                      pod/flask-app-865b4476d6-sk4lt      Successfully assigned default/flask-app-865b4476d6-sk4lt to worker7
+[2025-04-30 14:53:38] 6m2s        Normal    Started                        pod/flask-app-865b4476d6-sk4lt      Started container flask
+[2025-04-30 14:53:48] 43m         Normal    Killing                        pod/flask-app-865b4476d6-8gtcv      Stopping container flask
+[2025-04-30 14:53:48] 32m         Normal    Started                        pod/flask-app-865b4476d6-bb8h5      Started container flask
+[2025-04-30 14:53:48] 32m         Normal    Scheduled                      pod/flask-app-865b4476d6-bb8h5      Successfully assigned default/flask-app-865b4476d6-bb8h5 to worker7
+[2025-04-30 14:53:48] 32m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-bb8h5
+[2025-04-30 14:53:48] 32m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:53:48] 32m         Normal    Pulled                         pod/flask-app-865b4476d6-bb8h5      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:53:48] 32m         Normal    Created                        pod/flask-app-865b4476d6-bb8h5      Created container flask
+[2025-04-30 14:53:48] 15m         Normal    Killing                        pod/flask-app-865b4476d6-bb8h5      Stopping container flask
+[2025-04-30 14:53:48] 15m         Warning   FailedGetScale                 horizontalpodautoscaler/flask-hpa   deployments/scale.apps "flask-app" not found
+[2025-04-30 14:53:48] 6m12s       Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-sk4lt
+[2025-04-30 14:53:48] 6m12s       Normal    Created                        pod/flask-app-865b4476d6-sk4lt      Created container flask
+[2025-04-30 14:53:48] 6m12s       Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:53:48] 6m12s       Normal    Pulled                         pod/flask-app-865b4476d6-sk4lt      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:53:48] 6m11s       Normal    Scheduled                      pod/flask-app-865b4476d6-sk4lt      Successfully assigned default/flask-app-865b4476d6-sk4lt to worker7
+[2025-04-30 14:53:48] 6m12s       Normal    Started                        pod/flask-app-865b4476d6-sk4lt      Started container flask
+[2025-04-30 14:53:58] 43m         Normal    Killing                        pod/flask-app-865b4476d6-8gtcv      Stopping container flask
+[2025-04-30 14:53:58] 32m         Normal    Started                        pod/flask-app-865b4476d6-bb8h5      Started container flask
+[2025-04-30 14:53:58] 32m         Normal    Scheduled                      pod/flask-app-865b4476d6-bb8h5      Successfully assigned default/flask-app-865b4476d6-bb8h5 to worker7
+[2025-04-30 14:53:58] 32m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-bb8h5
+[2025-04-30 14:53:58] 32m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:53:58] 32m         Normal    Pulled                         pod/flask-app-865b4476d6-bb8h5      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:53:58] 32m         Normal    Created                        pod/flask-app-865b4476d6-bb8h5      Created container flask
+[2025-04-30 14:53:58] 15m         Normal    Killing                        pod/flask-app-865b4476d6-bb8h5      Stopping container flask
+[2025-04-30 14:53:58] 15m         Warning   FailedGetScale                 horizontalpodautoscaler/flask-hpa   deployments/scale.apps "flask-app" not found
+[2025-04-30 14:53:58] 6m22s       Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-sk4lt
+[2025-04-30 14:53:58] 6m22s       Normal    Created                        pod/flask-app-865b4476d6-sk4lt      Created container flask
+[2025-04-30 14:53:58] 6m22s       Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:53:58] 6m22s       Normal    Pulled                         pod/flask-app-865b4476d6-sk4lt      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:53:58] 6m22s       Normal    Scheduled                      pod/flask-app-865b4476d6-sk4lt      Successfully assigned default/flask-app-865b4476d6-sk4lt to worker7
+[2025-04-30 14:53:58] 6m22s       Normal    Started                        pod/flask-app-865b4476d6-sk4lt      Started container flask
+[2025-04-30 14:54:08] 43m         Normal    Killing                        pod/flask-app-865b4476d6-8gtcv      Stopping container flask
+[2025-04-30 14:54:08] 33m         Normal    Started                        pod/flask-app-865b4476d6-bb8h5      Started container flask
+[2025-04-30 14:54:08] 33m         Normal    Scheduled                      pod/flask-app-865b4476d6-bb8h5      Successfully assigned default/flask-app-865b4476d6-bb8h5 to worker7
+[2025-04-30 14:54:08] 33m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-bb8h5
+[2025-04-30 14:54:08] 33m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:54:08] 33m         Normal    Pulled                         pod/flask-app-865b4476d6-bb8h5      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:54:08] 33m         Normal    Created                        pod/flask-app-865b4476d6-bb8h5      Created container flask
+[2025-04-30 14:54:08] 15m         Normal    Killing                        pod/flask-app-865b4476d6-bb8h5      Stopping container flask
+[2025-04-30 14:54:08] 15m         Warning   FailedGetScale                 horizontalpodautoscaler/flask-hpa   deployments/scale.apps "flask-app" not found
+[2025-04-30 14:54:08] 6m32s       Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-sk4lt
+[2025-04-30 14:54:08] 6m32s       Normal    Created                        pod/flask-app-865b4476d6-sk4lt      Created container flask
+[2025-04-30 14:54:08] 6m32s       Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:54:08] 6m32s       Normal    Pulled                         pod/flask-app-865b4476d6-sk4lt      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:54:08] 6m32s       Normal    Scheduled                      pod/flask-app-865b4476d6-sk4lt      Successfully assigned default/flask-app-865b4476d6-sk4lt to worker7
+[2025-04-30 14:54:08] 6m32s       Normal    Started                        pod/flask-app-865b4476d6-sk4lt      Started container flask
+[2025-04-30 14:54:18] 44m         Normal    Killing                        pod/flask-app-865b4476d6-8gtcv      Stopping container flask
+[2025-04-30 14:54:18] 33m         Normal    Started                        pod/flask-app-865b4476d6-bb8h5      Started container flask
+[2025-04-30 14:54:18] 33m         Normal    Scheduled                      pod/flask-app-865b4476d6-bb8h5      Successfully assigned default/flask-app-865b4476d6-bb8h5 to worker7
+[2025-04-30 14:54:18] 33m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-bb8h5
+[2025-04-30 14:54:18] 33m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:54:18] 33m         Normal    Pulled                         pod/flask-app-865b4476d6-bb8h5      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:54:18] 33m         Normal    Created                        pod/flask-app-865b4476d6-bb8h5      Created container flask
+[2025-04-30 14:54:18] 15m         Normal    Killing                        pod/flask-app-865b4476d6-bb8h5      Stopping container flask
+[2025-04-30 14:54:18] 15m         Warning   FailedGetScale                 horizontalpodautoscaler/flask-hpa   deployments/scale.apps "flask-app" not found
+[2025-04-30 14:54:18] 6m42s       Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-sk4lt
+[2025-04-30 14:54:18] 6m42s       Normal    Created                        pod/flask-app-865b4476d6-sk4lt      Created container flask
+[2025-04-30 14:54:18] 6m42s       Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:54:18] 6m42s       Normal    Pulled                         pod/flask-app-865b4476d6-sk4lt      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:54:18] 6m42s       Normal    Scheduled                      pod/flask-app-865b4476d6-sk4lt      Successfully assigned default/flask-app-865b4476d6-sk4lt to worker7
+[2025-04-30 14:54:18] 6m42s       Normal    Started                        pod/flask-app-865b4476d6-sk4lt      Started container flask
+[2025-04-30 14:54:28] 44m         Normal    Killing                        pod/flask-app-865b4476d6-8gtcv      Stopping container flask
+[2025-04-30 14:54:28] 33m         Normal    Started                        pod/flask-app-865b4476d6-bb8h5      Started container flask
+[2025-04-30 14:54:28] 33m         Normal    Scheduled                      pod/flask-app-865b4476d6-bb8h5      Successfully assigned default/flask-app-865b4476d6-bb8h5 to worker7
+[2025-04-30 14:54:28] 33m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-bb8h5
+[2025-04-30 14:54:28] 33m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:54:28] 33m         Normal    Pulled                         pod/flask-app-865b4476d6-bb8h5      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:54:28] 33m         Normal    Created                        pod/flask-app-865b4476d6-bb8h5      Created container flask
+[2025-04-30 14:54:28] 15m         Normal    Killing                        pod/flask-app-865b4476d6-bb8h5      Stopping container flask
+[2025-04-30 14:54:28] 15m         Warning   FailedGetScale                 horizontalpodautoscaler/flask-hpa   deployments/scale.apps "flask-app" not found
+[2025-04-30 14:54:28] 6m52s       Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-sk4lt
+[2025-04-30 14:54:28] 6m52s       Normal    Created                        pod/flask-app-865b4476d6-sk4lt      Created container flask
+[2025-04-30 14:54:28] 6m52s       Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:54:28] 6m52s       Normal    Pulled                         pod/flask-app-865b4476d6-sk4lt      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:54:28] 6m52s       Normal    Scheduled                      pod/flask-app-865b4476d6-sk4lt      Successfully assigned default/flask-app-865b4476d6-sk4lt to worker7
+[2025-04-30 14:54:28] 6m52s       Normal    Started                        pod/flask-app-865b4476d6-sk4lt      Started container flask
+[2025-04-30 14:54:38] 44m         Normal    Killing                        pod/flask-app-865b4476d6-8gtcv      Stopping container flask
+[2025-04-30 14:54:38] 33m         Normal    Started                        pod/flask-app-865b4476d6-bb8h5      Started container flask
+[2025-04-30 14:54:38] 33m         Normal    Scheduled                      pod/flask-app-865b4476d6-bb8h5      Successfully assigned default/flask-app-865b4476d6-bb8h5 to worker7
+[2025-04-30 14:54:38] 33m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-bb8h5
+[2025-04-30 14:54:38] 33m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:54:38] 33m         Normal    Pulled                         pod/flask-app-865b4476d6-bb8h5      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:54:38] 33m         Normal    Created                        pod/flask-app-865b4476d6-bb8h5      Created container flask
+[2025-04-30 14:54:38] 16m         Normal    Killing                        pod/flask-app-865b4476d6-bb8h5      Stopping container flask
+[2025-04-30 14:54:38] 16m         Warning   FailedGetScale                 horizontalpodautoscaler/flask-hpa   deployments/scale.apps "flask-app" not found
+[2025-04-30 14:54:38] 7m2s        Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-sk4lt
+[2025-04-30 14:54:38] 7m2s        Normal    Created                        pod/flask-app-865b4476d6-sk4lt      Created container flask
+[2025-04-30 14:54:38] 7m2s        Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:54:38] 7m2s        Normal    Pulled                         pod/flask-app-865b4476d6-sk4lt      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:54:38] 7m2s        Normal    Scheduled                      pod/flask-app-865b4476d6-sk4lt      Successfully assigned default/flask-app-865b4476d6-sk4lt to worker7
+[2025-04-30 14:54:38] 7m2s        Normal    Started                        pod/flask-app-865b4476d6-sk4lt      Started container flask
+[2025-04-30 14:54:48] 44m         Normal    Killing                        pod/flask-app-865b4476d6-8gtcv      Stopping container flask
+[2025-04-30 14:54:48] 33m         Normal    Started                        pod/flask-app-865b4476d6-bb8h5      Started container flask
+[2025-04-30 14:54:48] 33m         Normal    Scheduled                      pod/flask-app-865b4476d6-bb8h5      Successfully assigned default/flask-app-865b4476d6-bb8h5 to worker7
+[2025-04-30 14:54:48] 33m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-bb8h5
+[2025-04-30 14:54:48] 33m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:54:48] 33m         Normal    Pulled                         pod/flask-app-865b4476d6-bb8h5      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:54:48] 33m         Normal    Created                        pod/flask-app-865b4476d6-bb8h5      Created container flask
+[2025-04-30 14:54:48] 16m         Normal    Killing                        pod/flask-app-865b4476d6-bb8h5      Stopping container flask
+[2025-04-30 14:54:48] 16m         Warning   FailedGetScale                 horizontalpodautoscaler/flask-hpa   deployments/scale.apps "flask-app" not found
+[2025-04-30 14:54:48] 7m12s       Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-sk4lt
+[2025-04-30 14:54:48] 7m12s       Normal    Created                        pod/flask-app-865b4476d6-sk4lt      Created container flask
+[2025-04-30 14:54:48] 7m12s       Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:54:48] 7m12s       Normal    Pulled                         pod/flask-app-865b4476d6-sk4lt      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:54:48] 7m12s       Normal    Scheduled                      pod/flask-app-865b4476d6-sk4lt      Successfully assigned default/flask-app-865b4476d6-sk4lt to worker7
+[2025-04-30 14:54:48] 7m12s       Normal    Started                        pod/flask-app-865b4476d6-sk4lt      Started container flask
+[2025-04-30 14:54:58] 44m         Normal    Killing                        pod/flask-app-865b4476d6-8gtcv      Stopping container flask
+[2025-04-30 14:54:58] 33m         Normal    Started                        pod/flask-app-865b4476d6-bb8h5      Started container flask
+[2025-04-30 14:54:58] 33m         Normal    Scheduled                      pod/flask-app-865b4476d6-bb8h5      Successfully assigned default/flask-app-865b4476d6-bb8h5 to worker7
+[2025-04-30 14:54:58] 33m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-bb8h5
+[2025-04-30 14:54:58] 33m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:54:58] 33m         Normal    Pulled                         pod/flask-app-865b4476d6-bb8h5      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:54:58] 33m         Normal    Created                        pod/flask-app-865b4476d6-bb8h5      Created container flask
+[2025-04-30 14:54:58] 16m         Normal    Killing                        pod/flask-app-865b4476d6-bb8h5      Stopping container flask
+[2025-04-30 14:54:58] 16m         Warning   FailedGetScale                 horizontalpodautoscaler/flask-hpa   deployments/scale.apps "flask-app" not found
+[2025-04-30 14:54:58] 7m22s       Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-sk4lt
+[2025-04-30 14:54:58] 7m22s       Normal    Created                        pod/flask-app-865b4476d6-sk4lt      Created container flask
+[2025-04-30 14:54:58] 7m22s       Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:54:58] 7m22s       Normal    Pulled                         pod/flask-app-865b4476d6-sk4lt      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:54:58] 7m22s       Normal    Scheduled                      pod/flask-app-865b4476d6-sk4lt      Successfully assigned default/flask-app-865b4476d6-sk4lt to worker7
+[2025-04-30 14:54:58] 7m22s       Normal    Started                        pod/flask-app-865b4476d6-sk4lt      Started container flask
+[2025-04-30 14:55:08] 44m         Normal    Killing                        pod/flask-app-865b4476d6-8gtcv      Stopping container flask
+[2025-04-30 14:55:08] 34m         Normal    Started                        pod/flask-app-865b4476d6-bb8h5      Started container flask
+[2025-04-30 14:55:08] 34m         Normal    Scheduled                      pod/flask-app-865b4476d6-bb8h5      Successfully assigned default/flask-app-865b4476d6-bb8h5 to worker7
+[2025-04-30 14:55:08] 34m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-bb8h5
+[2025-04-30 14:55:08] 34m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:55:08] 34m         Normal    Pulled                         pod/flask-app-865b4476d6-bb8h5      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:55:08] 34m         Normal    Created                        pod/flask-app-865b4476d6-bb8h5      Created container flask
+[2025-04-30 14:55:08] 16m         Normal    Killing                        pod/flask-app-865b4476d6-bb8h5      Stopping container flask
+[2025-04-30 14:55:08] 16m         Warning   FailedGetScale                 horizontalpodautoscaler/flask-hpa   deployments/scale.apps "flask-app" not found
+[2025-04-30 14:55:08] 7m32s       Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-sk4lt
+[2025-04-30 14:55:08] 7m32s       Normal    Created                        pod/flask-app-865b4476d6-sk4lt      Created container flask
+[2025-04-30 14:55:08] 7m32s       Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:55:08] 7m32s       Normal    Pulled                         pod/flask-app-865b4476d6-sk4lt      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:55:08] 7m32s       Normal    Scheduled                      pod/flask-app-865b4476d6-sk4lt      Successfully assigned default/flask-app-865b4476d6-sk4lt to worker7
+[2025-04-30 14:55:08] 7m32s       Normal    Started                        pod/flask-app-865b4476d6-sk4lt      Started container flask
+[2025-04-30 14:55:18] 45m         Normal    Killing                        pod/flask-app-865b4476d6-8gtcv      Stopping container flask
+[2025-04-30 14:55:18] 34m         Normal    Started                        pod/flask-app-865b4476d6-bb8h5      Started container flask
+[2025-04-30 14:55:18] 34m         Normal    Scheduled                      pod/flask-app-865b4476d6-bb8h5      Successfully assigned default/flask-app-865b4476d6-bb8h5 to worker7
+[2025-04-30 14:55:18] 34m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-bb8h5
+[2025-04-30 14:55:18] 34m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:55:18] 34m         Normal    Pulled                         pod/flask-app-865b4476d6-bb8h5      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:55:18] 34m         Normal    Created                        pod/flask-app-865b4476d6-bb8h5      Created container flask
+[2025-04-30 14:55:18] 16m         Normal    Killing                        pod/flask-app-865b4476d6-bb8h5      Stopping container flask
+[2025-04-30 14:55:18] 16m         Warning   FailedGetScale                 horizontalpodautoscaler/flask-hpa   deployments/scale.apps "flask-app" not found
+[2025-04-30 14:55:18] 7m43s       Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-sk4lt
+[2025-04-30 14:55:18] 7m43s       Normal    Created                        pod/flask-app-865b4476d6-sk4lt      Created container flask
+[2025-04-30 14:55:18] 7m43s       Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:55:18] 7m43s       Normal    Pulled                         pod/flask-app-865b4476d6-sk4lt      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:55:18] 7m42s       Normal    Scheduled                      pod/flask-app-865b4476d6-sk4lt      Successfully assigned default/flask-app-865b4476d6-sk4lt to worker7
+[2025-04-30 14:55:18] 7m43s       Normal    Started                        pod/flask-app-865b4476d6-sk4lt      Started container flask
+[2025-04-30 14:55:29] 45m         Normal    Killing                        pod/flask-app-865b4476d6-8gtcv      Stopping container flask
+[2025-04-30 14:55:29] 34m         Normal    Started                        pod/flask-app-865b4476d6-bb8h5      Started container flask
+[2025-04-30 14:55:29] 34m         Normal    Scheduled                      pod/flask-app-865b4476d6-bb8h5      Successfully assigned default/flask-app-865b4476d6-bb8h5 to worker7
+[2025-04-30 14:55:29] 34m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-bb8h5
+[2025-04-30 14:55:29] 34m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:55:29] 34m         Normal    Pulled                         pod/flask-app-865b4476d6-bb8h5      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:55:29] 34m         Normal    Created                        pod/flask-app-865b4476d6-bb8h5      Created container flask
+[2025-04-30 14:55:29] 16m         Normal    Killing                        pod/flask-app-865b4476d6-bb8h5      Stopping container flask
+[2025-04-30 14:55:29] 16m         Warning   FailedGetScale                 horizontalpodautoscaler/flask-hpa   deployments/scale.apps "flask-app" not found
+[2025-04-30 14:55:29] 7m53s       Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-sk4lt
+[2025-04-30 14:55:29] 7m53s       Normal    Created                        pod/flask-app-865b4476d6-sk4lt      Created container flask
+[2025-04-30 14:55:29] 7m53s       Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:55:29] 7m53s       Normal    Pulled                         pod/flask-app-865b4476d6-sk4lt      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:55:29] 7m52s       Normal    Scheduled                      pod/flask-app-865b4476d6-sk4lt      Successfully assigned default/flask-app-865b4476d6-sk4lt to worker7
+[2025-04-30 14:55:29] 7m53s       Normal    Started                        pod/flask-app-865b4476d6-sk4lt      Started container flask
+[2025-04-30 14:55:39] 45m         Normal    Killing                        pod/flask-app-865b4476d6-8gtcv      Stopping container flask
+[2025-04-30 14:55:39] 34m         Normal    Started                        pod/flask-app-865b4476d6-bb8h5      Started container flask
+[2025-04-30 14:55:39] 34m         Normal    Scheduled                      pod/flask-app-865b4476d6-bb8h5      Successfully assigned default/flask-app-865b4476d6-bb8h5 to worker7
+[2025-04-30 14:55:39] 34m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-bb8h5
+[2025-04-30 14:55:39] 34m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:55:39] 34m         Normal    Pulled                         pod/flask-app-865b4476d6-bb8h5      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:55:39] 34m         Normal    Created                        pod/flask-app-865b4476d6-bb8h5      Created container flask
+[2025-04-30 14:55:39] 17m         Normal    Killing                        pod/flask-app-865b4476d6-bb8h5      Stopping container flask
+[2025-04-30 14:55:39] 17m         Warning   FailedGetScale                 horizontalpodautoscaler/flask-hpa   deployments/scale.apps "flask-app" not found
+[2025-04-30 14:55:39] 8m3s        Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-sk4lt
+[2025-04-30 14:55:39] 8m3s        Normal    Created                        pod/flask-app-865b4476d6-sk4lt      Created container flask
+[2025-04-30 14:55:39] 8m3s        Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:55:39] 8m3s        Normal    Pulled                         pod/flask-app-865b4476d6-sk4lt      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:55:39] 8m2s        Normal    Scheduled                      pod/flask-app-865b4476d6-sk4lt      Successfully assigned default/flask-app-865b4476d6-sk4lt to worker7
+[2025-04-30 14:55:39] 8m3s        Normal    Started                        pod/flask-app-865b4476d6-sk4lt      Started container flask
+[2025-04-30 14:55:49] 45m         Normal    Killing                        pod/flask-app-865b4476d6-8gtcv      Stopping container flask
+[2025-04-30 14:55:49] 34m         Normal    Started                        pod/flask-app-865b4476d6-bb8h5      Started container flask
+[2025-04-30 14:55:49] 34m         Normal    Scheduled                      pod/flask-app-865b4476d6-bb8h5      Successfully assigned default/flask-app-865b4476d6-bb8h5 to worker7
+[2025-04-30 14:55:49] 34m         Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-bb8h5
+[2025-04-30 14:55:49] 34m         Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:55:49] 34m         Normal    Pulled                         pod/flask-app-865b4476d6-bb8h5      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:55:49] 34m         Normal    Created                        pod/flask-app-865b4476d6-bb8h5      Created container flask
+[2025-04-30 14:55:49] 17m         Normal    Killing                        pod/flask-app-865b4476d6-bb8h5      Stopping container flask
+[2025-04-30 14:55:49] 17m         Warning   FailedGetScale                 horizontalpodautoscaler/flask-hpa   deployments/scale.apps "flask-app" not found
+[2025-04-30 14:55:49] 8m13s       Normal    SuccessfulCreate               replicaset/flask-app-865b4476d6     Created pod: flask-app-865b4476d6-sk4lt
+[2025-04-30 14:55:49] 8m13s       Normal    Created                        pod/flask-app-865b4476d6-sk4lt      Created container flask
+[2025-04-30 14:55:49] 8m13s       Normal    ScalingReplicaSet              deployment/flask-app                Scaled up replica set flask-app-865b4476d6 to 1
+[2025-04-30 14:55:49] 8m13s       Normal    Pulled                         pod/flask-app-865b4476d6-sk4lt      Container image "docker.io/library/flask-fib-app:latest" already present on machine
+[2025-04-30 14:55:49] 8m12s       Normal    Scheduled                      pod/flask-app-865b4476d6-sk4lt      Successfully assigned default/flask-app-865b4476d6-sk4lt to worker7
+[2025-04-30 14:55:49] 8m13s       Normal    Started                        pod/flask-app-865b4476d6-sk4lt      Started container flask

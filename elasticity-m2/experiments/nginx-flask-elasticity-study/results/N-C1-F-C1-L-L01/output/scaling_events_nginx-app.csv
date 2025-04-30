@@ -1,0 +1,1054 @@
+[2025-04-30 14:47:56] 55m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-8tp47      Successfully assigned default/nginx-app-7dd8c588d7-8tp47 to worker7
+[2025-04-30 14:47:56] 55m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:47:56] 55m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-8tp47
+[2025-04-30 14:47:56] 55m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-8tp47      Pulling image "nginx:latest"
+[2025-04-30 14:47:56] 55m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-8tp47      Successfully pulled image "nginx:latest" in 853ms (853ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:47:56] 55m         Normal    Created                        pod/nginx-app-7dd8c588d7-8tp47      Created container nginx
+[2025-04-30 14:47:56] 55m         Normal    Started                        pod/nginx-app-7dd8c588d7-8tp47      Started container nginx
+[2025-04-30 14:47:56] 37m         Normal    Killing                        pod/nginx-app-7dd8c588d7-8tp47      Stopping container nginx
+[2025-04-30 14:47:56] 26m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-g69m7      Pulling image "nginx:latest"
+[2025-04-30 14:47:56] 26m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-g69m7      Successfully assigned default/nginx-app-7dd8c588d7-g69m7 to worker7
+[2025-04-30 14:47:56] 26m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-g69m7
+[2025-04-30 14:47:56] 26m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:47:56] 26m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-g69m7      Successfully pulled image "nginx:latest" in 698ms (698ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:47:56] 26m         Normal    Created                        pod/nginx-app-7dd8c588d7-g69m7      Created container nginx
+[2025-04-30 14:47:56] 26m         Normal    Started                        pod/nginx-app-7dd8c588d7-g69m7      Started container nginx
+[2025-04-30 14:47:56] 9m25s       Normal    Killing                        pod/nginx-app-7dd8c588d7-g69m7      Stopping container nginx
+[2025-04-30 14:47:56] 9m24s       Warning   FailedGetScale                 horizontalpodautoscaler/nginx-hpa   deployments/scale.apps "nginx-app" not found
+[2025-04-30 14:47:56] 20s         Normal    Pulling                        pod/nginx-app-7dd8c588d7-rc5hx      Pulling image "nginx:latest"
+[2025-04-30 14:47:56] 20s         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-rc5hx
+[2025-04-30 14:47:56] 20s         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:47:56] 20s         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-rc5hx      Successfully assigned default/nginx-app-7dd8c588d7-rc5hx to worker7
+[2025-04-30 14:47:56] 19s         Normal    Started                        pod/nginx-app-7dd8c588d7-rc5hx      Started container nginx
+[2025-04-30 14:47:56] 19s         Normal    Created                        pod/nginx-app-7dd8c588d7-rc5hx      Created container nginx
+[2025-04-30 14:47:56] 19s         Normal    Pulled                         pod/nginx-app-7dd8c588d7-rc5hx      Successfully pulled image "nginx:latest" in 689ms (689ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:48:06] 55m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-8tp47      Successfully assigned default/nginx-app-7dd8c588d7-8tp47 to worker7
+[2025-04-30 14:48:06] 55m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:48:06] 55m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-8tp47
+[2025-04-30 14:48:06] 55m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-8tp47      Pulling image "nginx:latest"
+[2025-04-30 14:48:06] 55m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-8tp47      Successfully pulled image "nginx:latest" in 853ms (853ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:48:06] 55m         Normal    Created                        pod/nginx-app-7dd8c588d7-8tp47      Created container nginx
+[2025-04-30 14:48:06] 55m         Normal    Started                        pod/nginx-app-7dd8c588d7-8tp47      Started container nginx
+[2025-04-30 14:48:06] 37m         Normal    Killing                        pod/nginx-app-7dd8c588d7-8tp47      Stopping container nginx
+[2025-04-30 14:48:06] 27m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-g69m7      Pulling image "nginx:latest"
+[2025-04-30 14:48:06] 27m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-g69m7      Successfully assigned default/nginx-app-7dd8c588d7-g69m7 to worker7
+[2025-04-30 14:48:06] 27m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-g69m7
+[2025-04-30 14:48:06] 27m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:48:06] 27m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-g69m7      Successfully pulled image "nginx:latest" in 698ms (698ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:48:06] 27m         Normal    Created                        pod/nginx-app-7dd8c588d7-g69m7      Created container nginx
+[2025-04-30 14:48:06] 27m         Normal    Started                        pod/nginx-app-7dd8c588d7-g69m7      Started container nginx
+[2025-04-30 14:48:06] 9m35s       Normal    Killing                        pod/nginx-app-7dd8c588d7-g69m7      Stopping container nginx
+[2025-04-30 14:48:06] 9m34s       Warning   FailedGetScale                 horizontalpodautoscaler/nginx-hpa   deployments/scale.apps "nginx-app" not found
+[2025-04-30 14:48:06] 30s         Normal    Pulling                        pod/nginx-app-7dd8c588d7-rc5hx      Pulling image "nginx:latest"
+[2025-04-30 14:48:06] 30s         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-rc5hx
+[2025-04-30 14:48:06] 30s         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:48:06] 30s         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-rc5hx      Successfully assigned default/nginx-app-7dd8c588d7-rc5hx to worker7
+[2025-04-30 14:48:06] 29s         Normal    Started                        pod/nginx-app-7dd8c588d7-rc5hx      Started container nginx
+[2025-04-30 14:48:06] 29s         Normal    Created                        pod/nginx-app-7dd8c588d7-rc5hx      Created container nginx
+[2025-04-30 14:48:06] 29s         Normal    Pulled                         pod/nginx-app-7dd8c588d7-rc5hx      Successfully pulled image "nginx:latest" in 689ms (689ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:48:16] 55m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-8tp47      Successfully assigned default/nginx-app-7dd8c588d7-8tp47 to worker7
+[2025-04-30 14:48:16] 55m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:48:16] 55m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-8tp47
+[2025-04-30 14:48:16] 55m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-8tp47      Pulling image "nginx:latest"
+[2025-04-30 14:48:16] 55m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-8tp47      Successfully pulled image "nginx:latest" in 853ms (853ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:48:16] 55m         Normal    Created                        pod/nginx-app-7dd8c588d7-8tp47      Created container nginx
+[2025-04-30 14:48:16] 55m         Normal    Started                        pod/nginx-app-7dd8c588d7-8tp47      Started container nginx
+[2025-04-30 14:48:16] 38m         Normal    Killing                        pod/nginx-app-7dd8c588d7-8tp47      Stopping container nginx
+[2025-04-30 14:48:16] 27m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-g69m7      Pulling image "nginx:latest"
+[2025-04-30 14:48:16] 27m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-g69m7      Successfully assigned default/nginx-app-7dd8c588d7-g69m7 to worker7
+[2025-04-30 14:48:16] 27m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-g69m7
+[2025-04-30 14:48:16] 27m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:48:16] 27m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-g69m7      Successfully pulled image "nginx:latest" in 698ms (698ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:48:16] 27m         Normal    Created                        pod/nginx-app-7dd8c588d7-g69m7      Created container nginx
+[2025-04-30 14:48:16] 27m         Normal    Started                        pod/nginx-app-7dd8c588d7-g69m7      Started container nginx
+[2025-04-30 14:48:16] 9m45s       Normal    Killing                        pod/nginx-app-7dd8c588d7-g69m7      Stopping container nginx
+[2025-04-30 14:48:16] 9m44s       Warning   FailedGetScale                 horizontalpodautoscaler/nginx-hpa   deployments/scale.apps "nginx-app" not found
+[2025-04-30 14:48:16] 40s         Normal    Pulling                        pod/nginx-app-7dd8c588d7-rc5hx      Pulling image "nginx:latest"
+[2025-04-30 14:48:16] 40s         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-rc5hx
+[2025-04-30 14:48:16] 40s         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:48:16] 40s         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-rc5hx      Successfully assigned default/nginx-app-7dd8c588d7-rc5hx to worker7
+[2025-04-30 14:48:16] 39s         Normal    Started                        pod/nginx-app-7dd8c588d7-rc5hx      Started container nginx
+[2025-04-30 14:48:16] 39s         Normal    Created                        pod/nginx-app-7dd8c588d7-rc5hx      Created container nginx
+[2025-04-30 14:48:16] 39s         Normal    Pulled                         pod/nginx-app-7dd8c588d7-rc5hx      Successfully pulled image "nginx:latest" in 689ms (689ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:48:26] 55m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-8tp47      Successfully assigned default/nginx-app-7dd8c588d7-8tp47 to worker7
+[2025-04-30 14:48:26] 55m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:48:26] 55m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-8tp47
+[2025-04-30 14:48:26] 55m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-8tp47      Pulling image "nginx:latest"
+[2025-04-30 14:48:26] 55m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-8tp47      Successfully pulled image "nginx:latest" in 853ms (853ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:48:26] 55m         Normal    Created                        pod/nginx-app-7dd8c588d7-8tp47      Created container nginx
+[2025-04-30 14:48:26] 55m         Normal    Started                        pod/nginx-app-7dd8c588d7-8tp47      Started container nginx
+[2025-04-30 14:48:26] 38m         Normal    Killing                        pod/nginx-app-7dd8c588d7-8tp47      Stopping container nginx
+[2025-04-30 14:48:26] 27m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-g69m7      Pulling image "nginx:latest"
+[2025-04-30 14:48:26] 27m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-g69m7      Successfully assigned default/nginx-app-7dd8c588d7-g69m7 to worker7
+[2025-04-30 14:48:26] 27m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-g69m7
+[2025-04-30 14:48:26] 27m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:48:26] 27m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-g69m7      Successfully pulled image "nginx:latest" in 698ms (698ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:48:26] 27m         Normal    Created                        pod/nginx-app-7dd8c588d7-g69m7      Created container nginx
+[2025-04-30 14:48:26] 27m         Normal    Started                        pod/nginx-app-7dd8c588d7-g69m7      Started container nginx
+[2025-04-30 14:48:26] 9m55s       Normal    Killing                        pod/nginx-app-7dd8c588d7-g69m7      Stopping container nginx
+[2025-04-30 14:48:26] 9m54s       Warning   FailedGetScale                 horizontalpodautoscaler/nginx-hpa   deployments/scale.apps "nginx-app" not found
+[2025-04-30 14:48:26] 50s         Normal    Pulling                        pod/nginx-app-7dd8c588d7-rc5hx      Pulling image "nginx:latest"
+[2025-04-30 14:48:26] 50s         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-rc5hx
+[2025-04-30 14:48:26] 50s         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:48:26] 50s         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-rc5hx      Successfully assigned default/nginx-app-7dd8c588d7-rc5hx to worker7
+[2025-04-30 14:48:26] 49s         Normal    Started                        pod/nginx-app-7dd8c588d7-rc5hx      Started container nginx
+[2025-04-30 14:48:26] 49s         Normal    Created                        pod/nginx-app-7dd8c588d7-rc5hx      Created container nginx
+[2025-04-30 14:48:26] 49s         Normal    Pulled                         pod/nginx-app-7dd8c588d7-rc5hx      Successfully pulled image "nginx:latest" in 689ms (689ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:48:36] 56m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-8tp47      Successfully assigned default/nginx-app-7dd8c588d7-8tp47 to worker7
+[2025-04-30 14:48:36] 56m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:48:36] 56m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-8tp47
+[2025-04-30 14:48:36] 56m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-8tp47      Pulling image "nginx:latest"
+[2025-04-30 14:48:36] 56m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-8tp47      Successfully pulled image "nginx:latest" in 853ms (853ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:48:36] 56m         Normal    Created                        pod/nginx-app-7dd8c588d7-8tp47      Created container nginx
+[2025-04-30 14:48:36] 56m         Normal    Started                        pod/nginx-app-7dd8c588d7-8tp47      Started container nginx
+[2025-04-30 14:48:36] 38m         Normal    Killing                        pod/nginx-app-7dd8c588d7-8tp47      Stopping container nginx
+[2025-04-30 14:48:36] 27m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-g69m7      Pulling image "nginx:latest"
+[2025-04-30 14:48:36] 27m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-g69m7      Successfully assigned default/nginx-app-7dd8c588d7-g69m7 to worker7
+[2025-04-30 14:48:36] 27m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-g69m7
+[2025-04-30 14:48:36] 27m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:48:36] 27m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-g69m7      Successfully pulled image "nginx:latest" in 698ms (698ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:48:36] 27m         Normal    Created                        pod/nginx-app-7dd8c588d7-g69m7      Created container nginx
+[2025-04-30 14:48:36] 27m         Normal    Started                        pod/nginx-app-7dd8c588d7-g69m7      Started container nginx
+[2025-04-30 14:48:36] 10m         Normal    Killing                        pod/nginx-app-7dd8c588d7-g69m7      Stopping container nginx
+[2025-04-30 14:48:36] 10m         Warning   FailedGetScale                 horizontalpodautoscaler/nginx-hpa   deployments/scale.apps "nginx-app" not found
+[2025-04-30 14:48:36] 60s         Normal    Pulling                        pod/nginx-app-7dd8c588d7-rc5hx      Pulling image "nginx:latest"
+[2025-04-30 14:48:36] 60s         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-rc5hx
+[2025-04-30 14:48:36] 60s         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:48:36] 60s         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-rc5hx      Successfully assigned default/nginx-app-7dd8c588d7-rc5hx to worker7
+[2025-04-30 14:48:36] 59s         Normal    Started                        pod/nginx-app-7dd8c588d7-rc5hx      Started container nginx
+[2025-04-30 14:48:36] 59s         Normal    Created                        pod/nginx-app-7dd8c588d7-rc5hx      Created container nginx
+[2025-04-30 14:48:36] 59s         Normal    Pulled                         pod/nginx-app-7dd8c588d7-rc5hx      Successfully pulled image "nginx:latest" in 689ms (689ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:48:47] 56m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-8tp47      Successfully assigned default/nginx-app-7dd8c588d7-8tp47 to worker7
+[2025-04-30 14:48:47] 56m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:48:47] 56m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-8tp47
+[2025-04-30 14:48:47] 56m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-8tp47      Pulling image "nginx:latest"
+[2025-04-30 14:48:47] 56m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-8tp47      Successfully pulled image "nginx:latest" in 853ms (853ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:48:47] 56m         Normal    Created                        pod/nginx-app-7dd8c588d7-8tp47      Created container nginx
+[2025-04-30 14:48:47] 56m         Normal    Started                        pod/nginx-app-7dd8c588d7-8tp47      Started container nginx
+[2025-04-30 14:48:47] 38m         Normal    Killing                        pod/nginx-app-7dd8c588d7-8tp47      Stopping container nginx
+[2025-04-30 14:48:47] 27m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-g69m7      Pulling image "nginx:latest"
+[2025-04-30 14:48:47] 27m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-g69m7      Successfully assigned default/nginx-app-7dd8c588d7-g69m7 to worker7
+[2025-04-30 14:48:47] 27m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-g69m7
+[2025-04-30 14:48:47] 27m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:48:47] 27m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-g69m7      Successfully pulled image "nginx:latest" in 698ms (698ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:48:47] 27m         Normal    Created                        pod/nginx-app-7dd8c588d7-g69m7      Created container nginx
+[2025-04-30 14:48:47] 27m         Normal    Started                        pod/nginx-app-7dd8c588d7-g69m7      Started container nginx
+[2025-04-30 14:48:47] 10m         Normal    Killing                        pod/nginx-app-7dd8c588d7-g69m7      Stopping container nginx
+[2025-04-30 14:48:47] 10m         Warning   FailedGetScale                 horizontalpodautoscaler/nginx-hpa   deployments/scale.apps "nginx-app" not found
+[2025-04-30 14:48:47] 71s         Normal    Pulling                        pod/nginx-app-7dd8c588d7-rc5hx      Pulling image "nginx:latest"
+[2025-04-30 14:48:47] 71s         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-rc5hx
+[2025-04-30 14:48:47] 71s         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:48:47] 70s         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-rc5hx      Successfully assigned default/nginx-app-7dd8c588d7-rc5hx to worker7
+[2025-04-30 14:48:47] 70s         Normal    Started                        pod/nginx-app-7dd8c588d7-rc5hx      Started container nginx
+[2025-04-30 14:48:47] 70s         Normal    Created                        pod/nginx-app-7dd8c588d7-rc5hx      Created container nginx
+[2025-04-30 14:48:47] 70s         Normal    Pulled                         pod/nginx-app-7dd8c588d7-rc5hx      Successfully pulled image "nginx:latest" in 689ms (689ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:48:57] 56m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-8tp47      Successfully assigned default/nginx-app-7dd8c588d7-8tp47 to worker7
+[2025-04-30 14:48:57] 56m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:48:57] 56m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-8tp47
+[2025-04-30 14:48:57] 56m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-8tp47      Pulling image "nginx:latest"
+[2025-04-30 14:48:57] 56m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-8tp47      Successfully pulled image "nginx:latest" in 853ms (853ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:48:57] 56m         Normal    Created                        pod/nginx-app-7dd8c588d7-8tp47      Created container nginx
+[2025-04-30 14:48:57] 56m         Normal    Started                        pod/nginx-app-7dd8c588d7-8tp47      Started container nginx
+[2025-04-30 14:48:57] 38m         Normal    Killing                        pod/nginx-app-7dd8c588d7-8tp47      Stopping container nginx
+[2025-04-30 14:48:57] 27m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-g69m7      Pulling image "nginx:latest"
+[2025-04-30 14:48:57] 27m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-g69m7      Successfully assigned default/nginx-app-7dd8c588d7-g69m7 to worker7
+[2025-04-30 14:48:57] 27m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-g69m7
+[2025-04-30 14:48:57] 27m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:48:57] 27m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-g69m7      Successfully pulled image "nginx:latest" in 698ms (698ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:48:57] 27m         Normal    Created                        pod/nginx-app-7dd8c588d7-g69m7      Created container nginx
+[2025-04-30 14:48:57] 27m         Normal    Started                        pod/nginx-app-7dd8c588d7-g69m7      Started container nginx
+[2025-04-30 14:48:57] 10m         Normal    Killing                        pod/nginx-app-7dd8c588d7-g69m7      Stopping container nginx
+[2025-04-30 14:48:57] 10m         Warning   FailedGetScale                 horizontalpodautoscaler/nginx-hpa   deployments/scale.apps "nginx-app" not found
+[2025-04-30 14:48:57] 81s         Normal    Pulling                        pod/nginx-app-7dd8c588d7-rc5hx      Pulling image "nginx:latest"
+[2025-04-30 14:48:57] 81s         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-rc5hx
+[2025-04-30 14:48:57] 81s         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:48:57] 80s         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-rc5hx      Successfully assigned default/nginx-app-7dd8c588d7-rc5hx to worker7
+[2025-04-30 14:48:57] 80s         Normal    Started                        pod/nginx-app-7dd8c588d7-rc5hx      Started container nginx
+[2025-04-30 14:48:57] 80s         Normal    Created                        pod/nginx-app-7dd8c588d7-rc5hx      Created container nginx
+[2025-04-30 14:48:57] 80s         Normal    Pulled                         pod/nginx-app-7dd8c588d7-rc5hx      Successfully pulled image "nginx:latest" in 689ms (689ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:49:07] 56m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-8tp47      Successfully assigned default/nginx-app-7dd8c588d7-8tp47 to worker7
+[2025-04-30 14:49:07] 56m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:49:07] 56m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-8tp47
+[2025-04-30 14:49:07] 56m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-8tp47      Pulling image "nginx:latest"
+[2025-04-30 14:49:07] 56m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-8tp47      Successfully pulled image "nginx:latest" in 853ms (853ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:49:07] 56m         Normal    Created                        pod/nginx-app-7dd8c588d7-8tp47      Created container nginx
+[2025-04-30 14:49:07] 56m         Normal    Started                        pod/nginx-app-7dd8c588d7-8tp47      Started container nginx
+[2025-04-30 14:49:07] 38m         Normal    Killing                        pod/nginx-app-7dd8c588d7-8tp47      Stopping container nginx
+[2025-04-30 14:49:07] 28m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-g69m7      Pulling image "nginx:latest"
+[2025-04-30 14:49:07] 28m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-g69m7      Successfully assigned default/nginx-app-7dd8c588d7-g69m7 to worker7
+[2025-04-30 14:49:07] 28m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-g69m7
+[2025-04-30 14:49:07] 28m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:49:07] 28m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-g69m7      Successfully pulled image "nginx:latest" in 698ms (698ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:49:07] 28m         Normal    Created                        pod/nginx-app-7dd8c588d7-g69m7      Created container nginx
+[2025-04-30 14:49:07] 28m         Normal    Started                        pod/nginx-app-7dd8c588d7-g69m7      Started container nginx
+[2025-04-30 14:49:07] 10m         Normal    Killing                        pod/nginx-app-7dd8c588d7-g69m7      Stopping container nginx
+[2025-04-30 14:49:07] 10m         Warning   FailedGetScale                 horizontalpodautoscaler/nginx-hpa   deployments/scale.apps "nginx-app" not found
+[2025-04-30 14:49:07] 91s         Normal    Pulling                        pod/nginx-app-7dd8c588d7-rc5hx      Pulling image "nginx:latest"
+[2025-04-30 14:49:07] 91s         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-rc5hx
+[2025-04-30 14:49:07] 91s         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:49:07] 90s         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-rc5hx      Successfully assigned default/nginx-app-7dd8c588d7-rc5hx to worker7
+[2025-04-30 14:49:07] 90s         Normal    Started                        pod/nginx-app-7dd8c588d7-rc5hx      Started container nginx
+[2025-04-30 14:49:07] 90s         Normal    Created                        pod/nginx-app-7dd8c588d7-rc5hx      Created container nginx
+[2025-04-30 14:49:07] 90s         Normal    Pulled                         pod/nginx-app-7dd8c588d7-rc5hx      Successfully pulled image "nginx:latest" in 689ms (689ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:49:17] 56m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-8tp47      Successfully assigned default/nginx-app-7dd8c588d7-8tp47 to worker7
+[2025-04-30 14:49:17] 56m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:49:17] 56m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-8tp47
+[2025-04-30 14:49:17] 56m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-8tp47      Pulling image "nginx:latest"
+[2025-04-30 14:49:17] 56m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-8tp47      Successfully pulled image "nginx:latest" in 853ms (853ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:49:17] 56m         Normal    Created                        pod/nginx-app-7dd8c588d7-8tp47      Created container nginx
+[2025-04-30 14:49:17] 56m         Normal    Started                        pod/nginx-app-7dd8c588d7-8tp47      Started container nginx
+[2025-04-30 14:49:17] 39m         Normal    Killing                        pod/nginx-app-7dd8c588d7-8tp47      Stopping container nginx
+[2025-04-30 14:49:17] 28m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-g69m7      Pulling image "nginx:latest"
+[2025-04-30 14:49:17] 28m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-g69m7      Successfully assigned default/nginx-app-7dd8c588d7-g69m7 to worker7
+[2025-04-30 14:49:17] 28m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-g69m7
+[2025-04-30 14:49:17] 28m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:49:17] 28m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-g69m7      Successfully pulled image "nginx:latest" in 698ms (698ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:49:17] 28m         Normal    Created                        pod/nginx-app-7dd8c588d7-g69m7      Created container nginx
+[2025-04-30 14:49:17] 28m         Normal    Started                        pod/nginx-app-7dd8c588d7-g69m7      Started container nginx
+[2025-04-30 14:49:17] 10m         Normal    Killing                        pod/nginx-app-7dd8c588d7-g69m7      Stopping container nginx
+[2025-04-30 14:49:17] 10m         Warning   FailedGetScale                 horizontalpodautoscaler/nginx-hpa   deployments/scale.apps "nginx-app" not found
+[2025-04-30 14:49:17] 101s        Normal    Pulling                        pod/nginx-app-7dd8c588d7-rc5hx      Pulling image "nginx:latest"
+[2025-04-30 14:49:17] 101s        Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-rc5hx
+[2025-04-30 14:49:17] 101s        Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:49:17] 100s        Normal    Scheduled                      pod/nginx-app-7dd8c588d7-rc5hx      Successfully assigned default/nginx-app-7dd8c588d7-rc5hx to worker7
+[2025-04-30 14:49:17] 100s        Normal    Started                        pod/nginx-app-7dd8c588d7-rc5hx      Started container nginx
+[2025-04-30 14:49:17] 100s        Normal    Created                        pod/nginx-app-7dd8c588d7-rc5hx      Created container nginx
+[2025-04-30 14:49:17] 100s        Normal    Pulled                         pod/nginx-app-7dd8c588d7-rc5hx      Successfully pulled image "nginx:latest" in 689ms (689ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:49:27] 56m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-8tp47      Successfully assigned default/nginx-app-7dd8c588d7-8tp47 to worker7
+[2025-04-30 14:49:27] 56m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:49:27] 56m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-8tp47
+[2025-04-30 14:49:27] 56m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-8tp47      Pulling image "nginx:latest"
+[2025-04-30 14:49:27] 56m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-8tp47      Successfully pulled image "nginx:latest" in 853ms (853ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:49:27] 56m         Normal    Created                        pod/nginx-app-7dd8c588d7-8tp47      Created container nginx
+[2025-04-30 14:49:27] 56m         Normal    Started                        pod/nginx-app-7dd8c588d7-8tp47      Started container nginx
+[2025-04-30 14:49:27] 39m         Normal    Killing                        pod/nginx-app-7dd8c588d7-8tp47      Stopping container nginx
+[2025-04-30 14:49:27] 28m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-g69m7      Pulling image "nginx:latest"
+[2025-04-30 14:49:27] 28m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-g69m7      Successfully assigned default/nginx-app-7dd8c588d7-g69m7 to worker7
+[2025-04-30 14:49:27] 28m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-g69m7
+[2025-04-30 14:49:27] 28m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:49:27] 28m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-g69m7      Successfully pulled image "nginx:latest" in 698ms (698ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:49:27] 28m         Normal    Created                        pod/nginx-app-7dd8c588d7-g69m7      Created container nginx
+[2025-04-30 14:49:27] 28m         Normal    Started                        pod/nginx-app-7dd8c588d7-g69m7      Started container nginx
+[2025-04-30 14:49:27] 10m         Normal    Killing                        pod/nginx-app-7dd8c588d7-g69m7      Stopping container nginx
+[2025-04-30 14:49:27] 10m         Warning   FailedGetScale                 horizontalpodautoscaler/nginx-hpa   deployments/scale.apps "nginx-app" not found
+[2025-04-30 14:49:27] 111s        Normal    Pulling                        pod/nginx-app-7dd8c588d7-rc5hx      Pulling image "nginx:latest"
+[2025-04-30 14:49:27] 111s        Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-rc5hx
+[2025-04-30 14:49:27] 111s        Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:49:27] 110s        Normal    Scheduled                      pod/nginx-app-7dd8c588d7-rc5hx      Successfully assigned default/nginx-app-7dd8c588d7-rc5hx to worker7
+[2025-04-30 14:49:27] 110s        Normal    Started                        pod/nginx-app-7dd8c588d7-rc5hx      Started container nginx
+[2025-04-30 14:49:27] 110s        Normal    Created                        pod/nginx-app-7dd8c588d7-rc5hx      Created container nginx
+[2025-04-30 14:49:27] 110s        Normal    Pulled                         pod/nginx-app-7dd8c588d7-rc5hx      Successfully pulled image "nginx:latest" in 689ms (689ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:49:37] 57m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-8tp47      Successfully assigned default/nginx-app-7dd8c588d7-8tp47 to worker7
+[2025-04-30 14:49:37] 57m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:49:37] 57m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-8tp47
+[2025-04-30 14:49:37] 57m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-8tp47      Pulling image "nginx:latest"
+[2025-04-30 14:49:37] 57m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-8tp47      Successfully pulled image "nginx:latest" in 853ms (853ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:49:37] 57m         Normal    Created                        pod/nginx-app-7dd8c588d7-8tp47      Created container nginx
+[2025-04-30 14:49:37] 57m         Normal    Started                        pod/nginx-app-7dd8c588d7-8tp47      Started container nginx
+[2025-04-30 14:49:37] 39m         Normal    Killing                        pod/nginx-app-7dd8c588d7-8tp47      Stopping container nginx
+[2025-04-30 14:49:37] 28m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-g69m7      Pulling image "nginx:latest"
+[2025-04-30 14:49:37] 28m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-g69m7      Successfully assigned default/nginx-app-7dd8c588d7-g69m7 to worker7
+[2025-04-30 14:49:37] 28m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-g69m7
+[2025-04-30 14:49:37] 28m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:49:37] 28m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-g69m7      Successfully pulled image "nginx:latest" in 698ms (698ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:49:37] 28m         Normal    Created                        pod/nginx-app-7dd8c588d7-g69m7      Created container nginx
+[2025-04-30 14:49:37] 28m         Normal    Started                        pod/nginx-app-7dd8c588d7-g69m7      Started container nginx
+[2025-04-30 14:49:37] 11m         Normal    Killing                        pod/nginx-app-7dd8c588d7-g69m7      Stopping container nginx
+[2025-04-30 14:49:37] 11m         Warning   FailedGetScale                 horizontalpodautoscaler/nginx-hpa   deployments/scale.apps "nginx-app" not found
+[2025-04-30 14:49:37] 2m1s        Normal    Pulling                        pod/nginx-app-7dd8c588d7-rc5hx      Pulling image "nginx:latest"
+[2025-04-30 14:49:37] 2m1s        Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-rc5hx
+[2025-04-30 14:49:37] 2m1s        Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:49:37] 2m          Normal    Scheduled                      pod/nginx-app-7dd8c588d7-rc5hx      Successfully assigned default/nginx-app-7dd8c588d7-rc5hx to worker7
+[2025-04-30 14:49:37] 2m          Normal    Started                        pod/nginx-app-7dd8c588d7-rc5hx      Started container nginx
+[2025-04-30 14:49:37] 2m          Normal    Created                        pod/nginx-app-7dd8c588d7-rc5hx      Created container nginx
+[2025-04-30 14:49:37] 2m          Normal    Pulled                         pod/nginx-app-7dd8c588d7-rc5hx      Successfully pulled image "nginx:latest" in 689ms (689ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:49:47] 57m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-8tp47      Successfully assigned default/nginx-app-7dd8c588d7-8tp47 to worker7
+[2025-04-30 14:49:47] 57m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:49:47] 57m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-8tp47
+[2025-04-30 14:49:47] 57m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-8tp47      Pulling image "nginx:latest"
+[2025-04-30 14:49:47] 57m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-8tp47      Successfully pulled image "nginx:latest" in 853ms (853ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:49:47] 57m         Normal    Created                        pod/nginx-app-7dd8c588d7-8tp47      Created container nginx
+[2025-04-30 14:49:47] 57m         Normal    Started                        pod/nginx-app-7dd8c588d7-8tp47      Started container nginx
+[2025-04-30 14:49:47] 39m         Normal    Killing                        pod/nginx-app-7dd8c588d7-8tp47      Stopping container nginx
+[2025-04-30 14:49:47] 28m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-g69m7      Pulling image "nginx:latest"
+[2025-04-30 14:49:47] 28m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-g69m7      Successfully assigned default/nginx-app-7dd8c588d7-g69m7 to worker7
+[2025-04-30 14:49:47] 28m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-g69m7
+[2025-04-30 14:49:47] 28m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:49:47] 28m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-g69m7      Successfully pulled image "nginx:latest" in 698ms (698ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:49:47] 28m         Normal    Created                        pod/nginx-app-7dd8c588d7-g69m7      Created container nginx
+[2025-04-30 14:49:47] 28m         Normal    Started                        pod/nginx-app-7dd8c588d7-g69m7      Started container nginx
+[2025-04-30 14:49:47] 11m         Normal    Killing                        pod/nginx-app-7dd8c588d7-g69m7      Stopping container nginx
+[2025-04-30 14:49:47] 11m         Warning   FailedGetScale                 horizontalpodautoscaler/nginx-hpa   deployments/scale.apps "nginx-app" not found
+[2025-04-30 14:49:47] 2m11s       Normal    Pulling                        pod/nginx-app-7dd8c588d7-rc5hx      Pulling image "nginx:latest"
+[2025-04-30 14:49:47] 2m11s       Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-rc5hx
+[2025-04-30 14:49:47] 2m11s       Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:49:47] 2m10s       Normal    Scheduled                      pod/nginx-app-7dd8c588d7-rc5hx      Successfully assigned default/nginx-app-7dd8c588d7-rc5hx to worker7
+[2025-04-30 14:49:47] 2m10s       Normal    Started                        pod/nginx-app-7dd8c588d7-rc5hx      Started container nginx
+[2025-04-30 14:49:47] 2m10s       Normal    Created                        pod/nginx-app-7dd8c588d7-rc5hx      Created container nginx
+[2025-04-30 14:49:47] 2m10s       Normal    Pulled                         pod/nginx-app-7dd8c588d7-rc5hx      Successfully pulled image "nginx:latest" in 689ms (689ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:49:57] 57m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-8tp47      Successfully assigned default/nginx-app-7dd8c588d7-8tp47 to worker7
+[2025-04-30 14:49:57] 57m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:49:57] 57m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-8tp47
+[2025-04-30 14:49:57] 57m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-8tp47      Pulling image "nginx:latest"
+[2025-04-30 14:49:57] 57m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-8tp47      Successfully pulled image "nginx:latest" in 853ms (853ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:49:57] 57m         Normal    Created                        pod/nginx-app-7dd8c588d7-8tp47      Created container nginx
+[2025-04-30 14:49:57] 57m         Normal    Started                        pod/nginx-app-7dd8c588d7-8tp47      Started container nginx
+[2025-04-30 14:49:57] 39m         Normal    Killing                        pod/nginx-app-7dd8c588d7-8tp47      Stopping container nginx
+[2025-04-30 14:49:57] 28m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-g69m7      Pulling image "nginx:latest"
+[2025-04-30 14:49:57] 28m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-g69m7      Successfully assigned default/nginx-app-7dd8c588d7-g69m7 to worker7
+[2025-04-30 14:49:57] 28m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-g69m7
+[2025-04-30 14:49:57] 28m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:49:57] 28m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-g69m7      Successfully pulled image "nginx:latest" in 698ms (698ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:49:57] 28m         Normal    Created                        pod/nginx-app-7dd8c588d7-g69m7      Created container nginx
+[2025-04-30 14:49:57] 28m         Normal    Started                        pod/nginx-app-7dd8c588d7-g69m7      Started container nginx
+[2025-04-30 14:49:57] 11m         Normal    Killing                        pod/nginx-app-7dd8c588d7-g69m7      Stopping container nginx
+[2025-04-30 14:49:57] 11m         Warning   FailedGetScale                 horizontalpodautoscaler/nginx-hpa   deployments/scale.apps "nginx-app" not found
+[2025-04-30 14:49:57] 2m21s       Normal    Pulling                        pod/nginx-app-7dd8c588d7-rc5hx      Pulling image "nginx:latest"
+[2025-04-30 14:49:57] 2m21s       Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-rc5hx
+[2025-04-30 14:49:57] 2m21s       Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:49:57] 2m20s       Normal    Scheduled                      pod/nginx-app-7dd8c588d7-rc5hx      Successfully assigned default/nginx-app-7dd8c588d7-rc5hx to worker7
+[2025-04-30 14:49:57] 2m20s       Normal    Started                        pod/nginx-app-7dd8c588d7-rc5hx      Started container nginx
+[2025-04-30 14:49:57] 2m20s       Normal    Created                        pod/nginx-app-7dd8c588d7-rc5hx      Created container nginx
+[2025-04-30 14:49:57] 2m20s       Normal    Pulled                         pod/nginx-app-7dd8c588d7-rc5hx      Successfully pulled image "nginx:latest" in 689ms (689ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:50:07] 57m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-8tp47      Successfully assigned default/nginx-app-7dd8c588d7-8tp47 to worker7
+[2025-04-30 14:50:07] 57m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:50:07] 57m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-8tp47
+[2025-04-30 14:50:07] 57m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-8tp47      Pulling image "nginx:latest"
+[2025-04-30 14:50:07] 57m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-8tp47      Successfully pulled image "nginx:latest" in 853ms (853ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:50:07] 57m         Normal    Created                        pod/nginx-app-7dd8c588d7-8tp47      Created container nginx
+[2025-04-30 14:50:07] 57m         Normal    Started                        pod/nginx-app-7dd8c588d7-8tp47      Started container nginx
+[2025-04-30 14:50:07] 39m         Normal    Killing                        pod/nginx-app-7dd8c588d7-8tp47      Stopping container nginx
+[2025-04-30 14:50:07] 29m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-g69m7      Pulling image "nginx:latest"
+[2025-04-30 14:50:07] 29m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-g69m7      Successfully assigned default/nginx-app-7dd8c588d7-g69m7 to worker7
+[2025-04-30 14:50:07] 29m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-g69m7
+[2025-04-30 14:50:07] 29m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:50:07] 29m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-g69m7      Successfully pulled image "nginx:latest" in 698ms (698ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:50:07] 29m         Normal    Created                        pod/nginx-app-7dd8c588d7-g69m7      Created container nginx
+[2025-04-30 14:50:07] 29m         Normal    Started                        pod/nginx-app-7dd8c588d7-g69m7      Started container nginx
+[2025-04-30 14:50:07] 11m         Normal    Killing                        pod/nginx-app-7dd8c588d7-g69m7      Stopping container nginx
+[2025-04-30 14:50:07] 11m         Warning   FailedGetScale                 horizontalpodautoscaler/nginx-hpa   deployments/scale.apps "nginx-app" not found
+[2025-04-30 14:50:07] 2m31s       Normal    Pulling                        pod/nginx-app-7dd8c588d7-rc5hx      Pulling image "nginx:latest"
+[2025-04-30 14:50:07] 2m31s       Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-rc5hx
+[2025-04-30 14:50:07] 2m31s       Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:50:07] 2m30s       Normal    Scheduled                      pod/nginx-app-7dd8c588d7-rc5hx      Successfully assigned default/nginx-app-7dd8c588d7-rc5hx to worker7
+[2025-04-30 14:50:07] 2m30s       Normal    Started                        pod/nginx-app-7dd8c588d7-rc5hx      Started container nginx
+[2025-04-30 14:50:07] 2m30s       Normal    Created                        pod/nginx-app-7dd8c588d7-rc5hx      Created container nginx
+[2025-04-30 14:50:07] 2m30s       Normal    Pulled                         pod/nginx-app-7dd8c588d7-rc5hx      Successfully pulled image "nginx:latest" in 689ms (689ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:50:17] 57m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-8tp47      Successfully assigned default/nginx-app-7dd8c588d7-8tp47 to worker7
+[2025-04-30 14:50:17] 57m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:50:17] 57m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-8tp47
+[2025-04-30 14:50:17] 57m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-8tp47      Pulling image "nginx:latest"
+[2025-04-30 14:50:17] 57m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-8tp47      Successfully pulled image "nginx:latest" in 853ms (853ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:50:17] 57m         Normal    Created                        pod/nginx-app-7dd8c588d7-8tp47      Created container nginx
+[2025-04-30 14:50:17] 57m         Normal    Started                        pod/nginx-app-7dd8c588d7-8tp47      Started container nginx
+[2025-04-30 14:50:17] 40m         Normal    Killing                        pod/nginx-app-7dd8c588d7-8tp47      Stopping container nginx
+[2025-04-30 14:50:17] 29m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-g69m7      Pulling image "nginx:latest"
+[2025-04-30 14:50:17] 29m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-g69m7      Successfully assigned default/nginx-app-7dd8c588d7-g69m7 to worker7
+[2025-04-30 14:50:17] 29m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-g69m7
+[2025-04-30 14:50:17] 29m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:50:17] 29m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-g69m7      Successfully pulled image "nginx:latest" in 698ms (698ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:50:17] 29m         Normal    Created                        pod/nginx-app-7dd8c588d7-g69m7      Created container nginx
+[2025-04-30 14:50:17] 29m         Normal    Started                        pod/nginx-app-7dd8c588d7-g69m7      Started container nginx
+[2025-04-30 14:50:17] 11m         Normal    Killing                        pod/nginx-app-7dd8c588d7-g69m7      Stopping container nginx
+[2025-04-30 14:50:17] 11m         Warning   FailedGetScale                 horizontalpodautoscaler/nginx-hpa   deployments/scale.apps "nginx-app" not found
+[2025-04-30 14:50:17] 2m41s       Normal    Pulling                        pod/nginx-app-7dd8c588d7-rc5hx      Pulling image "nginx:latest"
+[2025-04-30 14:50:17] 2m41s       Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-rc5hx
+[2025-04-30 14:50:17] 2m41s       Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:50:17] 2m40s       Normal    Scheduled                      pod/nginx-app-7dd8c588d7-rc5hx      Successfully assigned default/nginx-app-7dd8c588d7-rc5hx to worker7
+[2025-04-30 14:50:17] 2m40s       Normal    Started                        pod/nginx-app-7dd8c588d7-rc5hx      Started container nginx
+[2025-04-30 14:50:17] 2m40s       Normal    Created                        pod/nginx-app-7dd8c588d7-rc5hx      Created container nginx
+[2025-04-30 14:50:17] 2m40s       Normal    Pulled                         pod/nginx-app-7dd8c588d7-rc5hx      Successfully pulled image "nginx:latest" in 689ms (689ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:50:27] 57m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-8tp47      Successfully assigned default/nginx-app-7dd8c588d7-8tp47 to worker7
+[2025-04-30 14:50:27] 57m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:50:27] 57m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-8tp47
+[2025-04-30 14:50:27] 57m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-8tp47      Pulling image "nginx:latest"
+[2025-04-30 14:50:27] 57m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-8tp47      Successfully pulled image "nginx:latest" in 853ms (853ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:50:27] 57m         Normal    Created                        pod/nginx-app-7dd8c588d7-8tp47      Created container nginx
+[2025-04-30 14:50:27] 57m         Normal    Started                        pod/nginx-app-7dd8c588d7-8tp47      Started container nginx
+[2025-04-30 14:50:27] 40m         Normal    Killing                        pod/nginx-app-7dd8c588d7-8tp47      Stopping container nginx
+[2025-04-30 14:50:27] 29m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-g69m7      Pulling image "nginx:latest"
+[2025-04-30 14:50:27] 29m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-g69m7      Successfully assigned default/nginx-app-7dd8c588d7-g69m7 to worker7
+[2025-04-30 14:50:27] 29m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-g69m7
+[2025-04-30 14:50:27] 29m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:50:27] 29m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-g69m7      Successfully pulled image "nginx:latest" in 698ms (698ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:50:27] 29m         Normal    Created                        pod/nginx-app-7dd8c588d7-g69m7      Created container nginx
+[2025-04-30 14:50:27] 29m         Normal    Started                        pod/nginx-app-7dd8c588d7-g69m7      Started container nginx
+[2025-04-30 14:50:27] 11m         Normal    Killing                        pod/nginx-app-7dd8c588d7-g69m7      Stopping container nginx
+[2025-04-30 14:50:27] 11m         Warning   FailedGetScale                 horizontalpodautoscaler/nginx-hpa   deployments/scale.apps "nginx-app" not found
+[2025-04-30 14:50:27] 2m51s       Normal    Pulling                        pod/nginx-app-7dd8c588d7-rc5hx      Pulling image "nginx:latest"
+[2025-04-30 14:50:27] 2m51s       Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-rc5hx
+[2025-04-30 14:50:27] 2m51s       Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:50:27] 2m50s       Normal    Scheduled                      pod/nginx-app-7dd8c588d7-rc5hx      Successfully assigned default/nginx-app-7dd8c588d7-rc5hx to worker7
+[2025-04-30 14:50:27] 2m50s       Normal    Started                        pod/nginx-app-7dd8c588d7-rc5hx      Started container nginx
+[2025-04-30 14:50:27] 2m50s       Normal    Created                        pod/nginx-app-7dd8c588d7-rc5hx      Created container nginx
+[2025-04-30 14:50:27] 2m50s       Normal    Pulled                         pod/nginx-app-7dd8c588d7-rc5hx      Successfully pulled image "nginx:latest" in 689ms (689ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:50:37] 58m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-8tp47      Successfully assigned default/nginx-app-7dd8c588d7-8tp47 to worker7
+[2025-04-30 14:50:37] 58m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:50:37] 58m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-8tp47
+[2025-04-30 14:50:37] 58m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-8tp47      Pulling image "nginx:latest"
+[2025-04-30 14:50:37] 58m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-8tp47      Successfully pulled image "nginx:latest" in 853ms (853ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:50:37] 58m         Normal    Created                        pod/nginx-app-7dd8c588d7-8tp47      Created container nginx
+[2025-04-30 14:50:37] 58m         Normal    Started                        pod/nginx-app-7dd8c588d7-8tp47      Started container nginx
+[2025-04-30 14:50:37] 40m         Normal    Killing                        pod/nginx-app-7dd8c588d7-8tp47      Stopping container nginx
+[2025-04-30 14:50:37] 29m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-g69m7      Pulling image "nginx:latest"
+[2025-04-30 14:50:37] 29m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-g69m7      Successfully assigned default/nginx-app-7dd8c588d7-g69m7 to worker7
+[2025-04-30 14:50:37] 29m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-g69m7
+[2025-04-30 14:50:37] 29m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:50:37] 29m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-g69m7      Successfully pulled image "nginx:latest" in 698ms (698ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:50:37] 29m         Normal    Created                        pod/nginx-app-7dd8c588d7-g69m7      Created container nginx
+[2025-04-30 14:50:37] 29m         Normal    Started                        pod/nginx-app-7dd8c588d7-g69m7      Started container nginx
+[2025-04-30 14:50:37] 12m         Normal    Killing                        pod/nginx-app-7dd8c588d7-g69m7      Stopping container nginx
+[2025-04-30 14:50:37] 12m         Warning   FailedGetScale                 horizontalpodautoscaler/nginx-hpa   deployments/scale.apps "nginx-app" not found
+[2025-04-30 14:50:37] 3m1s        Normal    Pulling                        pod/nginx-app-7dd8c588d7-rc5hx      Pulling image "nginx:latest"
+[2025-04-30 14:50:37] 3m1s        Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-rc5hx
+[2025-04-30 14:50:37] 3m1s        Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:50:37] 3m          Normal    Scheduled                      pod/nginx-app-7dd8c588d7-rc5hx      Successfully assigned default/nginx-app-7dd8c588d7-rc5hx to worker7
+[2025-04-30 14:50:37] 3m          Normal    Started                        pod/nginx-app-7dd8c588d7-rc5hx      Started container nginx
+[2025-04-30 14:50:37] 3m          Normal    Created                        pod/nginx-app-7dd8c588d7-rc5hx      Created container nginx
+[2025-04-30 14:50:37] 3m          Normal    Pulled                         pod/nginx-app-7dd8c588d7-rc5hx      Successfully pulled image "nginx:latest" in 689ms (689ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:50:47] 58m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-8tp47      Successfully assigned default/nginx-app-7dd8c588d7-8tp47 to worker7
+[2025-04-30 14:50:47] 58m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:50:47] 58m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-8tp47
+[2025-04-30 14:50:47] 58m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-8tp47      Pulling image "nginx:latest"
+[2025-04-30 14:50:47] 58m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-8tp47      Successfully pulled image "nginx:latest" in 853ms (853ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:50:47] 58m         Normal    Created                        pod/nginx-app-7dd8c588d7-8tp47      Created container nginx
+[2025-04-30 14:50:47] 58m         Normal    Started                        pod/nginx-app-7dd8c588d7-8tp47      Started container nginx
+[2025-04-30 14:50:47] 40m         Normal    Killing                        pod/nginx-app-7dd8c588d7-8tp47      Stopping container nginx
+[2025-04-30 14:50:47] 29m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-g69m7      Pulling image "nginx:latest"
+[2025-04-30 14:50:47] 29m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-g69m7      Successfully assigned default/nginx-app-7dd8c588d7-g69m7 to worker7
+[2025-04-30 14:50:47] 29m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-g69m7
+[2025-04-30 14:50:47] 29m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:50:47] 29m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-g69m7      Successfully pulled image "nginx:latest" in 698ms (698ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:50:47] 29m         Normal    Created                        pod/nginx-app-7dd8c588d7-g69m7      Created container nginx
+[2025-04-30 14:50:47] 29m         Normal    Started                        pod/nginx-app-7dd8c588d7-g69m7      Started container nginx
+[2025-04-30 14:50:47] 12m         Normal    Killing                        pod/nginx-app-7dd8c588d7-g69m7      Stopping container nginx
+[2025-04-30 14:50:47] 12m         Warning   FailedGetScale                 horizontalpodautoscaler/nginx-hpa   deployments/scale.apps "nginx-app" not found
+[2025-04-30 14:50:47] 3m11s       Normal    Pulling                        pod/nginx-app-7dd8c588d7-rc5hx      Pulling image "nginx:latest"
+[2025-04-30 14:50:47] 3m11s       Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-rc5hx
+[2025-04-30 14:50:47] 3m11s       Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:50:47] 3m11s       Normal    Scheduled                      pod/nginx-app-7dd8c588d7-rc5hx      Successfully assigned default/nginx-app-7dd8c588d7-rc5hx to worker7
+[2025-04-30 14:50:47] 3m10s       Normal    Started                        pod/nginx-app-7dd8c588d7-rc5hx      Started container nginx
+[2025-04-30 14:50:47] 3m10s       Normal    Created                        pod/nginx-app-7dd8c588d7-rc5hx      Created container nginx
+[2025-04-30 14:50:47] 3m10s       Normal    Pulled                         pod/nginx-app-7dd8c588d7-rc5hx      Successfully pulled image "nginx:latest" in 689ms (689ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:50:57] 58m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-8tp47      Successfully assigned default/nginx-app-7dd8c588d7-8tp47 to worker7
+[2025-04-30 14:50:57] 58m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:50:57] 58m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-8tp47
+[2025-04-30 14:50:57] 58m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-8tp47      Pulling image "nginx:latest"
+[2025-04-30 14:50:57] 58m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-8tp47      Successfully pulled image "nginx:latest" in 853ms (853ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:50:57] 58m         Normal    Created                        pod/nginx-app-7dd8c588d7-8tp47      Created container nginx
+[2025-04-30 14:50:57] 58m         Normal    Started                        pod/nginx-app-7dd8c588d7-8tp47      Started container nginx
+[2025-04-30 14:50:57] 40m         Normal    Killing                        pod/nginx-app-7dd8c588d7-8tp47      Stopping container nginx
+[2025-04-30 14:50:57] 29m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-g69m7      Pulling image "nginx:latest"
+[2025-04-30 14:50:57] 29m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-g69m7      Successfully assigned default/nginx-app-7dd8c588d7-g69m7 to worker7
+[2025-04-30 14:50:57] 29m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-g69m7
+[2025-04-30 14:50:57] 29m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:50:57] 29m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-g69m7      Successfully pulled image "nginx:latest" in 698ms (698ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:50:57] 29m         Normal    Created                        pod/nginx-app-7dd8c588d7-g69m7      Created container nginx
+[2025-04-30 14:50:57] 29m         Normal    Started                        pod/nginx-app-7dd8c588d7-g69m7      Started container nginx
+[2025-04-30 14:50:57] 12m         Normal    Killing                        pod/nginx-app-7dd8c588d7-g69m7      Stopping container nginx
+[2025-04-30 14:50:57] 12m         Warning   FailedGetScale                 horizontalpodautoscaler/nginx-hpa   deployments/scale.apps "nginx-app" not found
+[2025-04-30 14:50:57] 3m21s       Normal    Pulling                        pod/nginx-app-7dd8c588d7-rc5hx      Pulling image "nginx:latest"
+[2025-04-30 14:50:57] 3m21s       Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-rc5hx
+[2025-04-30 14:50:57] 3m21s       Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:50:57] 3m21s       Normal    Scheduled                      pod/nginx-app-7dd8c588d7-rc5hx      Successfully assigned default/nginx-app-7dd8c588d7-rc5hx to worker7
+[2025-04-30 14:50:57] 3m20s       Normal    Started                        pod/nginx-app-7dd8c588d7-rc5hx      Started container nginx
+[2025-04-30 14:50:57] 3m20s       Normal    Created                        pod/nginx-app-7dd8c588d7-rc5hx      Created container nginx
+[2025-04-30 14:50:57] 3m20s       Normal    Pulled                         pod/nginx-app-7dd8c588d7-rc5hx      Successfully pulled image "nginx:latest" in 689ms (689ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:51:07] 58m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-8tp47      Successfully assigned default/nginx-app-7dd8c588d7-8tp47 to worker7
+[2025-04-30 14:51:07] 58m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:51:07] 58m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-8tp47
+[2025-04-30 14:51:07] 58m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-8tp47      Pulling image "nginx:latest"
+[2025-04-30 14:51:07] 58m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-8tp47      Successfully pulled image "nginx:latest" in 853ms (853ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:51:07] 58m         Normal    Created                        pod/nginx-app-7dd8c588d7-8tp47      Created container nginx
+[2025-04-30 14:51:07] 58m         Normal    Started                        pod/nginx-app-7dd8c588d7-8tp47      Started container nginx
+[2025-04-30 14:51:07] 40m         Normal    Killing                        pod/nginx-app-7dd8c588d7-8tp47      Stopping container nginx
+[2025-04-30 14:51:07] 30m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-g69m7      Pulling image "nginx:latest"
+[2025-04-30 14:51:07] 30m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-g69m7      Successfully assigned default/nginx-app-7dd8c588d7-g69m7 to worker7
+[2025-04-30 14:51:07] 30m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-g69m7
+[2025-04-30 14:51:07] 30m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:51:07] 30m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-g69m7      Successfully pulled image "nginx:latest" in 698ms (698ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:51:07] 30m         Normal    Created                        pod/nginx-app-7dd8c588d7-g69m7      Created container nginx
+[2025-04-30 14:51:07] 30m         Normal    Started                        pod/nginx-app-7dd8c588d7-g69m7      Started container nginx
+[2025-04-30 14:51:07] 12m         Normal    Killing                        pod/nginx-app-7dd8c588d7-g69m7      Stopping container nginx
+[2025-04-30 14:51:07] 12m         Warning   FailedGetScale                 horizontalpodautoscaler/nginx-hpa   deployments/scale.apps "nginx-app" not found
+[2025-04-30 14:51:07] 3m31s       Normal    Pulling                        pod/nginx-app-7dd8c588d7-rc5hx      Pulling image "nginx:latest"
+[2025-04-30 14:51:07] 3m31s       Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-rc5hx
+[2025-04-30 14:51:07] 3m31s       Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:51:07] 3m31s       Normal    Scheduled                      pod/nginx-app-7dd8c588d7-rc5hx      Successfully assigned default/nginx-app-7dd8c588d7-rc5hx to worker7
+[2025-04-30 14:51:07] 3m30s       Normal    Started                        pod/nginx-app-7dd8c588d7-rc5hx      Started container nginx
+[2025-04-30 14:51:07] 3m30s       Normal    Created                        pod/nginx-app-7dd8c588d7-rc5hx      Created container nginx
+[2025-04-30 14:51:07] 3m30s       Normal    Pulled                         pod/nginx-app-7dd8c588d7-rc5hx      Successfully pulled image "nginx:latest" in 689ms (689ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:51:17] 58m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-8tp47      Successfully assigned default/nginx-app-7dd8c588d7-8tp47 to worker7
+[2025-04-30 14:51:17] 58m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:51:17] 58m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-8tp47
+[2025-04-30 14:51:17] 58m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-8tp47      Pulling image "nginx:latest"
+[2025-04-30 14:51:17] 58m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-8tp47      Successfully pulled image "nginx:latest" in 853ms (853ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:51:17] 58m         Normal    Created                        pod/nginx-app-7dd8c588d7-8tp47      Created container nginx
+[2025-04-30 14:51:17] 58m         Normal    Started                        pod/nginx-app-7dd8c588d7-8tp47      Started container nginx
+[2025-04-30 14:51:17] 41m         Normal    Killing                        pod/nginx-app-7dd8c588d7-8tp47      Stopping container nginx
+[2025-04-30 14:51:17] 30m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-g69m7      Pulling image "nginx:latest"
+[2025-04-30 14:51:17] 30m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-g69m7      Successfully assigned default/nginx-app-7dd8c588d7-g69m7 to worker7
+[2025-04-30 14:51:17] 30m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-g69m7
+[2025-04-30 14:51:17] 30m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:51:17] 30m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-g69m7      Successfully pulled image "nginx:latest" in 698ms (698ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:51:17] 30m         Normal    Created                        pod/nginx-app-7dd8c588d7-g69m7      Created container nginx
+[2025-04-30 14:51:17] 30m         Normal    Started                        pod/nginx-app-7dd8c588d7-g69m7      Started container nginx
+[2025-04-30 14:51:17] 12m         Normal    Killing                        pod/nginx-app-7dd8c588d7-g69m7      Stopping container nginx
+[2025-04-30 14:51:17] 12m         Warning   FailedGetScale                 horizontalpodautoscaler/nginx-hpa   deployments/scale.apps "nginx-app" not found
+[2025-04-30 14:51:17] 3m41s       Normal    Pulling                        pod/nginx-app-7dd8c588d7-rc5hx      Pulling image "nginx:latest"
+[2025-04-30 14:51:17] 3m41s       Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-rc5hx
+[2025-04-30 14:51:17] 3m41s       Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:51:17] 3m41s       Normal    Scheduled                      pod/nginx-app-7dd8c588d7-rc5hx      Successfully assigned default/nginx-app-7dd8c588d7-rc5hx to worker7
+[2025-04-30 14:51:17] 3m40s       Normal    Started                        pod/nginx-app-7dd8c588d7-rc5hx      Started container nginx
+[2025-04-30 14:51:17] 3m40s       Normal    Created                        pod/nginx-app-7dd8c588d7-rc5hx      Created container nginx
+[2025-04-30 14:51:17] 3m40s       Normal    Pulled                         pod/nginx-app-7dd8c588d7-rc5hx      Successfully pulled image "nginx:latest" in 689ms (689ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:51:27] 58m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-8tp47      Successfully assigned default/nginx-app-7dd8c588d7-8tp47 to worker7
+[2025-04-30 14:51:27] 58m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:51:27] 58m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-8tp47
+[2025-04-30 14:51:27] 58m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-8tp47      Pulling image "nginx:latest"
+[2025-04-30 14:51:27] 58m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-8tp47      Successfully pulled image "nginx:latest" in 853ms (853ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:51:27] 58m         Normal    Created                        pod/nginx-app-7dd8c588d7-8tp47      Created container nginx
+[2025-04-30 14:51:27] 58m         Normal    Started                        pod/nginx-app-7dd8c588d7-8tp47      Started container nginx
+[2025-04-30 14:51:27] 41m         Normal    Killing                        pod/nginx-app-7dd8c588d7-8tp47      Stopping container nginx
+[2025-04-30 14:51:27] 30m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-g69m7      Pulling image "nginx:latest"
+[2025-04-30 14:51:27] 30m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-g69m7      Successfully assigned default/nginx-app-7dd8c588d7-g69m7 to worker7
+[2025-04-30 14:51:27] 30m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-g69m7
+[2025-04-30 14:51:27] 30m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:51:27] 30m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-g69m7      Successfully pulled image "nginx:latest" in 698ms (698ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:51:27] 30m         Normal    Created                        pod/nginx-app-7dd8c588d7-g69m7      Created container nginx
+[2025-04-30 14:51:27] 30m         Normal    Started                        pod/nginx-app-7dd8c588d7-g69m7      Started container nginx
+[2025-04-30 14:51:27] 12m         Normal    Killing                        pod/nginx-app-7dd8c588d7-g69m7      Stopping container nginx
+[2025-04-30 14:51:27] 12m         Warning   FailedGetScale                 horizontalpodautoscaler/nginx-hpa   deployments/scale.apps "nginx-app" not found
+[2025-04-30 14:51:27] 3m51s       Normal    Pulling                        pod/nginx-app-7dd8c588d7-rc5hx      Pulling image "nginx:latest"
+[2025-04-30 14:51:27] 3m51s       Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-rc5hx
+[2025-04-30 14:51:27] 3m51s       Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:51:27] 3m51s       Normal    Scheduled                      pod/nginx-app-7dd8c588d7-rc5hx      Successfully assigned default/nginx-app-7dd8c588d7-rc5hx to worker7
+[2025-04-30 14:51:27] 3m50s       Normal    Started                        pod/nginx-app-7dd8c588d7-rc5hx      Started container nginx
+[2025-04-30 14:51:27] 3m50s       Normal    Created                        pod/nginx-app-7dd8c588d7-rc5hx      Created container nginx
+[2025-04-30 14:51:27] 3m50s       Normal    Pulled                         pod/nginx-app-7dd8c588d7-rc5hx      Successfully pulled image "nginx:latest" in 689ms (689ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:51:37] 59m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-8tp47      Successfully assigned default/nginx-app-7dd8c588d7-8tp47 to worker7
+[2025-04-30 14:51:37] 59m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:51:37] 59m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-8tp47
+[2025-04-30 14:51:37] 59m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-8tp47      Pulling image "nginx:latest"
+[2025-04-30 14:51:37] 59m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-8tp47      Successfully pulled image "nginx:latest" in 853ms (853ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:51:37] 59m         Normal    Created                        pod/nginx-app-7dd8c588d7-8tp47      Created container nginx
+[2025-04-30 14:51:37] 59m         Normal    Started                        pod/nginx-app-7dd8c588d7-8tp47      Started container nginx
+[2025-04-30 14:51:37] 41m         Normal    Killing                        pod/nginx-app-7dd8c588d7-8tp47      Stopping container nginx
+[2025-04-30 14:51:37] 30m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-g69m7      Pulling image "nginx:latest"
+[2025-04-30 14:51:37] 30m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-g69m7      Successfully assigned default/nginx-app-7dd8c588d7-g69m7 to worker7
+[2025-04-30 14:51:37] 30m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-g69m7
+[2025-04-30 14:51:37] 30m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:51:37] 30m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-g69m7      Successfully pulled image "nginx:latest" in 698ms (698ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:51:37] 30m         Normal    Created                        pod/nginx-app-7dd8c588d7-g69m7      Created container nginx
+[2025-04-30 14:51:37] 30m         Normal    Started                        pod/nginx-app-7dd8c588d7-g69m7      Started container nginx
+[2025-04-30 14:51:37] 13m         Normal    Killing                        pod/nginx-app-7dd8c588d7-g69m7      Stopping container nginx
+[2025-04-30 14:51:37] 13m         Warning   FailedGetScale                 horizontalpodautoscaler/nginx-hpa   deployments/scale.apps "nginx-app" not found
+[2025-04-30 14:51:37] 4m1s        Normal    Pulling                        pod/nginx-app-7dd8c588d7-rc5hx      Pulling image "nginx:latest"
+[2025-04-30 14:51:37] 4m1s        Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-rc5hx
+[2025-04-30 14:51:37] 4m1s        Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:51:37] 4m1s        Normal    Scheduled                      pod/nginx-app-7dd8c588d7-rc5hx      Successfully assigned default/nginx-app-7dd8c588d7-rc5hx to worker7
+[2025-04-30 14:51:37] 4m          Normal    Started                        pod/nginx-app-7dd8c588d7-rc5hx      Started container nginx
+[2025-04-30 14:51:37] 4m          Normal    Created                        pod/nginx-app-7dd8c588d7-rc5hx      Created container nginx
+[2025-04-30 14:51:37] 4m          Normal    Pulled                         pod/nginx-app-7dd8c588d7-rc5hx      Successfully pulled image "nginx:latest" in 689ms (689ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:51:47] 59m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-8tp47      Successfully assigned default/nginx-app-7dd8c588d7-8tp47 to worker7
+[2025-04-30 14:51:47] 59m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:51:47] 59m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-8tp47
+[2025-04-30 14:51:47] 59m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-8tp47      Pulling image "nginx:latest"
+[2025-04-30 14:51:47] 59m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-8tp47      Successfully pulled image "nginx:latest" in 853ms (853ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:51:47] 59m         Normal    Created                        pod/nginx-app-7dd8c588d7-8tp47      Created container nginx
+[2025-04-30 14:51:47] 59m         Normal    Started                        pod/nginx-app-7dd8c588d7-8tp47      Started container nginx
+[2025-04-30 14:51:47] 41m         Normal    Killing                        pod/nginx-app-7dd8c588d7-8tp47      Stopping container nginx
+[2025-04-30 14:51:47] 30m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-g69m7      Pulling image "nginx:latest"
+[2025-04-30 14:51:47] 30m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-g69m7      Successfully assigned default/nginx-app-7dd8c588d7-g69m7 to worker7
+[2025-04-30 14:51:47] 30m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-g69m7
+[2025-04-30 14:51:47] 30m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:51:47] 30m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-g69m7      Successfully pulled image "nginx:latest" in 698ms (698ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:51:47] 30m         Normal    Created                        pod/nginx-app-7dd8c588d7-g69m7      Created container nginx
+[2025-04-30 14:51:47] 30m         Normal    Started                        pod/nginx-app-7dd8c588d7-g69m7      Started container nginx
+[2025-04-30 14:51:47] 13m         Normal    Killing                        pod/nginx-app-7dd8c588d7-g69m7      Stopping container nginx
+[2025-04-30 14:51:47] 13m         Warning   FailedGetScale                 horizontalpodautoscaler/nginx-hpa   deployments/scale.apps "nginx-app" not found
+[2025-04-30 14:51:47] 4m11s       Normal    Pulling                        pod/nginx-app-7dd8c588d7-rc5hx      Pulling image "nginx:latest"
+[2025-04-30 14:51:47] 4m11s       Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-rc5hx
+[2025-04-30 14:51:47] 4m11s       Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:51:47] 4m11s       Normal    Scheduled                      pod/nginx-app-7dd8c588d7-rc5hx      Successfully assigned default/nginx-app-7dd8c588d7-rc5hx to worker7
+[2025-04-30 14:51:47] 4m10s       Normal    Started                        pod/nginx-app-7dd8c588d7-rc5hx      Started container nginx
+[2025-04-30 14:51:47] 4m10s       Normal    Created                        pod/nginx-app-7dd8c588d7-rc5hx      Created container nginx
+[2025-04-30 14:51:47] 4m10s       Normal    Pulled                         pod/nginx-app-7dd8c588d7-rc5hx      Successfully pulled image "nginx:latest" in 689ms (689ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:51:57] 59m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-8tp47      Successfully assigned default/nginx-app-7dd8c588d7-8tp47 to worker7
+[2025-04-30 14:51:57] 59m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:51:57] 59m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-8tp47
+[2025-04-30 14:51:57] 59m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-8tp47      Pulling image "nginx:latest"
+[2025-04-30 14:51:57] 59m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-8tp47      Successfully pulled image "nginx:latest" in 853ms (853ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:51:57] 59m         Normal    Created                        pod/nginx-app-7dd8c588d7-8tp47      Created container nginx
+[2025-04-30 14:51:57] 59m         Normal    Started                        pod/nginx-app-7dd8c588d7-8tp47      Started container nginx
+[2025-04-30 14:51:57] 41m         Normal    Killing                        pod/nginx-app-7dd8c588d7-8tp47      Stopping container nginx
+[2025-04-30 14:51:57] 30m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-g69m7      Pulling image "nginx:latest"
+[2025-04-30 14:51:57] 30m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-g69m7      Successfully assigned default/nginx-app-7dd8c588d7-g69m7 to worker7
+[2025-04-30 14:51:57] 30m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-g69m7
+[2025-04-30 14:51:57] 30m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:51:57] 30m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-g69m7      Successfully pulled image "nginx:latest" in 698ms (698ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:51:57] 30m         Normal    Created                        pod/nginx-app-7dd8c588d7-g69m7      Created container nginx
+[2025-04-30 14:51:57] 30m         Normal    Started                        pod/nginx-app-7dd8c588d7-g69m7      Started container nginx
+[2025-04-30 14:51:57] 13m         Normal    Killing                        pod/nginx-app-7dd8c588d7-g69m7      Stopping container nginx
+[2025-04-30 14:51:57] 13m         Warning   FailedGetScale                 horizontalpodautoscaler/nginx-hpa   deployments/scale.apps "nginx-app" not found
+[2025-04-30 14:51:57] 4m22s       Normal    Pulling                        pod/nginx-app-7dd8c588d7-rc5hx      Pulling image "nginx:latest"
+[2025-04-30 14:51:57] 4m22s       Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-rc5hx
+[2025-04-30 14:51:57] 4m22s       Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:51:57] 4m21s       Normal    Scheduled                      pod/nginx-app-7dd8c588d7-rc5hx      Successfully assigned default/nginx-app-7dd8c588d7-rc5hx to worker7
+[2025-04-30 14:51:57] 4m21s       Normal    Started                        pod/nginx-app-7dd8c588d7-rc5hx      Started container nginx
+[2025-04-30 14:51:57] 4m21s       Normal    Created                        pod/nginx-app-7dd8c588d7-rc5hx      Created container nginx
+[2025-04-30 14:51:57] 4m21s       Normal    Pulled                         pod/nginx-app-7dd8c588d7-rc5hx      Successfully pulled image "nginx:latest" in 689ms (689ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:52:08] 59m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-8tp47      Successfully assigned default/nginx-app-7dd8c588d7-8tp47 to worker7
+[2025-04-30 14:52:08] 59m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:52:08] 59m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-8tp47
+[2025-04-30 14:52:08] 59m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-8tp47      Pulling image "nginx:latest"
+[2025-04-30 14:52:08] 59m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-8tp47      Successfully pulled image "nginx:latest" in 853ms (853ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:52:08] 59m         Normal    Created                        pod/nginx-app-7dd8c588d7-8tp47      Created container nginx
+[2025-04-30 14:52:08] 59m         Normal    Started                        pod/nginx-app-7dd8c588d7-8tp47      Started container nginx
+[2025-04-30 14:52:08] 41m         Normal    Killing                        pod/nginx-app-7dd8c588d7-8tp47      Stopping container nginx
+[2025-04-30 14:52:08] 31m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-g69m7      Pulling image "nginx:latest"
+[2025-04-30 14:52:08] 31m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-g69m7      Successfully assigned default/nginx-app-7dd8c588d7-g69m7 to worker7
+[2025-04-30 14:52:08] 31m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-g69m7
+[2025-04-30 14:52:08] 31m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:52:08] 31m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-g69m7      Successfully pulled image "nginx:latest" in 698ms (698ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:52:08] 31m         Normal    Created                        pod/nginx-app-7dd8c588d7-g69m7      Created container nginx
+[2025-04-30 14:52:08] 31m         Normal    Started                        pod/nginx-app-7dd8c588d7-g69m7      Started container nginx
+[2025-04-30 14:52:08] 13m         Normal    Killing                        pod/nginx-app-7dd8c588d7-g69m7      Stopping container nginx
+[2025-04-30 14:52:08] 13m         Warning   FailedGetScale                 horizontalpodautoscaler/nginx-hpa   deployments/scale.apps "nginx-app" not found
+[2025-04-30 14:52:08] 4m32s       Normal    Pulling                        pod/nginx-app-7dd8c588d7-rc5hx      Pulling image "nginx:latest"
+[2025-04-30 14:52:08] 4m32s       Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-rc5hx
+[2025-04-30 14:52:08] 4m32s       Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:52:08] 4m31s       Normal    Scheduled                      pod/nginx-app-7dd8c588d7-rc5hx      Successfully assigned default/nginx-app-7dd8c588d7-rc5hx to worker7
+[2025-04-30 14:52:08] 4m31s       Normal    Started                        pod/nginx-app-7dd8c588d7-rc5hx      Started container nginx
+[2025-04-30 14:52:08] 4m31s       Normal    Created                        pod/nginx-app-7dd8c588d7-rc5hx      Created container nginx
+[2025-04-30 14:52:08] 4m31s       Normal    Pulled                         pod/nginx-app-7dd8c588d7-rc5hx      Successfully pulled image "nginx:latest" in 689ms (689ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:52:18] 59m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-8tp47      Successfully assigned default/nginx-app-7dd8c588d7-8tp47 to worker7
+[2025-04-30 14:52:18] 59m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:52:18] 59m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-8tp47
+[2025-04-30 14:52:18] 59m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-8tp47      Pulling image "nginx:latest"
+[2025-04-30 14:52:18] 59m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-8tp47      Successfully pulled image "nginx:latest" in 853ms (853ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:52:18] 59m         Normal    Created                        pod/nginx-app-7dd8c588d7-8tp47      Created container nginx
+[2025-04-30 14:52:18] 59m         Normal    Started                        pod/nginx-app-7dd8c588d7-8tp47      Started container nginx
+[2025-04-30 14:52:18] 42m         Normal    Killing                        pod/nginx-app-7dd8c588d7-8tp47      Stopping container nginx
+[2025-04-30 14:52:18] 31m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-g69m7      Pulling image "nginx:latest"
+[2025-04-30 14:52:18] 31m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-g69m7      Successfully assigned default/nginx-app-7dd8c588d7-g69m7 to worker7
+[2025-04-30 14:52:18] 31m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-g69m7
+[2025-04-30 14:52:18] 31m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:52:18] 31m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-g69m7      Successfully pulled image "nginx:latest" in 698ms (698ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:52:18] 31m         Normal    Created                        pod/nginx-app-7dd8c588d7-g69m7      Created container nginx
+[2025-04-30 14:52:18] 31m         Normal    Started                        pod/nginx-app-7dd8c588d7-g69m7      Started container nginx
+[2025-04-30 14:52:18] 13m         Normal    Killing                        pod/nginx-app-7dd8c588d7-g69m7      Stopping container nginx
+[2025-04-30 14:52:18] 13m         Warning   FailedGetScale                 horizontalpodautoscaler/nginx-hpa   deployments/scale.apps "nginx-app" not found
+[2025-04-30 14:52:18] 4m42s       Normal    Pulling                        pod/nginx-app-7dd8c588d7-rc5hx      Pulling image "nginx:latest"
+[2025-04-30 14:52:18] 4m42s       Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-rc5hx
+[2025-04-30 14:52:18] 4m42s       Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:52:18] 4m41s       Normal    Scheduled                      pod/nginx-app-7dd8c588d7-rc5hx      Successfully assigned default/nginx-app-7dd8c588d7-rc5hx to worker7
+[2025-04-30 14:52:18] 4m41s       Normal    Started                        pod/nginx-app-7dd8c588d7-rc5hx      Started container nginx
+[2025-04-30 14:52:18] 4m41s       Normal    Created                        pod/nginx-app-7dd8c588d7-rc5hx      Created container nginx
+[2025-04-30 14:52:18] 4m41s       Normal    Pulled                         pod/nginx-app-7dd8c588d7-rc5hx      Successfully pulled image "nginx:latest" in 689ms (689ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:52:28] 59m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-8tp47      Successfully assigned default/nginx-app-7dd8c588d7-8tp47 to worker7
+[2025-04-30 14:52:28] 59m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:52:28] 59m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-8tp47
+[2025-04-30 14:52:28] 59m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-8tp47      Pulling image "nginx:latest"
+[2025-04-30 14:52:28] 59m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-8tp47      Successfully pulled image "nginx:latest" in 853ms (853ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:52:28] 59m         Normal    Created                        pod/nginx-app-7dd8c588d7-8tp47      Created container nginx
+[2025-04-30 14:52:28] 59m         Normal    Started                        pod/nginx-app-7dd8c588d7-8tp47      Started container nginx
+[2025-04-30 14:52:28] 42m         Normal    Killing                        pod/nginx-app-7dd8c588d7-8tp47      Stopping container nginx
+[2025-04-30 14:52:28] 31m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-g69m7      Pulling image "nginx:latest"
+[2025-04-30 14:52:28] 31m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-g69m7      Successfully assigned default/nginx-app-7dd8c588d7-g69m7 to worker7
+[2025-04-30 14:52:28] 31m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-g69m7
+[2025-04-30 14:52:28] 31m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:52:28] 31m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-g69m7      Successfully pulled image "nginx:latest" in 698ms (698ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:52:28] 31m         Normal    Created                        pod/nginx-app-7dd8c588d7-g69m7      Created container nginx
+[2025-04-30 14:52:28] 31m         Normal    Started                        pod/nginx-app-7dd8c588d7-g69m7      Started container nginx
+[2025-04-30 14:52:28] 13m         Normal    Killing                        pod/nginx-app-7dd8c588d7-g69m7      Stopping container nginx
+[2025-04-30 14:52:28] 13m         Warning   FailedGetScale                 horizontalpodautoscaler/nginx-hpa   deployments/scale.apps "nginx-app" not found
+[2025-04-30 14:52:28] 4m52s       Normal    Pulling                        pod/nginx-app-7dd8c588d7-rc5hx      Pulling image "nginx:latest"
+[2025-04-30 14:52:28] 4m52s       Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-rc5hx
+[2025-04-30 14:52:28] 4m52s       Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:52:28] 4m51s       Normal    Scheduled                      pod/nginx-app-7dd8c588d7-rc5hx      Successfully assigned default/nginx-app-7dd8c588d7-rc5hx to worker7
+[2025-04-30 14:52:28] 4m51s       Normal    Started                        pod/nginx-app-7dd8c588d7-rc5hx      Started container nginx
+[2025-04-30 14:52:28] 4m51s       Normal    Created                        pod/nginx-app-7dd8c588d7-rc5hx      Created container nginx
+[2025-04-30 14:52:28] 4m51s       Normal    Pulled                         pod/nginx-app-7dd8c588d7-rc5hx      Successfully pulled image "nginx:latest" in 689ms (689ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:52:38] 60m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-8tp47      Successfully assigned default/nginx-app-7dd8c588d7-8tp47 to worker7
+[2025-04-30 14:52:38] 60m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:52:38] 60m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-8tp47
+[2025-04-30 14:52:38] 60m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-8tp47      Pulling image "nginx:latest"
+[2025-04-30 14:52:38] 60m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-8tp47      Successfully pulled image "nginx:latest" in 853ms (853ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:52:38] 60m         Normal    Created                        pod/nginx-app-7dd8c588d7-8tp47      Created container nginx
+[2025-04-30 14:52:38] 60m         Normal    Started                        pod/nginx-app-7dd8c588d7-8tp47      Started container nginx
+[2025-04-30 14:52:38] 42m         Normal    Killing                        pod/nginx-app-7dd8c588d7-8tp47      Stopping container nginx
+[2025-04-30 14:52:38] 31m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-g69m7      Pulling image "nginx:latest"
+[2025-04-30 14:52:38] 31m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-g69m7      Successfully assigned default/nginx-app-7dd8c588d7-g69m7 to worker7
+[2025-04-30 14:52:38] 31m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-g69m7
+[2025-04-30 14:52:38] 31m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:52:38] 31m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-g69m7      Successfully pulled image "nginx:latest" in 698ms (698ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:52:38] 31m         Normal    Created                        pod/nginx-app-7dd8c588d7-g69m7      Created container nginx
+[2025-04-30 14:52:38] 31m         Normal    Started                        pod/nginx-app-7dd8c588d7-g69m7      Started container nginx
+[2025-04-30 14:52:38] 14m         Normal    Killing                        pod/nginx-app-7dd8c588d7-g69m7      Stopping container nginx
+[2025-04-30 14:52:38] 14m         Warning   FailedGetScale                 horizontalpodautoscaler/nginx-hpa   deployments/scale.apps "nginx-app" not found
+[2025-04-30 14:52:38] 5m2s        Normal    Pulling                        pod/nginx-app-7dd8c588d7-rc5hx      Pulling image "nginx:latest"
+[2025-04-30 14:52:38] 5m2s        Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-rc5hx
+[2025-04-30 14:52:38] 5m2s        Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:52:38] 5m1s        Normal    Scheduled                      pod/nginx-app-7dd8c588d7-rc5hx      Successfully assigned default/nginx-app-7dd8c588d7-rc5hx to worker7
+[2025-04-30 14:52:38] 5m1s        Normal    Started                        pod/nginx-app-7dd8c588d7-rc5hx      Started container nginx
+[2025-04-30 14:52:38] 5m1s        Normal    Created                        pod/nginx-app-7dd8c588d7-rc5hx      Created container nginx
+[2025-04-30 14:52:38] 5m1s        Normal    Pulled                         pod/nginx-app-7dd8c588d7-rc5hx      Successfully pulled image "nginx:latest" in 689ms (689ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:52:48] 60m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-8tp47      Successfully assigned default/nginx-app-7dd8c588d7-8tp47 to worker7
+[2025-04-30 14:52:48] 60m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:52:48] 60m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-8tp47
+[2025-04-30 14:52:48] 60m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-8tp47      Pulling image "nginx:latest"
+[2025-04-30 14:52:48] 60m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-8tp47      Successfully pulled image "nginx:latest" in 853ms (853ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:52:48] 60m         Normal    Created                        pod/nginx-app-7dd8c588d7-8tp47      Created container nginx
+[2025-04-30 14:52:48] 60m         Normal    Started                        pod/nginx-app-7dd8c588d7-8tp47      Started container nginx
+[2025-04-30 14:52:48] 42m         Normal    Killing                        pod/nginx-app-7dd8c588d7-8tp47      Stopping container nginx
+[2025-04-30 14:52:48] 31m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-g69m7      Pulling image "nginx:latest"
+[2025-04-30 14:52:48] 31m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-g69m7      Successfully assigned default/nginx-app-7dd8c588d7-g69m7 to worker7
+[2025-04-30 14:52:48] 31m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-g69m7
+[2025-04-30 14:52:48] 31m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:52:48] 31m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-g69m7      Successfully pulled image "nginx:latest" in 698ms (698ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:52:48] 31m         Normal    Created                        pod/nginx-app-7dd8c588d7-g69m7      Created container nginx
+[2025-04-30 14:52:48] 31m         Normal    Started                        pod/nginx-app-7dd8c588d7-g69m7      Started container nginx
+[2025-04-30 14:52:48] 14m         Normal    Killing                        pod/nginx-app-7dd8c588d7-g69m7      Stopping container nginx
+[2025-04-30 14:52:48] 14m         Warning   FailedGetScale                 horizontalpodautoscaler/nginx-hpa   deployments/scale.apps "nginx-app" not found
+[2025-04-30 14:52:48] 5m12s       Normal    Pulling                        pod/nginx-app-7dd8c588d7-rc5hx      Pulling image "nginx:latest"
+[2025-04-30 14:52:48] 5m12s       Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-rc5hx
+[2025-04-30 14:52:48] 5m12s       Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:52:48] 5m11s       Normal    Scheduled                      pod/nginx-app-7dd8c588d7-rc5hx      Successfully assigned default/nginx-app-7dd8c588d7-rc5hx to worker7
+[2025-04-30 14:52:48] 5m11s       Normal    Started                        pod/nginx-app-7dd8c588d7-rc5hx      Started container nginx
+[2025-04-30 14:52:48] 5m11s       Normal    Created                        pod/nginx-app-7dd8c588d7-rc5hx      Created container nginx
+[2025-04-30 14:52:48] 5m11s       Normal    Pulled                         pod/nginx-app-7dd8c588d7-rc5hx      Successfully pulled image "nginx:latest" in 689ms (689ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:52:58] 60m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-8tp47      Successfully assigned default/nginx-app-7dd8c588d7-8tp47 to worker7
+[2025-04-30 14:52:58] 60m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:52:58] 60m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-8tp47
+[2025-04-30 14:52:58] 60m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-8tp47      Pulling image "nginx:latest"
+[2025-04-30 14:52:58] 60m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-8tp47      Successfully pulled image "nginx:latest" in 853ms (853ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:52:58] 60m         Normal    Created                        pod/nginx-app-7dd8c588d7-8tp47      Created container nginx
+[2025-04-30 14:52:58] 60m         Normal    Started                        pod/nginx-app-7dd8c588d7-8tp47      Started container nginx
+[2025-04-30 14:52:58] 42m         Normal    Killing                        pod/nginx-app-7dd8c588d7-8tp47      Stopping container nginx
+[2025-04-30 14:52:58] 31m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-g69m7      Pulling image "nginx:latest"
+[2025-04-30 14:52:58] 31m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-g69m7      Successfully assigned default/nginx-app-7dd8c588d7-g69m7 to worker7
+[2025-04-30 14:52:58] 31m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-g69m7
+[2025-04-30 14:52:58] 31m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:52:58] 31m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-g69m7      Successfully pulled image "nginx:latest" in 698ms (698ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:52:58] 31m         Normal    Created                        pod/nginx-app-7dd8c588d7-g69m7      Created container nginx
+[2025-04-30 14:52:58] 31m         Normal    Started                        pod/nginx-app-7dd8c588d7-g69m7      Started container nginx
+[2025-04-30 14:52:58] 14m         Normal    Killing                        pod/nginx-app-7dd8c588d7-g69m7      Stopping container nginx
+[2025-04-30 14:52:58] 14m         Warning   FailedGetScale                 horizontalpodautoscaler/nginx-hpa   deployments/scale.apps "nginx-app" not found
+[2025-04-30 14:52:58] 5m22s       Normal    Pulling                        pod/nginx-app-7dd8c588d7-rc5hx      Pulling image "nginx:latest"
+[2025-04-30 14:52:58] 5m22s       Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-rc5hx
+[2025-04-30 14:52:58] 5m22s       Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:52:58] 5m21s       Normal    Scheduled                      pod/nginx-app-7dd8c588d7-rc5hx      Successfully assigned default/nginx-app-7dd8c588d7-rc5hx to worker7
+[2025-04-30 14:52:58] 5m21s       Normal    Started                        pod/nginx-app-7dd8c588d7-rc5hx      Started container nginx
+[2025-04-30 14:52:58] 5m21s       Normal    Created                        pod/nginx-app-7dd8c588d7-rc5hx      Created container nginx
+[2025-04-30 14:52:58] 5m21s       Normal    Pulled                         pod/nginx-app-7dd8c588d7-rc5hx      Successfully pulled image "nginx:latest" in 689ms (689ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:53:08] 60m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-8tp47      Successfully assigned default/nginx-app-7dd8c588d7-8tp47 to worker7
+[2025-04-30 14:53:08] 60m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:53:08] 60m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-8tp47
+[2025-04-30 14:53:08] 60m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-8tp47      Pulling image "nginx:latest"
+[2025-04-30 14:53:08] 60m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-8tp47      Successfully pulled image "nginx:latest" in 853ms (853ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:53:08] 60m         Normal    Created                        pod/nginx-app-7dd8c588d7-8tp47      Created container nginx
+[2025-04-30 14:53:08] 60m         Normal    Started                        pod/nginx-app-7dd8c588d7-8tp47      Started container nginx
+[2025-04-30 14:53:08] 42m         Normal    Killing                        pod/nginx-app-7dd8c588d7-8tp47      Stopping container nginx
+[2025-04-30 14:53:08] 32m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-g69m7      Pulling image "nginx:latest"
+[2025-04-30 14:53:08] 32m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-g69m7      Successfully assigned default/nginx-app-7dd8c588d7-g69m7 to worker7
+[2025-04-30 14:53:08] 32m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-g69m7
+[2025-04-30 14:53:08] 32m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:53:08] 32m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-g69m7      Successfully pulled image "nginx:latest" in 698ms (698ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:53:08] 32m         Normal    Created                        pod/nginx-app-7dd8c588d7-g69m7      Created container nginx
+[2025-04-30 14:53:08] 32m         Normal    Started                        pod/nginx-app-7dd8c588d7-g69m7      Started container nginx
+[2025-04-30 14:53:08] 14m         Normal    Killing                        pod/nginx-app-7dd8c588d7-g69m7      Stopping container nginx
+[2025-04-30 14:53:08] 14m         Warning   FailedGetScale                 horizontalpodautoscaler/nginx-hpa   deployments/scale.apps "nginx-app" not found
+[2025-04-30 14:53:08] 5m32s       Normal    Pulling                        pod/nginx-app-7dd8c588d7-rc5hx      Pulling image "nginx:latest"
+[2025-04-30 14:53:08] 5m32s       Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-rc5hx
+[2025-04-30 14:53:08] 5m32s       Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:53:08] 5m31s       Normal    Scheduled                      pod/nginx-app-7dd8c588d7-rc5hx      Successfully assigned default/nginx-app-7dd8c588d7-rc5hx to worker7
+[2025-04-30 14:53:08] 5m31s       Normal    Started                        pod/nginx-app-7dd8c588d7-rc5hx      Started container nginx
+[2025-04-30 14:53:08] 5m31s       Normal    Created                        pod/nginx-app-7dd8c588d7-rc5hx      Created container nginx
+[2025-04-30 14:53:08] 5m31s       Normal    Pulled                         pod/nginx-app-7dd8c588d7-rc5hx      Successfully pulled image "nginx:latest" in 689ms (689ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:53:18] 60m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-8tp47      Successfully assigned default/nginx-app-7dd8c588d7-8tp47 to worker7
+[2025-04-30 14:53:18] 60m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:53:18] 60m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-8tp47
+[2025-04-30 14:53:18] 60m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-8tp47      Pulling image "nginx:latest"
+[2025-04-30 14:53:18] 60m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-8tp47      Successfully pulled image "nginx:latest" in 853ms (853ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:53:18] 60m         Normal    Created                        pod/nginx-app-7dd8c588d7-8tp47      Created container nginx
+[2025-04-30 14:53:18] 60m         Normal    Started                        pod/nginx-app-7dd8c588d7-8tp47      Started container nginx
+[2025-04-30 14:53:18] 43m         Normal    Killing                        pod/nginx-app-7dd8c588d7-8tp47      Stopping container nginx
+[2025-04-30 14:53:18] 32m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-g69m7      Pulling image "nginx:latest"
+[2025-04-30 14:53:18] 32m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-g69m7      Successfully assigned default/nginx-app-7dd8c588d7-g69m7 to worker7
+[2025-04-30 14:53:18] 32m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-g69m7
+[2025-04-30 14:53:18] 32m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:53:18] 32m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-g69m7      Successfully pulled image "nginx:latest" in 698ms (698ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:53:18] 32m         Normal    Created                        pod/nginx-app-7dd8c588d7-g69m7      Created container nginx
+[2025-04-30 14:53:18] 32m         Normal    Started                        pod/nginx-app-7dd8c588d7-g69m7      Started container nginx
+[2025-04-30 14:53:18] 14m         Normal    Killing                        pod/nginx-app-7dd8c588d7-g69m7      Stopping container nginx
+[2025-04-30 14:53:18] 14m         Warning   FailedGetScale                 horizontalpodautoscaler/nginx-hpa   deployments/scale.apps "nginx-app" not found
+[2025-04-30 14:53:18] 5m42s       Normal    Pulling                        pod/nginx-app-7dd8c588d7-rc5hx      Pulling image "nginx:latest"
+[2025-04-30 14:53:18] 5m42s       Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-rc5hx
+[2025-04-30 14:53:18] 5m42s       Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:53:18] 5m41s       Normal    Scheduled                      pod/nginx-app-7dd8c588d7-rc5hx      Successfully assigned default/nginx-app-7dd8c588d7-rc5hx to worker7
+[2025-04-30 14:53:18] 5m41s       Normal    Started                        pod/nginx-app-7dd8c588d7-rc5hx      Started container nginx
+[2025-04-30 14:53:18] 5m41s       Normal    Created                        pod/nginx-app-7dd8c588d7-rc5hx      Created container nginx
+[2025-04-30 14:53:18] 5m41s       Normal    Pulled                         pod/nginx-app-7dd8c588d7-rc5hx      Successfully pulled image "nginx:latest" in 689ms (689ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:53:28] 60m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-8tp47      Successfully assigned default/nginx-app-7dd8c588d7-8tp47 to worker7
+[2025-04-30 14:53:28] 60m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:53:28] 60m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-8tp47
+[2025-04-30 14:53:28] 60m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-8tp47      Pulling image "nginx:latest"
+[2025-04-30 14:53:28] 60m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-8tp47      Successfully pulled image "nginx:latest" in 853ms (853ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:53:28] 60m         Normal    Created                        pod/nginx-app-7dd8c588d7-8tp47      Created container nginx
+[2025-04-30 14:53:28] 60m         Normal    Started                        pod/nginx-app-7dd8c588d7-8tp47      Started container nginx
+[2025-04-30 14:53:28] 43m         Normal    Killing                        pod/nginx-app-7dd8c588d7-8tp47      Stopping container nginx
+[2025-04-30 14:53:28] 32m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-g69m7      Pulling image "nginx:latest"
+[2025-04-30 14:53:28] 32m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-g69m7      Successfully assigned default/nginx-app-7dd8c588d7-g69m7 to worker7
+[2025-04-30 14:53:28] 32m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-g69m7
+[2025-04-30 14:53:28] 32m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:53:28] 32m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-g69m7      Successfully pulled image "nginx:latest" in 698ms (698ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:53:28] 32m         Normal    Created                        pod/nginx-app-7dd8c588d7-g69m7      Created container nginx
+[2025-04-30 14:53:28] 32m         Normal    Started                        pod/nginx-app-7dd8c588d7-g69m7      Started container nginx
+[2025-04-30 14:53:28] 14m         Normal    Killing                        pod/nginx-app-7dd8c588d7-g69m7      Stopping container nginx
+[2025-04-30 14:53:28] 14m         Warning   FailedGetScale                 horizontalpodautoscaler/nginx-hpa   deployments/scale.apps "nginx-app" not found
+[2025-04-30 14:53:28] 5m52s       Normal    Pulling                        pod/nginx-app-7dd8c588d7-rc5hx      Pulling image "nginx:latest"
+[2025-04-30 14:53:28] 5m52s       Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-rc5hx
+[2025-04-30 14:53:28] 5m52s       Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:53:28] 5m51s       Normal    Scheduled                      pod/nginx-app-7dd8c588d7-rc5hx      Successfully assigned default/nginx-app-7dd8c588d7-rc5hx to worker7
+[2025-04-30 14:53:28] 5m51s       Normal    Started                        pod/nginx-app-7dd8c588d7-rc5hx      Started container nginx
+[2025-04-30 14:53:28] 5m51s       Normal    Created                        pod/nginx-app-7dd8c588d7-rc5hx      Created container nginx
+[2025-04-30 14:53:28] 5m51s       Normal    Pulled                         pod/nginx-app-7dd8c588d7-rc5hx      Successfully pulled image "nginx:latest" in 689ms (689ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:53:38] 43m         Normal    Killing                        pod/nginx-app-7dd8c588d7-8tp47      Stopping container nginx
+[2025-04-30 14:53:38] 32m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-g69m7      Successfully assigned default/nginx-app-7dd8c588d7-g69m7 to worker7
+[2025-04-30 14:53:38] 32m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-g69m7      Pulling image "nginx:latest"
+[2025-04-30 14:53:38] 32m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:53:38] 32m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-g69m7
+[2025-04-30 14:53:38] 32m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-g69m7      Successfully pulled image "nginx:latest" in 698ms (698ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:53:38] 32m         Normal    Started                        pod/nginx-app-7dd8c588d7-g69m7      Started container nginx
+[2025-04-30 14:53:38] 32m         Normal    Created                        pod/nginx-app-7dd8c588d7-g69m7      Created container nginx
+[2025-04-30 14:53:38] 15m         Normal    Killing                        pod/nginx-app-7dd8c588d7-g69m7      Stopping container nginx
+[2025-04-30 14:53:38] 15m         Warning   FailedGetScale                 horizontalpodautoscaler/nginx-hpa   deployments/scale.apps "nginx-app" not found
+[2025-04-30 14:53:38] 6m2s        Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:53:38] 6m2s        Normal    Pulling                        pod/nginx-app-7dd8c588d7-rc5hx      Pulling image "nginx:latest"
+[2025-04-30 14:53:38] 6m1s        Normal    Scheduled                      pod/nginx-app-7dd8c588d7-rc5hx      Successfully assigned default/nginx-app-7dd8c588d7-rc5hx to worker7
+[2025-04-30 14:53:38] 6m2s        Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-rc5hx
+[2025-04-30 14:53:38] 6m1s        Normal    Started                        pod/nginx-app-7dd8c588d7-rc5hx      Started container nginx
+[2025-04-30 14:53:38] 6m1s        Normal    Created                        pod/nginx-app-7dd8c588d7-rc5hx      Created container nginx
+[2025-04-30 14:53:38] 6m1s        Normal    Pulled                         pod/nginx-app-7dd8c588d7-rc5hx      Successfully pulled image "nginx:latest" in 689ms (689ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:53:48] 43m         Normal    Killing                        pod/nginx-app-7dd8c588d7-8tp47      Stopping container nginx
+[2025-04-30 14:53:48] 32m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-g69m7      Successfully assigned default/nginx-app-7dd8c588d7-g69m7 to worker7
+[2025-04-30 14:53:48] 32m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-g69m7      Pulling image "nginx:latest"
+[2025-04-30 14:53:48] 32m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:53:48] 32m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-g69m7
+[2025-04-30 14:53:48] 32m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-g69m7      Successfully pulled image "nginx:latest" in 698ms (698ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:53:48] 32m         Normal    Started                        pod/nginx-app-7dd8c588d7-g69m7      Started container nginx
+[2025-04-30 14:53:48] 32m         Normal    Created                        pod/nginx-app-7dd8c588d7-g69m7      Created container nginx
+[2025-04-30 14:53:48] 15m         Normal    Killing                        pod/nginx-app-7dd8c588d7-g69m7      Stopping container nginx
+[2025-04-30 14:53:48] 15m         Warning   FailedGetScale                 horizontalpodautoscaler/nginx-hpa   deployments/scale.apps "nginx-app" not found
+[2025-04-30 14:53:48] 6m12s       Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:53:48] 6m12s       Normal    Pulling                        pod/nginx-app-7dd8c588d7-rc5hx      Pulling image "nginx:latest"
+[2025-04-30 14:53:48] 6m11s       Normal    Scheduled                      pod/nginx-app-7dd8c588d7-rc5hx      Successfully assigned default/nginx-app-7dd8c588d7-rc5hx to worker7
+[2025-04-30 14:53:48] 6m12s       Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-rc5hx
+[2025-04-30 14:53:48] 6m11s       Normal    Started                        pod/nginx-app-7dd8c588d7-rc5hx      Started container nginx
+[2025-04-30 14:53:48] 6m11s       Normal    Created                        pod/nginx-app-7dd8c588d7-rc5hx      Created container nginx
+[2025-04-30 14:53:48] 6m11s       Normal    Pulled                         pod/nginx-app-7dd8c588d7-rc5hx      Successfully pulled image "nginx:latest" in 689ms (689ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:53:58] 43m         Normal    Killing                        pod/nginx-app-7dd8c588d7-8tp47      Stopping container nginx
+[2025-04-30 14:53:58] 32m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-g69m7      Successfully assigned default/nginx-app-7dd8c588d7-g69m7 to worker7
+[2025-04-30 14:53:58] 32m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-g69m7      Pulling image "nginx:latest"
+[2025-04-30 14:53:58] 32m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:53:58] 32m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-g69m7
+[2025-04-30 14:53:58] 32m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-g69m7      Successfully pulled image "nginx:latest" in 698ms (698ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:53:58] 32m         Normal    Started                        pod/nginx-app-7dd8c588d7-g69m7      Started container nginx
+[2025-04-30 14:53:58] 32m         Normal    Created                        pod/nginx-app-7dd8c588d7-g69m7      Created container nginx
+[2025-04-30 14:53:58] 15m         Normal    Killing                        pod/nginx-app-7dd8c588d7-g69m7      Stopping container nginx
+[2025-04-30 14:53:58] 15m         Warning   FailedGetScale                 horizontalpodautoscaler/nginx-hpa   deployments/scale.apps "nginx-app" not found
+[2025-04-30 14:53:58] 6m22s       Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:53:58] 6m22s       Normal    Pulling                        pod/nginx-app-7dd8c588d7-rc5hx      Pulling image "nginx:latest"
+[2025-04-30 14:53:58] 6m21s       Normal    Scheduled                      pod/nginx-app-7dd8c588d7-rc5hx      Successfully assigned default/nginx-app-7dd8c588d7-rc5hx to worker7
+[2025-04-30 14:53:58] 6m22s       Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-rc5hx
+[2025-04-30 14:53:58] 6m21s       Normal    Started                        pod/nginx-app-7dd8c588d7-rc5hx      Started container nginx
+[2025-04-30 14:53:58] 6m21s       Normal    Created                        pod/nginx-app-7dd8c588d7-rc5hx      Created container nginx
+[2025-04-30 14:53:58] 6m21s       Normal    Pulled                         pod/nginx-app-7dd8c588d7-rc5hx      Successfully pulled image "nginx:latest" in 689ms (689ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:54:08] 43m         Normal    Killing                        pod/nginx-app-7dd8c588d7-8tp47      Stopping container nginx
+[2025-04-30 14:54:08] 33m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-g69m7      Successfully assigned default/nginx-app-7dd8c588d7-g69m7 to worker7
+[2025-04-30 14:54:08] 33m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-g69m7      Pulling image "nginx:latest"
+[2025-04-30 14:54:08] 33m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:54:08] 33m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-g69m7
+[2025-04-30 14:54:08] 33m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-g69m7      Successfully pulled image "nginx:latest" in 698ms (698ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:54:08] 33m         Normal    Started                        pod/nginx-app-7dd8c588d7-g69m7      Started container nginx
+[2025-04-30 14:54:08] 33m         Normal    Created                        pod/nginx-app-7dd8c588d7-g69m7      Created container nginx
+[2025-04-30 14:54:08] 15m         Normal    Killing                        pod/nginx-app-7dd8c588d7-g69m7      Stopping container nginx
+[2025-04-30 14:54:08] 15m         Warning   FailedGetScale                 horizontalpodautoscaler/nginx-hpa   deployments/scale.apps "nginx-app" not found
+[2025-04-30 14:54:08] 6m32s       Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:54:08] 6m32s       Normal    Pulling                        pod/nginx-app-7dd8c588d7-rc5hx      Pulling image "nginx:latest"
+[2025-04-30 14:54:08] 6m32s       Normal    Scheduled                      pod/nginx-app-7dd8c588d7-rc5hx      Successfully assigned default/nginx-app-7dd8c588d7-rc5hx to worker7
+[2025-04-30 14:54:08] 6m32s       Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-rc5hx
+[2025-04-30 14:54:08] 6m31s       Normal    Started                        pod/nginx-app-7dd8c588d7-rc5hx      Started container nginx
+[2025-04-30 14:54:08] 6m31s       Normal    Created                        pod/nginx-app-7dd8c588d7-rc5hx      Created container nginx
+[2025-04-30 14:54:08] 6m31s       Normal    Pulled                         pod/nginx-app-7dd8c588d7-rc5hx      Successfully pulled image "nginx:latest" in 689ms (689ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:54:18] 44m         Normal    Killing                        pod/nginx-app-7dd8c588d7-8tp47      Stopping container nginx
+[2025-04-30 14:54:18] 33m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-g69m7      Successfully assigned default/nginx-app-7dd8c588d7-g69m7 to worker7
+[2025-04-30 14:54:18] 33m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-g69m7      Pulling image "nginx:latest"
+[2025-04-30 14:54:18] 33m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:54:18] 33m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-g69m7
+[2025-04-30 14:54:18] 33m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-g69m7      Successfully pulled image "nginx:latest" in 698ms (698ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:54:18] 33m         Normal    Started                        pod/nginx-app-7dd8c588d7-g69m7      Started container nginx
+[2025-04-30 14:54:18] 33m         Normal    Created                        pod/nginx-app-7dd8c588d7-g69m7      Created container nginx
+[2025-04-30 14:54:18] 15m         Normal    Killing                        pod/nginx-app-7dd8c588d7-g69m7      Stopping container nginx
+[2025-04-30 14:54:18] 15m         Warning   FailedGetScale                 horizontalpodautoscaler/nginx-hpa   deployments/scale.apps "nginx-app" not found
+[2025-04-30 14:54:18] 6m42s       Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:54:18] 6m42s       Normal    Pulling                        pod/nginx-app-7dd8c588d7-rc5hx      Pulling image "nginx:latest"
+[2025-04-30 14:54:18] 6m42s       Normal    Scheduled                      pod/nginx-app-7dd8c588d7-rc5hx      Successfully assigned default/nginx-app-7dd8c588d7-rc5hx to worker7
+[2025-04-30 14:54:18] 6m42s       Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-rc5hx
+[2025-04-30 14:54:18] 6m41s       Normal    Started                        pod/nginx-app-7dd8c588d7-rc5hx      Started container nginx
+[2025-04-30 14:54:18] 6m41s       Normal    Created                        pod/nginx-app-7dd8c588d7-rc5hx      Created container nginx
+[2025-04-30 14:54:18] 6m41s       Normal    Pulled                         pod/nginx-app-7dd8c588d7-rc5hx      Successfully pulled image "nginx:latest" in 689ms (689ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:54:28] 44m         Normal    Killing                        pod/nginx-app-7dd8c588d7-8tp47      Stopping container nginx
+[2025-04-30 14:54:28] 33m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-g69m7      Successfully assigned default/nginx-app-7dd8c588d7-g69m7 to worker7
+[2025-04-30 14:54:28] 33m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-g69m7      Pulling image "nginx:latest"
+[2025-04-30 14:54:28] 33m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:54:28] 33m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-g69m7
+[2025-04-30 14:54:28] 33m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-g69m7      Successfully pulled image "nginx:latest" in 698ms (698ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:54:28] 33m         Normal    Started                        pod/nginx-app-7dd8c588d7-g69m7      Started container nginx
+[2025-04-30 14:54:28] 33m         Normal    Created                        pod/nginx-app-7dd8c588d7-g69m7      Created container nginx
+[2025-04-30 14:54:28] 15m         Normal    Killing                        pod/nginx-app-7dd8c588d7-g69m7      Stopping container nginx
+[2025-04-30 14:54:28] 15m         Warning   FailedGetScale                 horizontalpodautoscaler/nginx-hpa   deployments/scale.apps "nginx-app" not found
+[2025-04-30 14:54:28] 6m52s       Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:54:28] 6m52s       Normal    Pulling                        pod/nginx-app-7dd8c588d7-rc5hx      Pulling image "nginx:latest"
+[2025-04-30 14:54:28] 6m52s       Normal    Scheduled                      pod/nginx-app-7dd8c588d7-rc5hx      Successfully assigned default/nginx-app-7dd8c588d7-rc5hx to worker7
+[2025-04-30 14:54:28] 6m52s       Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-rc5hx
+[2025-04-30 14:54:28] 6m51s       Normal    Started                        pod/nginx-app-7dd8c588d7-rc5hx      Started container nginx
+[2025-04-30 14:54:28] 6m51s       Normal    Created                        pod/nginx-app-7dd8c588d7-rc5hx      Created container nginx
+[2025-04-30 14:54:28] 6m51s       Normal    Pulled                         pod/nginx-app-7dd8c588d7-rc5hx      Successfully pulled image "nginx:latest" in 689ms (689ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:54:38] 44m         Normal    Killing                        pod/nginx-app-7dd8c588d7-8tp47      Stopping container nginx
+[2025-04-30 14:54:38] 33m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-g69m7      Successfully assigned default/nginx-app-7dd8c588d7-g69m7 to worker7
+[2025-04-30 14:54:38] 33m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-g69m7      Pulling image "nginx:latest"
+[2025-04-30 14:54:38] 33m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:54:38] 33m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-g69m7
+[2025-04-30 14:54:38] 33m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-g69m7      Successfully pulled image "nginx:latest" in 698ms (698ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:54:38] 33m         Normal    Started                        pod/nginx-app-7dd8c588d7-g69m7      Started container nginx
+[2025-04-30 14:54:38] 33m         Normal    Created                        pod/nginx-app-7dd8c588d7-g69m7      Created container nginx
+[2025-04-30 14:54:38] 16m         Normal    Killing                        pod/nginx-app-7dd8c588d7-g69m7      Stopping container nginx
+[2025-04-30 14:54:38] 16m         Warning   FailedGetScale                 horizontalpodautoscaler/nginx-hpa   deployments/scale.apps "nginx-app" not found
+[2025-04-30 14:54:38] 7m2s        Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:54:38] 7m2s        Normal    Pulling                        pod/nginx-app-7dd8c588d7-rc5hx      Pulling image "nginx:latest"
+[2025-04-30 14:54:38] 7m2s        Normal    Scheduled                      pod/nginx-app-7dd8c588d7-rc5hx      Successfully assigned default/nginx-app-7dd8c588d7-rc5hx to worker7
+[2025-04-30 14:54:38] 7m2s        Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-rc5hx
+[2025-04-30 14:54:38] 7m1s        Normal    Started                        pod/nginx-app-7dd8c588d7-rc5hx      Started container nginx
+[2025-04-30 14:54:38] 7m1s        Normal    Created                        pod/nginx-app-7dd8c588d7-rc5hx      Created container nginx
+[2025-04-30 14:54:38] 7m1s        Normal    Pulled                         pod/nginx-app-7dd8c588d7-rc5hx      Successfully pulled image "nginx:latest" in 689ms (689ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:54:48] 44m         Normal    Killing                        pod/nginx-app-7dd8c588d7-8tp47      Stopping container nginx
+[2025-04-30 14:54:48] 33m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-g69m7      Successfully assigned default/nginx-app-7dd8c588d7-g69m7 to worker7
+[2025-04-30 14:54:48] 33m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-g69m7      Pulling image "nginx:latest"
+[2025-04-30 14:54:48] 33m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:54:48] 33m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-g69m7
+[2025-04-30 14:54:48] 33m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-g69m7      Successfully pulled image "nginx:latest" in 698ms (698ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:54:48] 33m         Normal    Started                        pod/nginx-app-7dd8c588d7-g69m7      Started container nginx
+[2025-04-30 14:54:48] 33m         Normal    Created                        pod/nginx-app-7dd8c588d7-g69m7      Created container nginx
+[2025-04-30 14:54:48] 16m         Normal    Killing                        pod/nginx-app-7dd8c588d7-g69m7      Stopping container nginx
+[2025-04-30 14:54:48] 16m         Warning   FailedGetScale                 horizontalpodautoscaler/nginx-hpa   deployments/scale.apps "nginx-app" not found
+[2025-04-30 14:54:48] 7m12s       Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:54:48] 7m12s       Normal    Pulling                        pod/nginx-app-7dd8c588d7-rc5hx      Pulling image "nginx:latest"
+[2025-04-30 14:54:48] 7m12s       Normal    Scheduled                      pod/nginx-app-7dd8c588d7-rc5hx      Successfully assigned default/nginx-app-7dd8c588d7-rc5hx to worker7
+[2025-04-30 14:54:48] 7m12s       Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-rc5hx
+[2025-04-30 14:54:48] 7m11s       Normal    Started                        pod/nginx-app-7dd8c588d7-rc5hx      Started container nginx
+[2025-04-30 14:54:48] 7m11s       Normal    Created                        pod/nginx-app-7dd8c588d7-rc5hx      Created container nginx
+[2025-04-30 14:54:48] 7m11s       Normal    Pulled                         pod/nginx-app-7dd8c588d7-rc5hx      Successfully pulled image "nginx:latest" in 689ms (689ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:54:58] 44m         Normal    Killing                        pod/nginx-app-7dd8c588d7-8tp47      Stopping container nginx
+[2025-04-30 14:54:58] 33m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-g69m7      Successfully assigned default/nginx-app-7dd8c588d7-g69m7 to worker7
+[2025-04-30 14:54:58] 33m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-g69m7      Pulling image "nginx:latest"
+[2025-04-30 14:54:58] 33m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:54:58] 33m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-g69m7
+[2025-04-30 14:54:58] 33m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-g69m7      Successfully pulled image "nginx:latest" in 698ms (698ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:54:58] 33m         Normal    Started                        pod/nginx-app-7dd8c588d7-g69m7      Started container nginx
+[2025-04-30 14:54:58] 33m         Normal    Created                        pod/nginx-app-7dd8c588d7-g69m7      Created container nginx
+[2025-04-30 14:54:58] 16m         Normal    Killing                        pod/nginx-app-7dd8c588d7-g69m7      Stopping container nginx
+[2025-04-30 14:54:58] 16m         Warning   FailedGetScale                 horizontalpodautoscaler/nginx-hpa   deployments/scale.apps "nginx-app" not found
+[2025-04-30 14:54:58] 7m22s       Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:54:58] 7m22s       Normal    Pulling                        pod/nginx-app-7dd8c588d7-rc5hx      Pulling image "nginx:latest"
+[2025-04-30 14:54:58] 7m22s       Normal    Scheduled                      pod/nginx-app-7dd8c588d7-rc5hx      Successfully assigned default/nginx-app-7dd8c588d7-rc5hx to worker7
+[2025-04-30 14:54:58] 7m22s       Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-rc5hx
+[2025-04-30 14:54:58] 7m21s       Normal    Started                        pod/nginx-app-7dd8c588d7-rc5hx      Started container nginx
+[2025-04-30 14:54:58] 7m21s       Normal    Created                        pod/nginx-app-7dd8c588d7-rc5hx      Created container nginx
+[2025-04-30 14:54:58] 7m21s       Normal    Pulled                         pod/nginx-app-7dd8c588d7-rc5hx      Successfully pulled image "nginx:latest" in 689ms (689ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:55:08] 44m         Normal    Killing                        pod/nginx-app-7dd8c588d7-8tp47      Stopping container nginx
+[2025-04-30 14:55:08] 34m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-g69m7      Successfully assigned default/nginx-app-7dd8c588d7-g69m7 to worker7
+[2025-04-30 14:55:08] 34m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-g69m7      Pulling image "nginx:latest"
+[2025-04-30 14:55:08] 34m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:55:08] 34m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-g69m7
+[2025-04-30 14:55:08] 34m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-g69m7      Successfully pulled image "nginx:latest" in 698ms (698ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:55:08] 34m         Normal    Started                        pod/nginx-app-7dd8c588d7-g69m7      Started container nginx
+[2025-04-30 14:55:08] 34m         Normal    Created                        pod/nginx-app-7dd8c588d7-g69m7      Created container nginx
+[2025-04-30 14:55:08] 16m         Normal    Killing                        pod/nginx-app-7dd8c588d7-g69m7      Stopping container nginx
+[2025-04-30 14:55:08] 16m         Warning   FailedGetScale                 horizontalpodautoscaler/nginx-hpa   deployments/scale.apps "nginx-app" not found
+[2025-04-30 14:55:08] 7m32s       Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:55:08] 7m32s       Normal    Pulling                        pod/nginx-app-7dd8c588d7-rc5hx      Pulling image "nginx:latest"
+[2025-04-30 14:55:08] 7m32s       Normal    Scheduled                      pod/nginx-app-7dd8c588d7-rc5hx      Successfully assigned default/nginx-app-7dd8c588d7-rc5hx to worker7
+[2025-04-30 14:55:08] 7m32s       Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-rc5hx
+[2025-04-30 14:55:08] 7m31s       Normal    Started                        pod/nginx-app-7dd8c588d7-rc5hx      Started container nginx
+[2025-04-30 14:55:08] 7m31s       Normal    Created                        pod/nginx-app-7dd8c588d7-rc5hx      Created container nginx
+[2025-04-30 14:55:08] 7m31s       Normal    Pulled                         pod/nginx-app-7dd8c588d7-rc5hx      Successfully pulled image "nginx:latest" in 689ms (689ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:55:18] 45m         Normal    Killing                        pod/nginx-app-7dd8c588d7-8tp47      Stopping container nginx
+[2025-04-30 14:55:18] 34m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-g69m7      Successfully assigned default/nginx-app-7dd8c588d7-g69m7 to worker7
+[2025-04-30 14:55:18] 34m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-g69m7      Pulling image "nginx:latest"
+[2025-04-30 14:55:18] 34m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:55:18] 34m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-g69m7
+[2025-04-30 14:55:18] 34m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-g69m7      Successfully pulled image "nginx:latest" in 698ms (698ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:55:18] 34m         Normal    Started                        pod/nginx-app-7dd8c588d7-g69m7      Started container nginx
+[2025-04-30 14:55:18] 34m         Normal    Created                        pod/nginx-app-7dd8c588d7-g69m7      Created container nginx
+[2025-04-30 14:55:18] 16m         Normal    Killing                        pod/nginx-app-7dd8c588d7-g69m7      Stopping container nginx
+[2025-04-30 14:55:18] 16m         Warning   FailedGetScale                 horizontalpodautoscaler/nginx-hpa   deployments/scale.apps "nginx-app" not found
+[2025-04-30 14:55:18] 7m43s       Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:55:18] 7m43s       Normal    Pulling                        pod/nginx-app-7dd8c588d7-rc5hx      Pulling image "nginx:latest"
+[2025-04-30 14:55:18] 7m42s       Normal    Scheduled                      pod/nginx-app-7dd8c588d7-rc5hx      Successfully assigned default/nginx-app-7dd8c588d7-rc5hx to worker7
+[2025-04-30 14:55:18] 7m43s       Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-rc5hx
+[2025-04-30 14:55:18] 7m42s       Normal    Started                        pod/nginx-app-7dd8c588d7-rc5hx      Started container nginx
+[2025-04-30 14:55:18] 7m42s       Normal    Created                        pod/nginx-app-7dd8c588d7-rc5hx      Created container nginx
+[2025-04-30 14:55:18] 7m42s       Normal    Pulled                         pod/nginx-app-7dd8c588d7-rc5hx      Successfully pulled image "nginx:latest" in 689ms (689ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:55:29] 45m         Normal    Killing                        pod/nginx-app-7dd8c588d7-8tp47      Stopping container nginx
+[2025-04-30 14:55:29] 34m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-g69m7      Successfully assigned default/nginx-app-7dd8c588d7-g69m7 to worker7
+[2025-04-30 14:55:29] 34m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-g69m7      Pulling image "nginx:latest"
+[2025-04-30 14:55:29] 34m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:55:29] 34m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-g69m7
+[2025-04-30 14:55:29] 34m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-g69m7      Successfully pulled image "nginx:latest" in 698ms (698ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:55:29] 34m         Normal    Started                        pod/nginx-app-7dd8c588d7-g69m7      Started container nginx
+[2025-04-30 14:55:29] 34m         Normal    Created                        pod/nginx-app-7dd8c588d7-g69m7      Created container nginx
+[2025-04-30 14:55:29] 16m         Normal    Killing                        pod/nginx-app-7dd8c588d7-g69m7      Stopping container nginx
+[2025-04-30 14:55:29] 16m         Warning   FailedGetScale                 horizontalpodautoscaler/nginx-hpa   deployments/scale.apps "nginx-app" not found
+[2025-04-30 14:55:29] 7m53s       Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:55:29] 7m53s       Normal    Pulling                        pod/nginx-app-7dd8c588d7-rc5hx      Pulling image "nginx:latest"
+[2025-04-30 14:55:29] 7m52s       Normal    Scheduled                      pod/nginx-app-7dd8c588d7-rc5hx      Successfully assigned default/nginx-app-7dd8c588d7-rc5hx to worker7
+[2025-04-30 14:55:29] 7m53s       Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-rc5hx
+[2025-04-30 14:55:29] 7m52s       Normal    Started                        pod/nginx-app-7dd8c588d7-rc5hx      Started container nginx
+[2025-04-30 14:55:29] 7m52s       Normal    Created                        pod/nginx-app-7dd8c588d7-rc5hx      Created container nginx
+[2025-04-30 14:55:29] 7m52s       Normal    Pulled                         pod/nginx-app-7dd8c588d7-rc5hx      Successfully pulled image "nginx:latest" in 689ms (689ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:55:39] 45m         Normal    Killing                        pod/nginx-app-7dd8c588d7-8tp47      Stopping container nginx
+[2025-04-30 14:55:39] 34m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-g69m7      Successfully assigned default/nginx-app-7dd8c588d7-g69m7 to worker7
+[2025-04-30 14:55:39] 34m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-g69m7      Pulling image "nginx:latest"
+[2025-04-30 14:55:39] 34m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:55:39] 34m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-g69m7
+[2025-04-30 14:55:39] 34m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-g69m7      Successfully pulled image "nginx:latest" in 698ms (698ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:55:39] 34m         Normal    Started                        pod/nginx-app-7dd8c588d7-g69m7      Started container nginx
+[2025-04-30 14:55:39] 34m         Normal    Created                        pod/nginx-app-7dd8c588d7-g69m7      Created container nginx
+[2025-04-30 14:55:39] 17m         Normal    Killing                        pod/nginx-app-7dd8c588d7-g69m7      Stopping container nginx
+[2025-04-30 14:55:39] 17m         Warning   FailedGetScale                 horizontalpodautoscaler/nginx-hpa   deployments/scale.apps "nginx-app" not found
+[2025-04-30 14:55:39] 8m3s        Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:55:39] 8m3s        Normal    Pulling                        pod/nginx-app-7dd8c588d7-rc5hx      Pulling image "nginx:latest"
+[2025-04-30 14:55:39] 8m2s        Normal    Scheduled                      pod/nginx-app-7dd8c588d7-rc5hx      Successfully assigned default/nginx-app-7dd8c588d7-rc5hx to worker7
+[2025-04-30 14:55:39] 8m3s        Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-rc5hx
+[2025-04-30 14:55:39] 8m2s        Normal    Started                        pod/nginx-app-7dd8c588d7-rc5hx      Started container nginx
+[2025-04-30 14:55:39] 8m2s        Normal    Created                        pod/nginx-app-7dd8c588d7-rc5hx      Created container nginx
+[2025-04-30 14:55:39] 8m2s        Normal    Pulled                         pod/nginx-app-7dd8c588d7-rc5hx      Successfully pulled image "nginx:latest" in 689ms (689ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:55:49] 45m         Normal    Killing                        pod/nginx-app-7dd8c588d7-8tp47      Stopping container nginx
+[2025-04-30 14:55:49] 34m         Normal    Scheduled                      pod/nginx-app-7dd8c588d7-g69m7      Successfully assigned default/nginx-app-7dd8c588d7-g69m7 to worker7
+[2025-04-30 14:55:49] 34m         Normal    Pulling                        pod/nginx-app-7dd8c588d7-g69m7      Pulling image "nginx:latest"
+[2025-04-30 14:55:49] 34m         Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:55:49] 34m         Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-g69m7
+[2025-04-30 14:55:49] 34m         Normal    Pulled                         pod/nginx-app-7dd8c588d7-g69m7      Successfully pulled image "nginx:latest" in 698ms (698ms including waiting). Image size: 72404038 bytes.
+[2025-04-30 14:55:49] 34m         Normal    Started                        pod/nginx-app-7dd8c588d7-g69m7      Started container nginx
+[2025-04-30 14:55:49] 34m         Normal    Created                        pod/nginx-app-7dd8c588d7-g69m7      Created container nginx
+[2025-04-30 14:55:49] 17m         Normal    Killing                        pod/nginx-app-7dd8c588d7-g69m7      Stopping container nginx
+[2025-04-30 14:55:49] 17m         Warning   FailedGetScale                 horizontalpodautoscaler/nginx-hpa   deployments/scale.apps "nginx-app" not found
+[2025-04-30 14:55:49] 8m13s       Normal    ScalingReplicaSet              deployment/nginx-app                Scaled up replica set nginx-app-7dd8c588d7 to 1
+[2025-04-30 14:55:49] 8m13s       Normal    Pulling                        pod/nginx-app-7dd8c588d7-rc5hx      Pulling image "nginx:latest"
+[2025-04-30 14:55:49] 8m12s       Normal    Scheduled                      pod/nginx-app-7dd8c588d7-rc5hx      Successfully assigned default/nginx-app-7dd8c588d7-rc5hx to worker7
+[2025-04-30 14:55:49] 8m13s       Normal    SuccessfulCreate               replicaset/nginx-app-7dd8c588d7     Created pod: nginx-app-7dd8c588d7-rc5hx
+[2025-04-30 14:55:49] 8m12s       Normal    Started                        pod/nginx-app-7dd8c588d7-rc5hx      Started container nginx
+[2025-04-30 14:55:49] 8m12s       Normal    Created                        pod/nginx-app-7dd8c588d7-rc5hx      Created container nginx
+[2025-04-30 14:55:49] 8m12s       Normal    Pulled                         pod/nginx-app-7dd8c588d7-rc5hx      Successfully pulled image "nginx:latest" in 689ms (689ms including waiting). Image size: 72404038 bytes.
