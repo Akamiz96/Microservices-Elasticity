@@ -94,7 +94,8 @@ with open(os.path.join(input_dir, "k6_start_time.txt")) as f:
     k6_start_time = datetime.strptime(f.read().strip(), "%Y-%m-%d %H:%M:%S")
 
 with open(config_file) as f:
-    stages = json.load(f)
+    config = json.load(f)
+stages = config["stages"]
 
 # Generar la serie de VUs y requests a lo largo del tiempo
 vus_series = []
