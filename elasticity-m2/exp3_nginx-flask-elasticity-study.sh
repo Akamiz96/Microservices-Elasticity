@@ -37,9 +37,9 @@ echo "Inicio del experimento: $(date)" | tee -a "$LOG_CENTRAL"
 # ---------------------------------------------------------------
 # LISTA DE CONFIGURACIONES A PROBAR
 # ---------------------------------------------------------------
-HPAS_NGINX=(C1)
-HPAS_FLASK=(C1)
-LOADS=(L01)
+HPAS_NGINX=(C1 C2 C3 C4 C5 C6 C7 C8 C9)
+HPAS_FLASK=(C1 C2 C3 C4 C5 C6 C7 C8 C9)
+LOADS=(L01 L02 L03 L04 L05 L06)
 
 # ---------------------------------------------------------------
 # BUCLE PRINCIPAL SOBRE TODAS LAS COMBINACIONES
