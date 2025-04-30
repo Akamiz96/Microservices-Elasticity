@@ -171,7 +171,7 @@ with open(os.path.join(input_dir, "k6_start_time.txt")) as f:
     k6_start_time = datetime.strptime(f.read().strip(), "%Y-%m-%d %H:%M:%S")
 
 with open(config_file) as f:
-    stages = json.load(f)["stages"]
+    stages = json.load(f)
 
 def parse_duration(d): return int(d[:-1]) * (60 if d.endswith("m") else 1)
 
