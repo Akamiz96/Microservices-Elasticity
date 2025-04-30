@@ -19,7 +19,7 @@
 # CONFIGURACIÓN DE RUTAS Y VARIABLES GLOBALES
 # ---------------------------------------------------------------
 PROJECT_DIR="experiments/nginx-flask-elasticity-study"
-DEPLOY_DIR="$PROJECT_DIR/deployment"
+DEPLOY_DIR="deployment"
 MANIFESTS_DIR="$PROJECT_DIR/manifests"
 K6_CONFIG_DIR="$PROJECT_DIR/scripts/k6_configs"
 ANALYSIS_DIR="$PROJECT_DIR/analysis"
@@ -37,9 +37,9 @@ echo "Inicio del experimento: $(date)" | tee -a "$LOG_CENTRAL"
 # ---------------------------------------------------------------
 # LISTA DE CONFIGURACIONES A PROBAR
 # ---------------------------------------------------------------
-HPAS_NGINX=(C1 C2 C3 C4 C5 C6 C7 C8 C9)
-HPAS_FLASK=(C1 C2 C3 C4 C5 C6 C7 C8 C9)
-LOADS=(L01 L02 L03 L04 L05 L06)
+HPAS_NGINX=(C1)
+HPAS_FLASK=(C1)
+LOADS=(L01)
 
 # ---------------------------------------------------------------
 # BUCLE PRINCIPAL SOBRE TODAS LAS COMBINACIONES
@@ -57,8 +57,7 @@ for HPA_NGINX in "${HPAS_NGINX[@]}"; do
       echo "Inicio: $START_TIME" | tee -a "$LOG_FILE"
 
       echo "[Paso 1] Aplicando manifiestos..." | tee -a "$LOG_FILE"
-      kubectl apply -f "$MANIFESTS_DIR/nginx-deployment.yaml" 2>&1 | tee -a "$LOG_FILE"
-      kubectl apply -f "$MANIFESTS_DIR/flask-deployment.yaml" 2>&1 | tee -a "$LOG_FILE"
+      bash "$DEPLOY_DIR/deploy.sh"
       kubectl apply -f "$MANIFESTS_DIR/generated/${HPA_NGINX}_nginx_hpa.yaml" 2>&1 | tee -a "$LOG_FILE"
       kubectl apply -f "$MANIFESTS_DIR/generated/${HPA_FLASK}_flask_hpa.yaml" 2>&1 | tee -a "$LOG_FILE"
 
@@ -66,9 +65,9 @@ for HPA_NGINX in "${HPAS_NGINX[@]}"; do
       sleep 20
 
       echo "[Paso 3] Iniciando recolección de métricas y eventos..." | tee -a "$LOG_FILE"
-      bash "$PROJECT_DIR/scripts/metric_collector_microbenchmark.sh" flask-app &
+      bash "$PROJECT_DIR/scripts/metric_collector_basic.sh" flask-app &
       PID_FLASK=$!
-      bash "$PROJECT_DIR/scripts/metric_collector_microbenchmark.sh" nginx-app &
+      bash "$PROJECT_DIR/scripts/metric_collector_basic.sh" nginx-app &
       PID_NGINX=$!
       bash "$PROJECT_DIR/scripts/capture_deployment_events.sh" flask-app &
       PID_EVENTS_FLASK=$!
@@ -78,7 +77,7 @@ for HPA_NGINX in "${HPAS_NGINX[@]}"; do
       echo "[Paso 4] Ejecutando prueba de carga con k6 ($LOAD_ID)..." | tee -a "$LOG_FILE"
       K6_START_TIME=$(date +"%Y-%m-%d %H:%M:%S")
       echo "$K6_START_TIME" > "$OUTPUT_DIR/k6_start_time.txt"
-      K6_CONF="$K6_CONFIG_DIR/${LOAD_ID}_config.json" \
+      K6_CONF="k6_configs/${LOAD_ID}_config.json" \
       LOAD_ID="$LOAD_ID" \
       k6 run --out csv="$OUTPUT_DIR/k6_results.csv" \
              --summary-export "$OUTPUT_DIR/k6_summary.json" \
