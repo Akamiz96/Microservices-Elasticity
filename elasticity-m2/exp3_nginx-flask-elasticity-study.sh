@@ -83,8 +83,8 @@ for HPA_NGINX in "${HPAS_NGINX[@]}"; do
              --summary-export "$OUTPUT_DIR/k6_summary.json" \
              "$PROJECT_DIR/scripts/load_test_runner.js" 2>&1 | tee -a "$LOG_FILE"
 
-      echo "[Paso 5] Esperando 1 minuto post-carga..." | tee -a "$LOG_FILE"
-      sleep 60
+      echo "[Paso 5] Esperando 10 minutos post-carga..." | tee -a "$LOG_FILE"
+      sleep 10m
 
       echo "[Paso 6] Finalizando procesos de recolección..." | tee -a "$LOG_FILE"
       kill "$PID_FLASK" "$PID_NGINX" "$PID_EVENTS_FLASK" "$PID_EVENTS_NGINX"
@@ -121,8 +121,8 @@ for HPA_NGINX in "${HPAS_NGINX[@]}"; do
       END_TIME=$(date)
       echo "[$END_TIME] Fin del experimento $EXP_ID" | tee -a "$LOG_CENTRAL"
 
-      echo "Esperando 5 minutos antes del siguiente experimento..." | tee -a "$LOG_FILE"
-      sleep 5m
+      echo "Esperando 1 minuto antes del siguiente experimento..." | tee -a "$LOG_FILE"
+      sleep 1m
     done
   done
 done
