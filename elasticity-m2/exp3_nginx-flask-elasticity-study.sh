@@ -57,7 +57,7 @@ for HPA_NGINX in "${HPAS_NGINX[@]}"; do
       echo "Inicio: $START_TIME" | tee -a "$LOG_FILE"
 
       echo "[Paso 1] Aplicando manifiestos..." | tee -a "$LOG_FILE"
-      bash "$DEPLOY_DIR/deploy.sh"
+      bash "$DEPLOY_DIR/deploy.sh" | tee -a "$LOG_FILE"
       kubectl apply -f "$MANIFESTS_DIR/generated/${HPA_NGINX}_nginx_hpa.yaml" 2>&1 | tee -a "$LOG_FILE"
       kubectl apply -f "$MANIFESTS_DIR/generated/${HPA_FLASK}_flask_hpa.yaml" 2>&1 | tee -a "$LOG_FILE"
 
